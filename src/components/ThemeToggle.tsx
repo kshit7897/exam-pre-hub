@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
 type Mode = "light" | "dark";
-// New key: old saved choices (from earlier versions) are ignored, so dark is the default for everyone.
+// Light is the default. Only an explicit saved "dark" choice changes it.
 const KEY = "studyhub:theme:v3";
 
 function apply(mode: Mode) {
@@ -12,14 +12,14 @@ function apply(mode: Mode) {
 }
 
 export default function ThemeToggle() {
-  const [mode, setMode] = useState<Mode>("dark");
+  const [mode, setMode] = useState<Mode>("light");
 
   useEffect(() => {
     try {
       const saved = window.localStorage.getItem(KEY);
-      if (saved === "light") setMode("light");
+      if (saved === "dark") setMode("dark");
     } catch {
-      // storage blocked: stay on dark
+      // storage blocked: stay on light
     }
   }, []);
 

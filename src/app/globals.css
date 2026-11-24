@@ -2,30 +2,6 @@
 
 /* ============ LIGHT (default) ============ */
 :root {
-  --bg: #130a05;
-  --card: #1f120a;
-  --card-2: #2a190e;
-  --fg: #fbeee4;
-  --muted: #d1ae95;
-  --accent: #fb923c;
-  --accent-fg: #130a05;
-  --accent-soft: #3a2010;
-  --good: #86efac;
-  --good-soft: #14321f;
-  --bad: #fca5a5;
-  --bad-soft: #3b1a1a;
-  --warn: #fcd34d;
-  --warn-soft: #3a2e0e;
-  --hint: #c4b5fd;
-  --hint-soft: #2a1f47;
-  --border: #3d2517;
-  --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
-  --shadow-lg: 0 18px 40px -18px rgb(0 0 0 / 0.8);
-  color-scheme: dark;
-}
-
-/* ============ DARK (only when the user picks it) ============ */
-:root[data-theme="light"] {
   --bg: #fff8f3;
   --card: #ffffff;
   --card-2: #fef1e7;
@@ -46,6 +22,30 @@
   --shadow: 0 1px 2px rgb(42 22 6 / 0.05), 0 8px 24px -14px rgb(42 22 6 / 0.2);
   --shadow-lg: 0 18px 40px -20px rgb(42 22 6 / 0.35);
   color-scheme: light;
+}
+
+/* ============ DARK (only when the user picks it) ============ */
+:root[data-theme="dark"] {
+  --bg: #130a05;
+  --card: #1f120a;
+  --card-2: #2a190e;
+  --fg: #fbeee4;
+  --muted: #d1ae95;
+  --accent: #fb923c;
+  --accent-fg: #130a05;
+  --accent-soft: #3a2010;
+  --good: #86efac;
+  --good-soft: #14321f;
+  --bad: #fca5a5;
+  --bad-soft: #3b1a1a;
+  --warn: #fcd34d;
+  --warn-soft: #3a2e0e;
+  --hint: #c4b5fd;
+  --hint-soft: #2a1f47;
+  --border: #3d2517;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 18px 40px -18px rgb(0 0 0 / 0.8);
+  color-scheme: dark;
 }
 
 html {
