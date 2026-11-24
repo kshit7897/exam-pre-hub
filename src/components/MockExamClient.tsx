@@ -95,6 +95,11 @@ export default function MockExamClient({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, secondsLeft]);
 
+  // Submit (manual or timer) switches to the result view. Bring the score into view.
+  useEffect(() => {
+    if (phase === "result") window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [phase]);
+
   // ---------- INTRO ----------
   if (phase === "intro") {
     return (
@@ -229,7 +234,7 @@ export default function MockExamClient({
   return (
     <div className="space-y-6">
       <FadeUp>
-        <section className="hero p-6 text-center sm:p-10" style={{ ["--c" as string]: pct >= 60 ? "#ea580c" : "#7c3aed" }}>
+        <section className="hero p-6 text-center sm:p-10" style={{ ["--c" as string]: "#ea580c" }}>
           <div className="relative z-10">
             <div className="text-xs font-semibold uppercase tracking-widest opacity-85">Tumhara score</div>
             <motion.div
@@ -256,7 +261,7 @@ export default function MockExamClient({
               <button type="button" onClick={start} className="btn focus-ring !border-0 !bg-white !text-[#141a2e]">
                 <RotateCcw size={16} aria-hidden /> Naya mock exam
               </button>
-              <BackButton fallback={`/${subjectId}`} label="Subject par wapas" />
+              <BackButton fallback={`/${subjectId}`} label="Subject par wapas" className="justify-center text-white/90 hover:text-white" />
             </div>
           </div>
         </section>
@@ -321,9 +326,9 @@ export default function MockExamClient({
 
 function Stat({ value, label }: { value: number; label: string }) {
   return (
-    <div className="rounded-xl bg-white/15 py-3">
-      <div className="text-3xl font-bold">{value}</div>
-      <div className="text-[11px] font-medium uppercase tracking-wide opacity-85">{label}</div>
+    <div className="rounded-xl bg-white/15 px-3 py-3 text-center">
+      <div className="text-3xl font-bold leading-none">{value}</div>
+      <div className="mt-1.5 text-[10px] font-semibold uppercase leading-tight tracking-wide opacity-90 sm:text-[11px]">{label}</div>
     </div>
   );
 }
