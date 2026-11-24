@@ -19,13 +19,13 @@ export const viewport: Viewport = {
   ],
 };
 
-// Sets the theme before first paint. Light unless the user explicitly chose dark.
+// Sets the theme before first paint. Dark unless the user explicitly chose light.
 const themeScript = `
 try {
   var m = localStorage.getItem("studyhub:theme:v3");
-  document.documentElement.setAttribute("data-theme", m === "dark" ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", m === "light" ? "light" : "dark");
 } catch (e) {
-  document.documentElement.setAttribute("data-theme", "light");
+  document.documentElement.setAttribute("data-theme", "dark");
 }
 `;
 

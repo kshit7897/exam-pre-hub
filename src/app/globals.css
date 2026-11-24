@@ -1,31 +1,7 @@
 @import "tailwindcss";
 
-/* ============ LIGHT (default) ============ */
+/* ============ DARK (default) ============ */
 :root {
-  --bg: #fff8f3;
-  --card: #ffffff;
-  --card-2: #fef1e7;
-  --fg: #2a1606;
-  --muted: #7a5a45;
-  --accent: #f97316;
-  --accent-fg: #ffffff;
-  --accent-soft: #ffedd5;
-  --good: #15803d;
-  --good-soft: #dcfce7;
-  --bad: #dc2626;
-  --bad-soft: #fee2e2;
-  --warn: #b45309;
-  --warn-soft: #fef3c7;
-  --hint: #8b5cf6;
-  --hint-soft: #ede9fe;
-  --border: #f5e0cf;
-  --shadow: 0 1px 2px rgb(42 22 6 / 0.05), 0 8px 24px -14px rgb(42 22 6 / 0.2);
-  --shadow-lg: 0 18px 40px -20px rgb(42 22 6 / 0.35);
-  color-scheme: light;
-}
-
-/* ============ DARK (only when the user picks it) ============ */
-:root[data-theme="dark"] {
   --bg: #130a05;
   --card: #1f120a;
   --card-2: #2a190e;
@@ -46,6 +22,30 @@
   --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
   --shadow-lg: 0 18px 40px -18px rgb(0 0 0 / 0.8);
   color-scheme: dark;
+}
+
+/* ============ LIGHT (only when the user picks it) ============ */
+:root[data-theme="light"] {
+  --bg: #fff8f3;
+  --card: #ffffff;
+  --card-2: #fef1e7;
+  --fg: #2a1606;
+  --muted: #7a5a45;
+  --accent: #f97316;
+  --accent-fg: #ffffff;
+  --accent-soft: #ffedd5;
+  --good: #15803d;
+  --good-soft: #dcfce7;
+  --bad: #dc2626;
+  --bad-soft: #fee2e2;
+  --warn: #b45309;
+  --warn-soft: #fef3c7;
+  --hint: #8b5cf6;
+  --hint-soft: #ede9fe;
+  --border: #f5e0cf;
+  --shadow: 0 1px 2px rgb(42 22 6 / 0.05), 0 8px 24px -14px rgb(42 22 6 / 0.2);
+  --shadow-lg: 0 18px 40px -20px rgb(42 22 6 / 0.35);
+  color-scheme: light;
 }
 
 html {
