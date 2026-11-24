@@ -1,0 +1,267 @@
+{
+  "id": "unit-2",
+  "title": "Propositional Logic",
+  "topics": [
+    {
+      "id": "2.1",
+      "title": "Propositions",
+      "notes": [
+        "A proposition is a declarative sentence that is either true or false (not both).",
+        "True is written as T or 1, false as F or 0. Propositional variables are written as p, q, r, s.",
+        "Not propositions: questions (What time is it?), commands (Read this carefully), and sentences with unknown variables (x + y = z)."
+      ]
+    },
+    {
+      "id": "2.2",
+      "title": "Connectives: NOT, AND, OR, conditional, biconditional",
+      "notes": [
+        "Negation ~p (NOT p): true when p is false.",
+        "Conjunction p ∧ q (AND): true only when both p and q are true.",
+        "Disjunction p ∨ q (OR): false only when both p and q are false.",
+        "Conditional p → q (if p then q): false only when p is true and q is false. p is the hypothesis, q is the conclusion.",
+        "Biconditional p ↔ q (p if and only if q): true when p and q have the same truth value."
+      ]
+    },
+    {
+      "id": "2.3",
+      "title": "Converse, inverse and contrapositive",
+      "notes": [
+        "For p → q: converse is q → p, inverse is ~p → ~q, contrapositive is ~q → ~p.",
+        "A conditional and its contrapositive always have the same truth value. The converse and the inverse are equivalent to each other, but not to the original statement."
+      ]
+    },
+    {
+      "id": "2.4",
+      "title": "Precedence, tautology and contradiction",
+      "notes": [
+        "Precedence (highest first): brackets, ~ (NOT), ∧ (AND), ∨ (OR), → (if then), ↔ (if and only if).",
+        "Tautology: a proposition that is always true. Example: p ∨ ~p.",
+        "Contradiction: a proposition that is always false. Example: p ∧ ~p."
+      ]
+    },
+    {
+      "id": "2.5",
+      "title": "Truth tables",
+      "notes": [
+        "A truth table lists all combinations of the variables. With n variables there are 2^n rows (2 variables: 4 rows, 3 variables: 8 rows).",
+        "Build the table column by column: first the simple parts (~p, p ∨ q), then the bigger expression. Use the final column for the answer.",
+        "Use the precedence rules and brackets to decide which column to compute first."
+      ]
+    },
+    {
+      "id": "2.6",
+      "title": "Logical implication and equivalence",
+      "notes": [
+        "Logical implication A ⇒ B: the statement A → B is a tautology.",
+        "Logical equivalence A ⇔ B (or A ≡ B): the statement A ↔ B is a tautology. Equivalent statements have identical truth tables.",
+        "To prove equivalence, make the truth tables of both sides and compare the final columns."
+      ]
+    },
+    {
+      "id": "2.7",
+      "title": "Laws of propositional algebra",
+      "notes": [
+        "Commutative: p ∨ q ≡ q ∨ p and p ∧ q ≡ q ∧ p.",
+        "Associative: p ∨ (q ∨ r) ≡ (p ∨ q) ∨ r and p ∧ (q ∧ r) ≡ (p ∧ q) ∧ r.",
+        "Distributive: p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r) and p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r).",
+        "De Morgan: ~(p ∨ q) ≡ ~p ∧ ~q and ~(p ∧ q) ≡ ~p ∨ ~q."
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "id": "mt2-m01",
+      "topic": "2.1",
+      "q": "Which of these is a proposition?",
+      "options": ["What time is it?", "Read this carefully.", "1 + 1 = 4", "x + y = z"],
+      "answer": 2,
+      "explanation": "1 + 1 = 4 is a declarative sentence and is false. It is a proposition. The other three are not."
+    },
+    {
+      "id": "mt2-m02",
+      "topic": "2.1",
+      "q": "A true proposition is denoted by:",
+      "options": ["0 or F", "1 or T", "X or Y", "? or !"],
+      "answer": 1,
+      "explanation": "True = T or 1, false = F or 0."
+    },
+    {
+      "id": "mt2-m03",
+      "topic": "2.2",
+      "q": "p: 2 is an even integer. Then ~p is:",
+      "options": ["2 is an odd integer", "2 is not an even integer", "3 is an even integer", "p is false only"],
+      "answer": 1,
+      "explanation": "Negation says NOT p: 2 is not an even integer."
+    },
+    {
+      "id": "mt2-m04",
+      "topic": "2.2",
+      "q": "p ∧ q is true when:",
+      "options": ["Any one of p, q is true", "Both p and q are true", "Both p and q are false", "p is false"],
+      "answer": 1,
+      "explanation": "AND is true only when both operands are true."
+    },
+    {
+      "id": "mt2-m05",
+      "topic": "2.2",
+      "q": "p ∨ q is false when:",
+      "options": ["p is true", "q is true", "both p and q are false", "both p and q are true"],
+      "answer": 2,
+      "explanation": "OR is false only when both operands are false."
+    },
+    {
+      "id": "mt2-m06",
+      "topic": "2.2",
+      "q": "p → q is false when:",
+      "options": ["p is true and q is false", "p is false and q is true", "both p and q are false", "both p and q are true"],
+      "answer": 0,
+      "explanation": "The conditional is false only when the hypothesis is true and the conclusion is false."
+    },
+    {
+      "id": "mt2-m07",
+      "topic": "2.2",
+      "q": "p ↔ q is true when:",
+      "options": ["p and q have the same truth value", "p is true only", "q is false only", "never"],
+      "answer": 0,
+      "explanation": "Biconditional is true when both sides match (both T or both F)."
+    },
+    {
+      "id": "mt2-m08",
+      "topic": "2.3",
+      "q": "The converse of p → q is:",
+      "options": ["~p → ~q", "q → p", "~q → ~p", "p ↔ q"],
+      "answer": 1,
+      "explanation": "Converse swaps the two parts: q → p."
+    },
+    {
+      "id": "mt2-m09",
+      "topic": "2.3",
+      "q": "The contrapositive of p → q is:",
+      "options": ["q → p", "~p → ~q", "~q → ~p", "p ∨ q"],
+      "answer": 2,
+      "explanation": "Contrapositive: negate and swap: ~q → ~p."
+    },
+    {
+      "id": "mt2-m10",
+      "topic": "2.4",
+      "q": "In precedence, which operator is applied first (after brackets)?",
+      "options": ["∨", "∧", "~ (NOT)", "→"],
+      "answer": 2,
+      "explanation": "NOT (~) has higher priority than AND, OR and the conditional."
+    },
+    {
+      "id": "mt2-m11",
+      "topic": "2.4",
+      "q": "A proposition that is always true is called:",
+      "options": ["Contradiction", "Tautology", "Contingency", "Converse"],
+      "answer": 1,
+      "explanation": "Always true = tautology, e.g. p ∨ ~p."
+    },
+    {
+      "id": "mt2-m12",
+      "topic": "2.4",
+      "q": "A proposition that is always false is called:",
+      "options": ["Tautology", "Converse", "Contradiction", "Inverse"],
+      "answer": 2,
+      "explanation": "Always false = contradiction, e.g. p ∧ ~p."
+    },
+    {
+      "id": "mt2-m13",
+      "topic": "2.5",
+      "q": "For p ∧ q ∧ r with 3 variables, in how many of the 8 rows is the result true?",
+      "options": ["1", "2", "3", "4"],
+      "answer": 0,
+      "explanation": "AND of three is true only when all three are true: only 1 row (T T T)."
+    },
+    {
+      "id": "mt2-m14",
+      "topic": "2.5",
+      "q": "How many rows does a truth table with 3 propositional variables have?",
+      "options": ["3", "6", "8", "9"],
+      "answer": 2,
+      "explanation": "2^3 = 8 rows."
+    },
+    {
+      "id": "mt2-m15",
+      "topic": "2.6",
+      "q": "If A ↔ B is a tautology, then A and B are:",
+      "options": ["Contradictions", "Logically equivalent", "Always different", "Converses of each other"],
+      "answer": 1,
+      "explanation": "A ↔ B tautology means A ≡ B (logically equivalent)."
+    },
+    {
+      "id": "mt2-m16",
+      "topic": "2.7",
+      "q": "By De Morgan's law, ~(p ∨ q) is equivalent to:",
+      "options": ["~p ∨ ~q", "~p ∧ ~q", "p ∧ q", "p ∨ q"],
+      "answer": 1,
+      "explanation": "~(p ∨ q) ≡ ~p ∧ ~q."
+    },
+    {
+      "id": "mt2-m17",
+      "topic": "2.7",
+      "q": "The distributive law gives p ∧ (q ∨ r) equal to:",
+      "options": ["(p ∧ q) ∨ (p ∧ r)", "(p ∨ q) ∧ r", "p ∨ (q ∧ r)", "(p ∧ q) ∧ r"],
+      "answer": 0,
+      "explanation": "AND distributes over OR: p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r)."
+    }
+  ],
+  "short": [
+    {
+      "id": "mt2-s01",
+      "topic": "2.1",
+      "q": "Which of these is a proposition: '2 is an even integer' or 'x + y = z'? Give a reason.",
+      "answer": "'2 is an even integer' is a proposition (it is true). 'x + y = z' is not, because its truth value depends on the values of x, y, z.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-s02",
+      "topic": "2.2",
+      "q": "Write the truth table of p ∧ q.",
+      "answer": "p=0,q=0 → 0; p=0,q=1 → 0; p=1,q=0 → 0; p=1,q=1 → 1.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-s03",
+      "topic": "2.3",
+      "q": "Write the converse, inverse and contrapositive of: 'If it is raining, then the ground is wet.'",
+      "answer": "Converse: If the ground is wet, then it is raining. Inverse: If it is not raining, then the ground is not wet. Contrapositive: If the ground is not wet, then it is not raining.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-s04",
+      "topic": "2.4",
+      "q": "Define tautology and contradiction with one example each.",
+      "answer": "Tautology is always true, e.g. p ∨ ~p. Contradiction is always false, e.g. p ∧ ~p.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-s05",
+      "topic": "2.5",
+      "q": "Is p ∨ ~p a tautology? Justify with a truth table.",
+      "answer": "Yes. When p=0, ~p=1 so p ∨ ~p = 1. When p=1, p ∨ ~p = 1. The result is always true, so it is a tautology.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-s06",
+      "topic": "2.6",
+      "q": "For A: p → q and B: ~q → ~p, show that A ⇔ B using a truth table.",
+      "answer": "Both A and B have the same truth values in all 4 rows (T,F,T,T), so A ↔ B is a tautology. Hence A ≡ B and A ⇒ B.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-s07",
+      "topic": "2.7",
+      "q": "State the distributive law of AND over OR.",
+      "answer": "p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r).",
+      "marks": 2
+    },
+    {
+      "id": "mt2-s08",
+      "topic": "2.7",
+      "q": "State De Morgan's law for ~(p ∧ q).",
+      "answer": "~(p ∧ q) ≡ ~p ∨ ~q.",
+      "marks": 2
+    }
+  ]
+}

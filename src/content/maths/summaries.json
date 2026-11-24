@@ -1,0 +1,92 @@
+{
+  "1.1": [
+    "Set = distinct elements ka collection.",
+    "N, Z, Q, I, R standard sets; R = Q ∪ I."
+  ],
+  "1.2": [
+    "Listing method: {1, 2, 3}.",
+    "Property method: {x | x ∈ N, x < 5}."
+  ],
+  "1.3": [
+    "Null set = { } ya φ; {φ} null set nahi hai.",
+    "Subset: A ⊆ B. Non-empty set ke kam se kam 2 subsets (φ aur khud).",
+    "Equal ⇒ equivalent, par equivalent ⇒ equal nahi."
+  ],
+  "1.4": [
+    "Rectangle = U, circles = sets.",
+    "Overlap = intersecting; no overlap = disjoint."
+  ],
+  "1.5": [
+    "A ∪ B: dono ke elements. A ∩ B: common elements.",
+    "A - B: A ke wo elements jo B mein nahi.",
+    "A Δ B = (A ∪ B) - (A ∩ B)."
+  ],
+  "1.6": [
+    "De Morgan: (A ∪ B)' = A' ∩ B', (A ∩ B)' = A' ∪ B'.",
+    "A ∪ A' = U, A ∩ A' = φ."
+  ],
+  "1.7": [
+    "n(P(A)) = 2^n.",
+    "n(A × B) = n(A) × n(B); A × B ≠ B × A."
+  ],
+  "2.1": [
+    "Proposition = true ya false wala declarative sentence.",
+    "T/1 aur F/0."
+  ],
+  "2.2": [
+    "~p: NOT. p ∧ q: dono true. p ∨ q: koi ek true.",
+    "p → q sirf p=T, q=F par false. p ↔ q: same value par true."
+  ],
+  "2.3": [
+    "Converse: q → p. Inverse: ~p → ~q. Contrapositive: ~q → ~p.",
+    "Conditional aur contrapositive equivalent hain."
+  ],
+  "2.4": [
+    "Precedence: () > ~ > ∧ > ∨ > → > ↔.",
+    "Tautology = hamesha true. Contradiction = hamesha false."
+  ],
+  "2.5": [
+    "2^n rows (n variables).",
+    "Columns step by step banao."
+  ],
+  "2.6": [
+    "A ⇒ B: A → B tautology.",
+    "A ≡ B: A ↔ B tautology (same truth table)."
+  ],
+  "2.7": [
+    "Commutative, associative, distributive laws.",
+    "De Morgan: ~(p ∨ q) = ~p ∧ ~q, ~(p ∧ q) = ~p ∨ ~q."
+  ],
+  "3.1": [
+    "Order = rows × columns.",
+    "Row, column, zero, square, diagonal, scalar, identity."
+  ],
+  "3.2": [
+    "Upper: diagonal ke neeche 0. Lower: diagonal ke upar 0.",
+    "Transpose: rows ↔ columns. Symmetric: A = Aᵀ."
+  ],
+  "3.3": [
+    "Add/subtract: same order.",
+    "kA: har element ko k se multiply."
+  ],
+  "3.4": [
+    "AB possible: cols(A) = rows(B). Order: rows(A) × cols(B).",
+    "Generally AB ≠ BA."
+  ],
+  "3.5": [
+    "2 × 2: ad − bc.",
+    "3 × 3: cofactor expansion; |AB| = |A||B|."
+  ],
+  "3.6": [
+    "Minor M_ij = bachi determinant.",
+    "Cofactor C_ij = (−1)^(i+j) M_ij."
+  ],
+  "3.7": [
+    "adj(A) = Cᵀ.",
+    "2 × 2: swap diagonal, baaki ka sign badlo."
+  ],
+  "3.8": [
+    "A⁻¹ = adj(A)/|A|, sirf |A| ≠ 0 par.",
+    "Check: A·A⁻¹ = I."
+  ]
+}

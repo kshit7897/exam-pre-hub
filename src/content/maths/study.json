@@ -1,0 +1,2451 @@
+{
+  "mt1-p007a": {
+    "context": "Do sets ke beech common elements ho to unke Venn diagram mein circles overlap karte hain.",
+    "venn": {
+      "layout": "overlap",
+      "shade": "none",
+      "caption": "A = {1, 2, 3}, B = {3, 4}. A ∩ B = {3}."
+    },
+    "walkthrough": [
+      "Rectangle = universal set U.",
+      "Har set ek circle hai.",
+      "Overlap = common elements."
+    ],
+    "example": {
+      "q": "A = {1, 2, 3}, B = {3, 4}: overlap mein kaun sa element?",
+      "a": "3 (A ∩ B = {3})."
+    },
+    "questions": [
+      "mt1-d-m07"
+    ]
+  },
+  "mt1-p007b": {
+    "context": "Disjoint sets ka Venn diagram: circles alag, koi overlap nahi.",
+    "venn": {
+      "layout": "disjoint",
+      "shade": "none",
+      "caption": "A = {-1, 0, 1}, B = {2, 4, 6}. A ∩ B = φ."
+    },
+    "walkthrough": [
+      "Dono circles alag rakho.",
+      "Overlap nahi = common element nahi.",
+      "A ∩ B = φ."
+    ],
+    "example": {
+      "q": "A = {-1, 0, 1}, B = {2, 4, 6} disjoint hain?",
+      "a": "Haan, A ∩ B = φ."
+    },
+    "questions": [
+      "mt1-d-m07"
+    ]
+  },
+  "mt1-p008": {
+    "context": "Subset mein ek set dusre ke andar hota hai.",
+    "venn": {
+      "layout": "subset",
+      "shade": "none",
+      "caption": "A ⊆ B: A = {1, 2, 3}, B = {0, 1, 2, 3, 4}."
+    },
+    "walkthrough": [
+      "Bada circle = B.",
+      "Chhota circle = A, B ke andar.",
+      "A ke saare elements B mein hain."
+    ],
+    "example": {
+      "q": "A = {1, 2, 3} aur B = {0, 1, 2, 3, 4}: A ⊆ B?",
+      "a": "Haan, A ⊆ B."
+    },
+    "questions": [
+      "mt1-d-m06"
+    ]
+  },
+  "mt1-p009a": {
+    "context": "Union ka Venn diagram: dono sets ka combined area.",
+    "venn": {
+      "layout": "overlap",
+      "shade": "A|B",
+      "caption": "A ∪ B: A = {1, 2, 3, 4, 5}, B = {3, 5, 7, 9}."
+    },
+    "walkthrough": [
+      "Dono circles dekho.",
+      "Dono ka poora area shade karo.",
+      "Result: A ∪ B = {1, 2, 3, 4, 5, 7, 9}."
+    ],
+    "example": {
+      "q": "A = {1,2,3,4,5}, B = {3,5,7,9}: A ∪ B?",
+      "a": "{1, 2, 3, 4, 5, 7, 9}."
+    },
+    "questions": [
+      "mt1-d-m01"
+    ]
+  },
+  "mt1-p009b": {
+    "context": "Intersection ka Venn diagram: sirf overlap.",
+    "venn": {
+      "layout": "overlap",
+      "shade": "A&B",
+      "caption": "A ∩ B: A = {1, 2, 3, 4, 5}, B = {3, 5, 7, 9}."
+    },
+    "walkthrough": [
+      "Dono circles ka common hissa dekho.",
+      "Sirf overlap shade karo.",
+      "Result: A ∩ B = {3, 5}."
+    ],
+    "example": {
+      "q": "A = {1,2,3,4,5}, B = {3,5,7,9}: A ∩ B?",
+      "a": "{3, 5}."
+    },
+    "questions": [
+      "mt1-d-m02"
+    ]
+  },
+  "mt1-p009c": {
+    "context": "Complement ka Venn diagram: universal set ka wo hissa jo A mein nahi hai.",
+    "venn": {
+      "layout": "overlap",
+      "shade": "U-A",
+      "caption": "A' = U - A: U = {1..10}, A = {1, 2, 4, 5, 9}."
+    },
+    "walkthrough": [
+      "Rectangle U ko dekho.",
+      "Circle A ke bahar ka area shade karo.",
+      "Result: A' = {3, 6, 7, 8, 10}."
+    ],
+    "example": {
+      "q": "U = {1..10}, A = {1, 2, 4, 5, 9}: A' ?",
+      "a": "{3, 6, 7, 8, 10}."
+    },
+    "questions": [
+      "mt1-d-m03"
+    ]
+  },
+  "mt1-p014a": {
+    "context": "A - B: circle A ka wo hissa jo circle B mein nahi.",
+    "venn": {
+      "layout": "overlap",
+      "shade": "A-B",
+      "caption": "A - B: A = {1, 2, 3, 4, 5}, B = {2, 4, 6, 7}. A - B = {1, 3, 5}."
+    },
+    "walkthrough": [
+      "Pehle A circle dekho.",
+      "B wale overlap ko chhod do.",
+      "Bacha hua A ka hissa = A - B."
+    ],
+    "example": {
+      "q": "A = {1,2,3,4,5}, B = {2,4,6,7}: A - B?",
+      "a": "{1, 3, 5}."
+    },
+    "questions": [
+      "mt1-d-m04",
+      "mt1-d-s02"
+    ]
+  },
+  "mt1-p014b": {
+    "context": "B - A: circle B ka wo hissa jo circle A mein nahi.",
+    "venn": {
+      "layout": "overlap",
+      "shade": "B-A",
+      "caption": "B - A: A = {1, 2, 3, 4, 5}, B = {2, 4, 6, 7}. B - A = {6, 7}."
+    },
+    "walkthrough": [
+      "Pehle B circle dekho.",
+      "A wale overlap ko chhod do.",
+      "Bacha hua B ka hissa = B - A."
+    ],
+    "example": {
+      "q": "A = {1,2,3,4,5}, B = {2,4,6,7}: B - A?",
+      "a": "{6, 7}."
+    },
+    "questions": [
+      "mt1-d-s02"
+    ]
+  },
+  "mt1-p015": {
+    "context": "Symmetric difference: dono sets ke sirf ek-ek mein wale elements.",
+    "venn": {
+      "layout": "overlap",
+      "shade": "A^B",
+      "caption": "A Δ B: A = {2, 3, 5, 7, 8}, B = {1, 2, 4, 8, 9}. A Δ B = {1, 3, 4, 5, 7, 9}."
+    },
+    "walkthrough": [
+      "Overlap (common) ko chhod do.",
+      "Dono circles ka bacha hua hissa shade karo.",
+      "Formula: A Δ B = (A - B) ∪ (B - A)."
+    ],
+    "example": {
+      "q": "A = {2,3,5,7,8}, B = {1,2,4,8,9}: A Δ B?",
+      "a": "{1, 3, 4, 5, 7, 9}."
+    },
+    "questions": [
+      "mt1-d-m05",
+      "mt1-d-s01"
+    ]
+  },
+  "mt2-p002": {
+    "context": "AND (∧) ka truth table: dono inputs true hon tabhi output true.",
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "p ∧ q"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "4 rows banao (p, q ke 4 combination).",
+      "Har row mein p aur q dekho.",
+      "Sirf p = 1 aur q = 1 wali row mein output 1."
+    ],
+    "example": {
+      "q": "p = 1, q = 0 par p ∧ q?",
+      "a": "0 (dono true nahi)."
+    },
+    "questions": [
+      "mt2-d-m01"
+    ]
+  },
+  "mt2-p003a": {
+    "context": "OR (∨) ka truth table: koi ek input true ho to output true.",
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "p ∨ q"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "4 rows banao.",
+      "Dekho: kya p ya q true hai?",
+      "Sirf dono false wali row mein output 0."
+    ],
+    "example": {
+      "q": "p = 0 aur q = 1 par p ∨ q?",
+      "a": "1."
+    },
+    "questions": [
+      "mt2-d-m02"
+    ]
+  },
+  "mt2-p003b": {
+    "context": "Conditional (→): 'agar p to q'. Ye sirf ek case mein false hai.",
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "p → q"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "p ko hypothesis, q ko conclusion maano.",
+      "Sirf p = 1 aur q = 0 wali row false.",
+      "Baaki sab rows true."
+    ],
+    "example": {
+      "q": "p = 1, q = 0 par p → q?",
+      "a": "0 (false)."
+    },
+    "questions": [
+      "mt2-d-m03",
+      "mt2-d-s01"
+    ]
+  },
+  "mt2-p004": {
+    "context": "Biconditional (↔): 'p tab aur sirf tab q'. Dono same hon to true.",
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "p ↔ q"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Row mein p aur q dekho.",
+      "Dono same hon to 1.",
+      "Alag hon to 0."
+    ],
+    "example": {
+      "q": "p = 0 aur q = 0 par p ↔ q?",
+      "a": "1 (dono same)."
+    },
+    "questions": [
+      "mt2-d-m04"
+    ]
+  },
+  "mt2-p005a": {
+    "context": "Tautology: hamesha true. Example p ∨ ~p.",
+    "table": {
+      "head": [
+        "p",
+        "~p",
+        "p ∨ ~p"
+      ],
+      "rows": [
+        [
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "p aur ~p likho.",
+      "Har row mein p ya ~p mein se ek true hai.",
+      "Final column sab 1: tautology."
+    ],
+    "example": {
+      "q": "p ∨ ~p kab false hoga?",
+      "a": "Kabhi nahi, ye tautology hai."
+    },
+    "questions": [
+      "mt2-m11"
+    ]
+  },
+  "mt2-p005b": {
+    "context": "Contradiction: hamesha false. Example p ∧ ~p.",
+    "table": {
+      "head": [
+        "p",
+        "~p",
+        "p ∧ ~p"
+      ],
+      "rows": [
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "p aur ~p likho.",
+      "Dono ek saath true kabhi nahi hote.",
+      "Final column sab 0: contradiction."
+    ],
+    "example": {
+      "q": "p ∧ ~p ka value?",
+      "a": "Hamesha 0 (contradiction)."
+    },
+    "questions": [
+      "mt2-m12"
+    ]
+  },
+  "mt2-p006a": {
+    "context": "Slide Example 1: (p ∨ ~q) → (p ∧ q). Columns step by step banaye.",
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "~q",
+        "p ∨ ~q",
+        "p ∧ q",
+        "(p ∨ ~q) → (p ∧ q)"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Pehle ~q likho.",
+      "Phir p ∨ ~q aur p ∧ q.",
+      "Last column: left true, right false = false."
+    ],
+    "example": {
+      "q": "p = 0, q = 1 par final value?",
+      "a": "1 (p ∨ ~q = 0, to implication true)."
+    },
+    "questions": [
+      "mt2-d-m05"
+    ]
+  },
+  "mt2-p006b": {
+    "context": "Slide Example 4: (p → q) → r. Pehle p → q, phir uska r ke saath conditional.",
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "r",
+        "p → q",
+        "(p → q) → r"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Pehle p → q likho.",
+      "Phir (p → q) aur r ka conditional.",
+      "Agar (p → q) = 0 ho to result 1."
+    ],
+    "example": {
+      "q": "p = 1, q = 0, r = 0 par?",
+      "a": "1 (p → q = 0, phir 0 → 0 = 1)."
+    },
+    "questions": [
+      "mt2-d-m05"
+    ]
+  },
+  "mt2-p009a": {
+    "context": "Slide example: A = p → q aur B = ~q → ~p. Dono ki final columns same hain, isliye A ≡ B.",
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "A = p → q",
+        "B = ~q → ~p",
+        "A ↔ B"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "A aur B ki alag columns banao.",
+      "Dono columns row by row compare karo.",
+      "A ↔ B sab rows mein true: tautology, isliye A ≡ B."
+    ],
+    "example": {
+      "q": "p = 1, q = 0 par A aur B?",
+      "a": "A = 0, B = 0 (dono same, equivalent)."
+    },
+    "questions": [
+      "mt2-d-m06",
+      "mt2-s06"
+    ]
+  },
+  "mt2-p011": {
+    "context": "Distributive law: p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r). Dono sides ka table compare karo.",
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "r",
+        "q ∨ r",
+        "LHS p ∧ (q ∨ r)",
+        "p ∧ q",
+        "p ∧ r",
+        "RHS (p ∧ q) ∨ (p ∧ r)"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "q ∨ r banao.",
+      "LHS = p ∧ (q ∨ r) banao.",
+      "RHS = (p ∧ q) ∨ (p ∧ r) banao aur LHS se compare karo."
+    ],
+    "example": {
+      "q": "p = 1, q = 0, r = 1 par LHS?",
+      "a": "1."
+    },
+    "questions": [
+      "mt2-d-m07",
+      "mt2-d-s02"
+    ]
+  },
+  "mt3-p001": {
+    "context": "Matrix ka order rows × columns se batate hain. Element a_ij = row i, column j.",
+    "table": {
+      "head": [
+        "Symbol",
+        "Matlab"
+      ],
+      "rows": [
+        [
+          "m",
+          "rows ki sankhya"
+        ],
+        [
+          "n",
+          "columns ki sankhya"
+        ],
+        [
+          "Order",
+          "m × n"
+        ],
+        [
+          "a_ij",
+          "row i aur column j ka element"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Pehle rows gino (m), phir columns (n).",
+      "Order = m × n.",
+      "a_ij mein pehla index row, doosra column."
+    ],
+    "example": {
+      "q": "2 rows aur 3 columns wale matrix ka order?",
+      "a": "2 × 3."
+    },
+    "questions": [
+      "mt3-d-m01"
+    ]
+  },
+  "mt3-p002": {
+    "context": "Row, column aur zero matrix: order se pehchano.",
+    "table": {
+      "head": [
+        "Type",
+        "Shape",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Row matrix",
+          "1 × n",
+          "[2 4]"
+        ],
+        [
+          "Column matrix",
+          "m × 1",
+          "[1; −2; 5]"
+        ],
+        [
+          "Zero matrix",
+          "koi bhi",
+          "sab elements 0"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Rows gino: 1 row = row matrix.",
+      "1 column = column matrix.",
+      "Sab elements 0 = zero matrix."
+    ],
+    "example": {
+      "q": "[2 4 6] kis type ka hai?",
+      "a": "Row matrix (1 × 3)."
+    },
+    "questions": [
+      "mt3-d-m02"
+    ]
+  },
+  "mt3-p003": {
+    "context": "Square matrix ke special types: diagonal, scalar, identity.",
+    "table": {
+      "head": [
+        "Type",
+        "Diagonal ke bahar",
+        "Diagonal par"
+      ],
+      "rows": [
+        [
+          "Diagonal",
+          "sab 0",
+          "kuch bhi"
+        ],
+        [
+          "Scalar",
+          "sab 0",
+          "sab barabar"
+        ],
+        [
+          "Identity (I)",
+          "sab 0",
+          "sab 1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Pehle check karo square hai ya nahi.",
+      "Diagonal ke bahar sab 0 hain?",
+      "Diagonal values barabar hain? Ya sab 1?"
+    ],
+    "example": {
+      "q": "3 × 3 identity matrix ka diagonal?",
+      "a": "1, 1, 1."
+    },
+    "questions": [
+      "mt3-d-m03"
+    ]
+  },
+  "mt3-p004": {
+    "context": "Triangular matrix: ek side ke sab entries 0.",
+    "table": {
+      "head": [
+        "Type",
+        "Zero entries",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Upper triangular",
+          "diagonal ke neeche (i > j)",
+          "[[1, 2, 3], [0, 4, 5], [0, 0, 6]]"
+        ],
+        [
+          "Lower triangular",
+          "diagonal ke upar (i < j)",
+          "[[1, 0, 0], [2, 4, 0], [3, 5, 6]]"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Matrix square hai ya nahi, pehle dekho.",
+      "Diagonal ke neeche 0 hain? Upper.",
+      "Diagonal ke upar 0 hain? Lower."
+    ],
+    "example": {
+      "q": "Upper triangular mein kya zero hai?",
+      "a": "Diagonal ke neeche ke sab entries."
+    },
+    "questions": [
+      "mt3-d-m04"
+    ]
+  },
+  "mt3-p005": {
+    "context": "Symmetric: A = Aᵀ. Transpose mein rows aur columns badalte hain.",
+    "table": {
+      "head": [
+        "Matrix",
+        "Row 1",
+        "Row 2"
+      ],
+      "rows": [
+        [
+          "A = [[2, 3], [3, 4]]",
+          "2  3",
+          "3  4"
+        ],
+        [
+          "Aᵀ",
+          "2  3",
+          "3  4"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "A ka transpose likho (rows ↔ columns).",
+      "A aur Aᵀ compare karo.",
+      "Barabar hain to symmetric."
+    ],
+    "example": {
+      "q": "Kya [[1, 4], [4, 7]] symmetric hai?",
+      "a": "Haan, 4 = 4 (off-diagonal)."
+    },
+    "questions": [
+      "mt3-d-s01"
+    ]
+  },
+  "mt3-p013": {
+    "context": "Slide example: A = [[0, 1], [1, 0]] ke liye A² = I.",
+    "table": {
+      "head": [
+        "Matrix",
+        "Row 1",
+        "Row 2"
+      ],
+      "rows": [
+        [
+          "A",
+          "0  1",
+          "1  0"
+        ],
+        [
+          "A²",
+          "1  0",
+          "0  1"
+        ],
+        [
+          "I",
+          "1  0",
+          "0  1"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "A × A banao: row × column.",
+      "Har element: row ka sum (product) column se.",
+      "Result identity I ke barabar."
+    ],
+    "example": {
+      "q": "A² kya hai?",
+      "a": "I (identity matrix)."
+    },
+    "questions": [
+      "mt3-d-m05",
+      "mt3-s05"
+    ]
+  },
+  "mt3-p016": {
+    "context": "3 × 3 determinant: first row ke saath cofactor expansion. Slide example A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]].",
+    "table": {
+      "head": [
+        "Term",
+        "Minor",
+        "Value"
+      ],
+      "rows": [
+        [
+          "+1 × a₁₁ (1)",
+          "M₁₁ = −3",
+          "1 × (−3) = −3"
+        ],
+        [
+          "−2 × a₁₂ (2)",
+          "M₁₂ = −6",
+          "−2 × (−6) = +12"
+        ],
+        [
+          "+3 × a₁₃ (3)",
+          "M₁₃ = −3",
+          "3 × (−3) = −9"
+        ],
+        [
+          "|A|",
+          "",
+          "−3 + 12 − 9 = 0"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Row 1 ke har element ke liye minor nikaalo.",
+      "Signs +, −, + lagao.",
+      "Teeno terms jod do: |A| = 0 (singular)."
+    ],
+    "example": {
+      "q": "Upar wala matrix singular hai?",
+      "a": "Haan, |A| = 0."
+    },
+    "questions": [
+      "mt3-d-m06",
+      "mt3-m14"
+    ]
+  },
+  "mt3-p019": {
+    "context": "Minor matrix: har element ka minor (row aur column hata kar bachi determinant).",
+    "table": {
+      "head": [
+        "Element a_ij",
+        "Minor M_ij",
+        "Value"
+      ],
+      "rows": [
+        [
+          "a₁₁ = 1",
+          "M₁₁",
+          "16"
+        ],
+        [
+          "a₁₂ = 5",
+          "M₁₂",
+          "−3"
+        ],
+        [
+          "a₁₃ = −2",
+          "M₁₃",
+          "36"
+        ],
+        [
+          "a₂₁ = 3",
+          "M₂₁",
+          "−7"
+        ],
+        [
+          "a₂₂ = −4",
+          "M₂₂",
+          "9"
+        ],
+        [
+          "a₂₃ = −1",
+          "M₂₃",
+          "−26"
+        ],
+        [
+          "a₃₁ = 6",
+          "M₃₁",
+          "−13"
+        ],
+        [
+          "a₃₂ = 4",
+          "M₃₂",
+          "5"
+        ],
+        [
+          "a₃₃ = −3",
+          "M₃₃",
+          "−19"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Element ki row aur column cover karo.",
+      "Bachche 2 × 2 matrix ki determinant nikaalo.",
+      "9 values ko same order mein rakho: minor matrix M = [[16, −3, 36], [−7, 9, −26], [−13, 5, −19]]."
+    ],
+    "example": {
+      "q": "M₁₁ kitna hai?",
+      "a": "16 (−4·−3 − (−1)·4 = 12 + 4)."
+    },
+    "questions": [
+      "mt3-d-m07",
+      "mt3-d-s02"
+    ]
+  },
+  "mt3-p021a": {
+    "context": "Cofactor C_ij = (−1)^(i+j) · M_ij. Signs: + − + / − + − / + − +.",
+    "table": {
+      "head": [
+        "Cofactor matrix C",
+        "Col 1",
+        "Col 2",
+        "Col 3"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "16",
+          "3",
+          "36"
+        ],
+        [
+          "Row 2",
+          "7",
+          "9",
+          "26"
+        ],
+        [
+          "Row 3",
+          "−13",
+          "−5",
+          "−19"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Har minor ke aage sign lagao (+ − + pattern).",
+      "Sign lagane ke baad C₁₂ = −(−3) = 3.",
+      "9 values ko C matrix mein rakho."
+    ],
+    "example": {
+      "q": "C₁₂ kitna hai?",
+      "a": "3 (sign − × minor −3)."
+    },
+    "questions": [
+      "mt3-d-m08"
+    ]
+  },
+  "mt3-p021b": {
+    "context": "Adjoint = cofactor matrix ka transpose: adj(A) = Cᵀ.",
+    "table": {
+      "head": [
+        "adj(A) = Cᵀ",
+        "Col 1",
+        "Col 2",
+        "Col 3"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "16",
+          "7",
+          "−13"
+        ],
+        [
+          "Row 2",
+          "3",
+          "9",
+          "−5"
+        ],
+        [
+          "Row 3",
+          "36",
+          "26",
+          "−19"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Cofactor matrix C lo.",
+      "Rows aur columns badlo (transpose).",
+      "Ye adjoint hai."
+    ],
+    "example": {
+      "q": "adj(A) ki row 1?",
+      "a": "16, 7, −13 (C ki column 1)."
+    },
+    "questions": [
+      "mt3-d-s03",
+      "mt3-m16"
+    ]
+  },
+  "mt3-p026": {
+    "context": "2 × 2 inverse: A⁻¹ = adj(A)/|A|. Slide example A = [[2, 4], [3, 8]].",
+    "table": {
+      "head": [
+        "Step",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Matrix A",
+          "[[2, 4], [3, 8]]"
+        ],
+        [
+          "|A|",
+          "2·8 − 4·3 = 4"
+        ],
+        [
+          "adj(A)",
+          "[[8, −4], [−3, 2]]"
+        ],
+        [
+          "A⁻¹ = adj(A)/|A|",
+          "[[2, −1], [−3/4, 1/2]]"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Pehle |A| nikaalo. 0 nahi to inverse exist karta hai.",
+      "2 × 2 adjoint: diagonal swap, baaki ka sign badlo.",
+      "Har element ko |A| se divide karo."
+    ],
+    "example": {
+      "q": "A⁻¹ ka (1,1) element?",
+      "a": "2 (8/4)."
+    },
+    "questions": [
+      "mt3-d-m09",
+      "mt3-s09"
+    ]
+  },
+  "mt3-p030": {
+    "context": "3 × 3 inverse. Slide example A = [[4, 1, −1], [2, 0, 3], [5, 1, 2]].",
+    "table": {
+      "head": [
+        "Step",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Matrix A",
+          "[[4, 1, −1], [2, 0, 3], [5, 1, 2]]"
+        ],
+        [
+          "|A|",
+          "−3"
+        ],
+        [
+          "Cofactor matrix C",
+          "[[−3, 11, 2], [−3, 13, 1], [3, −14, −2]]"
+        ],
+        [
+          "adj(A) = Cᵀ",
+          "[[−3, −3, 3], [11, 13, −14], [2, 1, −2]]"
+        ],
+        [
+          "A⁻¹ = adj(A) / (−3)",
+          "[[1, 1, −1], [−11/3, −13/3, 14/3], [−2/3, −1/3, 2/3]]"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "|A| nikaalo: −3 (≠ 0, to inverse exist karta hai).",
+      "Cofactor matrix banao (9 cofactors).",
+      "Transpose lo: adj(A).",
+      "Har element ko |A| = −3 se divide karo."
+    ],
+    "example": {
+      "q": "|A| = −3 ho to A⁻¹ = ?",
+      "a": "adj(A) / (−3)."
+    },
+    "questions": [
+      "mt3-d-m10"
+    ]
+  },
+  "mt1-p010a": {
+    "context": "Complement: universal set ka wo hissa jo A mein nahi.",
+    "walkthrough": [
+      "U ko rectangle maano.",
+      "Circle A ke bahar ka area shade karo.",
+      "Bache hue elements likho: A' = {3, 6, 7, 8, 10}."
+    ],
+    "example": {
+      "q": "U = {1..10}, A = {1, 2, 4, 5, 9}: A'?",
+      "a": "{3, 6, 7, 8, 10}."
+    },
+    "questions": [
+      "mt1-d-m03",
+      "mt1-w-s01"
+    ],
+    "venn": {
+      "layout": "single",
+      "shade": "U-A",
+      "caption": "A' : U = {1..10}, A = {1, 2, 4, 5, 9}, A' = {3, 6, 7, 8, 10}."
+    }
+  },
+  "mt1-p010b": {
+    "context": "Union ka example, slide ke jaisa.",
+    "walkthrough": [
+      "A ke elements likho: 1, 2, 3, 4, 5.",
+      "B ke elements likho: 3, 5, 7, 9.",
+      "Dono ko jodo, duplicates hatao."
+    ],
+    "example": {
+      "q": "A = {1,2,3,4,5}, B = {3,5,7,9}: A ∪ B?",
+      "a": "{1, 2, 3, 4, 5, 7, 9}."
+    },
+    "questions": [
+      "mt1-d-m01"
+    ],
+    "venn": {
+      "shade": "A|B",
+      "caption": "A = {1, 2, 3, 4, 5}, B = {3, 5, 7, 9}: A ∪ B = {1, 2, 3, 4, 5, 7, 9}."
+    }
+  },
+  "mt1-p011": {
+    "context": "Intersection ka example, slide ke jaisa.",
+    "walkthrough": [
+      "A aur B ke common elements dhoondo.",
+      "Sirf overlap shade karo.",
+      "Result: {3, 5}."
+    ],
+    "example": {
+      "q": "A = {1,2,3,4,5}, B = {3,5,7,9}: A ∩ B?",
+      "a": "{3, 5}."
+    },
+    "questions": [
+      "mt1-d-m02"
+    ],
+    "venn": {
+      "shade": "A&B",
+      "caption": "A = {1, 2, 3, 4, 5}, B = {3, 5, 7, 9}: A ∩ B = {3, 5}."
+    }
+  },
+  "mt1-p018r": {
+    "context": "Slide p018/p019 ke example: A = {1,2,4,5}, B = {6,7,9,10}, C = {1,2,9,10}, U = {1..10}.",
+    "walkthrough": [
+      "Har element dekho: kis set mein hai?",
+      "Ek element ek hi region mein jata hai.",
+      "Jo kisi set mein nahi, wo bahar hai."
+    ],
+    "example": {
+      "q": "Element 9 kis region mein hai?",
+      "a": "B ∩ C (sirf B aur C dono mein)."
+    },
+    "questions": [
+      "mt1-w-s04",
+      "mt1-w-s06"
+    ],
+    "table": {
+      "head": [
+        "Region",
+        "Elements"
+      ],
+      "rows": [
+        [
+          "A (sirf)",
+          "{4, 5}"
+        ],
+        [
+          "B (sirf)",
+          "{6, 7}"
+        ],
+        [
+          "A ∩ C",
+          "{1, 2}"
+        ],
+        [
+          "B ∩ C",
+          "{9, 10}"
+        ],
+        [
+          "Bahar",
+          "{3, 8}"
+        ]
+      ]
+    },
+    "venn3": {
+      "regions": {
+        "AC": [
+          1,
+          2
+        ],
+        "none": [
+          3,
+          8
+        ],
+        "A": [
+          4,
+          5
+        ],
+        "B": [
+          6,
+          7
+        ],
+        "BC": [
+          9,
+          10
+        ]
+      },
+      "caption": "U = {1..10}, A = {1, 2, 4, 5}, B = {6, 7, 9, 10}, C = {1, 2, 9, 10}."
+    }
+  },
+  "mt1-p017r": {
+    "context": "Slide p016–p018: U = factors of 48, A = factors of 24, B = factors of 12, C = factors of 8.",
+    "walkthrough": [
+      "Har divisor ke liye dekho: A, B, C mein se kaun sa?",
+      "16 aur 48 kisi set mein nahi (U mein hain).",
+      "Sets ke union/intersection ke liye regions se padho."
+    ],
+    "example": {
+      "q": "A ∪ B aur A ∩ B kya hai?",
+      "a": "A ∪ B = {1,2,3,4,6,8,12,24}; A ∩ B = {1,2,3,4,6,12}."
+    },
+    "questions": [
+      "mt1-w-s01",
+      "mt1-w-s02"
+    ],
+    "table": {
+      "head": [
+        "Region",
+        "Elements"
+      ],
+      "rows": [
+        [
+          "A (sirf)",
+          "{24}"
+        ],
+        [
+          "A ∩ B",
+          "{3, 6, 12}"
+        ],
+        [
+          "A ∩ C",
+          "{8}"
+        ],
+        [
+          "A ∩ B ∩ C",
+          "{1, 2, 4}"
+        ],
+        [
+          "Bahar",
+          "{16, 48}"
+        ]
+      ]
+    },
+    "venn3": {
+      "regions": {
+        "ABC": [
+          1,
+          2,
+          4
+        ],
+        "AB": [
+          3,
+          6,
+          12
+        ],
+        "AC": [
+          8
+        ],
+        "none": [
+          16,
+          48
+        ],
+        "A": [
+          24
+        ]
+      },
+      "caption": "U = factors of 48, A = factors of 24, B = factors of 12, C = factors of 8."
+    }
+  },
+  "mt1-p021r": {
+    "context": "Slide p021: U = {11..20}, A = {11, 13, 15, 18}, B = {12, 14, 16, 17, 18}, C = {18, 19, 20}.",
+    "walkthrough": [
+      "Har element ka region dekho.",
+      "18 A, B, C teeno mein hai.",
+      "Jo kisi mein nahi, wo bahar."
+    ],
+    "example": {
+      "q": "19 kis region mein?",
+      "a": "Sirf C."
+    },
+    "questions": [
+      "mt1-w-s07",
+      "mt1-w-s08",
+      "mt1-w-s09"
+    ],
+    "table": {
+      "head": [
+        "Region",
+        "Elements"
+      ],
+      "rows": [
+        [
+          "A (sirf)",
+          "{11, 13, 15}"
+        ],
+        [
+          "B (sirf)",
+          "{12, 14, 16, 17}"
+        ],
+        [
+          "C (sirf)",
+          "{19, 20}"
+        ],
+        [
+          "A ∩ B ∩ C",
+          "{18}"
+        ]
+      ]
+    },
+    "venn3": {
+      "regions": {
+        "A": [
+          11,
+          13,
+          15
+        ],
+        "B": [
+          12,
+          14,
+          16,
+          17
+        ],
+        "ABC": [
+          18
+        ],
+        "C": [
+          19,
+          20
+        ]
+      },
+      "caption": "U = {11..20}, A = {11, 13, 15, 18}, B = {12, 14, 16, 17, 18}, C = {18, 19, 20}."
+    }
+  },
+  "mt2-p006c": {
+    "context": "Slide Example 2 (pehle 'do it yourself' tha). p aur q ke 4 rows.",
+    "walkthrough": [
+      "~p aur ~q likho.",
+      "~p ∧ ~q aur p ∨ q banao.",
+      "Last column: left → right."
+    ],
+    "example": {
+      "q": "p = 0, q = 0 par result?",
+      "a": "0."
+    },
+    "questions": [
+      "mt2-w-s01"
+    ],
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "~p ∧ ~q",
+        "p ∨ q",
+        "Result"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1",
+          "1"
+        ]
+      ]
+    }
+  },
+  "mt2-p006d": {
+    "context": "Slide Example 3: (i) p ∨ q ∨ r, (ii) p ∧ q ∧ r.",
+    "walkthrough": [
+      "8 rows (pqr 000 se 111).",
+      "OR: koi ek 1 ho to 1.",
+      "AND: sab 1 ho to 1 (sirf 111)."
+    ],
+    "example": {
+      "q": "p=1, q=0, r=0 par p ∧ q ∧ r?",
+      "a": "0."
+    },
+    "questions": [
+      "mt2-w-s02",
+      "mt2-w-m01"
+    ],
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "r",
+        "p ∨ q ∨ r",
+        "p ∧ q ∧ r"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    }
+  },
+  "mt2-p007a": {
+    "context": "Slide Example 5: (~p → q) → ~r.",
+    "walkthrough": [
+      "~p likho.",
+      "~p → q likho.",
+      "~r likho.",
+      "Last: (~p → q) → ~r."
+    ],
+    "example": {
+      "q": "p=1, q=0, r=0 par result?",
+      "a": "1."
+    },
+    "questions": [
+      "mt2-w-s03"
+    ],
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "r",
+        "~p",
+        "~p → q",
+        "~r",
+        "Result"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      ]
+    }
+  },
+  "mt2-p007b": {
+    "context": "Slide Example 6: (~p ∧ q) → r.",
+    "walkthrough": [
+      "~p ∧ q likho.",
+      "Phir → r lagao.",
+      "Sirf (~p ∧ q) = 1 aur r = 0 par 0."
+    ],
+    "example": {
+      "q": "p=0, q=1, r=0 par?",
+      "a": "0."
+    },
+    "questions": [
+      "mt2-w-s04"
+    ],
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "r",
+        "~p ∧ q",
+        "Result"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "0",
+          "1"
+        ]
+      ]
+    }
+  },
+  "mt2-p007c": {
+    "context": "Slide Example 7: ~[(p ∨ ~q) ∧ ~r].",
+    "walkthrough": [
+      "p ∨ ~q likho.",
+      "~r likho.",
+      "AND karo, phir NOT (~) lagao."
+    ],
+    "example": {
+      "q": "p=0, q=0, r=0 par result?",
+      "a": "0 (p ∨ ~q = 1, ~r = 1, AND = 1, NOT = 0)."
+    },
+    "questions": [
+      "mt2-w-s05"
+    ],
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "r",
+        "p ∨ ~q",
+        "~r",
+        "(p ∨ ~q) ∧ ~r",
+        "Result"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ]
+      ]
+    }
+  },
+  "mt2-p008a": {
+    "context": "Slide Example 8: tautology check.",
+    "walkthrough": [
+      "~(p ∨ q) likho.",
+      "~q ∨ r likho.",
+      "Last column sab 1 hai, isliye tautology."
+    ],
+    "example": {
+      "q": "Ye tautology hai?",
+      "a": "Haan."
+    },
+    "questions": [
+      "mt2-w-m01",
+      "mt2-w-s06"
+    ],
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "r",
+        "~(p ∨ q)",
+        "~q ∨ r",
+        "Result"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "0",
+          "1",
+          "1"
+        ]
+      ]
+    }
+  },
+  "mt2-p008b": {
+    "context": "Slide Example 9: (~p ∧ q) ∨ (~r ∧ q).",
+    "walkthrough": [
+      "~p ∧ q likho.",
+      "~r ∧ q likho.",
+      "OR karo."
+    ],
+    "example": {
+      "q": "p=0, q=1, r=1 par?",
+      "a": "1 (~p ∧ q = 1)."
+    },
+    "questions": [
+      "mt2-w-s07"
+    ],
+    "table": {
+      "head": [
+        "p",
+        "q",
+        "r",
+        "~p ∧ q",
+        "~r ∧ q",
+        "Result"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    }
+  },
+  "mt3-p010": {
+    "context": "Slide p010: A = [[2, 3, 5], [8, 1, 2], [9, 2, 7]], B = [[1, 3, 5], [2, 5, 7], [9, 1, 0]].",
+    "walkthrough": [
+      "A ki row 1 ko B ki column 1 se multiply karo.",
+      "Har element = row × column ka sum.",
+      "Result 3 × 3 matrix."
+    ],
+    "example": {
+      "q": "(A·B)₁₁ kitna hai?",
+      "a": "2·1 + 3·2 + 5·9 = 53."
+    },
+    "questions": [
+      "mt3-w-s01",
+      "mt3-w-s02"
+    ],
+    "table": {
+      "head": [
+        "A·B",
+        "Col 1",
+        "Col 2",
+        "Col 3"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "53",
+          "26",
+          "31"
+        ],
+        [
+          "Row 2",
+          "28",
+          "31",
+          "47"
+        ],
+        [
+          "Row 3",
+          "76",
+          "44",
+          "59"
+        ]
+      ]
+    }
+  },
+  "mt3-p011": {
+    "context": "Slide p011: A (3 × 2), B (2 × 4).",
+    "walkthrough": [
+      "Check: A ke columns = B ke rows (2 = 2).",
+      "Result order: 3 × 4.",
+      "Har element row × column se."
+    ],
+    "example": {
+      "q": "Result ka order?",
+      "a": "3 × 4."
+    },
+    "questions": [
+      "mt3-w-s04"
+    ],
+    "table": {
+      "head": [
+        "A·B",
+        "Col 1",
+        "Col 2",
+        "Col 3",
+        "Col 4"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "-7",
+          "29",
+          "-30",
+          "-7"
+        ],
+        [
+          "Row 2",
+          "-16",
+          "69",
+          "-73",
+          "-14"
+        ],
+        [
+          "Row 3",
+          "3",
+          "50",
+          "-89",
+          "49"
+        ]
+      ]
+    }
+  },
+  "mt3-p012a": {
+    "context": "Slide p012: A = [[1, 2], [0, 3], [4, 5]], B = [[1, 0, 4], [2, 3, 5]].",
+    "walkthrough": [
+      "Order check: 3 × 2 aur 2 × 3 → 3 × 3.",
+      "Row × column se har element.",
+      "Result 3 × 3."
+    ],
+    "example": {
+      "q": "(AB)₁₁?",
+      "a": "1·1 + 2·2 = 5."
+    },
+    "questions": [
+      "mt3-w-s05"
+    ],
+    "table": {
+      "head": [
+        "A·B",
+        "Col 1",
+        "Col 2",
+        "Col 3"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "5",
+          "6",
+          "14"
+        ],
+        [
+          "Row 2",
+          "6",
+          "9",
+          "15"
+        ],
+        [
+          "Row 3",
+          "14",
+          "15",
+          "41"
+        ]
+      ]
+    }
+  },
+  "mt3-p012b": {
+    "context": "Slide p012: B·A.",
+    "walkthrough": [
+      "B (2 × 3) × A (3 × 2) = 2 × 2.",
+      "Row × column.",
+      "AB aur BA alag order ke hain."
+    ],
+    "example": {
+      "q": "BA ka order?",
+      "a": "2 × 2."
+    },
+    "questions": [
+      "mt3-w-s05",
+      "mt3-w-s02"
+    ],
+    "table": {
+      "head": [
+        "B·A",
+        "Col 1",
+        "Col 2"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "17",
+          "22"
+        ],
+        [
+          "Row 2",
+          "22",
+          "38"
+        ]
+      ]
+    }
+  },
+  "mt3-p024": {
+    "context": "Slide p024 example: A = [[1, 2, 3], [4, 3, 2], [1, 0, 3]].",
+    "walkthrough": [
+      "Har element ka cofactor nikaalo.",
+      "Cofactor matrix C banao.",
+      "Transpose karo: adj(A) = Cᵀ."
+    ],
+    "example": {
+      "q": "|A| kitna hai?",
+      "a": "−20."
+    },
+    "questions": [
+      "mt3-w-s09",
+      "mt3-m16"
+    ],
+    "table": {
+      "head": [
+        "adj(A)",
+        "Col 1",
+        "Col 2",
+        "Col 3"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "9",
+          "-6",
+          "-5"
+        ],
+        [
+          "Row 2",
+          "-10",
+          "0",
+          "10"
+        ],
+        [
+          "Row 3",
+          "-3",
+          "2",
+          "-5"
+        ]
+      ]
+    }
+  },
+  "mt3-p028": {
+    "context": "Slide p027–p029: inverse 3 × 3 example.",
+    "walkthrough": [
+      "|A| = 15 (≠ 0), inverse exist karta hai.",
+      "adj(A) nikaalo.",
+      "Har element ko 15 se divide karo."
+    ],
+    "example": {
+      "q": "A⁻¹ ka (1,1) element?",
+      "a": "−3/15 = −1/5."
+    },
+    "questions": [
+      "mt3-w-s11"
+    ],
+    "table": {
+      "head": [
+        "A⁻¹ (|A| = 15)",
+        "Col 1",
+        "Col 2",
+        "Col 3"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "-1/5",
+          "2/5",
+          "0"
+        ],
+        [
+          "Row 2",
+          "1/15",
+          "-17/15",
+          "2/3"
+        ],
+        [
+          "Row 3",
+          "4/15",
+          "7/15",
+          "-1/3"
+        ]
+      ]
+    }
+  },
+  "mt3-p029": {
+    "context": "Slide p029 example: adj(A) for A = [[−1, 2, 3], [−4, 0, 5], [0, 1, 2]].",
+    "walkthrough": [
+      "Cofactor matrix banao.",
+      "Transpose karo.",
+      "Result adj(A)."
+    ],
+    "example": {
+      "q": "|A| kitna hai?",
+      "a": "9."
+    },
+    "questions": [
+      "mt3-w-s10"
+    ],
+    "table": {
+      "head": [
+        "adj(A)",
+        "Col 1",
+        "Col 2",
+        "Col 3"
+      ],
+      "rows": [
+        [
+          "Row 1",
+          "-5",
+          "-1",
+          "10"
+        ],
+        [
+          "Row 2",
+          "8",
+          "-2",
+          "-7"
+        ],
+        [
+          "Row 3",
+          "-4",
+          "1",
+          "8"
+        ]
+      ]
+    }
+  },
+  "mt1-p019a": {
+    "context": "Slide p019: A ∪ B shade, A ∩ B = φ (circles overlap nahi karte).",
+    "venn": {
+      "layout": "disjoint",
+      "shade": "A|B",
+      "caption": "A ∪ B = {1, 2, 4, 5, 6, 7, 9, 10}; A ∩ B = φ."
+    },
+    "walkthrough": [
+      "A aur B alag circles hain.",
+      "Dono circle ka area shade karo: union.",
+      "Koi overlap nahi, isliye A ∩ B = φ."
+    ],
+    "example": {
+      "q": "A ∩ B kya hai?",
+      "a": "φ (koi common element nahi)."
+    },
+    "questions": [
+      "mt1-w-s05",
+      "mt1-w-m01"
+    ]
+  },
+  "mt1-p020": {
+    "context": "Slide p020: A Δ B = (A − B) ∪ (B − A) = A ∪ B.",
+    "venn": {
+      "layout": "disjoint",
+      "shade": "A^B",
+      "caption": "A = {1, 2, 4, 5}, B = {6, 7, 9, 10}: A Δ B = {1, 2, 4, 5, 6, 7, 9, 10}."
+    },
+    "walkthrough": [
+      "A − B = A (koi element nahi katta).",
+      "B − A = B.",
+      "Union: A Δ B = A ∪ B."
+    ],
+    "example": {
+      "q": "A = {1,2,4,5}, B = {6,7,9,10}: A Δ B?",
+      "a": "{1, 2, 4, 5, 6, 7, 9, 10} (= A ∪ B)."
+    },
+    "questions": [
+      "mt1-w-s05",
+      "mt1-d-m05"
+    ]
+  }
+}

@@ -1,0 +1,594 @@
+{
+  "mcq": [
+    {
+      "id": "mt3-d-m01",
+      "topic": "3.1",
+      "q": "Matrix mein a_23 kis position par hai?",
+      "options": [
+        "Row 2, column 3",
+        "Row 3, column 2",
+        "Row 2 only",
+        "Column 2 only"
+      ],
+      "answer": 0,
+      "explanation": "a_ij ka matlab row i aur column j."
+    },
+    {
+      "id": "mt3-d-m02",
+      "topic": "3.1",
+      "q": "[2 4 6] kis type ka matrix hai?",
+      "options": [
+        "Row matrix",
+        "Column matrix",
+        "Square matrix",
+        "Zero matrix"
+      ],
+      "answer": 0,
+      "explanation": "Ek hi row hai, to ye row matrix hai (order 1 × 3)."
+    },
+    {
+      "id": "mt3-d-m03",
+      "topic": "3.1",
+      "q": "3 × 3 identity matrix I ke diagonal elements kya hain?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explanation": "Identity matrix mein diagonal par 1, aur baaki 0."
+    },
+    {
+      "id": "mt3-d-m04",
+      "topic": "3.2",
+      "q": "Upper triangular matrix mein kaunse entries zero hain?",
+      "options": [
+        "Diagonal ke neeche",
+        "Diagonal ke upar",
+        "Diagonal par",
+        "Koi nahi"
+      ],
+      "answer": 0,
+      "explanation": "Upper triangular: diagonal ke neeche sab 0."
+    },
+    {
+      "id": "mt3-d-m05",
+      "topic": "3.4",
+      "q": "A = [[0, 1], [1, 0]] ke liye A² kya hai?",
+      "options": [
+        "Zero matrix",
+        "I (identity)",
+        "A",
+        "2A"
+      ],
+      "answer": 1,
+      "explanation": "A² = I."
+    },
+    {
+      "id": "mt3-d-m06",
+      "topic": "3.6",
+      "q": "Cofactor expansion mein a₁₂ ke saath sign kaunsa hota hai?",
+      "options": [
+        "+",
+        "−",
+        "0",
+        "Koi sign nahi"
+      ],
+      "answer": 1,
+      "explanation": "Row 1 mein signs +, −, +. Middle wala term minus hai."
+    },
+    {
+      "id": "mt3-d-m07",
+      "topic": "3.6",
+      "q": "A = [[1, 5, −2], [3, −4, −1], [6, 4, −3]] ka M₁₁ (minor) kya hai?",
+      "options": [
+        "16",
+        "−3",
+        "36",
+        "−7"
+      ],
+      "answer": 0,
+      "explanation": "M₁₁ = (−4)(−3) − (−1)(4) = 12 + 4 = 16."
+    },
+    {
+      "id": "mt3-d-m08",
+      "topic": "3.6",
+      "q": "Cofactor C₁₂ ka sign kya hai?",
+      "options": [
+        "+",
+        "−",
+        "0",
+        "Koi sign nahi"
+      ],
+      "answer": 1,
+      "explanation": "C₁₂ = (−1)^(1+2) M₁₂ = −M₁₂."
+    },
+    {
+      "id": "mt3-d-m09",
+      "topic": "3.8",
+      "q": "A = [[2, 4], [3, 8]] ka |A| = 4 hai. Kya A⁻¹ exist karta hai?",
+      "options": [
+        "Haan",
+        "Nahi",
+        "Sirf square matrix ke liye",
+        "Pata nahi"
+      ],
+      "answer": 0,
+      "explanation": "|A| ≠ 0 hai, isliye inverse exist karta hai."
+    },
+    {
+      "id": "mt3-d-m10",
+      "topic": "3.8",
+      "q": "|A| = −3 hai. A⁻¹ kaise nikaloge?",
+      "options": [
+        "adj(A) × (−3)",
+        "adj(A) / (−3)",
+        "adj(A) + 3",
+        "adj(A) − 3"
+      ],
+      "answer": 1,
+      "explanation": "A⁻¹ = adj(A) / |A| = adj(A) / (−3)."
+    },
+    {
+      "id": "mt3-w-m01",
+      "topic": "3.5",
+      "q": "A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] ka determinant kya hai?",
+      "options": [
+        "0",
+        "1",
+        "−3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Row 3 = 2 × row 2 − row 1 hai (rows dependent), isliye |A| = 0 (cofactor expansion se bhi 0 aata hai)."
+    },
+    {
+      "id": "mt3-y-m01",
+      "topic": "3.1",
+      "q": "3 × 1 matrix ka type kya hai?",
+      "options": [
+        "Row matrix",
+        "Column matrix",
+        "Square matrix",
+        "Diagonal matrix"
+      ],
+      "answer": 1,
+      "explanation": "Ek column, 3 rows: column matrix."
+    },
+    {
+      "id": "mt3-y-m02",
+      "topic": "3.1",
+      "q": "Scalar matrix ka diagonal kaisa hota hai?",
+      "options": [
+        "Sab 0",
+        "Sab barabar",
+        "Random values",
+        "Sirf ek 1"
+      ],
+      "answer": 1,
+      "explanation": "Scalar matrix mein diagonal elements barabar hote hain."
+    },
+    {
+      "id": "mt3-y-m03",
+      "topic": "3.2",
+      "q": "A = [[1, 2], [3, 4]] ka transpose Aᵀ kya hai?",
+      "options": [
+        "[[1, 3], [2, 4]]",
+        "[[1, 2], [3, 4]]",
+        "[[4, 3], [2, 1]]",
+        "[[2, 1], [4, 3]]"
+      ],
+      "answer": 0,
+      "explanation": "Rows aur columns badlo: [[1, 3], [2, 4]]."
+    },
+    {
+      "id": "mt3-y-m04",
+      "topic": "3.2",
+      "q": "Lower triangular matrix mein kaunse entries zero hote hain?",
+      "options": [
+        "Diagonal ke upar",
+        "Diagonal ke neeche",
+        "Diagonal par",
+        "Koi nahi"
+      ],
+      "answer": 0,
+      "explanation": "Lower triangular: diagonal ke upar sab 0."
+    },
+    {
+      "id": "mt3-y-m05",
+      "topic": "3.3",
+      "q": "A (2 × 2) + B (3 × 2) possible hai?",
+      "options": [
+        "Haan",
+        "Nahi",
+        "Sirf square ho to",
+        "Sirf same rows ho to"
+      ],
+      "answer": 1,
+      "explanation": "Addition ke liye same order chahiye. Yahan orders alag hain."
+    },
+    {
+      "id": "mt3-y-m06",
+      "topic": "3.4",
+      "q": "A (2 × 3) × B (2 × 3) possible hai?",
+      "options": [
+        "Haan",
+        "Nahi",
+        "Sirf square ho to",
+        "Hamesha"
+      ],
+      "answer": 1,
+      "explanation": "A ke columns (3) = B ke rows (2)? Nahi, isliye possible nahi."
+    },
+    {
+      "id": "mt3-y-m07",
+      "topic": "3.5",
+      "q": "det [[2, 1], [1, 2]] kya hai?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "2·2 − 1·1 = 3."
+    },
+    {
+      "id": "mt3-y-m08",
+      "topic": "3.6",
+      "q": "3 × 3 matrix mein C₂₁ ka sign kya hota hai?",
+      "options": [
+        "+",
+        "−",
+        "0",
+        "Koi sign nahi"
+      ],
+      "answer": 1,
+      "explanation": "Sign (−1)^(2+1) = −1."
+    },
+    {
+      "id": "mt3-y-m09",
+      "topic": "3.7",
+      "q": "2 × 2 matrix [[a, b], [c, d]] ka adjoint kya hai?",
+      "options": [
+        "[[d, −b], [−c, a]]",
+        "[[a, b], [c, d]]",
+        "[[d, b], [c, a]]",
+        "[[−a, b], [c, −d]]"
+      ],
+      "answer": 0,
+      "explanation": "Diagonal swap, baaki ka sign badlo."
+    },
+    {
+      "id": "mt3-y-m10",
+      "topic": "3.8",
+      "q": "A · A⁻¹ kya hai?",
+      "options": [
+        "0",
+        "A",
+        "I",
+        "|A|"
+      ],
+      "answer": 2,
+      "explanation": "Inverse ki definition: A · A⁻¹ = I."
+    }
+  ],
+  "short": [
+    {
+      "id": "mt3-d-s01",
+      "topic": "3.2",
+      "q": "Symmetric matrix ki condition likho aur ek example do.",
+      "answer": "A = Aᵀ. Example: [[2, 3], [3, 4]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-d-s02",
+      "topic": "3.6",
+      "q": "Matrix [[1, 5, −2], [3, −4, −1], [6, 4, −3]] ka minor matrix likho.",
+      "answer": "M = [[16, −3, 36], [−7, 9, −26], [−13, 5, −19]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-d-s03",
+      "topic": "3.7",
+      "q": "Adjoint kaise nikaalte hain?",
+      "answer": "Cofactor matrix nikaalo, phir uska transpose lo: adj(A) = Cᵀ.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s01",
+      "topic": "3.4",
+      "q": "A = [[2, 3, 5], [8, 1, 2], [9, 2, 7]] aur B = [[1, 3, 5], [2, 5, 7], [9, 1, 0]]. A·B nikaalo.",
+      "answer": "A·B = [[53, 26, 31], [28, 31, 47], [76, 44, 59]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s02",
+      "topic": "3.4",
+      "q": "Same A aur B (A = [[2, 3, 5], [8, 1, 2], [9, 2, 7]], B = [[1, 3, 5], [2, 5, 7], [9, 1, 0]]). B·A nikaalo aur A·B se compare karo.",
+      "answer": "B·A = [[71, 16, 46], [107, 25, 69], [26, 28, 47]]. A·B ≠ B·A, matrix multiplication generally commutative nahi hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s03",
+      "topic": "3.4",
+      "q": "A = [[2, 0, 6], [3, 4, 0], [1, 0, 1]] aur B = [[1, 2, 4], [3, 5, 0], [7, 0, 1]]. A·B nikaalo.",
+      "answer": "A·B = [[44, 4, 14], [15, 26, 12], [8, 2, 5]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s04",
+      "topic": "3.4",
+      "q": "A = [[2, −3], [5, −7], [9, −2]] (3 × 2) aur B = [[1, 4, −9, 7], [3, −7, 4, 7]] (2 × 4). A·B possible hai? Order aur value likho.",
+      "answer": "Haan, possible (3 × 2 aur 2 × 4, order 3 × 4). A·B = [[-7, 29, -30, -7], [-16, 69, -73, -14], [3, 50, -89, 49]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s05",
+      "topic": "3.4",
+      "q": "A = [[1, 2], [0, 3], [4, 5]] (3 × 2) aur B = [[1, 0, 4], [2, 3, 5]] (2 × 3). AB aur BA nikaalo, order batao.",
+      "answer": "AB (3 × 3) = [[5, 6, 14], [6, 9, 15], [14, 15, 41]]; BA (2 × 2) = [[17, 22], [22, 38]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s06",
+      "topic": "3.4",
+      "q": "A = [[1, 2, 3], [1, 0, 3], [2, 4, 1]]. A² aur A³ nikaalo.",
+      "answer": "A² = [[9, 14, 12], [7, 14, 6], [8, 8, 19]]; A³ = [[47, 66, 81], [33, 38, 69], [54, 92, 67]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s07",
+      "topic": "3.4",
+      "q": "A = [[1, 2], [−3, 0]]. A² + 3A + 5I nikaalo (I = 2 × 2 identity).",
+      "answer": "A² + 3A + 5I = [[3, 8], [-12, -1]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s08",
+      "topic": "3.5",
+      "q": "Agar |A| = −6 aur |B| = 38 ho, to |AB| kya hoga? (Property: |AB| = |A|·|B|)",
+      "answer": "|AB| = |A|·|B| = (−6)(38) = −228.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s09",
+      "topic": "3.7",
+      "q": "A = [[1, 2, 3], [4, 3, 2], [1, 0, 3]]. |A| nikaalo aur adj(A) likho.",
+      "answer": "|A| = -20; adj(A) = [[9, -6, -5], [-10, 0, 10], [-3, 2, -5]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s10",
+      "topic": "3.7",
+      "q": "A = [[−1, 2, 3], [−4, 0, 5], [0, 1, 2]]. |A| aur adj(A) nikaalo.",
+      "answer": "|A| = 9; adj(A) = [[-5, -1, 10], [8, -2, -7], [-4, 1, 8]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-w-s11",
+      "topic": "3.8",
+      "q": "A = [[1, 2, 4], [3, 1, 2], [5, 3, 3]]. |A| nikaalo aur A⁻¹ = adj(A)/|A| se nikaalo.",
+      "answer": "|A| = 15; adj(A) = [[-3, 6, 0], [1, -17, 10], [4, 7, -5]]; A⁻¹ = [[-1/5, 2/5, 0], [1/15, -17/15, 2/3], [4/15, 7/15, -1/3]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s01",
+      "topic": "3.3",
+      "q": "A = [[2, −3, 4], [2, 5, 7], [3, 7, 9]] aur B = [[1, 2, 3], [10, 6, 7], [−4, 4, 2]]. A + B nikaalo.",
+      "answer": "A + B = [[3, -1, 7], [12, 11, 14], [-1, 11, 11]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s02",
+      "topic": "3.3",
+      "q": "A = [[11, −7, 4, 6], [2, 0, −1, 9]] aur B = [[0, −4, 3, 2], [−9, 5, 13, −9]]. A + B nikaalo.",
+      "answer": "A + B = [[11, -11, 7, 8], [-7, 5, 12, 0]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s03",
+      "topic": "3.3",
+      "q": "A = [[−11, 7, 5], [7, −12, 14], [5, 10, 2]] aur B = [[17, −9, 4], [6, −1, −20], [−8, 4, 7]]. A + B nikaalo.",
+      "answer": "A + B = [[6, -2, 9], [13, -13, -6], [-3, 14, 9]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s04",
+      "topic": "3.3",
+      "q": "A = [[2, 1, 3], [4, 5, 7], [7, 4, 11]] aur B = [[7, 3, 2], [9, −5, 1], [4, 4, 8]]. A − B aur B − A nikaalo.",
+      "answer": "A − B = [[-5, -2, 1], [-5, 10, 6], [3, 0, 3]]; B − A = [[5, 2, -1], [5, -10, -6], [-3, 0, -3]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s05",
+      "topic": "3.3",
+      "q": "A = [[2, 7, 1], [0, 9, 5], [6, 3, 1]], B = [[14, 5, 3], [1, 6, 4], [5, 8, 9]], C = [[8, 2, 6], [4, 7, −3], [−2, 1, −4]]. (A + B) − C nikaalo.",
+      "answer": "(A + B) − C = [[8, 10, -2], [-3, 8, 12], [13, 10, 14]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s06",
+      "topic": "3.3",
+      "q": "A = [[2, 3], [4, 6]]. 2A nikaalo.",
+      "answer": "2A = [[4, 6], [8, 12]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s07",
+      "topic": "3.3",
+      "q": "A = [[1, −4, 3], [6, 7, 9]]. (−3)A nikaalo.",
+      "answer": "(−3)A = [[-3, 12, -9], [-18, -21, -27]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s08",
+      "topic": "3.3",
+      "q": "A = [[−4, 5], [0, 6]] aur B = [[2, −4], [7, −3]]. 2A + 3B nikaalo.",
+      "answer": "2A + 3B = [[-2, -2], [21, 3]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s09",
+      "topic": "3.3",
+      "q": "A = [[1, 0, −1], [5, 2, 3], [−4, 2, 7]], B = [[−1, 8, 4], [−2, 6, 9], [−3, 0, 5]], C = [[−2, 7, 4], [0, 5, 6], [10, 7, 11]]. 3A + 4B − 2C nikaalo.",
+      "answer": "3A + 4B − 2C = [[3, 18, 5], [7, 20, 33], [-44, -8, 19]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s10",
+      "topic": "3.3",
+      "q": "A = [[−3, 2], [4, 6]] aur B = [[−2, 6], [−1, 7]]. (1/2)A + 3B nikaalo.",
+      "answer": "(1/2)A + 3B = [[−15/2, 19], [−1, 24]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s11",
+      "topic": "3.4",
+      "q": "A = [[1, 2], [3, 2]] aur B = [[3, 5], [9, 8]]. AB aur BA nikaalo.",
+      "answer": "AB = [[21, 21], [27, 31]]; BA = [[18, 16], [33, 34]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s12",
+      "topic": "3.5",
+      "q": "A = [[1, 3], [4, 5]]. |A| nikaalo.",
+      "answer": "|A| = (1)(5) − (3)(4) = -7",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s13",
+      "topic": "3.5",
+      "q": "A = [[2, 4], [6, 12]]. |A| nikaalo, aur batao kya A⁻¹ exist karta hai?",
+      "answer": "|A| = 24 − 24 = 0. |A| = 0, isliye A⁻¹ exist nahi karta.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s14",
+      "topic": "3.5",
+      "q": "A = [[−1, −2], [4, 10]]. |A| aur |Aᵀ| nikaalo.",
+      "answer": "|A| = (−1)(10) − (−2)(4) = -2; |Aᵀ| = -2. Dono barabar hain.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s15",
+      "topic": "3.5",
+      "q": "A = [[3, 2, 1], [5, 7, 9], [3, 2, 7]]. |A| nikaalo (cofactor expansion se).",
+      "answer": "|A| = 66",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s16",
+      "topic": "3.5",
+      "q": "A = [[−1, 0, 1], [1, 0, 0], [1, 1, −1]]. |A| nikaalo.",
+      "answer": "|A| = 1",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s17",
+      "topic": "3.5",
+      "q": "A = [[2, −3, 1], [4, 0, 3], [−1, 3, 5]]. |A| nikaalo.",
+      "answer": "|A| = 63",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s18",
+      "topic": "3.5",
+      "q": "A = [[4, 5], [2, 1]] aur B = [[7, 3], [6, 8]]. |AB|, |A| aur |B| nikaalo, aur |AB| = |A|·|B| verify karo.",
+      "answer": "AB = [[58, 52], [20, 14]]; |AB| = -228; |A| = -6; |B| = 38; |A|·|B| = -228. Equal.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s19",
+      "topic": "3.7",
+      "q": "A = [[−1, 3], [−5, 7]]. adj(A) nikaalo.",
+      "answer": "adj(A) = [[7, -3], [5, -1]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s20",
+      "topic": "3.7",
+      "q": "A = [[−1, −2], [−3, −4]]. adj(A) nikaalo.",
+      "answer": "adj(A) = [[-4, 2], [3, -1]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-x-s21",
+      "topic": "3.8",
+      "q": "A = [[4, 3], [1, 2]]. A⁻¹ nikaalo (|A| check karke).",
+      "answer": "|A| = 5; A⁻¹ = [[2/5, -3/5], [-1/5, 4/5]]",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s01",
+      "topic": "3.1",
+      "q": "Scalar matrix aur identity matrix mein difference likho.",
+      "answer": "Scalar: diagonal sab barabar (k); identity: diagonal sab 1 (k = 1).",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s02",
+      "topic": "3.2",
+      "q": "Lower triangular 3 × 3 matrix ka example likho.",
+      "answer": "[[1, 0, 0], [2, 4, 0], [3, 5, 6]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s03",
+      "topic": "3.2",
+      "q": "A (3 × 2) ka transpose ka order kya hoga?",
+      "answer": "2 × 3.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s04",
+      "topic": "3.3",
+      "q": "A = [[1, 2], [3, 4]] aur B = [[5, 6], [7, 8]]. 2A − B nikaalo.",
+      "answer": "2A = [[2, 4], [6, 8]]; 2A − B = [[−3, −2], [−1, 0]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s05",
+      "topic": "3.4",
+      "q": "A = [[1, 0], [0, 1]] (identity) aur B = [[2, 3], [4, 5]]. AB nikaalo.",
+      "answer": "AB = B = [[2, 3], [4, 5]] (identity se multiply karne par matrix nahi badalta).",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s06",
+      "topic": "3.5",
+      "q": "|A| = 0 ho to kya hota hai?",
+      "answer": "A singular hai, isliye A⁻¹ exist nahi karta.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s07",
+      "topic": "3.6",
+      "q": "Minor M₁₂ ka definition likho aur A = [[1, 2], [3, 4]] ka M₁₂ nikaalo.",
+      "answer": "M₁₂ = row 1 aur column 2 hatane ke baad bachi determinant. Bachha element 3, isliye M₁₂ = 3.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s08",
+      "topic": "3.7",
+      "q": "A = [[1, 2], [3, 4]] ka adjoint likho.",
+      "answer": "adj(A) = [[4, −2], [−3, 1]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s09",
+      "topic": "3.8",
+      "q": "A = [[2, 1], [1, 1]] ka inverse likho.",
+      "answer": "|A| = 1, adj(A) = [[1, −1], [−1, 2]], A⁻¹ = [[1, −1], [−1, 2]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-y-s10",
+      "topic": "3.4",
+      "q": "AB ≠ BA ka example do: A = [[1, 0], [0, 0]], B = [[0, 1], [0, 0]].",
+      "answer": "AB = [[0, 1], [0, 0]]; BA = [[0, 0], [0, 0]]. Dono alag hain.",
+      "marks": 2
+    }
+  ]
+}

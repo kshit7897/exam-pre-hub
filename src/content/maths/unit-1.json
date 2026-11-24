@@ -1,0 +1,273 @@
+{
+  "id": "unit-1",
+  "title": "Set Theory",
+  "topics": [
+    {
+      "id": "1.1",
+      "title": "Introduction and standard sets",
+      "notes": [
+        "A set is a collection of distinct elements (no repetition). We say an element belongs to a set using the symbol ∈.",
+        "N = natural numbers {1, 2, 3, ...}; Z = integers; Q = rational numbers (p/q, q ≠ 0); I = irrational numbers; R = real numbers.",
+        "R = Q ∪ I. Irrational examples: √2, π. Rational examples: -3, 0, 1/3, -5/2."
+      ]
+    },
+    {
+      "id": "1.2",
+      "title": "Methods to describe a set",
+      "notes": [
+        "Listing (roster) method: list all members in curly brackets, e.g. A = {1, 2, 3, 4, 5}.",
+        "Property (set-builder) method: describe the members by a property, e.g. A = {x | x ∈ N, x < 5}.",
+        "Both methods can describe the same set. Choose the one that is easier to read."
+      ]
+    },
+    {
+      "id": "1.3",
+      "title": "Types of sets",
+      "notes": [
+        "Null (empty) set: no elements, written as { } or φ. {φ} is NOT a null set (it has one element, φ).",
+        "Singleton set: exactly one element, e.g. {2}. Finite set: elements can be counted (or empty). Infinite set: elements cannot be counted, e.g. N.",
+        "Cardinality n(A) = number of elements of a finite set. Example: A = {a, e, i, o, u} gives n(A) = 5.",
+        "Subset A ⊆ B: every element of A is in B. Null set is a subset of every set. Every set is a subset of itself. A non-empty set has at least two subsets (φ and itself).",
+        "Equal sets A = B: same elements. Equivalent sets: n(A) = n(B). Equal sets are always equivalent, but equivalent sets need not be equal.",
+        "Universal set U: superset of all sets under consideration. Disjoint sets: A ∩ B = φ (no common element)."
+      ]
+    },
+    {
+      "id": "1.4",
+      "title": "Venn diagrams",
+      "notes": [
+        "A Venn diagram shows sets pictorially: the universal set U is the rectangle and every other set is a circle inside it.",
+        "Intersecting sets: circles overlap. Disjoint sets: circles do not overlap. Subset A ⊆ B: circle A lies inside circle B. Equal sets: the circles coincide.",
+        "Shade the required region to show the answer: union, intersection, complement, difference or symmetric difference."
+      ]
+    },
+    {
+      "id": "1.5",
+      "title": "Operations on sets",
+      "notes": [
+        "Union A ∪ B: all elements of A or B (or both). Intersection A ∩ B: only the common elements.",
+        "Complement A' = U - A: all elements of the universal set that are not in A.",
+        "Difference A - B: elements of A that are not in B. B - A is the reverse. A - B ≠ B - A in general.",
+        "Symmetric difference A Δ B = (A ∪ B) - (A ∩ B) = (A - B) ∪ (B - A): elements in exactly one of the two sets.",
+        "If A and B are disjoint, then A - B = A and B - A = B."
+      ]
+    },
+    {
+      "id": "1.6",
+      "title": "Algebra of sets and laws",
+      "notes": [
+        "Complement laws: A ∪ A' = U, A ∩ A' = φ, (A')' = A, U' = φ, φ' = U.",
+        "Identity laws: A ∪ φ = A, A ∩ U = A, A ∪ U = U, A ∩ φ = φ.",
+        "Commutative: A ∪ B = B ∪ A and A ∩ B = B ∩ A. Associative: A ∪ (B ∪ C) = (A ∪ B) ∪ C, same for ∩.",
+        "Distributive: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) and A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C).",
+        "De Morgan's laws: (A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'.",
+        "If A ⊆ B then A ∪ B = B and A ∩ B = A."
+      ]
+    },
+    {
+      "id": "1.7",
+      "title": "Power set and Cartesian product",
+      "notes": [
+        "Power set P(A): set of all subsets of A (including φ and A). If n(A) = n, then n(P(A)) = 2^n.",
+        "Cartesian product A × B: set of ordered pairs (x, y) with x ∈ A and y ∈ B. n(A × B) = n(A) × n(B).",
+        "A × B ≠ B × A in general (order matters), but n(A × B) = n(B × A). (A × B) ∩ (B × A) can be non-empty, e.g. when the pairs are (1,1)."
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "id": "m1-m01",
+      "topic": "1.1",
+      "q": "Which set is the set of natural numbers N?",
+      "options": ["{0, 1, 2, 3, ...}", "{1, 2, 3, 4, ...}", "{-1, -2, -3, ...}", "{x | x is a fraction}"],
+      "answer": 1,
+      "explanation": "Natural numbers (counting numbers) start from 1: N = {1, 2, 3, ...}."
+    },
+    {
+      "id": "m1-m02",
+      "topic": "1.1",
+      "q": "Which of these is an irrational number?",
+      "options": ["-3", "0", "1/3", "√2"],
+      "answer": 3,
+      "explanation": "√2 cannot be written as p/q with integers p, q (q ≠ 0). The others are rational."
+    },
+    {
+      "id": "m1-m03",
+      "topic": "1.2",
+      "q": "Which property describes the set A = {2, 4, 6, 8} ?",
+      "options": ["{x | x is an even natural number less than 10}", "{x | x is an odd number}", "{x | x is a prime number}", "{x | x is an integer}"],
+      "answer": 0,
+      "explanation": "2, 4, 6, 8 are the even natural numbers less than 10."
+    },
+    {
+      "id": "m1-m04",
+      "topic": "1.3",
+      "q": "Which is the correct notation for the null set?",
+      "options": ["{φ}", "{ }", "{0}", "{1}"],
+      "answer": 1,
+      "explanation": "{ } or φ is the null set. {φ} contains one element, so it is not the null set."
+    },
+    {
+      "id": "m1-m05",
+      "topic": "1.3",
+      "q": "If A = {a, e, i, o, u}, then n(A) is:",
+      "options": ["4", "5", "6", "0"],
+      "answer": 1,
+      "explanation": "A has 5 elements, so its cardinality is 5."
+    },
+    {
+      "id": "m1-m06",
+      "topic": "1.3",
+      "q": "If A = {1, 2, 3} and B = {0, 1, 2, 3, 4}, then:",
+      "options": ["B ⊆ A", "A ⊆ B", "A = B", "A and B are disjoint"],
+      "answer": 1,
+      "explanation": "Every element of A (1, 2, 3) is in B, so A ⊆ B."
+    },
+    {
+      "id": "m1-m07",
+      "topic": "1.3",
+      "q": "A non-empty set has at least how many subsets?",
+      "options": ["0", "1", "2", "3"],
+      "answer": 2,
+      "explanation": "At least two subsets: the null set φ and the set itself."
+    },
+    {
+      "id": "m1-m08",
+      "topic": "1.3",
+      "q": "Which statement is always true?",
+      "options": ["Equal sets are always equivalent", "Equivalent sets are always equal", "Equal sets are never equivalent", "Every subset is equal to the set"],
+      "answer": 0,
+      "explanation": "Equal sets have the same elements, so they have the same number of elements. Equivalent sets need not be equal."
+    },
+    {
+      "id": "m1-m09",
+      "topic": "1.3",
+      "q": "A = {-1, 0, 1} and B = {2, 4, 6, 8, 10}. A and B are:",
+      "options": ["Equal", "Disjoint", "Subsets of each other", "Universal sets"],
+      "answer": 1,
+      "explanation": "They have no common element, so A ∩ B = φ and the sets are disjoint."
+    },
+    {
+      "id": "m1-m10",
+      "topic": "1.5",
+      "q": "A = {1, 3, 5, 7, 9} and B = {2, 4, 6, 8, 9, 10}. Then A - B is:",
+      "options": ["{1, 3, 5, 7}", "{1, 3, 5, 7, 9}", "{9}", "{2, 4, 6, 8, 10}"],
+      "answer": 0,
+      "explanation": "A - B removes the elements of B from A. 9 is in B, so it is removed. Result: {1, 3, 5, 7}."
+    },
+    {
+      "id": "m1-m11",
+      "topic": "1.5",
+      "q": "A = {1, 2, 3, 4, 5, 6} and B = {2, 3, 4, 7, 8, 9}. Then A Δ B is:",
+      "options": ["{1, 5, 6, 7, 8, 9}", "{2, 3, 4}", "{1, 2, 3, 4, 5, 6, 7, 8, 9}", "{7, 8, 9}"],
+      "answer": 0,
+      "explanation": "Symmetric difference = elements in exactly one set. Common elements 2, 3, 4 are removed."
+    },
+    {
+      "id": "m1-m12",
+      "topic": "1.5",
+      "q": "A = {1, 2, 3, 4, 5} and B = {3, 5, 7, 9}. Then A ∪ B is:",
+      "options": ["{3, 5}", "{1, 2, 3, 4, 5, 7, 9}", "{1, 2, 4}", "{7, 9}"],
+      "answer": 1,
+      "explanation": "Union contains all elements of A or B: {1, 2, 3, 4, 5, 7, 9}."
+    },
+    {
+      "id": "m1-m13",
+      "topic": "1.6",
+      "q": "By De Morgan's law, (A ∪ B)' is equal to:",
+      "options": ["A' ∪ B'", "A' ∩ B'", "A ∩ B", "A ∪ B"],
+      "answer": 1,
+      "explanation": "De Morgan: (A ∪ B)' = A' ∩ B'."
+    },
+    {
+      "id": "m1-m14",
+      "topic": "1.6",
+      "q": "A ∪ A' is equal to:",
+      "options": ["φ", "A", "U", "A'"],
+      "answer": 2,
+      "explanation": "A set together with its complement gives the whole universal set: A ∪ A' = U."
+    },
+    {
+      "id": "m1-m15",
+      "topic": "1.7",
+      "q": "If A = {1, 2, 3}, then n(P(A)) is:",
+      "options": ["3", "6", "8", "9"],
+      "answer": 2,
+      "explanation": "n(P(A)) = 2^3 = 8."
+    },
+    {
+      "id": "m1-m16",
+      "topic": "1.7",
+      "q": "A = {1, 2} and B = {a, b, c}. Then n(A × B) is:",
+      "options": ["5", "6", "8", "9"],
+      "answer": 1,
+      "explanation": "n(A × B) = n(A) × n(B) = 2 × 3 = 6."
+    },
+    {
+      "id": "m1-m17",
+      "topic": "1.5",
+      "q": "If A ∩ B = φ, then A - B equals:",
+      "options": ["φ", "B", "A", "U"],
+      "answer": 2,
+      "explanation": "Disjoint sets have nothing common, so removing B from A changes nothing: A - B = A."
+    }
+  ],
+  "short": [
+    {
+      "id": "m1-s01",
+      "topic": "1.1",
+      "q": "Define a set and give an example of a finite set.",
+      "answer": "A set is a collection of distinct elements. Example: A = {a, e, i, o, u}.",
+      "marks": 2
+    },
+    {
+      "id": "m1-s02",
+      "topic": "1.3",
+      "q": "State the difference between equal sets and equivalent sets.",
+      "answer": "Equal sets have exactly the same elements (A = B). Equivalent sets have the same number of elements, n(A) = n(B).",
+      "marks": 2
+    },
+    {
+      "id": "m1-s03",
+      "topic": "1.5",
+      "q": "For A = {1, 3, 5, 7, 9} and B = {2, 4, 6, 8, 9, 10}, find A - B and B - A.",
+      "answer": "A - B = {1, 3, 5, 7}; B - A = {2, 4, 6, 8, 10}.",
+      "marks": 2
+    },
+    {
+      "id": "m1-s04",
+      "topic": "1.5",
+      "q": "Define the symmetric difference of two sets and write its formula.",
+      "answer": "Symmetric difference contains elements in exactly one of A or B. A Δ B = (A ∪ B) - (A ∩ B) = (A - B) ∪ (B - A).",
+      "marks": 2
+    },
+    {
+      "id": "m1-s05",
+      "topic": "1.6",
+      "q": "State De Morgan's laws for two sets A and B.",
+      "answer": "(A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'.",
+      "marks": 2
+    },
+    {
+      "id": "m1-s06",
+      "topic": "1.7",
+      "q": "If n(A) = 3 and n(B) = 2, find n(P(A)) and n(A × B).",
+      "answer": "n(P(A)) = 2^3 = 8; n(A × B) = 3 × 2 = 6.",
+      "marks": 2
+    },
+    {
+      "id": "m1-s07",
+      "topic": "1.6",
+      "q": "If A ⊆ B, find A ∪ B and A ∩ B.",
+      "answer": "A ∪ B = B and A ∩ B = A.",
+      "marks": 2
+    },
+    {
+      "id": "m1-s08",
+      "topic": "1.5",
+      "q": "If A and B are disjoint sets, what is A - B? Give a reason.",
+      "answer": "A - B = A, because A and B have no common element, so nothing of A is removed.",
+      "marks": 2
+    }
+  ]
+}

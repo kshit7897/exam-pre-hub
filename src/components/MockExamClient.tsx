@@ -9,6 +9,7 @@ import BackButton from "@/components/BackButton";
 import HintBox from "@/components/HintBox";
 import { AnswerInput, ShortReview } from "@/components/ShortAnswer";
 import { FadeUp } from "@/components/Motion";
+import ImportanceBadge from "@/components/ImportanceBadge";
 
 type Props = {
   subjectId: string;
@@ -164,6 +165,7 @@ export default function MockExamClient({
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="chip chip-accent">Q{idx + 1}</span>
                   <span className="chip">{titleOf(q.unitId)}</span>
+                  <ImportanceBadge imp={q.imp} />
                 </div>
                 <p className="font-semibold leading-relaxed">{q.q}</p>
                 <HintBox hint={q.hint ?? ""} onOpen={() => setHintsUsed((h) => ({ ...h, [q.id]: true }))} />
@@ -207,6 +209,7 @@ export default function MockExamClient({
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="chip chip-warn">Q{paper.mcq.length + idx + 1}</span>
                   <span className="chip">{titleOf(q.unitId)}</span>
+                  <ImportanceBadge imp={q.imp} />
                 </div>
                 <p className="font-semibold leading-relaxed">{q.q}</p>
                 <HintBox hint={q.hint ?? ""} onOpen={() => setHintsUsed((h) => ({ ...h, [q.id]: true }))} />

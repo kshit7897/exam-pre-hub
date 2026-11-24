@@ -1,9 +1,13 @@
 import Link from "next/link";
-import { ChevronRight, Cpu } from "lucide-react";
+import { ChevronRight, Cpu, Sigma } from "lucide-react";
 import { countQuestions, subjects } from "@/lib/subjects";
 import { colorAt } from "@/lib/unitStyle";
 import { FadeUp, Stagger, StaggerItem } from "@/components/Motion";
 import Dashboard, { type DashSubject } from "@/components/Dashboard";
+import SubjectArt from "@/components/SubjectArt";
+
+// Icon for each subject (set in src/lib/subjects.ts).
+const SUBJECT_ICON = { cpu: Cpu, sigma: Sigma };
 
 // Data for the dashboard charts (question ids and colours per unit).
 const dash: DashSubject[] = subjects.map((s, si) => ({
@@ -32,17 +36,19 @@ export default function Home() {
           {subjects.map((s, i) => {
             const c = countQuestions(s);
             const color = colorAt(i);
+            const Icon = SUBJECT_ICON[s.icon];
             return (
               <StaggerItem key={s.id}>
                 <Link
                   href={`/${s.id}`}
-                  className="card card-link focus-ring flex h-full items-center gap-4 p-4 sm:p-5"
+                  className="card card-link focus-ring relative flex h-full items-center gap-4 overflow-hidden p-4 sm:p-5"
                   style={{ ["--c" as string]: color }}
                 >
-                  <div className="tile grid h-14 w-14 shrink-0 place-items-center rounded-2xl">
-                    <Cpu size={26} strokeWidth={2} aria-hidden />
+                  <SubjectArt art={s.art} />
+                  <div className="tile relative grid h-14 w-14 shrink-0 place-items-center rounded-2xl">
+                    <Icon size={26} strokeWidth={2} aria-hidden />
                   </div>
-                  <div className="min-w-0 flex-1">
+                  <div className="relative min-w-0 flex-1">
                     <div className="text-lg font-bold">{s.name}</div>
                     <div className="mt-0.5 truncate text-sm text-[var(--muted)]">{s.subtitle}</div>
                     <div className="mt-2 flex flex-wrap gap-1.5">
@@ -51,7 +57,7 @@ export default function Home() {
                       <span className="chip">{c.short} short</span>
                     </div>
                   </div>
-                  <ChevronRight size={22} className="shrink-0 text-[var(--muted)]" aria-hidden />
+                  <ChevronRight size={22} className="relative shrink-0 text-[var(--muted)]" aria-hidden />
                 </Link>
               </StaggerItem>
             );

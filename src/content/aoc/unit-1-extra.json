@@ -675,6 +675,266 @@
       ],
       "answer": 3,
       "explanation": "Slides list parity bit, check sum and CRC."
+    },
+    {
+      "id": "u1-d-m01",
+      "topic": "1.2",
+      "q": "In the basic computer block diagram, which unit sits directly between the input devices and the CPU?",
+      "options": [
+        "Output devices",
+        "Input-Output Processor",
+        "RAM",
+        "Control unit"
+      ],
+      "answer": 1,
+      "explanation": "Input devices send data to the Input-Output Processor, which passes it to the CPU."
+    },
+    {
+      "id": "u1-d-m02",
+      "topic": "1.1",
+      "q": "Which characteristic means a computer never gets tired or bored?",
+      "options": [
+        "Accuracy",
+        "Diligence",
+        "Versatility",
+        "Storage"
+      ],
+      "answer": 1,
+      "explanation": "Diligence: the computer works without tiring or getting bored."
+    },
+    {
+      "id": "u1-d-m03",
+      "topic": "1.3",
+      "q": "In the place-value table for 49365, the digit in the 10^1 place is:",
+      "options": [
+        "4",
+        "9",
+        "3",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "Digits from left: 4 (10^4), 9 (10^3), 3 (10^2), 6 (10^1), 5 (10^0)."
+    },
+    {
+      "id": "u1-d-m04",
+      "topic": "1.3",
+      "q": "Which of these is NOT one of the three factors that decide a digit's value in a positional system?",
+      "options": [
+        "Digit",
+        "Positional value",
+        "Base",
+        "Sign"
+      ],
+      "answer": 3,
+      "explanation": "The slide's Venn diagram lists digit, positional value and base."
+    },
+    {
+      "id": "u1-d-m05",
+      "topic": "1.6",
+      "q": "In an 8-bit signed fixed-point register (1 sign, 4 integer, 3 fraction bits), the 1's complement form of -7.5 is:",
+      "options": [
+        "1000.011",
+        "0111.011",
+        "1000.100",
+        "0111.100"
+      ],
+      "answer": 0,
+      "explanation": "7.5 = 0111.100. Its 1's complement (invert all bits) is 1000.011."
+    },
+    {
+      "id": "u1-f-m01",
+      "topic": "1.1",
+      "q": "Kaunsi characteristic 'bina thake' kaam karne se related hai?",
+      "options": [
+        "Accuracy",
+        "Diligence",
+        "Storage",
+        "Speed"
+      ],
+      "answer": 1,
+      "explanation": "Speed, accuracy, diligence, versatility, storage, automatic working and 'no IQ' (it works only on the instructions given). Each bubble is one characteristic."
+    },
+    {
+      "id": "u1-f-m02",
+      "topic": "1.2",
+      "q": "Cheque par magnetic ink wale number kaun padhta hai?",
+      "options": [
+        "OCR",
+        "MICR",
+        "Scanner",
+        "Mouse"
+      ],
+      "answer": 1,
+      "explanation": "Input devices enter data: keyboard, mouse, scanner, OCR, bar code reader, MICR, trackball, joystick, touchpad and touch panel."
+    },
+    {
+      "id": "u1-f-m03",
+      "topic": "1.2",
+      "q": "Paper par diya gaya output kaunsa hai?",
+      "options": [
+        "Soft copy",
+        "Hard copy",
+        "Both",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Output devices show results: monitor, printer, speakers, headset, projector and plotter. Output is soft copy (on screen) or hard copy (on paper)."
+    },
+    {
+      "id": "u1-f-m04",
+      "topic": "1.2",
+      "q": "Control flow kis line se dikhaya jaata hai?",
+      "options": [
+        "Solid line",
+        "Dotted line",
+        "Double line",
+        "Wavy line"
+      ],
+      "answer": 1,
+      "explanation": "Input and output sit at the edges. The CPU (control unit and ALU) works with main memory, and auxiliary storage connects to main memory. Solid lines show data flow and dotted lines show control flow."
+    },
+    {
+      "id": "u1-f-m05",
+      "topic": "1.3",
+      "q": "1 MB kitne KB ke barabar hai?",
+      "options": [
+        "1000",
+        "1024",
+        "2048",
+        "512"
+      ],
+      "answer": 1,
+      "explanation": "Bit, nibble (4 bits) and byte (8 bits) come first. Then KB, MB, GB, TB, PB, EB, ZB and YB, and each is 1024 times the one below it."
+    },
+    {
+      "id": "u1-f-m06",
+      "topic": "1.3",
+      "q": "Hexadecimal number system ka base kya hai?",
+      "options": [
+        "8",
+        "10",
+        "16",
+        "2"
+      ],
+      "answer": 2,
+      "explanation": "Binary base 2 (0-1), decimal base 10 (0-9), octal base 8 (0-7), hexadecimal base 16 (0-9, A-F)."
+    },
+    {
+      "id": "u1-f-m07",
+      "topic": "1.7",
+      "q": "111101.1 ko floating-point mein convert karne par exponent kitna hai?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 2,
+      "explanation": "Mantissa m = 1.111011000110, radix r = 2 and exponent e = 5. Stored as sign bit 0, the mantissa, and exponent 5."
+    },
+    {
+      "id": "u1-f-m08",
+      "topic": "1.6",
+      "q": "-45 kis group mein aata hai?",
+      "options": [
+        "Fraction",
+        "Integer",
+        "Sign",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Numbers can be integer or fractional, and each can be positive or negative. The sign is kept in a separate bit in fixed-point form."
+    },
+    {
+      "id": "u1-f-m09",
+      "topic": "1.6",
+      "q": "-35 ka 8-bit sign-magnitude form kya hai?",
+      "options": [
+        "00100011",
+        "10100011",
+        "11011100",
+        "11011101"
+      ],
+      "answer": 1,
+      "explanation": "MSB 0 means positive and 1 means negative. +35 is 00100011 in 8 bits and -35 is 10100011 (sign bit 1, same magnitude)."
+    },
+    {
+      "id": "u1-f-m10",
+      "topic": "1.6",
+      "q": "5 (00000101) ka 2's complement 8-bit mein kya hai?",
+      "options": [
+        "00000101",
+        "11111010",
+        "11111011",
+        "00000110"
+      ],
+      "answer": 2,
+      "explanation": "Start from 00100011, invert to 11011100, then add 1 to get 11011101 as the 2's complement form of -35."
+    },
+    {
+      "id": "u1-f-m11",
+      "topic": "1.6",
+      "q": "16-bit signed fixed-point register mein fraction bits kitne hain?",
+      "options": [
+        "6",
+        "9",
+        "15",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "A register has a sign bit, integer bits and fraction bits. 8-bit: 1 sign, 4 integer, 3 fraction. 16-bit: 1 sign, 9 integer, 6 fraction. 32-bit: 1 sign, 15 integer, 16 fraction."
+    },
+    {
+      "id": "u1-f-m12",
+      "topic": "1.6",
+      "q": "-7.5 ka sign bit kya hai?",
+      "options": [
+        "0",
+        "1",
+        "X",
+        "-"
+      ],
+      "answer": 1,
+      "explanation": "7.5 = 111.1, placed as 4 integer bits and 3 fraction bits = 0111.100. With sign bit 1 the answer is 1 0111 100."
+    },
+    {
+      "id": "u1-f-m13",
+      "topic": "1.6",
+      "q": "-7.5 ka 2's complement (fraction sahit) kya hai?",
+      "options": [
+        "1000.011",
+        "1000.100",
+        "0111.100",
+        "1111.100"
+      ],
+      "answer": 1,
+      "explanation": "Add 1 to the 1's complement: 1000.011 + 0.001 = 1000.100. With sign bit 1 the answer is 1 1000 100."
+    },
+    {
+      "id": "u1-f-m14",
+      "topic": "1.8",
+      "q": "Message 011 ka even parity bit kya hai?",
+      "options": [
+        "0",
+        "1",
+        "X",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "For each 3-bit message the table gives the parity bit that makes the number of 1s odd (P-odd) or even (P-even)."
+    },
+    {
+      "id": "u1-f-m15",
+      "topic": "1.8",
+      "q": "Receiver par parity error aaye to kya hota hai?",
+      "options": [
+        "Signal regeneration demand",
+        "Ignore",
+        "Shutdown",
+        "Reset"
+      ],
+      "answer": 0,
+      "explanation": "The sender adds a parity bit (even parity here) and sends the message. The receiver's parity checker detects an error and asks for signal regeneration."
     }
   ],
   "short": [
@@ -802,6 +1062,20 @@
       "topic": "1.8",
       "q": "What is a parity bit? Find the even-parity bit for 1011.",
       "answer": "A parity bit is an extra bit added to make the total number of 1s even or odd. 1011 has three 1s (odd), so the even-parity bit is 1 and the transmitted message is 11011.",
+      "marks": 2
+    },
+    {
+      "id": "u1-d-s01",
+      "topic": "1.2",
+      "q": "Draw the block diagram of a basic computer and label its main parts.",
+      "answer": "Input devices -> Input-Output Processor -> CPU (ALU, control unit, main memory), with auxiliary storage linked to memory and output devices fed from the Input-Output Processor.",
+      "marks": 2
+    },
+    {
+      "id": "u1-d-s02",
+      "topic": "1.6",
+      "q": "Write the 2's complement of -35 in an 8-bit register.",
+      "answer": "00100011 -> 1's complement 11011100 -> add 1 -> 11011101.",
       "marks": 2
     }
   ]

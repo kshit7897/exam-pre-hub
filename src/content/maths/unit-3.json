@@ -1,0 +1,307 @@
+{
+  "id": "unit-3",
+  "title": "Matrix Algebra",
+  "topics": [
+    {
+      "id": "3.1",
+      "title": "Matrix, order and types",
+      "notes": [
+        "A matrix is an ordered rectangular array of numbers. With m rows and n columns it has order m × n (rows × columns).",
+        "Row matrix: one row (1 × n). Column matrix: one column (m × 1). Zero matrix: all elements 0.",
+        "Square matrix: rows = columns (n × n). Diagonal matrix: square, all non-diagonal elements 0.",
+        "Scalar matrix: diagonal matrix with all diagonal elements equal. Identity (unit) matrix I: scalar matrix with all diagonal elements 1."
+      ]
+    },
+    {
+      "id": "3.2",
+      "title": "Triangular, transpose and symmetric matrices",
+      "notes": [
+        "Upper triangular: all entries below the diagonal are 0. Lower triangular: all entries above the diagonal are 0.",
+        "Transpose Aᵀ: rows and columns interchanged. If A is m × n then Aᵀ is n × m.",
+        "Symmetric matrix: A = Aᵀ. Only square matrices can be symmetric."
+      ]
+    },
+    {
+      "id": "3.3",
+      "title": "Addition, subtraction and scalar multiplication",
+      "notes": [
+        "Addition and subtraction are possible only when both matrices have the same order. Add or subtract element by element.",
+        "Scalar multiplication: multiply every element by the same number k: kA.",
+        "Example: 2 × [[1, 2], [3, 4]] = [[2, 4], [6, 8]]."
+      ]
+    },
+    {
+      "id": "3.4",
+      "title": "Matrix multiplication",
+      "notes": [
+        "A·B is possible only when the number of columns of A equals the number of rows of B.",
+        "If A is m × n and B is n × r, then A·B is m × r.",
+        "Matrix multiplication is generally NOT commutative: AB ≠ BA in general.",
+        "A² = A·A. Example: for A = [[0, 1], [1, 0]], A² = I."
+      ]
+    },
+    {
+      "id": "3.5",
+      "title": "Determinant of 2 × 2 and 3 × 3 matrices",
+      "notes": [
+        "Determinant |A| (or det A) is defined only for square matrices.",
+        "2 × 2: |A| = a11·a22 − a12·a21. Example: |[[1, 2], [3, 4]]| = 4 − 6 = −2.",
+        "3 × 3: expand along a row or column: |A| = a11·M11 − a12·M12 + a13·M13 (cofactor expansion).",
+        "|AB| = |A|·|B| for square matrices of the same order."
+      ]
+    },
+    {
+      "id": "3.6",
+      "title": "Minors and cofactors",
+      "notes": [
+        "Minor M_ij of an element a_ij: determinant of the matrix left after deleting row i and column j.",
+        "Cofactor C_ij = (−1)^(i+j) · M_ij. Signs for a 3 × 3 matrix: + − + / − + − / + − +.",
+        "The minor matrix has M_ij in each position; the cofactor matrix has C_ij in each position."
+      ]
+    },
+    {
+      "id": "3.7",
+      "title": "Adjoint of a matrix",
+      "notes": [
+        "Adjoint adj(A) = transpose of the cofactor matrix: adj(A) = Cᵀ.",
+        "For a 2 × 2 matrix [[a, b], [c, d]]: adj(A) = [[d, −b], [−c, a]] (swap the diagonal, change the sign of the other two).",
+        "The adjoint is used to find the inverse."
+      ]
+    },
+    {
+      "id": "3.8",
+      "title": "Inverse of a matrix",
+      "notes": [
+        "A⁻¹ exists only when |A| ≠ 0 (non-singular matrix). Then A·A⁻¹ = I.",
+        "Formula: A⁻¹ = adj(A) / |A|.",
+        "For a 2 × 2 matrix: A⁻¹ = (1/|A|) [[d, −b], [−c, a]]."
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "id": "mt3-m01",
+      "topic": "3.1",
+      "q": "A matrix with 2 rows and 3 columns has order:",
+      "options": ["3 × 2", "2 × 3", "2 × 2", "3 × 3"],
+      "answer": 1,
+      "explanation": "Order = rows × columns = 2 × 3."
+    },
+    {
+      "id": "mt3-m02",
+      "topic": "3.1",
+      "q": "A matrix that has only one row is called:",
+      "options": ["Column matrix", "Row matrix", "Zero matrix", "Square matrix"],
+      "answer": 1,
+      "explanation": "One row = row matrix, order 1 × n."
+    },
+    {
+      "id": "mt3-m03",
+      "topic": "3.1",
+      "q": "The diagonal elements of an identity matrix are:",
+      "options": ["0", "1", "any values", "all different"],
+      "answer": 1,
+      "explanation": "Identity matrix is a scalar matrix with all diagonal elements 1."
+    },
+    {
+      "id": "mt3-m04",
+      "topic": "3.1",
+      "q": "A scalar matrix is a diagonal matrix in which:",
+      "options": ["All diagonal elements are equal", "All elements are zero", "It has only one row", "Non-diagonal elements are 1"],
+      "answer": 0,
+      "explanation": "Scalar matrix = diagonal matrix with equal diagonal elements."
+    },
+    {
+      "id": "mt3-m05",
+      "topic": "3.2",
+      "q": "The transpose of a 2 × 3 matrix has order:",
+      "options": ["2 × 3", "3 × 2", "3 × 3", "2 × 2"],
+      "answer": 1,
+      "explanation": "Transpose swaps rows and columns: 3 × 2."
+    },
+    {
+      "id": "mt3-m06",
+      "topic": "3.2",
+      "q": "A matrix A is symmetric if:",
+      "options": ["A = 0", "A = Aᵀ", "A = −Aᵀ", "A = I"],
+      "answer": 1,
+      "explanation": "Symmetric matrix: A equals its transpose."
+    },
+    {
+      "id": "mt3-m07",
+      "topic": "3.2",
+      "q": "In an upper triangular matrix, which entries are zero?",
+      "options": ["Entries above the diagonal", "Entries below the diagonal", "Diagonal entries", "No entries"],
+      "answer": 1,
+      "explanation": "Upper triangular: everything below the diagonal is 0."
+    },
+    {
+      "id": "mt3-m08",
+      "topic": "3.3",
+      "q": "Addition of two matrices A and B is possible when:",
+      "options": ["They have the same order", "They have different orders", "Both are square of any size", "Both are row matrices"],
+      "answer": 0,
+      "explanation": "Addition and subtraction need the same order."
+    },
+    {
+      "id": "mt3-m09",
+      "topic": "3.3",
+      "q": "2 × [[1, 2], [3, 4]] equals:",
+      "options": ["[[2, 4], [6, 8]]", "[[1, 2], [3, 4]]", "[[2, 2], [3, 4]]", "[[3, 4], [5, 6]]"],
+      "answer": 0,
+      "explanation": "Multiply every element by 2."
+    },
+    {
+      "id": "mt3-m10",
+      "topic": "3.4",
+      "q": "A·B is possible when:",
+      "options": ["Columns of A = rows of B", "Rows of A = rows of B", "A is always square", "A and B have the same order"],
+      "answer": 0,
+      "explanation": "The inner dimensions must match: columns of A = rows of B."
+    },
+    {
+      "id": "mt3-m11",
+      "topic": "3.4",
+      "q": "If A is 2 × 3 and B is 3 × 2, the order of AB is:",
+      "options": ["2 × 2", "3 × 3", "2 × 3", "3 × 2"],
+      "answer": 0,
+      "explanation": "Outer dimensions: rows of A (2) × columns of B (2)."
+    },
+    {
+      "id": "mt3-m12",
+      "topic": "3.4",
+      "q": "Matrix multiplication is generally:",
+      "options": ["Commutative", "Not commutative (AB ≠ BA in general)", "Always equal to BA", "Always zero"],
+      "answer": 1,
+      "explanation": "The order matters in matrix multiplication."
+    },
+    {
+      "id": "mt3-m13",
+      "topic": "3.5",
+      "q": "The determinant of [[1, 2], [3, 4]] is:",
+      "options": ["−2", "2", "10", "−10"],
+      "answer": 0,
+      "explanation": "1·4 − 2·3 = 4 − 6 = −2."
+    },
+    {
+      "id": "mt3-m14",
+      "topic": "3.5",
+      "q": "Which matrix is singular (determinant 0)?",
+      "options": ["[[1, 5], [3, 15]]", "[[1, 0], [0, 1]]", "[[2, 1], [1, 2]]", "[[3, 0], [0, 2]]"],
+      "answer": 0,
+      "explanation": "1·15 − 5·3 = 15 − 15 = 0."
+    },
+    {
+      "id": "mt3-m15",
+      "topic": "3.6",
+      "q": "The cofactor C_ij is equal to (−1)^(i+j) times:",
+      "options": ["The adjoint", "The minor M_ij", "The element a_ij", "The transpose"],
+      "answer": 1,
+      "explanation": "C_ij = (−1)^(i+j) · M_ij."
+    },
+    {
+      "id": "mt3-m16",
+      "topic": "3.7",
+      "q": "The adjoint of A is:",
+      "options": ["Transpose of the cofactor matrix", "The inverse of A", "The minor matrix itself", "The identity matrix"],
+      "answer": 0,
+      "explanation": "adj(A) = (cofactor matrix)ᵀ."
+    },
+    {
+      "id": "mt3-m17",
+      "topic": "3.8",
+      "q": "The inverse of A exists only if:",
+      "options": ["|A| = 0", "|A| ≠ 0", "A is a row matrix", "A is the zero matrix"],
+      "answer": 1,
+      "explanation": "A⁻¹ = adj(A)/|A| needs |A| ≠ 0."
+    },
+    {
+      "id": "mt3-m18",
+      "topic": "3.8",
+      "q": "For A = [[2, 4], [3, 8]], |A| is:",
+      "options": ["4", "−4", "16", "8"],
+      "answer": 0,
+      "explanation": "2·8 − 4·3 = 16 − 12 = 4."
+    },
+    {
+      "id": "mt3-m19",
+      "topic": "3.8",
+      "q": "The formula for the inverse of A is:",
+      "options": ["adj(A) × |A|", "adj(A) / |A|", "A / |A|", "|A| / adj(A)"],
+      "answer": 1,
+      "explanation": "A⁻¹ = adj(A) / |A|."
+    }
+  ],
+  "short": [
+    {
+      "id": "mt3-s01",
+      "topic": "3.1",
+      "q": "Define the order of a matrix. What is the order of [[1, 2, 3]]?",
+      "answer": "Order = rows × columns. [[1, 2, 3]] has 1 row and 3 columns, so its order is 1 × 3 (a row matrix).",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s02",
+      "topic": "3.2",
+      "q": "Define a symmetric matrix and give a 2 × 2 example.",
+      "answer": "A is symmetric if A = Aᵀ. Example: [[1, 4], [4, 7]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s03",
+      "topic": "3.3",
+      "q": "A = [[1, 2], [3, 4]] and B = [[0, 1], [1, 0]]. Find A + B.",
+      "answer": "A + B = [[1, 3], [4, 4]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s04",
+      "topic": "3.4",
+      "q": "Find AB for A = [1 2] (1 × 2) and B = [[3], [4]] (2 × 1).",
+      "answer": "AB = [1·3 + 2·4] = [11] (a 1 × 1 matrix).",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s05",
+      "topic": "3.4",
+      "q": "Show that A² = I for A = [[0, 1], [1, 0]].",
+      "answer": "A² = [[0·0 + 1·1, 0·1 + 1·0], [1·0 + 0·1, 1·1 + 0·0]] = [[1, 0], [0, 1]] = I.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s06",
+      "topic": "3.5",
+      "q": "Find |A| for A = [[3, 2], [1, 4]].",
+      "answer": "|A| = 3·4 − 2·1 = 12 − 2 = 10.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s07",
+      "topic": "3.6",
+      "q": "Define the minor and the cofactor of an element a_ij.",
+      "answer": "Minor M_ij is the determinant after deleting row i and column j. Cofactor C_ij = (−1)^(i+j) · M_ij.",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s08",
+      "topic": "3.7",
+      "q": "Find adj(A) for A = [[2, 4], [3, 8]].",
+      "answer": "adj(A) = [[8, −4], [−3, 2]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s09",
+      "topic": "3.8",
+      "q": "Find A⁻¹ for A = [[2, 4], [3, 8]].",
+      "answer": "|A| = 4, adj(A) = [[8, −4], [−3, 2]], so A⁻¹ = [[2, −1], [−3/4, 1/2]].",
+      "marks": 2
+    },
+    {
+      "id": "mt3-s10",
+      "topic": "3.8",
+      "q": "State the formula for the inverse of a matrix and when it exists.",
+      "answer": "A⁻¹ = adj(A) / |A|. It exists only when |A| ≠ 0.",
+      "marks": 2
+    }
+  ]
+}

@@ -350,6 +350,526 @@
       ],
       "answer": 3,
       "explanation": "JK truth table: J=1, K=1 gives the complement Q(t)'."
+    },
+    {
+      "id": "u2-d-m01",
+      "topic": "2.1",
+      "q": "In the NAND gate truth table, the output when both inputs are 1 is:",
+      "options": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 0,
+      "explanation": "NAND is NOT of AND, so with A=B=1 the output is 0."
+    },
+    {
+      "id": "u2-d-m02",
+      "topic": "2.1",
+      "q": "The Ex-OR output for inputs A=0, B=0, C=1 (3-variable table) is:",
+      "options": [
+        "0",
+        "1",
+        "Undefined",
+        "Same as NOR"
+      ],
+      "answer": 1,
+      "explanation": "Ex-OR is 1 for an odd number of 1s. Here there is one 1, so the output is 1."
+    },
+    {
+      "id": "u2-d-m03",
+      "topic": "2.3",
+      "q": "In a 2-variable K-map, the cell for x = 1, y = 0 is minterm number:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "answer": 1,
+      "explanation": "The 2-variable map has m0 (00), m1 (01), m2 (10) and m3 (11). x=1, y=0 is m2."
+    },
+    {
+      "id": "u2-d-m04",
+      "topic": "2.3",
+      "q": "In the 3-variable K-map, the cell for A = 1 and BC = 01 is minterm:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 1,
+      "explanation": "A is the leading bit, so 1 01 = 101 in binary = 5."
+    },
+    {
+      "id": "u2-d-m05",
+      "topic": "2.5",
+      "q": "In the D flip-flop truth table, with clock = 1 and D = 0, Q becomes:",
+      "options": [
+        "0",
+        "1",
+        "Toggles",
+        "Invalid"
+      ],
+      "answer": 0,
+      "explanation": "On the clock edge Q follows D, so Q = 0."
+    },
+    {
+      "id": "u2-d-m06",
+      "topic": "2.2",
+      "q": "According to the De Morgan figure, (A+B)' is equal to:",
+      "options": [
+        "A'B'",
+        "A'+B'",
+        "AB",
+        "A+B'"
+      ],
+      "answer": 0,
+      "explanation": "De Morgan's second law: (A+B)' = A'.B'."
+    },
+    {
+      "id": "u2-f-m01",
+      "topic": "2.1",
+      "q": "Logic gate ka output kis par depend karta hai?",
+      "options": [
+        "Sirf clock",
+        "Inputs aur gate ka logic",
+        "Memory",
+        "Random"
+      ],
+      "answer": 1,
+      "explanation": "A logic circuit takes one or more binary inputs and gives one output. The output depends only on the logic of the gate."
+    },
+    {
+      "id": "u2-f-m02",
+      "topic": "2.1",
+      "q": "AND gate ka output 1 kab hota hai?",
+      "options": [
+        "Koi ek input 1 ho",
+        "Sab inputs 1 hon",
+        "Sab inputs 0 hon",
+        "Inputs alag hon"
+      ],
+      "answer": 1,
+      "explanation": "AND gives 1 only when all inputs are 1. F = AB. Rows: 00->0, 01->0, 10->0, 11->1."
+    },
+    {
+      "id": "u2-f-m03",
+      "topic": "2.1",
+      "q": "NOT gate ka input 0 ho to output kya hoga?",
+      "options": [
+        "0",
+        "1",
+        "X",
+        "Same as input"
+      ],
+      "answer": 1,
+      "explanation": "NOT gives the opposite of its input. F = A'. Input 0 gives 1 and input 1 gives 0."
+    },
+    {
+      "id": "u2-f-m04",
+      "topic": "2.1",
+      "q": "NOR gate ka output 1 kab hota hai?",
+      "options": [
+        "Koi input 1 ho",
+        "Sab inputs 0 hon",
+        "Inputs alag hon",
+        "Sab inputs 1 hon"
+      ],
+      "answer": 1,
+      "explanation": "NOR is NOT followed by OR, so F = (A+B)'. Output is 1 only when all inputs are 0."
+    },
+    {
+      "id": "u2-f-m05",
+      "topic": "2.1",
+      "q": "Ex-NOR ka output 1 kab hota hai?",
+      "options": [
+        "Inputs alag hon",
+        "Inputs same hon",
+        "Sirf A = 1 ho",
+        "Kabhi nahi"
+      ],
+      "answer": 1,
+      "explanation": "Ex-NOR is Ex-OR followed by NOT. It gives 1 when the inputs are equal, i.e. an even number of 1s."
+    },
+    {
+      "id": "u2-f-m06",
+      "topic": "2.2",
+      "q": "F = x + y'z ke liye x=1, y=1, z=1 par F kya hai?",
+      "options": [
+        "0",
+        "1",
+        "Undefined",
+        "y"
+      ],
+      "answer": 1,
+      "explanation": "The example F = x + y'z is shown as a truth table, an expression and a logic diagram. F = 1 when x = 1, or when y = 0 and z = 1."
+    },
+    {
+      "id": "u2-f-m07",
+      "topic": "2.2",
+      "q": "A(B+C) ka distributive form kya hai?",
+      "options": [
+        "AB + C",
+        "AB + AC",
+        "A + BC",
+        "AB + BC"
+      ],
+      "answer": 1,
+      "explanation": "Commutative: order does not matter. Associative: grouping does not matter. Distributive: a term can be factored out."
+    },
+    {
+      "id": "u2-f-m08",
+      "topic": "2.2",
+      "q": "X + X' ki value kya hai?",
+      "options": [
+        "0",
+        "1",
+        "X",
+        "X'"
+      ],
+      "answer": 1,
+      "explanation": "The table lists the basic identities, e.g. X+X'=1, X.X'=0, X+XY=X, X(X+Y)=X and X+YZ=(X+Y)(X+Z). Use them to simplify expressions."
+    },
+    {
+      "id": "u2-f-m09",
+      "topic": "2.2",
+      "q": "'Break the line' rule NOR ko kis gate mein badalta hai?",
+      "options": [
+        "NAND",
+        "Negative-AND",
+        "OR",
+        "XOR"
+      ],
+      "answer": 1,
+      "explanation": "Rule: break the bar and change the operator. NAND becomes negative-OR (A'+B'), and NOR becomes negative-AND (A'B')."
+    },
+    {
+      "id": "u2-f-m10",
+      "topic": "2.2",
+      "q": "(AB)' ka De Morgan equivalent kya hai?",
+      "options": [
+        "A'B'",
+        "A' + B'",
+        "A + B",
+        "AB"
+      ],
+      "answer": 1,
+      "explanation": "The left side and right side columns match for all four input combinations, which proves the theorem."
+    },
+    {
+      "id": "u2-f-m11",
+      "topic": "2.2",
+      "q": "(A+B)' ka De Morgan equivalent kya hai?",
+      "options": [
+        "A + B",
+        "A' + B'",
+        "A'B'",
+        "AB"
+      ],
+      "answer": 2,
+      "explanation": "Both sides match for all four input combinations, which proves the theorem."
+    },
+    {
+      "id": "u2-f-m12",
+      "topic": "2.3",
+      "q": "K-map group mein agar 0 aa jaaye to?",
+      "options": [
+        "Allowed hai",
+        "Group galat hai",
+        "Ok hai",
+        "Double count hota hai"
+      ],
+      "answer": 1,
+      "explanation": "A group must contain only 1s and be a power of 2 in size. The right example uses a pair of 1s in a row, not an uneven shape."
+    },
+    {
+      "id": "u2-f-m13",
+      "topic": "2.3",
+      "q": "Diagonal 1s ka group allowed hai?",
+      "options": [
+        "Haan",
+        "Nahi",
+        "Sirf 2 cells mein",
+        "Sirf 4 cells mein"
+      ],
+      "answer": 1,
+      "explanation": "Groups must be square or rectangular (no diagonal). Make the largest groups possible and let groups overlap if needed."
+    },
+    {
+      "id": "u2-f-m14",
+      "topic": "2.3",
+      "q": "K-map ke edges wrap ho sakte hain?",
+      "options": [
+        "Haan (wrap-around)",
+        "Nahi",
+        "Sirf top par",
+        "Sirf side par"
+      ],
+      "answer": 0,
+      "explanation": "Groups can wrap around the edges of the map. Each group gives one product term in the SOP answer."
+    },
+    {
+      "id": "u2-f-m15",
+      "topic": "2.3",
+      "q": "Minterm 1 ko cover karne wala sahi SOP term kya hai?",
+      "options": [
+        "X'Z",
+        "YZ",
+        "XY",
+        "X + Y"
+      ],
+      "answer": 0,
+      "explanation": "Groups on the slide give YZ + XY. Caution: YZ+XY does not cover minterm 1, so the correct minimal SOP is X'Z + XY (confirm with teacher)."
+    },
+    {
+      "id": "u2-f-m16",
+      "topic": "2.3",
+      "q": "Group mein jo variable change hota hai, use kya kiya jaata hai?",
+      "options": [
+        "Rakha jaata hai",
+        "Hata diya jaata hai",
+        "Double hota hai",
+        "Sirf negate hota hai"
+      ],
+      "answer": 1,
+      "explanation": "Several groupings are drawn on the slide. Each group is a power of 2, and the final answer is the sum of the chosen product terms."
+    },
+    {
+      "id": "u2-f-m17",
+      "topic": "2.3",
+      "q": "POS mein variable 1 ho to sum term mein kya aata hai?",
+      "options": [
+        "X",
+        "X'",
+        "1",
+        "0"
+      ],
+      "answer": 1,
+      "explanation": "POS uses the zeros (maxterms). Groups of zeros give sum terms, and the slide's simplified result is (Y+Z)(Y'+Z')(X'+Y')."
+    },
+    {
+      "id": "u2-f-m18",
+      "topic": "2.3",
+      "q": "Column 00 ke zeros ka sum term kya hai?",
+      "options": [
+        "X + Y",
+        "(Y + Z)",
+        "Z'",
+        "X'Y"
+      ],
+      "answer": 1,
+      "explanation": "The four zeros in the first column form one group, giving the simplified POS result (Y+Z)."
+    },
+    {
+      "id": "u2-f-m19",
+      "topic": "2.4",
+      "q": "Combinational circuit mein memory element hota hai?",
+      "options": [
+        "Haan",
+        "Nahi",
+        "Clock ke saath",
+        "Sirf output mein"
+      ],
+      "answer": 1,
+      "explanation": "The output depends only on the present inputs. It has n inputs and m outputs, and it uses no memory."
+    },
+    {
+      "id": "u2-f-m20",
+      "topic": "2.4",
+      "q": "Combinational circuit design ka step 4 kya hai?",
+      "options": [
+        "Logic diagram",
+        "Simplified Boolean function",
+        "Problem statement",
+        "Truth table"
+      ],
+      "answer": 1,
+      "explanation": "Five steps: state the problem, assign letter symbols to inputs and outputs, write the truth table, get the simplified Boolean function, draw the logic diagram."
+    },
+    {
+      "id": "u2-f-m21",
+      "topic": "2.4",
+      "q": "Full adder mein X=1, Y=1, Z=1 par Sum aur Carry kya hain?",
+      "options": [
+        "Sum 0, Carry 0",
+        "Sum 1, Carry 1",
+        "Sum 1, Carry 0",
+        "Sum 0, Carry 1"
+      ],
+      "answer": 1,
+      "explanation": "Sum = X XOR Y XOR Z. Carry is 1 when two or more inputs are 1."
+    },
+    {
+      "id": "u2-f-m22",
+      "topic": "2.4",
+      "q": "Full adder ka carry expression kya hai?",
+      "options": [
+        "XYZ",
+        "Z(X XOR Y) + XY",
+        "X + Y + Z",
+        "X XOR Y XOR Z"
+      ],
+      "answer": 1,
+      "explanation": "Two XOR gates give the sum. AND and OR gates give the carry, so Carry = Z(X XOR Y) + XY."
+    },
+    {
+      "id": "u2-f-m23",
+      "topic": "2.5",
+      "q": "Flip-flop ki kitni types hain?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 2,
+      "explanation": "Flip-flops are classified as asynchronous or synchronous. The four types are SR, D, JK and T."
+    },
+    {
+      "id": "u2-f-m24",
+      "topic": "2.5",
+      "q": "SR flip-flop mein S = R = 1 ka matlab kya hai?",
+      "options": [
+        "Set",
+        "Reset",
+        "Invalid",
+        "No change"
+      ],
+      "answer": 2,
+      "explanation": "S=0,R=0 holds the state. S=0,R=1 resets (Q=0). S=1,R=0 sets (Q=1). S=1,R=1 is invalid."
+    },
+    {
+      "id": "u2-f-m25",
+      "topic": "2.5",
+      "q": "Cross-coupled NOR SR latch mein S=1, R=0 ka effect kya hai?",
+      "options": [
+        "Reset",
+        "Set (Q = 1)",
+        "Invalid",
+        "No change"
+      ],
+      "answer": 1,
+      "explanation": "Two cross-coupled NOR gates. Each output feeds back to the other gate, so the circuit stores one bit."
+    },
+    {
+      "id": "u2-f-m26",
+      "topic": "2.5",
+      "q": "D flip-flop mein Q kab change hota hai?",
+      "options": [
+        "Clock edge par",
+        "Hamesha",
+        "Kabhi nahi",
+        "D badalte hi turant"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are D and clock C, outputs Q and Q'. The flip-flop copies D to Q on the clock edge."
+    },
+    {
+      "id": "u2-f-m27",
+      "topic": "2.5",
+      "q": "JK flip-flop mein J = 0, K = 0 par kya hota hai?",
+      "options": [
+        "Set",
+        "Reset",
+        "No change",
+        "Toggle"
+      ],
+      "answer": 2,
+      "explanation": "Inputs J, K and clock, outputs Q and Q'. J acts as set and K acts as reset."
+    },
+    {
+      "id": "u2-f-m28",
+      "topic": "2.5",
+      "q": "T flip-flop kis flip-flop ka version hai?",
+      "options": [
+        "JK jisme J aur K jude hon",
+        "D jisme D = Q",
+        "SR jisme S = R",
+        "Koi nahi"
+      ],
+      "answer": 0,
+      "explanation": "One data input T, clock and outputs Q and Q'. A T flip-flop is a JK flip-flop with J and K tied together."
+    },
+    {
+      "id": "u2-f-m29",
+      "topic": "2.5",
+      "q": "T flip-flop mein T = 1 par clock aaye to output?",
+      "options": [
+        "Same rehta hai",
+        "Toggle hota hai",
+        "Hamesha 0",
+        "Hamesha 1"
+      ],
+      "answer": 1,
+      "explanation": "With clock 1 and T=1 the output toggles. With T=0 the output does not change."
+    },
+    {
+      "id": "u2-f-m101",
+      "topic": "2.3",
+      "q": "W=1, X=0, Y=1, Z=1 ka minterm kya hai?",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "13"
+      ],
+      "answer": 2,
+      "explanation": "Gray code is used on both axes (WX and YZ). Every cell has a unique 4-bit label."
+    },
+    {
+      "id": "u2-d-m07",
+      "topic": "2.4",
+      "q": "Half adder mein SUM output kis gate se banta hai?",
+      "options": [
+        "AND",
+        "OR",
+        "XOR",
+        "NAND"
+      ],
+      "answer": 2,
+      "explanation": "Sum = X XOR Y, isliye XOR gate. Carry = XY, isliye AND gate."
+    },
+    {
+      "id": "u2-d-m08",
+      "topic": "2.4",
+      "q": "X=1, Y=1 par half adder ka output (Sum, Carry) kya hoga?",
+      "options": [
+        "Sum=0, Carry=1",
+        "Sum=1, Carry=0",
+        "Sum=1, Carry=1",
+        "Sum=0, Carry=0"
+      ],
+      "answer": 0,
+      "explanation": "1 + 1 = 10 (binary). Sum 0 aur Carry 1."
+    },
+    {
+      "id": "u2-d-m09",
+      "topic": "2.3",
+      "q": "K-map ko aur kis naam se jaana jaata hai?",
+      "options": [
+        "Venn diagram",
+        "Hasse diagram",
+        "Gantt chart",
+        "Veitch diagram"
+      ],
+      "answer": 3,
+      "explanation": "K-map ko Veitch diagram, KV map ya K-map bhi kehte hain."
+    },
+    {
+      "id": "u2-d-m10",
+      "topic": "2.4",
+      "q": "Half adder ke block diagram mein kitne inputs aur outputs hain?",
+      "options": [
+        "1 input, 1 output",
+        "2 inputs, 1 output",
+        "2 inputs, 2 outputs",
+        "3 inputs, 2 outputs"
+      ],
+      "answer": 2,
+      "explanation": "Inputs X aur Y; outputs SUM aur CARRY."
     }
   ],
   "short": [
@@ -428,6 +948,27 @@
       "topic": "2.5",
       "q": "What does a D flip-flop output when the clock is 1?",
       "answer": "With clock = 1, Q follows D: D=0 gives Q=0, D=1 gives Q=1.",
+      "marks": 2
+    },
+    {
+      "id": "u2-d-s01",
+      "topic": "2.3",
+      "q": "Why are K-map rows and columns written in Gray code order (00, 01, 11, 10)?",
+      "answer": "Neighbouring cells differ in only one variable, so groups of 1s can be drawn as adjacent blocks of 1, 2, 4 or 8 cells.",
+      "marks": 2
+    },
+    {
+      "id": "u2-d-s02",
+      "topic": "2.5",
+      "q": "Give the JK flip-flop behaviour for all four input combinations.",
+      "answer": "J=0,K=0 no change; J=0,K=1 clear (Q=0); J=1,K=0 set (Q=1); J=1,K=1 complement Q(t)'.",
+      "marks": 2
+    },
+    {
+      "id": "u2-d-s03",
+      "topic": "2.4",
+      "q": "Half adder ka Sum aur Carry expression likho.",
+      "answer": "Sum = X XOR Y; Carry = XY.",
       "marks": 2
     }
   ]

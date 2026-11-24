@@ -1,0 +1,434 @@
+{
+  "mcq": [
+    {
+      "id": "mt1-d-m01",
+      "topic": "1.5",
+      "q": "Venn diagram mein A ∪ B kaisa dikhta hai?",
+      "options": [
+        "Sirf A ka hissa",
+        "Dono circles ka poora area (shade)",
+        "Sirf common part",
+        "Rectangle ke bahar ka area"
+      ],
+      "answer": 1,
+      "explanation": "Union mein A ya B (ya dono) ke saare elements aate hain, isliye dono circles poore shade hote hain."
+    },
+    {
+      "id": "mt1-d-m02",
+      "topic": "1.5",
+      "q": "Venn diagram mein A ∩ B kaun sa area hai?",
+      "options": [
+        "Dono circles ka overlapping area",
+        "A ke bahar wala area",
+        "Sirf circle B",
+        "Pura rectangle"
+      ],
+      "answer": 0,
+      "explanation": "Intersection sirf common elements hain, jo dono circles ke overlap mein hote hain."
+    },
+    {
+      "id": "mt1-d-m03",
+      "topic": "1.5",
+      "q": "A' (complement) Venn diagram mein kaun sa area hai?",
+      "options": [
+        "Circle A ke andar",
+        "Rectangle U mein circle A ke bahar",
+        "Circle B ke andar",
+        "Sirf overlap"
+      ],
+      "answer": 1,
+      "explanation": "A' = U - A. Rectangle ke andar par circle A ke bahar ka area."
+    },
+    {
+      "id": "mt1-d-m04",
+      "topic": "1.5",
+      "q": "A - B Venn diagram mein kaun sa area hai?",
+      "options": [
+        "A ka wo hissa jo B mein nahi hai",
+        "B ka wo hissa jo A mein nahi hai",
+        "Overlap",
+        "Dono ka union"
+      ],
+      "answer": 0,
+      "explanation": "A - B mein A ke elements hain jo B mein nahi hain, yaani circle A ka non-overlapping part."
+    },
+    {
+      "id": "mt1-d-m05",
+      "topic": "1.5",
+      "q": "A Δ B Venn diagram mein kaun sa area shade hota hai?",
+      "options": [
+        "Sirf overlap",
+        "Sirf circle A ka hissa",
+        "Dono circles ka non-overlapping area",
+        "Pura U"
+      ],
+      "answer": 2,
+      "explanation": "Symmetric difference mein wo elements hain jo sirf ek set mein hain, isliye overlap chhod kar dono circles ka bahar wala hissa."
+    },
+    {
+      "id": "mt1-d-m06",
+      "topic": "1.4",
+      "q": "Agar A ⊆ B hai, to Venn diagram mein circle A kahan hoga?",
+      "options": [
+        "B ke bahar",
+        "B ke andar",
+        "A aur B alag, bina overlap ke",
+        "A aur B ka size same"
+      ],
+      "answer": 1,
+      "explanation": "Subset mein A ke saare elements B mein hote hain, isliye circle A circle B ke andar aata hai."
+    },
+    {
+      "id": "mt1-d-m07",
+      "topic": "1.4",
+      "q": "Venn diagram mein do circles overlap nahi kar rahe. Sets kaise hain?",
+      "options": [
+        "Disjoint",
+        "Equal",
+        "Subsets",
+        "Universal"
+      ],
+      "answer": 0,
+      "explanation": "Jab circles overlap nahi karte, A ∩ B = φ, yaani sets disjoint hain."
+    },
+    {
+      "id": "mt1-w-m01",
+      "topic": "1.5",
+      "q": "U = {1..10}, A = {1, 2, 4, 5}, B = {6, 7, 9, 10}. A ∩ B = ?",
+      "options": [
+        "φ",
+        "{1, 2, 4, 5}",
+        "{6, 7, 9, 10}",
+        "U"
+      ],
+      "answer": 0,
+      "explanation": "A aur B mein koi common element nahi, isliye A ∩ B = φ (disjoint sets)."
+    },
+    {
+      "id": "mt1-y-m01",
+      "topic": "1.1",
+      "q": "Kaunsa number rational hai?",
+      "options": [
+        "√2",
+        "π",
+        "1/3",
+        "√5"
+      ],
+      "answer": 2,
+      "explanation": "1/3 = p/q form mein hai (p = 1, q = 3)."
+    },
+    {
+      "id": "mt1-y-m02",
+      "topic": "1.1",
+      "q": "Real numbers R kya hain?",
+      "options": [
+        "Q ∩ I",
+        "Q ∪ I",
+        "Q − I",
+        "I − Q"
+      ],
+      "answer": 1,
+      "explanation": "R = Q ∪ I (rational aur irrational ka union)."
+    },
+    {
+      "id": "mt1-y-m03",
+      "topic": "1.2",
+      "q": "{1, 4, 9, 16} ka set-builder form kaunsa hai?",
+      "options": [
+        "{x | x = n², n ∈ N, n ≤ 4}",
+        "{x | x is odd}",
+        "{x | x ∈ Z}",
+        "{x | x < 10}"
+      ],
+      "answer": 0,
+      "explanation": "1, 4, 9, 16 = 1², 2², 3², 4²."
+    },
+    {
+      "id": "mt1-y-m04",
+      "topic": "1.3",
+      "q": "{φ} mein kitne elements hain?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Ye null set hai"
+      ],
+      "answer": 1,
+      "explanation": "{φ} mein ek element hai: φ. Isliye ye null set nahi hai."
+    },
+    {
+      "id": "mt1-y-m05",
+      "topic": "1.3",
+      "q": "Kaunsa set infinite hai?",
+      "options": [
+        "{1, 2, 3}",
+        "{x | x ∈ N}",
+        "{a, e, i, o, u}",
+        "{2}"
+      ],
+      "answer": 1,
+      "explanation": "Natural numbers N ke elements count nahi ho sakte."
+    },
+    {
+      "id": "mt1-y-m06",
+      "topic": "1.4",
+      "q": "Disjoint sets ka Venn diagram kaisa hota hai?",
+      "options": [
+        "Circles overlap karte hain",
+        "Circles alag, bina overlap",
+        "Ek circle dusre ke andar",
+        "Dono circles same"
+      ],
+      "answer": 1,
+      "explanation": "Disjoint sets mein koi common element nahi, isliye circles overlap nahi karte."
+    },
+    {
+      "id": "mt1-y-m07",
+      "topic": "1.7",
+      "q": "A = {1, 2}, B = {3}. A × B = ?",
+      "options": [
+        "{(1, 3), (2, 3)}",
+        "{(3, 1), (3, 2)}",
+        "{1, 2, 3}",
+        "{(1, 2), (3, 3)}"
+      ],
+      "answer": 0,
+      "explanation": "Pehle A ka element, phir B ka element: (1, 3), (2, 3)."
+    },
+    {
+      "id": "mt1-y-m08",
+      "topic": "1.5",
+      "q": "A = {1, 2, 3}, B = {3, 4}. A − B = ?",
+      "options": [
+        "{1, 2}",
+        "{3}",
+        "{4}",
+        "{1, 2, 3, 4}"
+      ],
+      "answer": 0,
+      "explanation": "A ke elements jo B mein nahi: 1, 2."
+    },
+    {
+      "id": "mt1-y-m09",
+      "topic": "1.6",
+      "q": "A ∩ (B ∪ C) ke barabar kya hai?",
+      "options": [
+        "(A ∩ B) ∪ (A ∩ C)",
+        "(A ∪ B) ∩ C",
+        "A ∪ B ∪ C",
+        "A'"
+      ],
+      "answer": 0,
+      "explanation": "Intersection distributive hai union par: A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)."
+    },
+    {
+      "id": "mt1-y-m10",
+      "topic": "1.6",
+      "q": "(A')' kya hai?",
+      "options": [
+        "A'",
+        "U",
+        "A",
+        "φ"
+      ],
+      "answer": 2,
+      "explanation": "Complement ka complement original set deta hai."
+    },
+    {
+      "id": "mt1-y-m11",
+      "topic": "1.3",
+      "q": "Equal sets ka Venn diagram mein circles kaise hote hain?",
+      "options": [
+        "Overlap karte hain",
+        "Alag hote hain",
+        "Same position par, ek hi area",
+        "Ek circle bahar"
+      ],
+      "answer": 2,
+      "explanation": "Equal sets ke sab elements same hain, isliye circles coincide karte hain."
+    },
+    {
+      "id": "mt1-y-m12",
+      "topic": "1.7",
+      "q": "A = {x, y}: P(A) mein kitne subsets hain?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "n(P(A)) = 2² = 4: φ, {x}, {y}, {x, y}."
+    }
+  ],
+  "short": [
+    {
+      "id": "mt1-d-s01",
+      "topic": "1.5",
+      "q": "Venn diagram mein A Δ B kaun sa area shade hota hai? Formula bhi likho.",
+      "answer": "Dono circles ka non-overlapping part shade hota hai. A Δ B = (A ∪ B) - (A ∩ B) = (A - B) ∪ (B - A).",
+      "marks": 2
+    },
+    {
+      "id": "mt1-d-s02",
+      "topic": "1.5",
+      "q": "A = {1, 2, 3, 4, 5} aur B = {2, 4, 6, 7} ke liye A - B aur B - A likho.",
+      "answer": "A - B = {1, 3, 5}; B - A = {6, 7}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s01",
+      "topic": "1.5",
+      "q": "U = factors of 48 = {1, 2, 3, 4, 6, 8, 12, 16, 24, 48}. A = factors of 24, B = factors of 12, C = factors of 8. A', B', C' likho.",
+      "answer": "A' = {16, 48}; B' = {8, 16, 24, 48}; C' = {3, 6, 12, 16, 24, 48}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s02",
+      "topic": "1.5",
+      "q": "Same U, A, B, C (factors of 48, 24, 12, 8): A ∪ B, A ∩ B aur A Δ B nikaalo.",
+      "answer": "A ∪ B = {1, 2, 3, 4, 6, 8, 12, 24}; A ∩ B = {1, 2, 3, 4, 6, 12}; A Δ B = {8, 24}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s03",
+      "topic": "1.6",
+      "q": "Same U, B, C: (B ∪ C)' aur B' ∩ C' nikaal kar De Morgan verify karo.",
+      "answer": "(B ∪ C)' = {16, 24, 48}; B' ∩ C' = {16, 24, 48}. Dono same hain, De Morgan verify.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s04",
+      "topic": "1.5",
+      "q": "U = {1..10}, A = {1, 2, 4, 5}, B = {6, 7, 9, 10}, C = {1, 2, 9, 10}. A', B', C' likho.",
+      "answer": "A' = {3, 6, 7, 8, 9, 10}; B' = {1, 2, 3, 4, 5, 8}; C' = {3, 4, 5, 6, 7, 8}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s05",
+      "topic": "1.5",
+      "q": "Same sets (U = {1..10}, A = {1, 2, 4, 5}, B = {6, 7, 9, 10}): A ∪ B, A ∩ B aur A Δ B nikaalo.",
+      "answer": "A ∪ B = {1, 2, 4, 5, 6, 7, 9, 10}; A ∩ B = {} (φ); A Δ B = {1, 2, 4, 5, 6, 7, 9, 10}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s06",
+      "topic": "1.6",
+      "q": "Same sets (C = {1, 2, 9, 10}): (B ∪ C)' aur B' ∩ C' verify karo.",
+      "answer": "(B ∪ C)' = {3, 4, 5, 8}; B' ∩ C' = {3, 4, 5, 8}. Equal, isliye (B ∪ C)' = B' ∩ C'.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s07",
+      "topic": "1.7",
+      "q": "U = {11..20}, A = {11, 13, 15, 18}, B = {12, 14, 16, 17, 18}. A ∪ B aur n(P(A)) nikaalo.",
+      "answer": "A ∪ B = {11, 12, 13, 14, 15, 16, 17, 18}; n(P(A)) = 2^4 = 16.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s08",
+      "topic": "1.5",
+      "q": "Same U, A, B, C = {18, 19, 20}: A' − B', B' − A' aur B' − C' nikaalo.",
+      "answer": "A' − B' = {12, 14, 16, 17}; B' − A' = {11, 13, 15}; B' − C' = {19, 20}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s09",
+      "topic": "1.5",
+      "q": "Same sets (U = {11..20}): A Δ B, C Δ B aur B ∩ C nikaalo.",
+      "answer": "A Δ B = {11, 12, 13, 14, 15, 16, 17}; C Δ B = {12, 14, 16, 17, 19, 20}; B ∩ C = {18}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s10",
+      "topic": "1.6",
+      "q": "A = {1, 2, 3, 4}, B = {2, 4, 5, 6}, C = {4, 5, 7}. A ∪ (B ∩ C) aur A ∩ (B ∪ C) nikaalo.",
+      "answer": "A ∪ (B ∩ C) = {1, 2, 3, 4, 5}; A ∩ (B ∪ C) = {2, 4}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s11",
+      "topic": "1.6",
+      "q": "U = {1..7}, A = {1, 2, 3, 4}, B = {3, 4, 5}. De Morgan se (A ∪ B)' aur (A ∩ B)' nikaalo.",
+      "answer": "(A ∪ B)' = {6, 7}; (A ∩ B)' = {1, 2, 5, 6, 7}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s12",
+      "topic": "1.5",
+      "q": "A = {1, 2, 3}, B = {1, 2, 3, 4, 5}, C = {1, 4, 6, 7}. C − B aur C − A nikaalo, aur batao C − B ⊆ C − A kyon.",
+      "answer": "C − B = {6, 7}; C − A = {4, 6, 7}. C − B ⊆ C − A kyonki A ⊆ B hai, isliye C − B, C − A ka subset hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s13",
+      "topic": "1.5",
+      "q": "A = {1, 2, 3, 4}, B = {1, 3, 5}, C = {1, 5, 6}. A − (B ∪ C) nikaalo.",
+      "answer": "A − (B ∪ C) = {2, 4}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-w-s14",
+      "topic": "1.7",
+      "q": "A = {1, 2, 3, 4}, B = {1, 4, 5}. n(A × B) aur (A × B) ∩ (B × A) nikaalo.",
+      "answer": "n(A × B) = 12; (A × B) ∩ (B × A) = {(1, 1), (1, 4), (4, 1), (4, 4)}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-y-s01",
+      "topic": "1.1",
+      "q": "N, Z, Q, I, R ka relation likho.",
+      "answer": "N ⊂ Z ⊂ Q ⊂ R; I ⊂ R; R = Q ∪ I; Q ∩ I = φ.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-y-s02",
+      "topic": "1.2",
+      "q": "{x ∈ N | x < 5} ko listing method mein likho.",
+      "answer": "{1, 2, 3, 4}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-y-s03",
+      "topic": "1.2",
+      "q": "{3, 6, 9} ko property (set-builder) form mein likho.",
+      "answer": "{x | x ∈ N, x multiple of 3, x ≤ 9} (ya {x | x = 3n, n ∈ {1, 2, 3}}).",
+      "marks": 2
+    },
+    {
+      "id": "mt1-y-s04",
+      "topic": "1.3",
+      "q": "Finite aur infinite set ka ek-ek example do.",
+      "answer": "Finite: {1, 2, 3}; Infinite: N = {1, 2, 3, ...}.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-y-s05",
+      "topic": "1.4",
+      "q": "Subset A ⊆ B ka Venn diagram kaise banate hain?",
+      "answer": "Circle A ko circle B ke andar banao, kyunki A ke sab elements B mein hain.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-y-s06",
+      "topic": "1.6",
+      "q": "De Morgan ka use karke (A ∩ B)' ko A' aur B' ke form mein likho.",
+      "answer": "(A ∩ B)' = A' ∪ B'.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-y-s07",
+      "topic": "1.7",
+      "q": "A = {1, 2, 3}, B = {x, y}: n(A × B) aur n(P(A)) nikaalo.",
+      "answer": "n(A × B) = 3 × 2 = 6; n(P(A)) = 2³ = 8.",
+      "marks": 2
+    },
+    {
+      "id": "mt1-y-s08",
+      "topic": "1.5",
+      "q": "A = {a, b, c}, U = {a, b, c, d, e}. A' likho aur A ∪ A' batao.",
+      "answer": "A' = {d, e}; A ∪ A' = U = {a, b, c, d, e}.",
+      "marks": 2
+    }
+  ]
+}

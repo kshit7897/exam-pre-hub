@@ -6,6 +6,7 @@ import { getSubject, getUnit, subjects } from "@/lib/subjects";
 import { colorAt, iconAt } from "@/lib/unitStyle";
 import BackButton from "@/components/BackButton";
 import NotesReader from "@/components/NotesReader";
+import DiagramGallery from "@/components/DiagramGallery";
 import TopicNav from "@/components/TopicNav";
 import { FadeUp } from "@/components/Motion";
 
@@ -53,6 +54,9 @@ async function UnitLoader({ params }: { params: Promise<{ subject: string; unit:
                   <span className="rounded-full bg-white/20 px-3 py-1">{unit.topics.length} topics</span>
                   <span className="rounded-full bg-white/20 px-3 py-1">{unit.mcq.length} MCQ</span>
                   <span className="rounded-full bg-white/20 px-3 py-1">{unit.short.length} short</span>
+                  {unit.diagrams && unit.diagrams.length > 0 && (
+                    <a href="#diagrams" className="rounded-full bg-white/20 px-3 py-1">{unit.diagrams.length} diagrams</a>
+                  )}
                 </div>
               </div>
             </div>
@@ -72,6 +76,8 @@ async function UnitLoader({ params }: { params: Promise<{ subject: string; unit:
         <TopicNav topics={unit.topics.map((t) => ({ id: t.id, title: t.title }))} color={color} />
         <NotesReader topics={unit.topics} color={color} />
       </div>
+
+      <DiagramGallery diagrams={unit.diagrams ?? []} topics={unit.topics} color={color} mcq={unit.mcq} short={unit.short} />
     </div>
   );
 }

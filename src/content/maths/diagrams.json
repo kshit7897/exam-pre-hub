@@ -1,0 +1,479 @@
+[
+  {
+    "id": "mt1-p007a",
+    "unit": "unit-1",
+    "page": 7,
+    "topic": "1.4",
+    "title": "Intersecting sets (A ∩ B ≠ φ)",
+    "image": "/maths/diagrams/mt1-p007.jpg",
+    "reading": "Circles overlap: sets ke beech common elements hain."
+  },
+  {
+    "id": "mt1-p007b",
+    "unit": "unit-1",
+    "page": 7,
+    "topic": "1.4",
+    "title": "Disjoint sets (A ∩ B = φ)",
+    "image": "/maths/diagrams/mt1-p007.jpg",
+    "reading": "Circles overlap nahi karte: koi common element nahi."
+  },
+  {
+    "id": "mt1-p008",
+    "unit": "unit-1",
+    "page": 8,
+    "topic": "1.4",
+    "title": "Subset and equal sets",
+    "image": "/maths/diagrams/mt1-p008.jpg",
+    "reading": "A ⊆ B mein circle A circle B ke andar hota hai. A = B mein circles same hote hain."
+  },
+  {
+    "id": "mt1-p009a",
+    "unit": "unit-1",
+    "page": 9,
+    "topic": "1.5",
+    "title": "Union A ∪ B",
+    "image": "/maths/diagrams/mt1-p009.jpg",
+    "reading": "Dono circles poore shade: A ya B mein jo bhi element ho."
+  },
+  {
+    "id": "mt1-p009b",
+    "unit": "unit-1",
+    "page": 9,
+    "topic": "1.5",
+    "title": "Intersection A ∩ B",
+    "image": "/maths/diagrams/mt1-p009.jpg",
+    "reading": "Sirf overlap shade: dono sets ke common elements."
+  },
+  {
+    "id": "mt1-p009c",
+    "unit": "unit-1",
+    "page": 9,
+    "topic": "1.5",
+    "title": "Complement A'",
+    "image": "/maths/diagrams/mt1-p009.jpg",
+    "reading": "Rectangle U mein circle A ke bahar ka hissa shade."
+  },
+  {
+    "id": "mt1-p014a",
+    "unit": "unit-1",
+    "page": 14,
+    "topic": "1.5",
+    "title": "Difference A - B",
+    "image": "/maths/diagrams/mt1-p014.jpg",
+    "reading": "Circle A ka hissa jo circle B se bahar hai."
+  },
+  {
+    "id": "mt1-p014b",
+    "unit": "unit-1",
+    "page": 14,
+    "topic": "1.5",
+    "title": "Difference B - A",
+    "image": "/maths/diagrams/mt1-p014.jpg",
+    "reading": "Circle B ka hissa jo circle A se bahar hai."
+  },
+  {
+    "id": "mt1-p015",
+    "unit": "unit-1",
+    "page": 15,
+    "topic": "1.5",
+    "title": "Symmetric difference A Δ B",
+    "image": "/maths/diagrams/mt1-p015.jpg",
+    "reading": "Sirf ek set mein aane wale elements: dono circles ka non-overlapping part."
+  },
+  {
+    "id": "mt2-p002",
+    "unit": "unit-2",
+    "page": 2,
+    "topic": "2.2",
+    "title": "Conjunction truth table (AND)",
+    "image": "/maths/diagrams/mt2-p002.jpg",
+    "reading": "p ∧ q sirf tab true hai jab dono true hon."
+  },
+  {
+    "id": "mt2-p003a",
+    "unit": "unit-2",
+    "page": 3,
+    "topic": "2.2",
+    "title": "Disjunction truth table (OR)",
+    "image": "/maths/diagrams/mt2-p003.jpg",
+    "reading": "p ∨ q tab false hai jab dono false hon."
+  },
+  {
+    "id": "mt2-p003b",
+    "unit": "unit-2",
+    "page": 3,
+    "topic": "2.2",
+    "title": "Conditional truth table (p → q)",
+    "image": "/maths/diagrams/mt2-p003.jpg",
+    "reading": "p → q sirf tab false hai jab p true aur q false ho."
+  },
+  {
+    "id": "mt2-p004",
+    "unit": "unit-2",
+    "page": 4,
+    "topic": "2.2",
+    "title": "Biconditional truth table (p ↔ q)",
+    "image": "/maths/diagrams/mt2-p004.jpg",
+    "reading": "p ↔ q tab true hai jab dono ki values same hon."
+  },
+  {
+    "id": "mt2-p005a",
+    "unit": "unit-2",
+    "page": 5,
+    "topic": "2.4",
+    "title": "Tautology: p ∨ ~p",
+    "image": "/maths/diagrams/mt2-p005.jpg",
+    "reading": "Final column sab rows mein true: tautology."
+  },
+  {
+    "id": "mt2-p005b",
+    "unit": "unit-2",
+    "page": 5,
+    "topic": "2.4",
+    "title": "Contradiction: p ∧ ~p",
+    "image": "/maths/diagrams/mt2-p005.jpg",
+    "reading": "Final column sab rows mein false: contradiction."
+  },
+  {
+    "id": "mt2-p006a",
+    "unit": "unit-2",
+    "page": 6,
+    "topic": "2.5",
+    "title": "Example 1: (p ∨ ~q) → (p ∧ q)",
+    "image": "/maths/diagrams/mt2-p006.jpg",
+    "reading": "Step by step columns banao, last column answer hai."
+  },
+  {
+    "id": "mt2-p006b",
+    "unit": "unit-2",
+    "page": 6,
+    "topic": "2.5",
+    "title": "Example 4: (p → q) → r",
+    "image": "/maths/diagrams/mt2-p006.jpg",
+    "reading": "Pehle p → q, phir uska r ke saath conditional."
+  },
+  {
+    "id": "mt2-p009a",
+    "unit": "unit-2",
+    "page": 9,
+    "topic": "2.6",
+    "title": "Implication and equivalence: p → q and ~q → ~p",
+    "image": "/maths/diagrams/mt2-p009.jpg",
+    "reading": "Dono statements ki final columns same hain, isliye equivalent."
+  },
+  {
+    "id": "mt2-p011",
+    "unit": "unit-2",
+    "page": 11,
+    "topic": "2.7",
+    "title": "Distributive law: p ∧ (q ∨ r)",
+    "image": "/maths/diagrams/mt2-p011.jpg",
+    "reading": "LHS aur RHS ki final columns same: law verify."
+  },
+  {
+    "id": "mt3-p001",
+    "unit": "unit-3",
+    "page": 1,
+    "topic": "3.1",
+    "title": "Matrix notation and order",
+    "image": "/maths/diagrams/mt3-p001.jpg",
+    "reading": "Order m × n: m rows, n columns. a_ij = row i, column j."
+  },
+  {
+    "id": "mt3-p002",
+    "unit": "unit-3",
+    "page": 2,
+    "topic": "3.1",
+    "title": "Row, column and zero matrix",
+    "image": "/maths/diagrams/mt3-p002.jpg",
+    "reading": "Ek row = row matrix, ek column = column matrix, sab 0 = zero matrix."
+  },
+  {
+    "id": "mt3-p003",
+    "unit": "unit-3",
+    "page": 3,
+    "topic": "3.1",
+    "title": "Square, diagonal, scalar and identity matrix",
+    "image": "/maths/diagrams/mt3-p003.jpg",
+    "reading": "Diagonal: non-diagonal 0. Scalar: diagonal barabar. Identity: diagonal 1."
+  },
+  {
+    "id": "mt3-p004",
+    "unit": "unit-3",
+    "page": 4,
+    "topic": "3.2",
+    "title": "Upper and lower triangular matrix",
+    "image": "/maths/diagrams/mt3-p004.jpg",
+    "reading": "Upper triangular: diagonal ke neeche 0. Lower: diagonal ke upar 0."
+  },
+  {
+    "id": "mt3-p005",
+    "unit": "unit-3",
+    "page": 5,
+    "topic": "3.2",
+    "title": "Symmetric matrix: A = Aᵀ",
+    "image": "/maths/diagrams/mt3-p005.jpg",
+    "reading": "A = Aᵀ hai to matrix symmetric hai."
+  },
+  {
+    "id": "mt3-p013",
+    "unit": "unit-3",
+    "page": 13,
+    "topic": "3.4",
+    "title": "A² = I example",
+    "image": "/maths/diagrams/mt3-p013.jpg",
+    "reading": "A² = I: slide ka example, A × A karke identity milti hai."
+  },
+  {
+    "id": "mt3-p016",
+    "unit": "unit-3",
+    "page": 16,
+    "topic": "3.5",
+    "title": "3 × 3 determinant by cofactor expansion",
+    "image": "/maths/diagrams/mt3-p016.jpg",
+    "reading": "3 × 3 determinant: row 1 ke cofactor expansion, |A| = 0."
+  },
+  {
+    "id": "mt3-p019",
+    "unit": "unit-3",
+    "page": 19,
+    "topic": "3.6",
+    "title": "Minor matrix",
+    "image": "/maths/diagrams/mt3-p019.jpg",
+    "reading": "Har element ka minor: row aur column hatane ke baad bachi determinant."
+  },
+  {
+    "id": "mt3-p021a",
+    "unit": "unit-3",
+    "page": 21,
+    "topic": "3.6",
+    "title": "Cofactor matrix",
+    "image": "/maths/diagrams/mt3-p021.jpg",
+    "reading": "Cofactor = sign × minor. Sign pattern + − + / − + − / + − +."
+  },
+  {
+    "id": "mt3-p021b",
+    "unit": "unit-3",
+    "page": 21,
+    "topic": "3.7",
+    "title": "Adjoint = transpose of cofactor matrix",
+    "image": "/maths/diagrams/mt3-p021.jpg",
+    "reading": "Adjoint = cofactor matrix ka transpose."
+  },
+  {
+    "id": "mt3-p026",
+    "unit": "unit-3",
+    "page": 26,
+    "topic": "3.8",
+    "title": "2 × 2 inverse by adjoint",
+    "image": "/maths/diagrams/mt3-p026.jpg",
+    "reading": "2 × 2 inverse: |A| = 4, adj ko 4 se divide karo."
+  },
+  {
+    "id": "mt3-p030",
+    "unit": "unit-3",
+    "page": 30,
+    "topic": "3.8",
+    "title": "3 × 3 inverse by adjoint",
+    "image": "/maths/diagrams/mt3-p030.jpg",
+    "reading": "3 × 3 inverse: |A| = −3, cofactor, transpose, phir divide."
+  },
+  {
+    "id": "mt1-p010a",
+    "unit": "unit-1",
+    "page": 10,
+    "topic": "1.5",
+    "title": "A' (complement) Venn",
+    "image": "/maths/diagrams/mt1-p010.jpg",
+    "reading": "Circle A ke bahar ka area (rectangle U ke andar) = A'."
+  },
+  {
+    "id": "mt1-p010b",
+    "unit": "unit-1",
+    "page": 10,
+    "topic": "1.5",
+    "title": "Union A ∪ B (example)",
+    "image": "/maths/diagrams/mt1-p010.jpg",
+    "reading": "Dono circles ka poora area = A ∪ B."
+  },
+  {
+    "id": "mt1-p011",
+    "unit": "unit-1",
+    "page": 11,
+    "topic": "1.5",
+    "title": "Intersection A ∩ B (example)",
+    "image": "/maths/diagrams/mt1-p011.jpg",
+    "reading": "Sirf overlap = A ∩ B."
+  },
+  {
+    "id": "mt1-p018r",
+    "unit": "unit-1",
+    "page": 18,
+    "topic": "1.5",
+    "title": "Three-set example: region table (U = 1..10)",
+    "image": "/maths/diagrams/mt1-p018.jpg",
+    "reading": "Teen sets A, B, C ke saare regions: kaun sa element kis region mein hai."
+  },
+  {
+    "id": "mt1-p017r",
+    "unit": "unit-1",
+    "page": 17,
+    "topic": "1.5",
+    "title": "Four-set example: region table (U = divisors of 48)",
+    "image": "/maths/diagrams/mt1-p017.jpg",
+    "reading": "Divisors wala example: A, B, C ke regions."
+  },
+  {
+    "id": "mt1-p021r",
+    "unit": "unit-1",
+    "page": 21,
+    "topic": "1.5",
+    "title": "Example with A, B, C (U = 11..20)",
+    "image": "/maths/diagrams/mt1-p021.jpg",
+    "reading": "A, B, C ke regions: 18 teeno/do sets mein kahan hai, dekho."
+  },
+  {
+    "id": "mt2-p006c",
+    "unit": "unit-2",
+    "page": 6,
+    "topic": "2.5",
+    "title": "Example 2: (~p ∧ ~q) → (p ∨ q)",
+    "image": "/maths/diagrams/mt2-p006.jpg",
+    "reading": "Do variables wala statement: pehle NOT, phir AND/OR, last mein →."
+  },
+  {
+    "id": "mt2-p006d",
+    "unit": "unit-2",
+    "page": 6,
+    "topic": "2.5",
+    "title": "Example 3(i): p ∨ q ∨ r and p ∧ q ∧ r",
+    "image": "/maths/diagrams/mt2-p006.jpg",
+    "reading": "Teen variables ka OR aur AND: OR sirf 000 par 0, AND sirf 111 par 1."
+  },
+  {
+    "id": "mt2-p007a",
+    "unit": "unit-2",
+    "page": 7,
+    "topic": "2.5",
+    "title": "Example 5: (~p → q) → ~r",
+    "image": "/maths/diagrams/mt2-p007.jpg",
+    "reading": "Har intermediate column se final column nikalo."
+  },
+  {
+    "id": "mt2-p007b",
+    "unit": "unit-2",
+    "page": 7,
+    "topic": "2.5",
+    "title": "Example 6: (~p ∧ q) → r",
+    "image": "/maths/diagrams/mt2-p007.jpg",
+    "reading": "Pehle ~p ∧ q, phir → r."
+  },
+  {
+    "id": "mt2-p007c",
+    "unit": "unit-2",
+    "page": 7,
+    "topic": "2.5",
+    "title": "Example 7: ~[(p ∨ ~q) ∧ ~r]",
+    "image": "/maths/diagrams/mt2-p007.jpg",
+    "reading": "Andar se bahar: pehle p ∨ ~q, phir ∧ ~r, last mein NOT."
+  },
+  {
+    "id": "mt2-p008a",
+    "unit": "unit-2",
+    "page": 8,
+    "topic": "2.6",
+    "title": "Example 8: ~(p ∨ q) → (~q ∨ r) (tautology)",
+    "image": "/maths/diagrams/mt2-p008.jpg",
+    "reading": "Sab 8 rows mein 1: tautology."
+  },
+  {
+    "id": "mt2-p008b",
+    "unit": "unit-2",
+    "page": 8,
+    "topic": "2.5",
+    "title": "Example 9: (~p ∧ q) ∨ (~r ∧ q)",
+    "image": "/maths/diagrams/mt2-p008.jpg",
+    "reading": "Dono AND ka OR."
+  },
+  {
+    "id": "mt3-p010",
+    "unit": "unit-3",
+    "page": 10,
+    "topic": "3.4",
+    "title": "A·B (3 × 3 example)",
+    "image": "/maths/diagrams/mt3-p010.jpg",
+    "reading": "Row × column: A ki row aur B ki column ka dot product."
+  },
+  {
+    "id": "mt3-p011",
+    "unit": "unit-3",
+    "page": 11,
+    "topic": "3.4",
+    "title": "A·B (3 × 2 and 2 × 4)",
+    "image": "/maths/diagrams/mt3-p011.jpg",
+    "reading": "Inner dimensions match (2 = 2), order 3 × 4."
+  },
+  {
+    "id": "mt3-p012a",
+    "unit": "unit-3",
+    "page": 12,
+    "topic": "3.4",
+    "title": "A·B (3 × 2 and 2 × 3)",
+    "image": "/maths/diagrams/mt3-p012.jpg",
+    "reading": "3 × 2 aur 2 × 3 ka product 3 × 3 hota hai."
+  },
+  {
+    "id": "mt3-p012b",
+    "unit": "unit-3",
+    "page": 12,
+    "topic": "3.4",
+    "title": "B·A (2 × 3 and 3 × 2)",
+    "image": "/maths/diagrams/mt3-p012.jpg",
+    "reading": "BA 2 × 2 hota hai, AB se alag (non-commutative)."
+  },
+  {
+    "id": "mt3-p024",
+    "unit": "unit-3",
+    "page": 24,
+    "topic": "3.7",
+    "title": "adj(A) for A = [[1, 2, 3], [4, 3, 2], [1, 0, 3]]",
+    "image": "/maths/diagrams/mt3-p024.jpg",
+    "reading": "|A| = −20. adj(A) = cofactor matrix ka transpose."
+  },
+  {
+    "id": "mt3-p028",
+    "unit": "unit-3",
+    "page": 28,
+    "topic": "3.8",
+    "title": "A⁻¹ for A = [[1, 2, 4], [3, 1, 2], [5, 3, 3]]",
+    "image": "/maths/diagrams/mt3-p028.jpg",
+    "reading": "A⁻¹ = adj(A) / 15. adj(A) = [[−3, 6, 0], [1, −17, 10], [4, 7, −5]]."
+  },
+  {
+    "id": "mt3-p029",
+    "unit": "unit-3",
+    "page": 29,
+    "topic": "3.7",
+    "title": "adj(A) for A = [[−1, 2, 3], [−4, 0, 5], [0, 1, 2]]",
+    "image": "/maths/diagrams/mt3-p029.jpg",
+    "reading": "|A| = 9. adj(A) = Cᵀ."
+  },
+  {
+    "id": "mt1-p019a",
+    "unit": "unit-1",
+    "page": 19,
+    "topic": "1.5",
+    "title": "Union and intersection (disjoint sets, U = 1..10)",
+    "image": "/maths/diagrams/mt1-p019.jpg",
+    "reading": "A = {1, 2, 4, 5} aur B = {6, 7, 9, 10} disjoint hain: union sab elements, intersection khaali."
+  },
+  {
+    "id": "mt1-p020",
+    "unit": "unit-1",
+    "page": 20,
+    "topic": "1.5",
+    "title": "Symmetric difference A Δ B (disjoint sets)",
+    "image": "/maths/diagrams/mt1-p020.jpg",
+    "reading": "Disjoint sets ka A Δ B = A ∪ B, kyunki overlap khaali hai."
+  }
+]

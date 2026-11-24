@@ -1,0 +1,1406 @@
+[
+  {
+    "id": "u1-p008",
+    "unit": "unit-1",
+    "page": 8,
+    "topic": "1.2",
+    "title": "Basic digital computer: block diagram",
+    "image": "/aoc/diagrams/u1-p008.jpg",
+    "reading": "Input devices send data to the Input-Output Processor, which passes it to the CPU and RAM. The CPU sends results back through the processor to the output devices. Arrows show the direction of data flow."
+  },
+  {
+    "id": "u1-p012",
+    "unit": "unit-1",
+    "page": 12,
+    "topic": "1.1",
+    "title": "Characteristics of a computer (bubble diagram)",
+    "image": "/aoc/diagrams/u1-p012.jpg",
+    "reading": "Speed, accuracy, diligence, versatility, storage, automatic working and 'no IQ' (it works only on the instructions given). Each bubble is one characteristic."
+  },
+  {
+    "id": "u1-p021",
+    "unit": "unit-1",
+    "page": 21,
+    "topic": "1.2",
+    "title": "Input devices",
+    "image": "/aoc/diagrams/u1-p021.jpg",
+    "reading": "Input devices enter data: keyboard, mouse, scanner, OCR, bar code reader, MICR, trackball, joystick, touchpad and touch panel."
+  },
+  {
+    "id": "u1-p023",
+    "unit": "unit-1",
+    "page": 23,
+    "topic": "1.2",
+    "title": "Output devices",
+    "image": "/aoc/diagrams/u1-p023.jpg",
+    "reading": "Output devices show results: monitor, printer, speakers, headset, projector and plotter. Output is soft copy (on screen) or hard copy (on paper)."
+  },
+  {
+    "id": "u1-p031",
+    "unit": "unit-1",
+    "page": 31,
+    "topic": "1.2",
+    "title": "Block diagram of a digital computer",
+    "image": "/aoc/diagrams/u1-p031.jpg",
+    "reading": "Input and output sit at the edges. The CPU (control unit and ALU) works with main memory, and auxiliary storage connects to main memory. Solid lines show data flow and dotted lines show control flow."
+  },
+  {
+    "id": "u1-p037",
+    "unit": "unit-1",
+    "page": 37,
+    "topic": "1.3",
+    "title": "Positional number system: three factors (Venn)",
+    "image": "/aoc/diagrams/u1-p037.jpg",
+    "reading": "The value of a digit depends on three things: the digit itself, its positional value and the base of the number system."
+  },
+  {
+    "id": "u1-p045",
+    "unit": "unit-1",
+    "page": 45,
+    "topic": "1.3",
+    "title": "Decimal place values (49365)",
+    "image": "/aoc/diagrams/u1-p045.jpg",
+    "reading": "Each digit is multiplied by 10 raised to its place. 4x10^4 + 9x10^3 + 3x10^2 + 6x10^1 + 5x10^0 = 49365."
+  },
+  {
+    "id": "u1-p048",
+    "unit": "unit-1",
+    "page": 48,
+    "topic": "1.3",
+    "title": "Binary units pyramid (bit to YB)",
+    "image": "/aoc/diagrams/u1-p048.jpg",
+    "reading": "Bit, nibble (4 bits) and byte (8 bits) come first. Then KB, MB, GB, TB, PB, EB, ZB and YB, and each is 1024 times the one below it."
+  },
+  {
+    "id": "u1-p056",
+    "unit": "unit-1",
+    "page": 56,
+    "topic": "1.3",
+    "title": "Summary of number systems (base table)",
+    "image": "/aoc/diagrams/u1-p056.jpg",
+    "reading": "Binary base 2 (0-1), decimal base 10 (0-9), octal base 8 (0-7), hexadecimal base 16 (0-9, A-F)."
+  },
+  {
+    "id": "u1-p120",
+    "unit": "unit-1",
+    "page": 120,
+    "topic": "1.7",
+    "title": "Floating-point example: 111101.1000110",
+    "image": "/aoc/diagrams/u1-p120.jpg",
+    "reading": "Mantissa m = 1.111011000110, radix r = 2 and exponent e = 5. Stored as sign bit 0, the mantissa, and exponent 5."
+  },
+  {
+    "id": "u1-p126",
+    "unit": "unit-1",
+    "page": 126,
+    "topic": "1.6",
+    "title": "Fixed-point: integer and fraction, positive and negative",
+    "image": "/aoc/diagrams/u1-p126.jpg",
+    "reading": "Numbers can be integer or fractional, and each can be positive or negative. The sign is kept in a separate bit in fixed-point form."
+  },
+  {
+    "id": "u1-p137",
+    "unit": "unit-1",
+    "page": 137,
+    "topic": "1.6",
+    "title": "Sign-magnitude form (MSB is the sign)",
+    "image": "/aoc/diagrams/u1-p137.jpg",
+    "reading": "MSB 0 means positive and 1 means negative. +35 is 00100011 in 8 bits and -35 is 10100011 (sign bit 1, same magnitude)."
+  },
+  {
+    "id": "u1-p139",
+    "unit": "unit-1",
+    "page": 139,
+    "topic": "1.6",
+    "title": "Two's complement of -35",
+    "image": "/aoc/diagrams/u1-p139.jpg",
+    "reading": "Start from 00100011, invert to 11011100, then add 1 to get 11011101 as the 2's complement form of -35."
+  },
+  {
+    "id": "u1-p141",
+    "unit": "unit-1",
+    "page": 141,
+    "topic": "1.6",
+    "title": "Signed fixed-point register layouts",
+    "image": "/aoc/diagrams/u1-p141.jpg",
+    "reading": "A register has a sign bit, integer bits and fraction bits. 8-bit: 1 sign, 4 integer, 3 fraction. 16-bit: 1 sign, 9 integer, 6 fraction. 32-bit: 1 sign, 15 integer, 16 fraction."
+  },
+  {
+    "id": "u1-p142",
+    "unit": "unit-1",
+    "page": 142,
+    "topic": "1.6",
+    "title": "-7.5 in sign-magnitude (8-bit register)",
+    "image": "/aoc/diagrams/u1-p142.jpg",
+    "reading": "7.5 = 111.1, placed as 4 integer bits and 3 fraction bits = 0111.100. With sign bit 1 the answer is 1 0111 100."
+  },
+  {
+    "id": "u1-p144",
+    "unit": "unit-1",
+    "page": 144,
+    "topic": "1.6",
+    "title": "-7.5 in 1's complement",
+    "image": "/aoc/diagrams/u1-p144.jpg",
+    "reading": "Invert 0111.100 to get 1000.011. The sign bit is 1 for the negative number."
+  },
+  {
+    "id": "u1-p147",
+    "unit": "unit-1",
+    "page": 147,
+    "topic": "1.6",
+    "title": "-7.5 in 2's complement",
+    "image": "/aoc/diagrams/u1-p147.jpg",
+    "reading": "Add 1 to the 1's complement: 1000.011 + 0.001 = 1000.100. With sign bit 1 the answer is 1 1000 100."
+  },
+  {
+    "id": "u1-p155",
+    "unit": "unit-1",
+    "page": 155,
+    "topic": "1.8",
+    "title": "Parity table for 3-bit messages",
+    "image": "/aoc/diagrams/u1-p155.jpg",
+    "reading": "For each 3-bit message the table gives the parity bit that makes the number of 1s odd (P-odd) or even (P-even)."
+  },
+  {
+    "id": "u1-p156",
+    "unit": "unit-1",
+    "page": 156,
+    "topic": "1.8",
+    "title": "Parity generator and checker flowchart",
+    "image": "/aoc/diagrams/u1-p156.jpg",
+    "reading": "The sender adds a parity bit (even parity here) and sends the message. The receiver's parity checker detects an error and asks for signal regeneration."
+  },
+  {
+    "id": "u2-p003",
+    "unit": "unit-2",
+    "page": 3,
+    "topic": "2.1",
+    "title": "Logic gate: inputs to output block",
+    "image": "/aoc/diagrams/u2-p003.jpg",
+    "reading": "A logic circuit takes one or more binary inputs and gives one output. The output depends only on the logic of the gate."
+  },
+  {
+    "id": "u2-p005",
+    "unit": "unit-2",
+    "page": 5,
+    "topic": "2.1",
+    "title": "AND gate symbol and truth table",
+    "image": "/aoc/diagrams/u2-p005.jpg",
+    "reading": "AND gives 1 only when all inputs are 1. F = AB. Rows: 00->0, 01->0, 10->0, 11->1."
+  },
+  {
+    "id": "u2-p006",
+    "unit": "unit-2",
+    "page": 6,
+    "topic": "2.1",
+    "title": "NOT gate symbol and truth table",
+    "image": "/aoc/diagrams/u2-p006.jpg",
+    "reading": "NOT gives the opposite of its input. F = A'. Input 0 gives 1 and input 1 gives 0."
+  },
+  {
+    "id": "u2-p007",
+    "unit": "unit-2",
+    "page": 7,
+    "topic": "2.1",
+    "title": "NAND gate: truth table",
+    "image": "/aoc/diagrams/u2-p007.jpg",
+    "reading": "NAND is NOT followed by AND, so F = (AB)'. Output is 0 only when all inputs are 1."
+  },
+  {
+    "id": "u2-p008",
+    "unit": "unit-2",
+    "page": 8,
+    "topic": "2.1",
+    "title": "NOR gate: truth table",
+    "image": "/aoc/diagrams/u2-p008.jpg",
+    "reading": "NOR is NOT followed by OR, so F = (A+B)'. Output is 1 only when all inputs are 0."
+  },
+  {
+    "id": "u2-p009",
+    "unit": "unit-2",
+    "page": 9,
+    "topic": "2.1",
+    "title": "Ex-OR gate: truth table (2 and 3 inputs)",
+    "image": "/aoc/diagrams/u2-p009.jpg",
+    "reading": "Ex-OR gives 1 when the inputs differ, i.e. an odd number of 1s. For 3 inputs it gives 1 when the count of 1s is odd."
+  },
+  {
+    "id": "u2-p010",
+    "unit": "unit-2",
+    "page": 10,
+    "topic": "2.1",
+    "title": "Ex-NOR gate: truth table",
+    "image": "/aoc/diagrams/u2-p010.jpg",
+    "reading": "Ex-NOR is Ex-OR followed by NOT. It gives 1 when the inputs are equal, i.e. an even number of 1s."
+  },
+  {
+    "id": "u2-p012",
+    "unit": "unit-2",
+    "page": 12,
+    "topic": "2.2",
+    "title": "Boolean function: truth table, expression, logic diagram",
+    "image": "/aoc/diagrams/u2-p012.jpg",
+    "reading": "The example F = x + y'z is shown as a truth table, an expression and a logic diagram. F = 1 when x = 1, or when y = 0 and z = 1."
+  },
+  {
+    "id": "u2-p013",
+    "unit": "unit-2",
+    "page": 13,
+    "topic": "2.2",
+    "title": "Boolean algebra laws (commutative, associative, distributive)",
+    "image": "/aoc/diagrams/u2-p013.jpg",
+    "reading": "Commutative: order does not matter. Associative: grouping does not matter. Distributive: a term can be factored out."
+  },
+  {
+    "id": "u2-p015",
+    "unit": "unit-2",
+    "page": 15,
+    "topic": "2.2",
+    "title": "Postulates and theorems table",
+    "image": "/aoc/diagrams/u2-p015.jpg",
+    "reading": "The table lists the basic identities, e.g. X+X'=1, X.X'=0, X+XY=X, X(X+Y)=X and X+YZ=(X+Y)(X+Z). Use them to simplify expressions."
+  },
+  {
+    "id": "u2-p016",
+    "unit": "unit-2",
+    "page": 16,
+    "topic": "2.2",
+    "title": "De Morgan's law",
+    "image": "/aoc/diagrams/u2-p016.jpg",
+    "reading": "De Morgan's laws: (AB)' = A' + B' and (A+B)' = A'.B'. They help convert between NAND, NOR and bubbled gates."
+  },
+  {
+    "id": "u2-p017",
+    "unit": "unit-2",
+    "page": 17,
+    "topic": "2.2",
+    "title": "Break the line and change the sign",
+    "image": "/aoc/diagrams/u2-p017.jpg",
+    "reading": "Rule: break the bar and change the operator. NAND becomes negative-OR (A'+B'), and NOR becomes negative-AND (A'B')."
+  },
+  {
+    "id": "u2-p018",
+    "unit": "unit-2",
+    "page": 18,
+    "topic": "2.2",
+    "title": "Theorem 1 truth table: (AB)' = A'+B'",
+    "image": "/aoc/diagrams/u2-p018.jpg",
+    "reading": "The left side and right side columns match for all four input combinations, which proves the theorem."
+  },
+  {
+    "id": "u2-p019",
+    "unit": "unit-2",
+    "page": 19,
+    "topic": "2.2",
+    "title": "Theorem 2 truth table: (A+B)' = A'B'",
+    "image": "/aoc/diagrams/u2-p019.jpg",
+    "reading": "Both sides match for all four input combinations, which proves the theorem."
+  },
+  {
+    "id": "u2-p023",
+    "unit": "unit-2",
+    "page": 23,
+    "topic": "2.3",
+    "title": "K-map introduction",
+    "image": "/aoc/diagrams/u2-p023.jpg",
+    "reading": "K-map Boolean function ko minimize karne ka simple method hai. Ise Veitch diagram, KV map ya K-map bhi kehte hain, aur ye 4 aur 6 variables tak kaam karta hai."
+  },
+  {
+    "id": "u2-p025",
+    "unit": "unit-2",
+    "page": 25,
+    "topic": "2.3",
+    "title": "K-map layouts for 2, 3 and 4 inputs",
+    "image": "/aoc/diagrams/u2-p025.jpg",
+    "reading": "Each K-map cell is one minterm. Rows and columns use Gray code order (00, 01, 11, 10), so neighbouring cells differ by one variable."
+  },
+  {
+    "id": "u2-p026",
+    "unit": "unit-2",
+    "page": 26,
+    "topic": "2.3",
+    "title": "K-map for 2 variables",
+    "image": "/aoc/diagrams/u2-p026.jpg",
+    "reading": "Cells are m0 (x'y'), m1 (x'y), m2 (xy') and m3 (xy). Top row is x=0 and bottom row is x=1."
+  },
+  {
+    "id": "u2-p027",
+    "unit": "unit-2",
+    "page": 27,
+    "topic": "2.3",
+    "title": "K-map for 4 variables",
+    "image": "/aoc/diagrams/u2-p027.jpg",
+    "reading": "Gray code is used on both axes (WX and YZ). Every cell has a unique 4-bit label."
+  },
+  {
+    "id": "u2-p029",
+    "unit": "unit-2",
+    "page": 29,
+    "topic": "2.3",
+    "title": "Grouping rules: wrong vs right",
+    "image": "/aoc/diagrams/u2-p029.jpg",
+    "reading": "A group must contain only 1s and be a power of 2 in size. The right example uses a pair of 1s in a row, not an uneven shape."
+  },
+  {
+    "id": "u2-p030",
+    "unit": "unit-2",
+    "page": 30,
+    "topic": "2.3",
+    "title": "Group shapes: square, rectangular, horizontal, vertical",
+    "image": "/aoc/diagrams/u2-p030.jpg",
+    "reading": "Groups must be square or rectangular (no diagonal). Make the largest groups possible and let groups overlap if needed."
+  },
+  {
+    "id": "u2-p031",
+    "unit": "unit-2",
+    "page": 31,
+    "topic": "2.3",
+    "title": "K-map SOP grouping (wrap-around)",
+    "image": "/aoc/diagrams/u2-p031.jpg",
+    "reading": "Groups can wrap around the edges of the map. Each group gives one product term in the SOP answer."
+  },
+  {
+    "id": "u2-p035",
+    "unit": "unit-2",
+    "page": 35,
+    "topic": "2.3",
+    "title": "SOP example F(X,Y,Z) = sum(1,3,6,7)",
+    "image": "/aoc/diagrams/u2-p035.jpg",
+    "reading": "Groups on the slide give YZ + XY. Caution: YZ+XY does not cover minterm 1, so the correct minimal SOP is X'Z + XY (confirm with teacher)."
+  },
+  {
+    "id": "u2-p036",
+    "unit": "unit-2",
+    "page": 36,
+    "topic": "2.3",
+    "title": "SOP example F(W,X,Y,Z) = sum(3,5,7,8,10,11)",
+    "image": "/aoc/diagrams/u2-p036.jpg",
+    "reading": "Several groupings are drawn on the slide. Each group is a power of 2, and the final answer is the sum of the chosen product terms."
+  },
+  {
+    "id": "u2-p039",
+    "unit": "unit-2",
+    "page": 39,
+    "topic": "2.3",
+    "title": "POS example F(X,Y,Z) = pi(0,3,4,6,7)",
+    "image": "/aoc/diagrams/u2-p039.jpg",
+    "reading": "POS uses the zeros (maxterms). Groups of zeros give sum terms, and the slide's simplified result is (Y+Z)(Y'+Z')(X'+Y')."
+  },
+  {
+    "id": "u2-p040",
+    "unit": "unit-2",
+    "page": 40,
+    "topic": "2.3",
+    "title": "POS example F(W,X,Y,Z) = pi(0,4,8,12)",
+    "image": "/aoc/diagrams/u2-p040.jpg",
+    "reading": "The four zeros in the first column form one group, giving the simplified POS result (Y+Z)."
+  },
+  {
+    "id": "u2-p042",
+    "unit": "unit-2",
+    "page": 42,
+    "topic": "2.4",
+    "title": "Combinational circuit: characteristics",
+    "image": "/aoc/diagrams/u2-p042.jpg",
+    "reading": "The output depends only on the present inputs. It has n inputs and m outputs, and it uses no memory."
+  },
+  {
+    "id": "u2-p043",
+    "unit": "unit-2",
+    "page": 43,
+    "topic": "2.4",
+    "title": "Design procedure for combinational circuits",
+    "image": "/aoc/diagrams/u2-p043.jpg",
+    "reading": "Five steps: state the problem, assign letter symbols to inputs and outputs, write the truth table, get the simplified Boolean function, draw the logic diagram."
+  },
+  {
+    "id": "u2-p044",
+    "unit": "unit-2",
+    "page": 44,
+    "topic": "2.4",
+    "title": "Half adder block diagram",
+    "image": "/aoc/diagrams/u2-p044.jpg",
+    "reading": "Half adder 2 bits (X, Y) add karta hai. Do outputs hain: SUM aur CARRY."
+  },
+  {
+    "id": "u2-p045",
+    "unit": "unit-2",
+    "page": 45,
+    "topic": "2.4",
+    "title": "Half adder truth table and circuit",
+    "image": "/aoc/diagrams/u2-p045.jpg",
+    "reading": "Sum = X XOR Y, Carry = XY. Ek XOR gate aur ek AND gate se half adder ban jaata hai."
+  },
+  {
+    "id": "u2-p046",
+    "unit": "unit-2",
+    "page": 46,
+    "topic": "2.4",
+    "title": "Full adder truth table",
+    "image": "/aoc/diagrams/u2-p046.jpg",
+    "reading": "Sum = X XOR Y XOR Z. Carry is 1 when two or more inputs are 1."
+  },
+  {
+    "id": "u2-p047",
+    "unit": "unit-2",
+    "page": 47,
+    "topic": "2.4",
+    "title": "Full adder circuit",
+    "image": "/aoc/diagrams/u2-p047.jpg",
+    "reading": "Two XOR gates give the sum. AND and OR gates give the carry, so Carry = Z(X XOR Y) + XY."
+  },
+  {
+    "id": "u2-p049",
+    "unit": "unit-2",
+    "page": 49,
+    "topic": "2.5",
+    "title": "Types of flip-flop",
+    "image": "/aoc/diagrams/u2-p049.jpg",
+    "reading": "Flip-flops are classified as asynchronous or synchronous. The four types are SR, D, JK and T."
+  },
+  {
+    "id": "u2-p051",
+    "unit": "unit-2",
+    "page": 51,
+    "topic": "2.5",
+    "title": "SR flip-flop truth table",
+    "image": "/aoc/diagrams/u2-p051.jpg",
+    "reading": "S=0,R=0 holds the state. S=0,R=1 resets (Q=0). S=1,R=0 sets (Q=1). S=1,R=1 is invalid."
+  },
+  {
+    "id": "u2-p052",
+    "unit": "unit-2",
+    "page": 52,
+    "topic": "2.5",
+    "title": "SR flip-flop circuit (two NOR gates)",
+    "image": "/aoc/diagrams/u2-p052.jpg",
+    "reading": "Two cross-coupled NOR gates. Each output feeds back to the other gate, so the circuit stores one bit."
+  },
+  {
+    "id": "u2-p054",
+    "unit": "unit-2",
+    "page": 54,
+    "topic": "2.5",
+    "title": "D flip-flop block diagram",
+    "image": "/aoc/diagrams/u2-p054.jpg",
+    "reading": "Inputs are D and clock C, outputs Q and Q'. The flip-flop copies D to Q on the clock edge."
+  },
+  {
+    "id": "u2-p055",
+    "unit": "unit-2",
+    "page": 55,
+    "topic": "2.5",
+    "title": "D flip-flop truth table",
+    "image": "/aoc/diagrams/u2-p055.jpg",
+    "reading": "With clock 0 there is no change. With clock 1, Q follows D: D=0 gives 0 and D=1 gives 1."
+  },
+  {
+    "id": "u2-p056",
+    "unit": "unit-2",
+    "page": 56,
+    "topic": "2.5",
+    "title": "JK flip-flop block diagram",
+    "image": "/aoc/diagrams/u2-p056.jpg",
+    "reading": "Inputs J, K and clock, outputs Q and Q'. J acts as set and K acts as reset."
+  },
+  {
+    "id": "u2-p057",
+    "unit": "unit-2",
+    "page": 57,
+    "topic": "2.5",
+    "title": "JK flip-flop truth table and circuit",
+    "image": "/aoc/diagrams/u2-p057.jpg",
+    "reading": "J=0,K=0 no change. J=0,K=1 clear. J=1,K=0 set. J=1,K=1 complements Q."
+  },
+  {
+    "id": "u2-p058",
+    "unit": "unit-2",
+    "page": 58,
+    "topic": "2.5",
+    "title": "T flip-flop block diagram",
+    "image": "/aoc/diagrams/u2-p058.jpg",
+    "reading": "One data input T, clock and outputs Q and Q'. A T flip-flop is a JK flip-flop with J and K tied together."
+  },
+  {
+    "id": "u2-p059",
+    "unit": "unit-2",
+    "page": 59,
+    "topic": "2.5",
+    "title": "T flip-flop truth table and circuit",
+    "image": "/aoc/diagrams/u2-p059.jpg",
+    "reading": "With clock 1 and T=1 the output toggles. With T=0 the output does not change."
+  },
+  {
+    "id": "u3-p002",
+    "unit": "unit-3",
+    "page": 2,
+    "topic": "3.1",
+    "title": "Integrated circuit (chip) photo",
+    "image": "/aoc/diagrams/u3-p002.jpg",
+    "reading": "An IC is a silicon chip with many interconnected gates and components, mounted in a ceramic or plastic package."
+  },
+  {
+    "id": "u3-p006",
+    "unit": "unit-3",
+    "page": 6,
+    "topic": "3.1",
+    "title": "Classification of IC chips",
+    "image": "/aoc/diagrams/u3-p006.jpg",
+    "reading": "IC types from small to large scale: SSI, MSI, LSI, VLSI, SLSI and ULSI."
+  },
+  {
+    "id": "u3-p007",
+    "unit": "unit-3",
+    "page": 7,
+    "topic": "3.1",
+    "title": "Types of IC: SSI to VLSI",
+    "image": "/aoc/diagrams/u3-p007.jpg",
+    "reading": "SSI: about 10 transistors or a few gates. MSI: 10 to 200 gates (decoders, adders, registers). LSI: 200 to 1000 gates. VLSI: 1000 to 10,000 gates."
+  },
+  {
+    "id": "u3-p008",
+    "unit": "unit-3",
+    "page": 8,
+    "topic": "3.1",
+    "title": "Types of IC: SLSI and ULSI",
+    "image": "/aoc/diagrams/u3-p008.jpg",
+    "reading": "SLSI: 10,000 to 100,000 gates (microprocessors). ULSI: more than 1 million transistors on one chip."
+  },
+  {
+    "id": "u3-p014",
+    "unit": "unit-3",
+    "page": 14,
+    "topic": "3.2",
+    "title": "Block diagram of a 2x4 decoder (title)",
+    "image": "/aoc/diagrams/u3-p014.jpg",
+    "reading": "A 2x4 decoder takes 2 input lines and gives 4 output lines. Each output is active for one input code."
+  },
+  {
+    "id": "u3-p015",
+    "unit": "unit-3",
+    "page": 15,
+    "topic": "3.2",
+    "title": "2x4 decoder block with pins",
+    "image": "/aoc/diagrams/u3-p015.jpg",
+    "reading": "Inputs A0 and A1, enable, and outputs D1 to D4. The enable pin switches the decoder on."
+  },
+  {
+    "id": "u3-p016",
+    "unit": "unit-3",
+    "page": 16,
+    "topic": "3.2",
+    "title": "2x4 decoder truth table",
+    "image": "/aoc/diagrams/u3-p016.jpg",
+    "reading": "With enable = 1, the output matching the input code is 1 and the rest are 0. For A1A0 = 10, output D3 is 1."
+  },
+  {
+    "id": "u3-p017",
+    "unit": "unit-3",
+    "page": 17,
+    "topic": "3.2",
+    "title": "2x4 decoder circuit",
+    "image": "/aoc/diagrams/u3-p017.jpg",
+    "reading": "Each output is an AND gate of the inputs (true or complemented) and the enable line. Inverters make the complemented inputs."
+  },
+  {
+    "id": "u3-p018",
+    "unit": "unit-3",
+    "page": 18,
+    "topic": "3.2",
+    "title": "3x8 decoder block diagram",
+    "image": "/aoc/diagrams/u3-p018.jpg",
+    "reading": "A 3x8 decoder has inputs A0, A1, A2, an enable, and 8 outputs D1 to D8."
+  },
+  {
+    "id": "u3-p019",
+    "unit": "unit-3",
+    "page": 19,
+    "topic": "3.2",
+    "title": "3x8 decoder truth table",
+    "image": "/aoc/diagrams/u3-p019.jpg",
+    "reading": "Each code 000 to 111 activates exactly one output from D1 to D8."
+  },
+  {
+    "id": "u3-p020",
+    "unit": "unit-3",
+    "page": 20,
+    "topic": "3.2",
+    "title": "3x8 decoder circuit",
+    "image": "/aoc/diagrams/u3-p020.jpg",
+    "reading": "Inverters create complemented inputs, and one AND gate per output combines the inputs with the enable."
+  },
+  {
+    "id": "u3-p023",
+    "unit": "unit-3",
+    "page": 23,
+    "topic": "3.3",
+    "title": "8x3 encoder truth table",
+    "image": "/aoc/diagrams/u3-p023.jpg",
+    "reading": "The encoder has 8 inputs (D0 to D7) and 3 outputs (X, Y, Z). For an active input the output is its 3-bit binary code. For D5 the output XYZ is 101."
+  },
+  {
+    "id": "u3-p024",
+    "unit": "unit-3",
+    "page": 24,
+    "topic": "3.3",
+    "title": "8x3 encoder circuit (OR gates)",
+    "image": "/aoc/diagrams/u3-p024.jpg",
+    "reading": "X = D4+D5+D6+D7, Y = D2+D3+D6+D7, Z = D1+D3+D5+D7. Each output is an OR of the inputs whose code has that bit set to 1."
+  },
+  {
+    "id": "u3-p028",
+    "unit": "unit-3",
+    "page": 28,
+    "topic": "3.4",
+    "title": "Block diagram of a 2x1 multiplexer",
+    "image": "/aoc/diagrams/u3-p028.jpg",
+    "reading": "A 2x1 MUX has two data inputs I0 and I1, one select line S0, and one output Y."
+  },
+  {
+    "id": "u3-p029",
+    "unit": "unit-3",
+    "page": 29,
+    "topic": "3.4",
+    "title": "2x1 MUX truth table",
+    "image": "/aoc/diagrams/u3-p029.jpg",
+    "reading": "When S0 = 0 the output is I0. When S0 = 1 the output is I1."
+  },
+  {
+    "id": "u3-p030",
+    "unit": "unit-3",
+    "page": 30,
+    "topic": "3.4",
+    "title": "2x1 MUX circuit",
+    "image": "/aoc/diagrams/u3-p030.jpg",
+    "reading": "Two AND gates (one with S0 inverted) feed an OR gate, which passes either I0 or I1."
+  },
+  {
+    "id": "u3-p034",
+    "unit": "unit-3",
+    "page": 34,
+    "topic": "3.4",
+    "title": "Block diagram of a 4x1 multiplexer",
+    "image": "/aoc/diagrams/u3-p034.jpg",
+    "reading": "A 4x1 MUX has inputs I0 to I3, select lines S0 and S1, and output Y."
+  },
+  {
+    "id": "u3-p035",
+    "unit": "unit-3",
+    "page": 35,
+    "topic": "3.4",
+    "title": "4x1 MUX truth table",
+    "image": "/aoc/diagrams/u3-p035.jpg",
+    "reading": "S1S0 = 00 gives I0, 01 gives I1, 10 gives I2 and 11 gives I3. Here S1 is the most significant bit."
+  },
+  {
+    "id": "u3-p036",
+    "unit": "unit-3",
+    "page": 36,
+    "topic": "3.4",
+    "title": "4x1 MUX circuit",
+    "image": "/aoc/diagrams/u3-p036.jpg",
+    "reading": "Four AND gates, each enabled by one decoded select combination, feed a single OR gate."
+  },
+  {
+    "id": "u3-p039",
+    "unit": "unit-3",
+    "page": 39,
+    "topic": "3.5",
+    "title": "Block diagram of a 1x4 demultiplexer",
+    "image": "/aoc/diagrams/u3-p039.jpg",
+    "reading": "A 1x4 DEMUX takes one input D and sends it to one of the outputs F0 to F3, chosen by S0 and S1."
+  },
+  {
+    "id": "u3-p040",
+    "unit": "unit-3",
+    "page": 40,
+    "topic": "3.5",
+    "title": "1x4 DEMUX truth table",
+    "image": "/aoc/diagrams/u3-p040.jpg",
+    "reading": "Only the output chosen by the select lines carries D. All other outputs stay 0."
+  },
+  {
+    "id": "u3-p041",
+    "unit": "unit-3",
+    "page": 41,
+    "topic": "3.5",
+    "title": "1x4 DEMUX circuit",
+    "image": "/aoc/diagrams/u3-p041.jpg",
+    "reading": "Four AND gates with decoded select lines. The input D goes to all four AND gates."
+  },
+  {
+    "id": "u3-p044",
+    "unit": "unit-3",
+    "page": 44,
+    "topic": "3.7",
+    "title": "4-bit shift register (flip-flops in cascade)",
+    "image": "/aoc/diagrams/u3-p044.jpg",
+    "reading": "Flip-flops are chained: each output feeds the next D input, and all share one clock. Data moves one stage per clock pulse."
+  },
+  {
+    "id": "u3-p046",
+    "unit": "unit-3",
+    "page": 46,
+    "topic": "3.7",
+    "title": "SISO shift register",
+    "image": "/aoc/diagrams/u3-p046.jpg",
+    "reading": "Serial in, serial out. Bits enter and leave one at a time. The diagram shows shifting in both directions."
+  },
+  {
+    "id": "u3-p047",
+    "unit": "unit-3",
+    "page": 47,
+    "topic": "3.7",
+    "title": "SIPO shift register",
+    "image": "/aoc/diagrams/u3-p047.jpg",
+    "reading": "Serial in, parallel out. After n clock pulses all n bits can be read in parallel."
+  },
+  {
+    "id": "u3-p048",
+    "unit": "unit-3",
+    "page": 48,
+    "topic": "3.7",
+    "title": "PIPO shift register",
+    "image": "/aoc/diagrams/u3-p048.jpg",
+    "reading": "Parallel in, parallel out. All bits are loaded and read together."
+  },
+  {
+    "id": "u3-p049",
+    "unit": "unit-3",
+    "page": 49,
+    "topic": "3.7",
+    "title": "PISO shift register",
+    "image": "/aoc/diagrams/u3-p049.jpg",
+    "reading": "Parallel in, serial out. Bits are loaded in parallel and then shifted out one at a time."
+  },
+  {
+    "id": "u3-p050",
+    "unit": "unit-3",
+    "page": 50,
+    "topic": "3.7",
+    "title": "Bidirectional shift register",
+    "image": "/aoc/diagrams/u3-p050.jpg",
+    "reading": "Data can shift left or right, depending on a control input."
+  },
+  {
+    "id": "u3-p054",
+    "unit": "unit-3",
+    "page": 54,
+    "topic": "3.8",
+    "title": "Synchronous vs asynchronous counter (table)",
+    "image": "/aoc/diagrams/u3-p054.jpg",
+    "reading": "Synchronous: one clock drives all flip-flops, so it is faster but harder to design. Asynchronous: the clock drives only the first flip-flop, so it is slower but simpler."
+  },
+  {
+    "id": "u3-p055",
+    "unit": "unit-3",
+    "page": 55,
+    "topic": "3.8",
+    "title": "Synchronous and asynchronous counter diagrams",
+    "image": "/aoc/diagrams/u3-p055.jpg",
+    "reading": "In the synchronous counter the clock reaches every flip-flop. In the asynchronous counter each stage is clocked by the previous one, so the change ripples."
+  },
+  {
+    "id": "u3-p059",
+    "unit": "unit-3",
+    "page": 59,
+    "topic": "3.8",
+    "title": "4-bit synchronous binary counter circuit",
+    "image": "/aoc/diagrams/u3-p059.jpg",
+    "reading": "Four JK flip-flops share one clock. The count-enable and AND gates decide which flip-flops toggle, giving counts 0 to 15."
+  },
+  {
+    "id": "u3-p060",
+    "unit": "unit-3",
+    "page": 60,
+    "topic": "3.8",
+    "title": "Timing diagram of a 4-bit counter",
+    "image": "/aoc/diagrams/u3-p060.jpg",
+    "reading": "The chart shows the clock and outputs A, B, C and D. Each clock pulse moves the count to the next value."
+  },
+  {
+    "id": "u4-p009",
+    "unit": "unit-4",
+    "page": 9,
+    "topic": "4.1",
+    "title": "Instruction code format: opcode and operand",
+    "image": "/aoc/diagrams/u4-p009.jpg",
+    "reading": "An instruction has an opcode (what to do, e.g. ADD) and an operand (the data or its address, e.g. 101 or 301)."
+  },
+  {
+    "id": "u4-p012",
+    "unit": "unit-4",
+    "page": 12,
+    "topic": "4.2",
+    "title": "Processor registers of the basic computer",
+    "image": "/aoc/diagrams/u4-p012.jpg",
+    "reading": "Eight registers: PC, AR, IR, TR, DR, AC, INPR and OUTR, each with a fixed role."
+  },
+  {
+    "id": "u4-p013",
+    "unit": "unit-4",
+    "page": 13,
+    "topic": "4.2",
+    "title": "PC register (12 bits)",
+    "image": "/aoc/diagrams/u4-p013.jpg",
+    "reading": "PC holds the address of the next instruction. It increments after each fetch, so instructions run in order."
+  },
+  {
+    "id": "u4-p014",
+    "unit": "unit-4",
+    "page": 14,
+    "topic": "4.2",
+    "title": "AR register (12 bits)",
+    "image": "/aoc/diagrams/u4-p014.jpg",
+    "reading": "AR (also called MAR) holds the memory address to read or write."
+  },
+  {
+    "id": "u4-p015",
+    "unit": "unit-4",
+    "page": 15,
+    "topic": "4.2",
+    "title": "IR register (16 bits)",
+    "image": "/aoc/diagrams/u4-p015.jpg",
+    "reading": "IR holds a copy of the instruction fetched from memory."
+  },
+  {
+    "id": "u4-p016",
+    "unit": "unit-4",
+    "page": 16,
+    "topic": "4.2",
+    "title": "TR register (16 bits)",
+    "image": "/aoc/diagrams/u4-p016.jpg",
+    "reading": "TR is a temporary register that holds data during processing."
+  },
+  {
+    "id": "u4-p017",
+    "unit": "unit-4",
+    "page": 17,
+    "topic": "4.2",
+    "title": "DR register (16 bits)",
+    "image": "/aoc/diagrams/u4-p017.jpg",
+    "reading": "DR (also called MDR) holds data read from memory, or data to be written to it."
+  },
+  {
+    "id": "u4-p018",
+    "unit": "unit-4",
+    "page": 18,
+    "topic": "4.2",
+    "title": "AC register (16 bits)",
+    "image": "/aoc/diagrams/u4-p018.jpg",
+    "reading": "AC is the accumulator. It holds the results of arithmetic and logic operations."
+  },
+  {
+    "id": "u4-p019",
+    "unit": "unit-4",
+    "page": 19,
+    "topic": "4.2",
+    "title": "OUTR register (8 bits)",
+    "image": "/aoc/diagrams/u4-p019.jpg",
+    "reading": "OUTR holds output characters that are sent to the output device."
+  },
+  {
+    "id": "u4-p020",
+    "unit": "unit-4",
+    "page": 20,
+    "topic": "4.2",
+    "title": "INPR register (8 bits)",
+    "image": "/aoc/diagrams/u4-p020.jpg",
+    "reading": "INPR holds the input characters typed by the user."
+  },
+  {
+    "id": "u4-p021",
+    "unit": "unit-4",
+    "page": 21,
+    "topic": "4.2",
+    "title": "Memory of 4096 x 16",
+    "image": "/aoc/diagrams/u4-p021.jpg",
+    "reading": "Memory has 4096 words of 16 bits each. 4096 = 2^12, which is why addresses are 12 bits."
+  },
+  {
+    "id": "u4-p022",
+    "unit": "unit-4",
+    "page": 22,
+    "topic": "4.2",
+    "title": "Register table (PC, AR, DR, TR, IR)",
+    "image": "/aoc/diagrams/u4-p022.jpg",
+    "reading": "PC and AR are 12 bits. DR, TR and IR are 16 bits. Each register's use is listed in the table."
+  },
+  {
+    "id": "u4-p023",
+    "unit": "unit-4",
+    "page": 23,
+    "topic": "4.2",
+    "title": "Register table (AC, INPR, OUTR)",
+    "image": "/aoc/diagrams/u4-p023.jpg",
+    "reading": "AC is 16 bits. INPR and OUTR are 8 bits each."
+  },
+  {
+    "id": "u4-p024",
+    "unit": "unit-4",
+    "page": 24,
+    "topic": "4.2",
+    "title": "Register organization of the basic computer",
+    "image": "/aoc/diagrams/u4-p024.jpg",
+    "reading": "Registers are shown in a fixed order with the memory at the top, and the bit width of each register is marked."
+  },
+  {
+    "id": "u4-p027",
+    "unit": "unit-4",
+    "page": 27,
+    "topic": "4.3",
+    "title": "Common bus system (full diagram)",
+    "image": "/aoc/diagrams/u4-p027.jpg",
+    "reading": "All registers, memory and the ALU share one bus. Selection lines decide which register sends data onto the bus and which register loads it."
+  },
+  {
+    "id": "u4-p031",
+    "unit": "unit-4",
+    "page": 31,
+    "topic": "4.4",
+    "title": "General register organization",
+    "image": "/aoc/diagrams/u4-p031.jpg",
+    "reading": "MUX A and MUX B pick two operands for the ALU. A 3x8 decoder selects the destination register, and the ALU result goes to the output."
+  },
+  {
+    "id": "u4-p032",
+    "unit": "unit-4",
+    "page": 32,
+    "topic": "4.4",
+    "title": "Register and MUX input selection code",
+    "image": "/aoc/diagrams/u4-p032.jpg",
+    "reading": "Each register has a 3-bit select code. The code chooses which register goes onto bus A or bus B."
+  },
+  {
+    "id": "u4-p033",
+    "unit": "unit-4",
+    "page": 33,
+    "topic": "4.4",
+    "title": "Operations with symbols (opcode table)",
+    "image": "/aoc/diagrams/u4-p033.jpg",
+    "reading": "00000 transfer A, 00001 increment A, 00100 decrement A, 00101 A AND B, 00110 A OR B, 00111 A XOR B, 01000 complement A, 01001 shift right A, 01010 shift left A."
+  },
+  {
+    "id": "u4-p035",
+    "unit": "unit-4",
+    "page": 35,
+    "topic": "4.4",
+    "title": "Control word layout (14 bits)",
+    "image": "/aoc/diagrams/u4-p035.jpg",
+    "reading": "The control word has 14 bits: SEL A (3), SEL B (3), SELOPR (5) and SEL D (3)."
+  },
+  {
+    "id": "u4-p037",
+    "unit": "unit-4",
+    "page": 37,
+    "topic": "4.4",
+    "title": "Data path example: R2 = R1 + R3",
+    "image": "/aoc/diagrams/u4-p037.jpg",
+    "reading": "R1 goes to MUX A, R3 goes to MUX B, the ALU adds them, and the result is stored in R2."
+  },
+  {
+    "id": "u4-p039",
+    "unit": "unit-4",
+    "page": 39,
+    "topic": "4.4",
+    "title": "Advantages of general register organization",
+    "image": "/aoc/diagrams/u4-p039.jpg",
+    "reading": "General register organization ke teen advantages: centralized control aur security, scalability, aur data sharing."
+  },
+  {
+    "id": "u4-p041",
+    "unit": "unit-4",
+    "page": 41,
+    "topic": "4.5",
+    "title": "Stack examples: bowls, books, plates, coins",
+    "image": "/aoc/diagrams/u4-p041.jpg",
+    "reading": "Everyday stacks show last-in, first-out. The last item put on top is the first one taken off."
+  },
+  {
+    "id": "u4-p044",
+    "unit": "unit-4",
+    "page": 44,
+    "topic": "4.5",
+    "title": "Stack with push and pop arrows",
+    "image": "/aoc/diagrams/u4-p044.jpg",
+    "reading": "Push adds an item on top. Pop removes the top item. The top of the stack is the only place where items are added or removed."
+  },
+  {
+    "id": "u4-p045",
+    "unit": "unit-4",
+    "page": 45,
+    "topic": "4.5",
+    "title": "Push and pop on a stack (values 1 to 5)",
+    "image": "/aoc/diagrams/u4-p045.jpg",
+    "reading": "After pushing 1 to 5, popping returns 5, then 4, 3, 2 and 1. This is the reverse of the push order."
+  },
+  {
+    "id": "u4-p048",
+    "unit": "unit-4",
+    "page": 48,
+    "topic": "4.5",
+    "title": "Register stack with SP, FULL and EMPTY",
+    "image": "/aoc/diagrams/u4-p048.jpg",
+    "reading": "SP holds the address of the top item. The FULL and EMPTY flags show whether the stack is full or empty."
+  },
+  {
+    "id": "u4-p049",
+    "unit": "unit-4",
+    "page": 49,
+    "topic": "4.5",
+    "title": "PUSH micro-operations",
+    "image": "/aoc/diagrams/u4-p049.jpg",
+    "reading": "SP <- SP + 1, then M[SP] <- DR. If SP = 0 the stack is FULL, and EMPTY is cleared."
+  },
+  {
+    "id": "u4-p050",
+    "unit": "unit-4",
+    "page": 50,
+    "topic": "4.5",
+    "title": "POP micro-operations",
+    "image": "/aoc/diagrams/u4-p050.jpg",
+    "reading": "DR <- M[SP], then SP <- SP - 1. If SP = 0 the stack is EMPTY, and FULL is cleared."
+  },
+  {
+    "id": "u4-p052",
+    "unit": "unit-4",
+    "page": 52,
+    "topic": "4.5",
+    "title": "Memory stack: program, operands and stack",
+    "image": "/aoc/diagrams/u4-p052.jpg",
+    "reading": "Program, operands and stack share memory. PC points to the program, AR to operands, and SP to the stack."
+  },
+  {
+    "id": "u4-p054",
+    "unit": "unit-4",
+    "page": 54,
+    "topic": "4.5",
+    "title": "PUSH and POP with a memory stack",
+    "image": "/aoc/diagrams/u4-p054.jpg",
+    "reading": "PUSH: SP <- SP+1 and M[SP] <- DR. POP: DR <- M[SP] and SP <- SP-1."
+  },
+  {
+    "id": "u4-p058",
+    "unit": "unit-4",
+    "page": 58,
+    "topic": "4.5",
+    "title": "Reverse Polish notation evaluation: 34* 56* +",
+    "image": "/aoc/diagrams/u4-p058.jpg",
+    "reading": "Read left to right. Push each number. An operator pops two numbers, computes the result and pushes it back. For 34* 56* + the answer is 12 + 30 = 42."
+  },
+  {
+    "id": "u4-p062",
+    "unit": "unit-4",
+    "page": 62,
+    "topic": "4.6",
+    "title": "Three-address format example",
+    "image": "/aoc/diagrams/u4-p062.jpg",
+    "reading": "ADD R1,A,B; ADD R2,C,D; MUL X,R1,R2 computes (A+B)*(C+D) with three operands in each instruction."
+  },
+  {
+    "id": "u4-p064",
+    "unit": "unit-4",
+    "page": 64,
+    "topic": "4.6",
+    "title": "Two-address format example",
+    "image": "/aoc/diagrams/u4-p064.jpg",
+    "reading": "MOV R1,A; ADD R1,B; MOV R2,C; ADD R2,D; MUL R1,R2; MOV X,R1 computes (A+B)*(C+D) with two operands per instruction."
+  },
+  {
+    "id": "u4-p066",
+    "unit": "unit-4",
+    "page": 66,
+    "topic": "4.6",
+    "title": "One-address format example",
+    "image": "/aoc/diagrams/u4-p066.jpg",
+    "reading": "LOAD A; ADD B; STORE T; LOAD C; ADD D; MUL T; STORE X. The accumulator AC is the implied second operand."
+  },
+  {
+    "id": "u4-p070",
+    "unit": "unit-4",
+    "page": 70,
+    "topic": "4.7",
+    "title": "Direct addressing mode",
+    "image": "/aoc/diagrams/u4-p070.jpg",
+    "reading": "The address field holds the operand's address. ADD 547 reads the operand stored at address 547."
+  },
+  {
+    "id": "u4-p072",
+    "unit": "unit-4",
+    "page": 72,
+    "topic": "4.7",
+    "title": "Indirect addressing mode",
+    "image": "/aoc/diagrams/u4-p072.jpg",
+    "reading": "The address field points to a memory word that holds the operand's address. ADD 300 reads word 300 (which holds 1350), then the operand at 1350."
+  },
+  {
+    "id": "u4-p073",
+    "unit": "unit-4",
+    "page": 73,
+    "topic": "4.7",
+    "title": "Immediate mode",
+    "image": "/aoc/diagrams/u4-p073.jpg",
+    "reading": "The operand is written in the instruction. ADD 10 adds the value 10 directly, with no memory access."
+  },
+  {
+    "id": "u4-p074",
+    "unit": "unit-4",
+    "page": 74,
+    "topic": "4.7",
+    "title": "Register mode",
+    "image": "/aoc/diagrams/u4-p074.jpg",
+    "reading": "The operand is in a register. AC <- AC + [R] uses the register content directly, with no memory access."
+  },
+  {
+    "id": "u4-p075",
+    "unit": "unit-4",
+    "page": 75,
+    "topic": "4.7",
+    "title": "Register indirect mode",
+    "image": "/aoc/diagrams/u4-p075.jpg",
+    "reading": "The register holds the address of the operand. AC <- AC + [[R]] needs one memory access to fetch the operand."
+  },
+  {
+    "id": "u4-p077",
+    "unit": "unit-4",
+    "page": 77,
+    "topic": "4.7",
+    "title": "Auto-decrement mode",
+    "image": "/aoc/diagrams/u4-p077.jpg",
+    "reading": "The register value is decremented and then used as the address of the operand. The diagram shows the register pointing into memory around addresses 3298 to 3302."
+  },
+  {
+    "id": "u5-p005",
+    "unit": "unit-5",
+    "page": 5,
+    "topic": "5.1",
+    "title": "Input devices (pictures)",
+    "image": "/aoc/diagrams/u5-p005.jpg",
+    "reading": "Input devices: OCR, keyboard, scanner, trackball, MICR, touch panel, touchpad, joystick, bar code reader and mouse."
+  },
+  {
+    "id": "u5-p007",
+    "unit": "unit-5",
+    "page": 7,
+    "topic": "5.1",
+    "title": "Monitors: CRT, LCD, LED, plasma",
+    "image": "/aoc/diagrams/u5-p007.jpg",
+    "reading": "CRT is the older tube-based display. LCD, LED and plasma are non-CRT flat displays."
+  },
+  {
+    "id": "u5-p008",
+    "unit": "unit-5",
+    "page": 8,
+    "topic": "5.1",
+    "title": "Impact printers: daisy wheel and dot matrix",
+    "image": "/aoc/diagrams/u5-p008.jpg",
+    "reading": "Impact printers strike a ribbon against the paper. Daisy wheel prints full characters. Dot matrix builds each character from dots."
+  },
+  {
+    "id": "u5-p009",
+    "unit": "unit-5",
+    "page": 9,
+    "topic": "5.1",
+    "title": "Drum and chain printers",
+    "image": "/aoc/diagrams/u5-p009.jpg",
+    "reading": "Drum printers use a rotating drum of characters. Chain printers use a moving chain of characters with print hammers."
+  },
+  {
+    "id": "u5-p010",
+    "unit": "unit-5",
+    "page": 10,
+    "topic": "5.1",
+    "title": "Non-impact printers: laser and inkjet",
+    "image": "/aoc/diagrams/u5-p010.jpg",
+    "reading": "Non-impact printers do not strike the paper. Laser and inkjet printers are the examples on the slide."
+  },
+  {
+    "id": "u5-p011",
+    "unit": "unit-5",
+    "page": 11,
+    "topic": "5.1",
+    "title": "Other output devices: plotter, speakers, headphones",
+    "image": "/aoc/diagrams/u5-p011.jpg",
+    "reading": "Plotters draw large graphics. Speakers and headphones give sound output."
+  },
+  {
+    "id": "u5-p013",
+    "unit": "unit-5",
+    "page": 13,
+    "topic": "5.1",
+    "title": "Storage devices (pictures)",
+    "image": "/aoc/diagrams/u5-p013.jpg",
+    "reading": "Primary: RAM, ROM and cache. Secondary: hard disk, CD/DVD, SD card, pen drive, floppy disk, magnetic tape and SSD."
+  },
+  {
+    "id": "u5-p019",
+    "unit": "unit-5",
+    "page": 19,
+    "topic": "5.2",
+    "title": "I/O bus connected to devices (diagram)",
+    "image": "/aoc/diagrams/u5-p019.jpg",
+    "reading": "The processor connects to each device through an interface, using data, address and control lines. Keyboard, printer and magnetic disk each have their own interface."
+  },
+  {
+    "id": "u5-p020",
+    "unit": "unit-5",
+    "page": 20,
+    "topic": "5.2",
+    "title": "Four commands an interface receives",
+    "image": "/aoc/diagrams/u5-p020.jpg",
+    "reading": "An interface receives four commands: control, status, data output and data input."
+  },
+  {
+    "id": "u5-p029",
+    "unit": "unit-5",
+    "page": 29,
+    "topic": "5.3",
+    "title": "Classification of asynchronous transfer",
+    "image": "/aoc/diagrams/u5-p029.jpg",
+    "reading": "Asynchronous transfer uses the strobe method or the handshaking method. Each method can be source initiated or destination initiated."
+  },
+  {
+    "id": "u5-p032",
+    "unit": "unit-5",
+    "page": 32,
+    "topic": "5.3",
+    "title": "Source-initiated strobe (block and timing)",
+    "image": "/aoc/diagrams/u5-p032.jpg",
+    "reading": "The source puts data on the bus and sends a strobe. The data is valid while the strobe is high."
+  },
+  {
+    "id": "u5-p033",
+    "unit": "unit-5",
+    "page": 33,
+    "topic": "5.3",
+    "title": "Destination-initiated strobe (block and timing)",
+    "image": "/aoc/diagrams/u5-p033.jpg",
+    "reading": "The destination sends the strobe first. The source then places valid data on the bus."
+  },
+  {
+    "id": "u5-p036",
+    "unit": "unit-5",
+    "page": 36,
+    "topic": "5.3",
+    "title": "Source-initiated handshaking (block and timing)",
+    "image": "/aoc/diagrams/u5-p036.jpg",
+    "reading": "The source places data and sets Data Valid. The destination responds with Data Accepted, and both signals are then cleared."
+  },
+  {
+    "id": "u5-p037",
+    "unit": "unit-5",
+    "page": 37,
+    "topic": "5.3",
+    "title": "Source-initiated handshaking: steps",
+    "image": "/aoc/diagrams/u5-p037.jpg",
+    "reading": "Place data and enable data valid. Accept data and enable data accepted. Disable data valid. Disable data accepted (back to the initial state)."
+  },
+  {
+    "id": "u5-p038",
+    "unit": "unit-5",
+    "page": 38,
+    "topic": "5.3",
+    "title": "Destination-initiated handshaking (block and timing)",
+    "image": "/aoc/diagrams/u5-p038.jpg",
+    "reading": "The destination raises Ready for Data. The source places data and sets Data Valid. The destination accepts the data and lowers Ready for Data."
+  },
+  {
+    "id": "u5-p039",
+    "unit": "unit-5",
+    "page": 39,
+    "topic": "5.3",
+    "title": "Destination-initiated handshaking: steps",
+    "image": "/aoc/diagrams/u5-p039.jpg",
+    "reading": "Ready to accept data (enable ready for data). Place data and enable data valid. Accept data and disable ready for data. Disable data valid (initial state)."
+  },
+  {
+    "id": "u5-p041",
+    "unit": "unit-5",
+    "page": 41,
+    "topic": "5.4",
+    "title": "CPU and peripheral: data transfer",
+    "image": "/aoc/diagrams/u5-p041.jpg",
+    "reading": "Data moves in both directions between the CPU and a peripheral device. The CPU is the processor and the peripheral is the device."
+  },
+  {
+    "id": "u5-p048",
+    "unit": "unit-5",
+    "page": 48,
+    "topic": "5.4",
+    "title": "Programmed I/O: interface diagram",
+    "image": "/aoc/diagrams/u5-p048.jpg",
+    "reading": "The CPU uses address, data and I/O read/write lines to reach the interface. The interface has a data register and a status register with flag F. The device uses the I/O bus, data valid and data accepted."
+  },
+  {
+    "id": "u5-p049",
+    "unit": "unit-5",
+    "page": 49,
+    "topic": "5.4",
+    "title": "Programmed I/O: steps",
+    "image": "/aoc/diagrams/u5-p049.jpg",
+    "reading": "The interface accepts the byte and enables data accepted. It sets flag F. If F = 1 the CPU reads the data. If F = 0 the device can send the next byte."
+  },
+  {
+    "id": "u5-p053",
+    "unit": "unit-5",
+    "page": 53,
+    "topic": "5.4",
+    "title": "DMA block diagram (BR, HLDA, BG)",
+    "image": "/aoc/diagrams/u5-p053.jpg",
+    "reading": "The DMA controller sends BR to the processor's HOLD input. The processor replies with HLDA and then sends BG. The controller then moves data between the I/O device and memory."
+  },
+  {
+    "id": "u5-p060",
+    "unit": "unit-5",
+    "page": 60,
+    "topic": "5.5",
+    "title": "Memory hierarchy pyramid",
+    "image": "/aoc/diagrams/u5-p060.jpg",
+    "reading": "From top to bottom: register, cache, main memory (primary), magnetic disk and magnetic tape (auxiliary). Speed falls and capacity rises going down."
+  },
+  {
+    "id": "u5-p064",
+    "unit": "unit-5",
+    "page": 64,
+    "topic": "5.5",
+    "title": "Main memory classification",
+    "image": "/aoc/diagrams/u5-p064.jpg",
+    "reading": "Primary memory splits into RAM (static and dynamic) and ROM (PROM, EPROM, EEPROM)."
+  },
+  {
+    "id": "u5-p072",
+    "unit": "unit-5",
+    "page": 72,
+    "topic": "5.6",
+    "title": "Auxiliary (secondary) memory classification",
+    "image": "/aoc/diagrams/u5-p072.jpg",
+    "reading": "Magnetic tape, magnetic disk (hard disk, floppy), optical disk (CD) and flash memory (pen drive) are the auxiliary storage types."
+  },
+  {
+    "id": "u5-p073",
+    "unit": "unit-5",
+    "page": 73,
+    "topic": "5.6",
+    "title": "Magnetic tape",
+    "image": "/aoc/diagrams/u5-p073.jpg",
+    "reading": "Magnetic tape is a plastic strip coated with magnetic material, kept on reels. It is sequential access and mainly used for backup."
+  },
+  {
+    "id": "u5-p076",
+    "unit": "unit-5",
+    "page": 76,
+    "topic": "5.6",
+    "title": "Magnetic disk: tracks and sectors",
+    "image": "/aoc/diagrams/u5-p076.jpg",
+    "reading": "Concentric circles are tracks, and each track is divided into sectors. A sector is the smallest unit of transfer. The read/write head moves over the surface."
+  },
+  {
+    "id": "u5-p078",
+    "unit": "unit-5",
+    "page": 78,
+    "topic": "5.7",
+    "title": "Cache memory between CPU and primary memory",
+    "image": "/aoc/diagrams/u5-p078.jpg",
+    "reading": "Cache sits between the CPU and primary memory. The CPU checks cache first. If the word is missing, primary memory is read."
+  }
+]

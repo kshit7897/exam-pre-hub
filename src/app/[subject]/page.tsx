@@ -1,10 +1,11 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BookOpen, ChevronLeft, ChevronRight, ClipboardCheck, Layers, ListChecks, PenLine } from "lucide-react";
+import { BookOpen, ChevronLeft, ChevronRight, ClipboardCheck, HelpCircle, Layers, ListChecks, PenLine } from "lucide-react";
 import { getSubject, subjects, countQuestions } from "@/lib/subjects";
 import { colorAt, iconAt } from "@/lib/unitStyle";
 import ProgressSummary from "@/components/ProgressSummary";
+import SubjectArt from "@/components/SubjectArt";
 import { FadeUp, Stagger, StaggerItem } from "@/components/Motion";
 
 export function generateStaticParams() {
@@ -33,6 +34,7 @@ async function SubjectLoader({ params }: { params: Promise<{ subject: string }> 
     { href: `/${subject.id}/practice`, title: "Practice", text: "MCQ, hint ke saath", icon: PenLine, c: colorAt(2) },
     { href: `/${subject.id}/practice?type=short`, title: "Short answers", text: "1 line me likho, check karo", icon: ListChecks, c: colorAt(3) },
     { href: `/${subject.id}/mock`, title: "Mock exam", text: "30 MCQ + 20 short, timer ke saath", icon: ClipboardCheck, c: colorAt(4) },
+    { href: `/${subject.id}/confirm`, title: "Teacher se confirm", text: "Slide ke unclear points", icon: HelpCircle, c: colorAt(5) },
   ];
 
   return (
@@ -42,7 +44,8 @@ async function SubjectLoader({ params }: { params: Promise<{ subject: string }> 
       </Link>
 
       <FadeUp>
-        <section className="hero p-6 sm:p-10" style={{ ["--c" as string]: colorAt(0) }}>
+        <section className="hero relative overflow-hidden p-6 sm:p-10" style={{ ["--c" as string]: colorAt(subjects.findIndex((s) => s.id === subject.id)) }}>
+          <SubjectArt art={subject.art} tone="light" />
           <div className="relative z-10">
             <p className="text-xs font-semibold uppercase tracking-widest opacity-85">Subject</p>
             <h1 className="mt-1 text-4xl font-bold sm:text-5xl">{subject.name}</h1>

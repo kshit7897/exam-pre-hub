@@ -1,0 +1,366 @@
+{
+  "mcq": [
+    {
+      "id": "mt2-d-m01",
+      "topic": "2.2",
+      "q": "Truth table mein p ∧ q kitni rows mein TRUE hai (4 rows mein se)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Sirf p = 1 aur q = 1 wali row mein AND true hai."
+    },
+    {
+      "id": "mt2-d-m02",
+      "topic": "2.2",
+      "q": "p = 0 aur q = 1 par p ∨ q ka value kya hai?",
+      "options": [
+        "0",
+        "1",
+        "Undefined",
+        "Contradiction"
+      ],
+      "answer": 1,
+      "explanation": "OR tab true hota hai jab koi ek input true ho."
+    },
+    {
+      "id": "mt2-d-m03",
+      "topic": "2.2",
+      "q": "p = 1 aur q = 0 par p → q ka value kya hai?",
+      "options": [
+        "1",
+        "0",
+        "Tautology",
+        "Converse"
+      ],
+      "answer": 1,
+      "explanation": "Conditional false tab hota hai jab p true aur q false ho."
+    },
+    {
+      "id": "mt2-d-m04",
+      "topic": "2.2",
+      "q": "p = 0 aur q = 0 par p ↔ q ka value kya hai?",
+      "options": [
+        "0",
+        "1",
+        "Contradiction",
+        "Converse"
+      ],
+      "answer": 1,
+      "explanation": "Dono same hain (dono false), isliye biconditional true."
+    },
+    {
+      "id": "mt2-d-m05",
+      "topic": "2.5",
+      "q": "p = 1, q = 0, r = 0 par (p → q) → r ka value kya hai?",
+      "options": [
+        "0",
+        "1",
+        "Unknown",
+        "Contradiction"
+      ],
+      "answer": 1,
+      "explanation": "p → q = 0. Phir 0 → r = 1 (false hypothesis se conditional true)."
+    },
+    {
+      "id": "mt2-d-m06",
+      "topic": "2.6",
+      "q": "Slide example mein A ↔ B ka result kya hai (A: p → q, B: ~q → ~p)?",
+      "options": [
+        "Contradiction",
+        "Tautology",
+        "Contingency",
+        "Converse"
+      ],
+      "answer": 1,
+      "explanation": "Sab rows mein A ↔ B true hai, isliye ye tautology hai."
+    },
+    {
+      "id": "mt2-d-m07",
+      "topic": "2.7",
+      "q": "Distributive table mein p = 1, q = 0, r = 1 par LHS p ∧ (q ∨ r) kya hai?",
+      "options": [
+        "0",
+        "1",
+        "φ",
+        "2"
+      ],
+      "answer": 1,
+      "explanation": "q ∨ r = 0 ∨ 1 = 1. Phir 1 ∧ 1 = 1."
+    },
+    {
+      "id": "mt2-w-m01",
+      "topic": "2.6",
+      "q": "Slide Example 8 ka statement ~(p ∨ q) → (~q ∨ r) kis type ka hai?",
+      "options": [
+        "Contradiction",
+        "Tautology",
+        "Contingency",
+        "Converse"
+      ],
+      "answer": 1,
+      "explanation": "Sab 8 rows true hain, isliye tautology hai."
+    },
+    {
+      "id": "mt2-y-m01",
+      "topic": "2.1",
+      "q": "Kaunsa statement proposition hai?",
+      "options": [
+        "Close the door",
+        "x > 5",
+        "Delhi India ki rajdhani hai",
+        "Kya tum aaoge?"
+      ],
+      "answer": 2,
+      "explanation": "Ye declarative hai aur true hai. Baaki commands, open sentence ya question hain."
+    },
+    {
+      "id": "mt2-y-m02",
+      "topic": "2.2",
+      "q": "p = 1, q = 1 par p ↔ q ka value?",
+      "options": [
+        "0",
+        "1",
+        "Undefined",
+        "φ"
+      ],
+      "answer": 1,
+      "explanation": "Dono true hain, isliye biconditional true."
+    },
+    {
+      "id": "mt2-y-m03",
+      "topic": "2.2",
+      "q": "p = 0, q = 0 par p → q ka value?",
+      "options": [
+        "0",
+        "1",
+        "Undefined",
+        "φ"
+      ],
+      "answer": 1,
+      "explanation": "Conditional false sirf p = T, q = F par hota hai."
+    },
+    {
+      "id": "mt2-y-m04",
+      "topic": "2.3",
+      "q": "p → q ka inverse kaunsa hai?",
+      "options": [
+        "q → p",
+        "~q → ~p",
+        "~p → ~q",
+        "p ∨ q"
+      ],
+      "answer": 2,
+      "explanation": "Inverse: dono ko negate karo, swap nahi karo: ~p → ~q."
+    },
+    {
+      "id": "mt2-y-m05",
+      "topic": "2.3",
+      "q": "Conditional aur uska ____ hamesha equivalent hote hain.",
+      "options": [
+        "Converse",
+        "Inverse",
+        "Contrapositive",
+        "Biconditional"
+      ],
+      "answer": 2,
+      "explanation": "p → q ≡ ~q → ~p (contrapositive)."
+    },
+    {
+      "id": "mt2-y-m06",
+      "topic": "2.4",
+      "q": "Precedence mein ∧ aur ∨ mein kaun pehle?",
+      "options": [
+        "∨ pehle",
+        "∧ pehle",
+        "Dono same",
+        "→ pehle"
+      ],
+      "answer": 1,
+      "explanation": "AND (∧) ka precedence OR (∨) se zyada hai."
+    },
+    {
+      "id": "mt2-y-m07",
+      "topic": "2.4",
+      "q": "p ∧ (q ∨ ~q) kis type ka hai?",
+      "options": [
+        "Tautology",
+        "Contradiction",
+        "p ke barabar (contingency)",
+        "Converse"
+      ],
+      "answer": 2,
+      "explanation": "q ∨ ~q = T, isliye p ∧ T = p. Ye na tautology hai na contradiction."
+    },
+    {
+      "id": "mt2-y-m08",
+      "topic": "2.6",
+      "q": "p ∨ ~p ≡ ?",
+      "options": [
+        "p",
+        "~p",
+        "Tautology",
+        "Contradiction"
+      ],
+      "answer": 2,
+      "explanation": "p ∨ ~p hamesha true hai, isliye tautology."
+    },
+    {
+      "id": "mt2-y-m09",
+      "topic": "2.5",
+      "q": "2 variables wale truth table mein kitni rows hoti hain?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "2² = 4 rows."
+    },
+    {
+      "id": "mt2-y-m10",
+      "topic": "2.7",
+      "q": "Commutative law: p ∧ q ≡ ?",
+      "options": [
+        "q ∧ p",
+        "q ∨ p",
+        "~p ∧ ~q",
+        "p"
+      ],
+      "answer": 0,
+      "explanation": "AND commutative hai: p ∧ q ≡ q ∧ p."
+    }
+  ],
+  "short": [
+    {
+      "id": "mt2-d-s01",
+      "topic": "2.2",
+      "q": "p = 1 aur q = 0 ke liye p → q ka value likho aur reason do.",
+      "answer": "0 (false). Conditional sirf tab false hota hai jab p true aur q false ho.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-d-s02",
+      "topic": "2.7",
+      "q": "Distributive law wali truth table se LHS aur RHS compare karke conclusion likho.",
+      "answer": "Dono sides ki final columns sab 8 rows mein same hain, isliye p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r).",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s01",
+      "topic": "2.5",
+      "q": "Example 2: (~p ∧ ~q) → (p ∨ q) ka truth table banao (r ignore karo; rows pq = 00, 01, 10, 11). Final column likho.",
+      "answer": "Final column: 0 1 1 1. Yani sirf pq=00 par false, baaki true.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s02",
+      "topic": "2.5",
+      "q": "Example 3: (i) p ∨ q ∨ r aur (ii) p ∧ q ∧ r ke truth table ki final columns likho (8 rows, pqr = 000 se 111).",
+      "answer": "(i) p ∨ q ∨ r: 0 1 1 1 1 1 1 1. (ii) p ∧ q ∧ r: 0 0 0 0 0 0 0 1.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s03",
+      "topic": "2.5",
+      "q": "Example 5: (~p → q) → ~r ka truth table banao (pqr = 000 se 111). Final column aur kitni rows true hain?",
+      "answer": "Final column: 1 1 1 0 1 0 1 0. 5 rows true; na tautology na contradiction.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s04",
+      "topic": "2.5",
+      "q": "Example 6: (~p ∧ q) → r ka truth table banao. Final column aur kitni rows true hain?",
+      "answer": "Final column: 1 1 0 1 1 1 1 1. 7 rows true.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s05",
+      "topic": "2.5",
+      "q": "Example 7: ~[(p ∨ ~q) ∧ ~r] ka truth table banao. Final column likho.",
+      "answer": "Final column: 0 1 1 1 0 1 0 1.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s06",
+      "topic": "2.6",
+      "q": "Example 8: ~(p ∨ q) → (~q ∨ r) tautology hai ya nahi? Truth table se justify karo.",
+      "answer": "Haan, tautology hai. Sab 8 rows mein final column 1 hai (1 1 1 1 1 1 1 1), isliye ye tautology hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s07",
+      "topic": "2.5",
+      "q": "Example 9: (~p ∧ q) ∨ (~r ∧ q) ka truth table banao. Final column likho.",
+      "answer": "Final column: 0 0 1 1 0 0 1 0.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s08",
+      "topic": "2.7",
+      "q": "Distributive law p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r) truth table se verify karo.",
+      "answer": "Haan, dono sides ki final columns sab 8 rows mein same hain, isliye law verify hota hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-w-s09",
+      "topic": "2.7",
+      "q": "De Morgan ~(p ∧ q) ≡ ~p ∨ ~q aur associative p ∨ (q ∨ r) ≡ (p ∨ q) ∨ r verify karo.",
+      "answer": "~(p ∧ q) ≡ ~p ∨ ~q: true (sab rows same). p ∨ (q ∨ r) ≡ (p ∨ q) ∨ r: true (sab rows same).",
+      "marks": 2
+    },
+    {
+      "id": "mt2-y-s01",
+      "topic": "2.1",
+      "q": "'x > 5' proposition kyon nahi hai?",
+      "answer": "Iska truth value x ki value par depend karta hai (x = 7 true, x = 2 false), isliye ye fixed true/false nahi hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-y-s02",
+      "topic": "2.2",
+      "q": "p = 1, q = 0 ke liye ~p, p ∧ q, p ∨ q, p → q, p ↔ q ke values likho.",
+      "answer": "~p = 0; p ∧ q = 0; p ∨ q = 1; p → q = 0; p ↔ q = 0.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-y-s03",
+      "topic": "2.3",
+      "q": "'If a number is divisible by 4, then it is even' ka converse, inverse aur contrapositive likho, aur batao kaunsa true hai.",
+      "answer": "Converse: If even, then divisible by 4 (false, 2). Inverse: If not divisible by 4, then odd (false, 6). Contrapositive: If odd, then not divisible by 4 (true). Original aur contrapositive true hain.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-y-s04",
+      "topic": "2.4",
+      "q": "p ∧ (q ∨ ~q) ko simplify karke batao kaise type ka hai.",
+      "answer": "q ∨ ~q = 1, isliye p ∧ 1 = p. Ye contingency hai (na tautology, na contradiction).",
+      "marks": 2
+    },
+    {
+      "id": "mt2-y-s05",
+      "topic": "2.6",
+      "q": "A ⇒ B aur A ⇔ B mein difference likho.",
+      "answer": "A ⇒ B: A → B tautology hai. A ⇔ B: A ↔ B tautology hai, yaani dono same truth table ke hain.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-y-s06",
+      "topic": "2.5",
+      "q": "p ↔ q ka truth table likho (4 rows).",
+      "answer": "00 → 1, 01 → 0, 10 → 0, 11 → 1.",
+      "marks": 2
+    },
+    {
+      "id": "mt2-y-s07",
+      "topic": "2.7",
+      "q": "OR ka associative law likho.",
+      "answer": "p ∨ (q ∨ r) ≡ (p ∨ q) ∨ r.",
+      "marks": 2
+    }
+  ]
+}

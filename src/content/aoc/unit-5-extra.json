@@ -636,6 +636,331 @@
       ],
       "answer": 1,
       "explanation": "Slide: 10 to 100 times faster than RAM."
+    },
+    {
+      "id": "u5-d-m01",
+      "topic": "5.2",
+      "q": "In the I/O bus diagram, which block sits between the processor and each device?",
+      "options": [
+        "Memory",
+        "Interface",
+        "Register",
+        "Controller"
+      ],
+      "answer": 1,
+      "explanation": "Each device connects to the bus through its own interface."
+    },
+    {
+      "id": "u5-d-m02",
+      "topic": "5.3",
+      "q": "In destination-initiated strobe, which signal is sent first?",
+      "options": [
+        "Data",
+        "Strobe from the destination",
+        "Data valid from the source",
+        "Data accepted"
+      ],
+      "answer": 1,
+      "explanation": "The timing diagram shows the strobe rising before valid data."
+    },
+    {
+      "id": "u5-d-m03",
+      "topic": "5.4",
+      "q": "In the DMA block diagram, which pin does the processor use to acknowledge the bus request?",
+      "options": [
+        "BR",
+        "BG",
+        "HLDA",
+        "HOLD"
+      ],
+      "answer": 2,
+      "explanation": "The processor replies to BR with HLDA (hold acknowledge)."
+    },
+    {
+      "id": "u5-d-m04",
+      "topic": "5.5",
+      "q": "At the top of the memory hierarchy pyramid is:",
+      "options": [
+        "Cache",
+        "Main memory",
+        "Register",
+        "Magnetic tape"
+      ],
+      "answer": 2,
+      "explanation": "Registers are the fastest and smallest level, at the top."
+    },
+    {
+      "id": "u5-d-m05",
+      "topic": "5.7",
+      "q": "In the cache memory diagram, the cache is placed between:",
+      "options": [
+        "CPU and primary memory",
+        "Primary and secondary memory",
+        "Keyboard and CPU",
+        "Printer and disk"
+      ],
+      "answer": 0,
+      "explanation": "Cache sits between the CPU and primary memory to speed up access."
+    },
+    {
+      "id": "u5-f-m01",
+      "topic": "5.1",
+      "q": "MICR ka main use kya hai?",
+      "options": [
+        "Printing",
+        "Magnetic ink cheque padhna",
+        "Display",
+        "Storage"
+      ],
+      "answer": 1,
+      "explanation": "Input devices: OCR, keyboard, scanner, trackball, MICR, touch panel, touchpad, joystick, bar code reader and mouse."
+    },
+    {
+      "id": "u5-f-m02",
+      "topic": "5.1",
+      "q": "Flat display ka type kaunsa hai?",
+      "options": [
+        "CRT",
+        "LCD",
+        "Tube",
+        "Plotter"
+      ],
+      "answer": 1,
+      "explanation": "CRT is the older tube-based display. LCD, LED and plasma are non-CRT flat displays."
+    },
+    {
+      "id": "u5-f-m03",
+      "topic": "5.1",
+      "q": "Impact printer kaunsa hai?",
+      "options": [
+        "Inkjet",
+        "Dot matrix",
+        "Laser",
+        "Thermal"
+      ],
+      "answer": 1,
+      "explanation": "Impact printers strike a ribbon against the paper. Daisy wheel prints full characters. Dot matrix builds each character from dots."
+    },
+    {
+      "id": "u5-f-m04",
+      "topic": "5.1",
+      "q": "Chain printer mein kya hota hai?",
+      "options": [
+        "Lasers",
+        "Print hammers",
+        "Ink",
+        "Heat"
+      ],
+      "answer": 1,
+      "explanation": "Drum printers use a rotating drum of characters. Chain printers use a moving chain of characters with print hammers."
+    },
+    {
+      "id": "u5-f-m05",
+      "topic": "5.1",
+      "q": "Non-impact printers kaunse hain?",
+      "options": [
+        "Dot matrix",
+        "Laser aur inkjet",
+        "Drum",
+        "Chain"
+      ],
+      "answer": 1,
+      "explanation": "Non-impact printers do not strike the paper. Laser and inkjet printers are the examples on the slide."
+    },
+    {
+      "id": "u5-f-m06",
+      "topic": "5.1",
+      "q": "Plotter ka kaam kya hai?",
+      "options": [
+        "Sound dena",
+        "Bade drawings banana",
+        "Storage",
+        "Input lena"
+      ],
+      "answer": 1,
+      "explanation": "Plotters draw large graphics. Speakers and headphones give sound output."
+    },
+    {
+      "id": "u5-f-m07",
+      "topic": "5.1",
+      "q": "SSD kis category mein aata hai?",
+      "options": [
+        "Primary",
+        "Secondary",
+        "Input",
+        "Output"
+      ],
+      "answer": 1,
+      "explanation": "Primary: RAM, ROM and cache. Secondary: hard disk, CD/DVD, SD card, pen drive, floppy disk, magnetic tape and SSD."
+    },
+    {
+      "id": "u5-f-m08",
+      "topic": "5.2",
+      "q": "Interface ka main kaam kya hai?",
+      "options": [
+        "Data store karna",
+        "Device ko bus se jodna",
+        "Print karna",
+        "Clock dena"
+      ],
+      "answer": 1,
+      "explanation": "The processor connects to each device through an interface, using data, address and control lines. Keyboard, printer and magnetic disk each have their own interface."
+    },
+    {
+      "id": "u5-f-m09",
+      "topic": "5.3",
+      "q": "Asynchronous transfer ke kitne main methods hain?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "Asynchronous transfer uses the strobe method or the handshaking method. Each method can be source initiated or destination initiated."
+    },
+    {
+      "id": "u5-f-m10",
+      "topic": "5.3",
+      "q": "Source-initiated strobe mein strobe kaun bhejta hai?",
+      "options": [
+        "Destination",
+        "Source",
+        "Memory",
+        "Clock"
+      ],
+      "answer": 1,
+      "explanation": "The source puts data on the bus and sends a strobe. The data is valid while the strobe is high."
+    },
+    {
+      "id": "u5-f-m11",
+      "topic": "5.3",
+      "q": "Destination-initiated strobe mein pehla signal kya hai?",
+      "options": [
+        "Data",
+        "Strobe",
+        "Accepted",
+        "Valid"
+      ],
+      "answer": 1,
+      "explanation": "The destination sends the strobe first. The source then places valid data on the bus."
+    },
+    {
+      "id": "u5-f-m12",
+      "topic": "5.3",
+      "q": "Source-initiated handshaking mein pehla signal kya hai?",
+      "options": [
+        "DATA ACCEPTED",
+        "DATA VALID",
+        "READY",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "The source places data and sets Data Valid. The destination responds with Data Accepted, and both signals are then cleared."
+    },
+    {
+      "id": "u5-f-m13",
+      "topic": "5.3",
+      "q": "Destination-initiated handshaking mein pehla signal kya hai?",
+      "options": [
+        "DATA VALID",
+        "READY FOR DATA",
+        "ACCEPTED",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "The destination raises Ready for Data. The source places data and sets Data Valid. The destination accepts the data and lowers Ready for Data."
+    },
+    {
+      "id": "u5-f-m14",
+      "topic": "5.4",
+      "q": "CPU aur peripheral ke beech data kis direction mein jaata hai?",
+      "options": [
+        "Ek taraf",
+        "Dono taraf",
+        "Koi nahi",
+        "Clock ke saath"
+      ],
+      "answer": 1,
+      "explanation": "Data moves in both directions between the CPU and a peripheral device. The CPU is the processor and the peripheral is the device."
+    },
+    {
+      "id": "u5-f-m15",
+      "topic": "5.5",
+      "q": "EPROM kis branch mein aata hai?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Cache",
+        "Tape"
+      ],
+      "answer": 1,
+      "explanation": "Primary memory splits into RAM (static and dynamic) and ROM (PROM, EPROM, EEPROM)."
+    },
+    {
+      "id": "u5-f-m16",
+      "topic": "5.6",
+      "q": "Pen drive kis branch mein aata hai?",
+      "options": [
+        "Tape",
+        "Flash memory",
+        "Disk",
+        "CD"
+      ],
+      "answer": 1,
+      "explanation": "Magnetic tape, magnetic disk (hard disk, floppy), optical disk (CD) and flash memory (pen drive) are the auxiliary storage types."
+    },
+    {
+      "id": "u5-f-m17",
+      "topic": "5.6",
+      "q": "Magnetic tape ka access type kya hai?",
+      "options": [
+        "Random",
+        "Sequential",
+        "Associative",
+        "Direct"
+      ],
+      "answer": 1,
+      "explanation": "Magnetic tape is a plastic strip coated with magnetic material, kept on reels. It is sequential access and mainly used for backup."
+    },
+    {
+      "id": "u5-f-m18",
+      "topic": "5.6",
+      "q": "Disk ka minimum transfer unit kya hai?",
+      "options": [
+        "Track",
+        "Sector",
+        "Bit",
+        "File"
+      ],
+      "answer": 1,
+      "explanation": "Concentric circles are tracks, and each track is divided into sectors. A sector is the smallest unit of transfer. The read/write head moves over the surface."
+    },
+    {
+      "id": "u5-f-m101",
+      "topic": "5.3",
+      "q": "Source-initiated handshaking mein pehla step kya hai?",
+      "options": [
+        "Data accept karna",
+        "Data bus par data rakhna aur DATA VALID enable karna",
+        "DATA ACCEPTED disable karna",
+        "Ready for data enable karna"
+      ],
+      "answer": 1,
+      "explanation": "Place data and enable data valid. Accept data and enable data accepted. Disable data valid. Disable data accepted (back to the initial state)."
+    },
+    {
+      "id": "u5-f-m102",
+      "topic": "5.3",
+      "q": "Destination-initiated handshaking mein pehla step kya hai?",
+      "options": [
+        "Data bus par data rakhna",
+        "DATA VALID enable karna",
+        "READY FOR DATA enable karna",
+        "DATA ACCEPTED enable karna"
+      ],
+      "answer": 2,
+      "explanation": "Ready to accept data (enable ready for data). Place data and enable data valid. Accept data and disable ready for data. Disable data valid (initial state)."
     }
   ],
   "short": [
@@ -749,6 +1074,20 @@
       "topic": "5.7",
       "q": "Why is cache memory placed between the CPU and main memory?",
       "answer": "It acts as a buffer and provides faster access to active data. This reduces the average time taken to access data and improves overall system performance.",
+      "marks": 2
+    },
+    {
+      "id": "u5-d-s01",
+      "topic": "5.4",
+      "q": "Describe the programmed I/O interface: which registers does it have and what is flag F?",
+      "answer": "The interface has a data register and a status register. Flag F is a bit in the status register that the interface sets when data is ready; the CPU reads the data when F = 1.",
+      "marks": 2
+    },
+    {
+      "id": "u5-d-s02",
+      "topic": "5.4",
+      "q": "List the DMA signal sequence between the controller, the processor and the bus.",
+      "answer": "DMA controller sends BR; the processor replies with HLDA; the processor then grants the bus with BG to the DMA controller.",
       "marks": 2
     }
   ]

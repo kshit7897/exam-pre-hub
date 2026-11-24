@@ -337,6 +337,409 @@
       ],
       "answer": 1,
       "explanation": "S1S0 = 01 selects F1."
+    },
+    {
+      "id": "u3-d-m01",
+      "topic": "3.2",
+      "q": "In the 3x8 decoder truth table on the slide (columns A0, A1, A2), which output is active when A0A1A2 = 110?",
+      "options": [
+        "D6",
+        "D7",
+        "D8",
+        "D5"
+      ],
+      "answer": 1,
+      "explanation": "On the slide, A0 is the first column (most significant). A0=1, A1=1, A2=0 is the 7th row, which is D7."
+    },
+    {
+      "id": "u3-d-m02",
+      "topic": "3.3",
+      "q": "In the 8x3 encoder truth table, when input D5 is high, the output XYZ is:",
+      "options": [
+        "010",
+        "101",
+        "110",
+        "011"
+      ],
+      "answer": 1,
+      "explanation": "The slide's table gives XYZ = 101 for D5."
+    },
+    {
+      "id": "u3-d-m03",
+      "topic": "3.4",
+      "q": "In the 2x1 MUX truth table, when S0 = 1 the output is:",
+      "options": [
+        "I0",
+        "I1",
+        "S0",
+        "0"
+      ],
+      "answer": 1,
+      "explanation": "S0 = 1 selects I1."
+    },
+    {
+      "id": "u3-d-m04",
+      "topic": "3.5",
+      "q": "In a 1x4 DEMUX with select lines S1S0 = 11, which output receives the input D?",
+      "options": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "answer": 3,
+      "explanation": "S1S0 = 11 = 3, so F3 receives D."
+    },
+    {
+      "id": "u3-d-m05",
+      "topic": "3.7",
+      "q": "How many D flip-flops does the 4-bit shift register circuit use?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "The circuit cascades four flip-flops, one per bit."
+    },
+    {
+      "id": "u3-f-m01",
+      "topic": "3.1",
+      "q": "IC ka base material kya hai?",
+      "options": [
+        "Copper",
+        "Silicon",
+        "Iron",
+        "Plastic"
+      ],
+      "answer": 1,
+      "explanation": "An IC is a silicon chip with many interconnected gates and components, mounted in a ceramic or plastic package."
+    },
+    {
+      "id": "u3-f-m02",
+      "topic": "3.1",
+      "q": "Sabse chhota IC scale kaunsa hai?",
+      "options": [
+        "VLSI",
+        "SSI",
+        "ULSI",
+        "LSI"
+      ],
+      "answer": 1,
+      "explanation": "IC types from small to large scale: SSI, MSI, LSI, VLSI, SLSI and ULSI."
+    },
+    {
+      "id": "u3-f-m03",
+      "topic": "3.1",
+      "q": "MSI mein kitne gates hote hain?",
+      "options": [
+        "10 se kam",
+        "10 se 200",
+        "200 se 1000",
+        "10 lakh se zyada"
+      ],
+      "answer": 1,
+      "explanation": "SSI: about 10 transistors or a few gates. MSI: 10 to 200 gates (decoders, adders, registers). LSI: 200 to 1000 gates. VLSI: 1000 to 10,000 gates."
+    },
+    {
+      "id": "u3-f-m04",
+      "topic": "3.1",
+      "q": "ULSI mein transistors kitne hote hain?",
+      "options": [
+        "10,000",
+        "1,00,000",
+        "1 million se zyada",
+        "100"
+      ],
+      "answer": 2,
+      "explanation": "SLSI: 10,000 to 100,000 gates (microprocessors). ULSI: more than 1 million transistors on one chip."
+    },
+    {
+      "id": "u3-f-m05",
+      "topic": "3.2",
+      "q": "2x4 decoder mein kitne outputs hote hain?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "Inputs A0 and A1, enable, and outputs D1 to D4. The enable pin switches the decoder on."
+    },
+    {
+      "id": "u3-f-m06",
+      "topic": "3.2",
+      "q": "Decoder mein enable 0 ho to output kya hoga?",
+      "options": [
+        "Sab 0",
+        "Sab 1",
+        "Ek 1",
+        "Random"
+      ],
+      "answer": 0,
+      "explanation": "With enable = 1, the output matching the input code is 1 and the rest are 0. For A1A0 = 10, output D3 is 1."
+    },
+    {
+      "id": "u3-f-m07",
+      "topic": "3.2",
+      "q": "2x4 decoder mein D2 ka expression kya hai?",
+      "options": [
+        "A0 A1' E",
+        "A0' A1 E",
+        "A0 A1 E",
+        "A0' A1' E"
+      ],
+      "answer": 0,
+      "explanation": "Each output is an AND gate of the inputs (true or complemented) and the enable line. Inverters make the complemented inputs."
+    },
+    {
+      "id": "u3-f-m08",
+      "topic": "3.2",
+      "q": "3x8 decoder mein kitne inputs hote hain?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "A 3x8 decoder has inputs A0, A1, A2, an enable, and 8 outputs D1 to D8."
+    },
+    {
+      "id": "u3-f-m09",
+      "topic": "3.2",
+      "q": "3x8 decoder mein kitne AND gates hote hain?",
+      "options": [
+        "3",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "Inverters create complemented inputs, and one AND gate per output combines the inputs with the enable."
+    },
+    {
+      "id": "u3-f-m10",
+      "topic": "3.3",
+      "q": "Encoder ka Z output kin inputs par 1 hota hai?",
+      "options": [
+        "D1, D3, D5, D7",
+        "D2, D3, D6, D7",
+        "D4 se D7",
+        "D0, D2"
+      ],
+      "answer": 0,
+      "explanation": "X = D4+D5+D6+D7, Y = D2+D3+D6+D7, Z = D1+D3+D5+D7. Each output is an OR of the inputs whose code has that bit set to 1."
+    },
+    {
+      "id": "u3-f-m11",
+      "topic": "3.4",
+      "q": "2x1 MUX mein kitne data inputs hote hain?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "A 2x1 MUX has two data inputs I0 and I1, one select line S0, and one output Y."
+    },
+    {
+      "id": "u3-f-m12",
+      "topic": "3.4",
+      "q": "2x1 MUX mein S0 = 1 par output kya hai?",
+      "options": [
+        "I0",
+        "I1",
+        "0",
+        "S0"
+      ],
+      "answer": 1,
+      "explanation": "When S0 = 0 the output is I0. When S0 = 1 the output is I1."
+    },
+    {
+      "id": "u3-f-m13",
+      "topic": "3.4",
+      "q": "2x1 MUX mein S0 = 0 par output kya hai?",
+      "options": [
+        "I0",
+        "I1",
+        "S0",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two AND gates (one with S0 inverted) feed an OR gate, which passes either I0 or I1."
+    },
+    {
+      "id": "u3-f-m14",
+      "topic": "3.4",
+      "q": "4x1 MUX mein kitni select lines hoti hain?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "A 4x1 MUX has inputs I0 to I3, select lines S0 and S1, and output Y."
+    },
+    {
+      "id": "u3-f-m15",
+      "topic": "3.4",
+      "q": "4x1 MUX mein kitne AND gates hote hain?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explanation": "Four AND gates, each enabled by one decoded select combination, feed a single OR gate."
+    },
+    {
+      "id": "u3-f-m16",
+      "topic": "3.5",
+      "q": "1x4 DEMUX mein kitne outputs hote hain?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explanation": "A 1x4 DEMUX takes one input D and sends it to one of the outputs F0 to F3, chosen by S0 and S1."
+    },
+    {
+      "id": "u3-f-m17",
+      "topic": "3.5",
+      "q": "1x4 DEMUX mein S1S0 = 00 par kaunsa output?",
+      "options": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "answer": 0,
+      "explanation": "Four AND gates with decoded select lines. The input D goes to all four AND gates."
+    },
+    {
+      "id": "u3-f-m18",
+      "topic": "3.7",
+      "q": "4-bit shift register mein kitne flip-flops hote hain?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "Flip-flops are chained: each output feeds the next D input, and all share one clock. Data moves one stage per clock pulse."
+    },
+    {
+      "id": "u3-f-m19",
+      "topic": "3.7",
+      "q": "SISO mein serial out kab milta hai?",
+      "options": [
+        "Turant",
+        "Shift ke baad",
+        "Kabhi nahi",
+        "Parallel mein"
+      ],
+      "answer": 1,
+      "explanation": "Serial in, serial out. Bits enter and leave one at a time. The diagram shows shifting in both directions."
+    },
+    {
+      "id": "u3-f-m20",
+      "topic": "3.7",
+      "q": "SIPO register ka output kaisa hota hai?",
+      "options": [
+        "Serial",
+        "Parallel",
+        "Dono",
+        "Koi nahi"
+      ],
+      "answer": 1,
+      "explanation": "Serial in, parallel out. After n clock pulses all n bits can be read in parallel."
+    },
+    {
+      "id": "u3-f-m21",
+      "topic": "3.7",
+      "q": "PIPO register shift karta hai?",
+      "options": [
+        "Haan",
+        "Nahi",
+        "Kabhi",
+        "Sirf right"
+      ],
+      "answer": 1,
+      "explanation": "Parallel in, parallel out. All bits are loaded and read together."
+    },
+    {
+      "id": "u3-f-m22",
+      "topic": "3.7",
+      "q": "Serial in, parallel out register ka naam kya hai?",
+      "options": [
+        "SISO",
+        "SIPO",
+        "PISO",
+        "PIPO"
+      ],
+      "answer": 1,
+      "explanation": "Parallel in, serial out. Bits are loaded in parallel and then shifted out one at a time."
+    },
+    {
+      "id": "u3-f-m23",
+      "topic": "3.7",
+      "q": "Bidirectional register mein right shift par input kis side se?",
+      "options": [
+        "Right",
+        "Left",
+        "Dono nahi",
+        "Center"
+      ],
+      "answer": 1,
+      "explanation": "Data can shift left or right, depending on a control input."
+    },
+    {
+      "id": "u3-f-m24",
+      "topic": "3.8",
+      "q": "Ripple counter kaunsa counter hai?",
+      "options": [
+        "Synchronous",
+        "Asynchronous",
+        "Johnson",
+        "Ring"
+      ],
+      "answer": 1,
+      "explanation": "In the synchronous counter the clock reaches every flip-flop. In the asynchronous counter each stage is clocked by the previous one, so the change ripples."
+    },
+    {
+      "id": "u3-f-m25",
+      "topic": "3.8",
+      "q": "4-bit counter mein A0 kab toggle hota hai?",
+      "options": [
+        "Kabhi nahi",
+        "Har clock par (count enable 1 ho to)",
+        "Sirf 0 par",
+        "Random"
+      ],
+      "answer": 1,
+      "explanation": "Four JK flip-flops share one clock. The count-enable and AND gates decide which flip-flops toggle, giving counts 0 to 15."
+    },
+    {
+      "id": "u3-f-m26",
+      "topic": "3.8",
+      "q": "Timing diagram mein har clock pulse par count kitna badhta hai?",
+      "options": [
+        "Random",
+        "Ek (binary + 1)",
+        "Reset hota",
+        "Do guna"
+      ],
+      "answer": 1,
+      "explanation": "The chart shows the clock and outputs A, B, C and D. Each clock pulse moves the count to the next value."
     }
   ],
   "short": [
@@ -408,6 +811,20 @@
       "topic": "3.8",
       "q": "List two advantages and one disadvantage of synchronous counters.",
       "answer": "Advantages: simple to design (compared to asynchronous), works simultaneously, no propagation delay, faster operation. Disadvantage: needs large components and complex logic as number of states increases (any valid answer).",
+      "marks": 2
+    },
+    {
+      "id": "u3-d-s01",
+      "topic": "3.2",
+      "q": "Draw the block diagram of a 2x4 decoder with enable and label all pins.",
+      "answer": "Inputs A0 and A1; enable; outputs D1, D2, D3, D4.",
+      "marks": 2
+    },
+    {
+      "id": "u3-d-s02",
+      "topic": "3.8",
+      "q": "In one line, how does a synchronous counter differ from an asynchronous counter?",
+      "answer": "In a synchronous counter all flip-flops change together from one clock; in an asynchronous counter each change ripples from stage to stage.",
       "marks": 2
     }
   ]

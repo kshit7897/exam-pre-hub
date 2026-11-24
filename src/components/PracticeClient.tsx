@@ -1,14 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import ImportanceBadge from "@/components/ImportanceBadge";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Check, Flame, Lightbulb, Shuffle, Target, X } from "lucide-react";
+import { ArrowRight, Check, Flame, Lightbulb, RotateCcw, Shuffle, Target, X } from "lucide-react";
 import type { TaggedMCQ, TaggedShort } from "@/lib/types";
 import { recordAnswer, shuffle } from "@/lib/storage";
 import BackButton from "@/components/BackButton";
 import HintBox from "@/components/HintBox";
 import { AnswerInput, ShortReview } from "@/components/ShortAnswer";
 import { AnimatedBar } from "@/components/Motion";
+import { matchKeywords } from "@/lib/keywords";
 
 type Props = {
   subjectId: string;
@@ -38,6 +40,16 @@ export default function PracticeClient({
   const [picked, setPicked] = useState<number | null>(null);
   const [text, setText] = useState("");
   const [score, setScore] = useState({ right: 0, total: 0, hints: 0 });
+  const [seen, setSeen] = useState<string[]>([]); // questions already scored in this round
+  const [requeued, setRequeued] = useState<string[]>([]); // questions sent back to the end of the round
+  const [shortMark, setShortMark] = useState<number | null>(null);
+  const [revealed, setRevealed] = useState(false); // model answer shown for a short question
+  const feedbackRef = useRef<HTMLDivElement>(null);
+
+  // After self-marking a short answer, bring the result into view.
+  useEffect(() => {
+    if (shortMark !== null) feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [shortMark]);
 
   // The shuffled order is built on the client only (after mount), so server and client HTML match.
   const [queue, setQueue] = useState<Item[] | null>(null);
@@ -67,12 +79,31 @@ export default function PracticeClient({
     setPicked(null);
     setText("");
     setScore({ right: 0, total: 0, hints: 0 });
+    setSeen([]);
+    setRequeued([]);
+    setShortMark(null);
   }
 
   function next() {
     setIndex((i) => i + 1);
     setPicked(null);
     setText("");
+    setShortMark(null);
+    setRevealed(false);
+  }
+
+  // Put the current question at the end of this round (once), so the student sees it again.
+  function requeueCurrent() {
+    if (!current || requeued.includes(current.id)) return;
+    setRequeued((r) => [...r, current.id]);
+    setQueue((q) => (q ? [...q, current] : q));
+  }
+
+  // Score only the first attempt of a question; repeats are practice, not extra marks.
+  function scoreOnce(correct: boolean) {
+    if (!current || seen.includes(current.id)) return;
+    setSeen((s) => [...s, current.id]);
+    setScore((s) => ({ ...s, right: s.right + (correct ? 1 : 0), total: s.total + 1 }));
   }
 
   function pickOption(i: number) {
@@ -80,15 +111,27 @@ export default function PracticeClient({
     setPicked(i);
     const correct = i === current.answer;
     recordAnswer(current.id, correct);
-    setScore((s) => ({ ...s, right: s.right + (correct ? 1 : 0), total: s.total + 1 }));
+    scoreOnce(correct);
+    if (!correct) requeueCurrent();
   }
 
   function markShort(marks: number) {
-    if (!current || current.kind !== "short") return;
+    if (!current || current.kind !== "short" || shortMark !== null) return;
     const full = marks === current.marks;
+    setShortMark(marks);
     recordAnswer(current.id, full);
-    setScore((s) => ({ ...s, right: s.right + (full ? 1 : 0), total: s.total + 1 }));
-    next();
+    scoreOnce(full);
+    if (!full) requeueCurrent();
+  }
+
+  // Submit a typed short answer: keyword match with the model answer, then mark it.
+  function submitShort() {
+    if (!current || current.kind !== "short" || !text.trim()) return;
+    const kw = matchKeywords(text, current.answer);
+    const pct = kw.total ? kw.matched.length / kw.total : 0;
+    const mark = pct >= 0.7 ? current.marks : pct >= 0.4 ? Math.max(1, current.marks - 1) : 0;
+    setRevealed(true);
+    markShort(mark);
   }
 
   return (
@@ -165,7 +208,7 @@ export default function PracticeClient({
                         {score.right}
                         <span className="text-2xl opacity-80">/{score.total}</span>
                       </div>
-                      <div className="mt-2 text-sm opacity-90">{score.hints} hint use kiye</div>
+                      <div className="mt-2 text-sm opacity-90">{score.hints} hint use kiye{requeued.length ? ` · ${requeued.length} sawal dobara kiye` : ""}</div>
                     </div>
                   </div>
                   <div className="p-5">
@@ -192,6 +235,7 @@ export default function PracticeClient({
                       <span className="chip">
                         {unitMeta(current.unitId)?.title} · {current.topic}
                       </span>
+                      <ImportanceBadge imp={current.imp} />
                     </div>
 
                     <p className="text-lg font-semibold leading-relaxed sm:text-xl">{current.q}</p>
@@ -260,22 +304,58 @@ export default function PracticeClient({
                         </AnimatePresence>
 
                         {picked !== null && (
-                          <button type="button" onClick={next} className="btn btn-primary focus-ring w-full !py-3.5">
-                            Agla question <ArrowRight size={17} aria-hidden />
-                          </button>
+                          <FeedbackButtons
+                            repeatDone={requeued.includes(current.id)}
+                            onNext={next}
+                            onRepeat={() => { requeueCurrent(); next(); }}
+                            note={picked !== current.answer ? "Ye sawal round ke end mein phir aayega." : null}
+                          />
                         )}
                       </div>
                     )}
 
                     {current.kind === "short" && (
                       <div className="space-y-4">
-                        <AnswerInput id={`ans-${current.id}`} value={text} onChange={setText} />
-                        <ShortReview
-                          key={current.id}
-                          answer={current.answer}
-                          student={text}
-                          onMark={(m) => markShort(m)}
-                        />
+                        <AnswerInput id={`ans-${current.id}`} value={text} onChange={setText} disabled={shortMark !== null} />
+                        {shortMark === null && (
+                          <div className="grid gap-2 sm:grid-cols-2">
+                            <button type="button" onClick={() => setRevealed(true)} className="btn focus-ring !py-3.5">
+                              Model answer dekho
+                            </button>
+                            <button type="button" onClick={submitShort} disabled={!text.trim()} className="btn btn-primary focus-ring !py-3.5 disabled:opacity-50">
+                              <Check size={17} aria-hidden /> Submit karo
+                            </button>
+                          </div>
+                        )}
+                        {revealed && shortMark === null && (
+                          <div className="space-y-3">
+                            <div className="rounded-xl bg-[var(--card-2)] p-4 text-sm leading-relaxed"><b>Model answer:</b> {current.answer}</div>
+                            <FeedbackButtons repeatDone={requeued.includes(current.id)} onNext={next} onRepeat={() => { requeueCurrent(); next(); }} note={null} />
+                          </div>
+                        )}
+                        {shortMark !== null && (() => {
+                          const kw = matchKeywords(text, current.answer);
+                          const pct = kw.total ? Math.round((kw.matched.length / kw.total) * 100) : 0;
+                          const full = shortMark === current.marks;
+                          const tone = full ? "bg-[var(--good-soft)]" : shortMark > 0 ? "bg-[var(--warn-soft)]" : "bg-[var(--bad-soft)]";
+                          return (
+                            <div className="space-y-3">
+                              <div className={`space-y-3 rounded-xl p-4 text-sm leading-relaxed ${tone}`}>
+                                <div className="flex items-center gap-1.5 font-bold">
+                                  {full ? <><Check size={16} aria-hidden /> Sahi ({shortMark}/{current.marks})</> : shortMark > 0 ? <>Adha ({shortMark}/{current.marks})</> : <><X size={16} aria-hidden /> Galat (0/{current.marks})</>}
+                                  <span className="font-normal">· {pct}% points match</span>
+                                </div>
+                                <div><b>Model answer:</b> {current.answer}</div>
+                                <div className="flex flex-wrap gap-1.5">
+                                  {kw.matched.map((k) => <span key={k} className="chip chip-good">{k}</span>)}
+                                  {kw.missing.slice(0, 8).map((k) => <span key={k} className="chip">{k}</span>)}
+                                </div>
+                                <p className="text-xs text-[var(--muted)]">Ye keyword match se check hua hai. Model answer se milakar dekho.</p>
+                              </div>
+                              <FeedbackButtons repeatDone={requeued.includes(current.id)} onNext={next} onRepeat={() => { requeueCurrent(); next(); }} note={!full ? "Ye sawal round ke end mein phir aayega." : null} />
+                            </div>
+                          );
+                        })()}
                       </div>
                     )}
                   </motion.article>
@@ -317,6 +397,22 @@ export default function PracticeClient({
       <div className="flex justify-center">
         <button type="button" onClick={() => reset()} className="focus-ring inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)]">
           <Shuffle size={15} aria-hidden /> Questions shuffle karo
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function FeedbackButtons({ onNext, onRepeat, repeatDone, note }: { onNext: () => void; onRepeat: () => void; repeatDone: boolean; note: string | null }) {
+  return (
+    <div className="space-y-2">
+      {note && <p className="text-xs text-[var(--muted)]">{note}</p>}
+      <div className="grid gap-2 sm:grid-cols-2">
+        <button type="button" onClick={onNext} className="btn btn-primary focus-ring !py-3.5">
+          <Check size={17} aria-hidden /> Samajh gaya, agla <ArrowRight size={17} aria-hidden />
+        </button>
+        <button type="button" onClick={onRepeat} disabled={repeatDone} className="btn focus-ring !py-3.5 disabled:opacity-50">
+          <RotateCcw size={16} aria-hidden /> {repeatDone ? "Round ke end mein hai" : "Dobara puchho"}
         </button>
       </div>
     </div>
