@@ -4,9 +4,27 @@ import ThemeToggle from "@/components/ThemeToggle";
 import Logo from "@/components/Logo";
 import "./globals.css";
 
+const SITE_URL = "https://exam-pre-hub.vercel.app";
+const DESCRIPTION = "Notes, summaries, hints, practice questions and mock exams.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "StudyHub",
-  description: "Notes, summaries, hints, practice questions and mock exams.",
+  description: DESCRIPTION,
+  openGraph: {
+    title: "StudyHub",
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: "StudyHub",
+    type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "StudyHub" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "StudyHub",
+    description: DESCRIPTION,
+    images: ["/og.png"],
+  },
 };
 
 export const viewport: Viewport = {
