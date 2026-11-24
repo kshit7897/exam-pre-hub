@@ -1,0 +1,588 @@
+{
+  "id": "unit-3",
+  "title": "Digital Components",
+  "topics": [
+    {
+      "id": "3.1",
+      "title": "Integrated Circuits (IC)",
+      "notes": [
+        "An Integrated Circuit (IC), also called a chip, is made from silicon and mounted in a ceramic or plastic container. It contains many electronic components (gates, transistors, registers) on a single chip.",
+        "Features: components are fixed (cannot be repaired or replaced individually), works on low voltage, small in size, cheap, gives better performance for complex operations.",
+        "Classification by number of gates/transistors: SSI (Small Scale Integration: up to about 10 gates/few gates such as AND, OR, NOT), MSI (Medium Scale: 10 to 200 gates, e.g. decoders, adders, registers), LSI (Large Scale: 200 to 1000 gates, e.g. processors and memory chips), VLSI (Very Large Scale: 1000 to 10,000 or more gates), SLSI / Super Large Scale (about 10,000 to 100,000 gates, e.g. microprocessors and microcontrollers), ULSI (Ultra Large Scale: more than 1 million transistors).",
+        "Applications: smartphones, laptops, computers, televisions, cameras, scientific calculators, digital watches, control systems.",
+        "Most common component of a VLSI device is NAND, NOR or inverter gate. VLSI example: complex microcomputer chip."
+      ]
+    },
+    {
+      "id": "3.2",
+      "title": "Decoder",
+      "notes": [
+        "A decoder is a combinational circuit that converts binary information from n input lines into 2^n output lines (one output line per possible input code). It is the reverse of an encoder.",
+        "Example: 2x4 decoder (2 inputs, 4 outputs), 3x8 decoder (3 inputs, 8 outputs), 4x16 decoder (4 inputs, 16 outputs).",
+        "Enable input: the decoder works only when the enable is 1.",
+        "Uses: binary to octal conversion uses a 3x8 decoder; binary to hexadecimal conversion uses a 4x16 decoder; address decoding in memory."
+      ]
+    },
+    {
+      "id": "3.3",
+      "title": "Encoder",
+      "notes": [
+        "An encoder is a combinational circuit that performs the reverse operation of a decoder. It has up to 2^n input lines and n output lines.",
+        "It produces a binary code equivalent to the active input line.",
+        "Example: an 8x3 encoder has 8 inputs and 3 outputs. The enable signal is optional in encoders.",
+        "8x3 encoder output equations (from the slide circuit): X = D4+D5+D6+D7, Y = D2+D3+D6+D7, Z = D1+D3+D5+D7. D0 is not used in any output (it gives 000)."
+      ]
+    },
+    {
+      "id": "3.4",
+      "title": "Multiplexer (MUX / Data Selector)",
+      "notes": [
+        "A multiplexer (MUX) is a combinational circuit that directs one out of 2^n input data lines to a single output line. It is also called a data selector.",
+        "To design a MUX we need: 2^n input data lines, n selection lines, and 1 output line.",
+        "2x1 MUX: 2 inputs, 1 select line, 1 output. 4x1 MUX: 4 inputs, 2 select lines, 1 output.",
+        "Select lines decide which input is passed to the output.",
+        "Note: the slide 4x1 truth table lists S0 before S1. Standard convention is S1 as the most significant select bit (S1S0 = 10 selects I2). Check the teacher convention before the exam."
+      ]
+    },
+    {
+      "id": "3.5",
+      "title": "De-multiplexer (DEMUX / Data Distributor)",
+      "notes": [
+        "A de-multiplexer (DEMUX) is a combinational circuit that directs one input line to one of 2^n output lines. It performs the reverse operation of a multiplexer. It is also called a data distributor.",
+        "A DEMUX contains 1 input line, 2^n output lines and n selection lines. In simple words, DEMUX means ONE TO MANY.",
+        "Example: a 1x4 DEMUX has 1 input, 4 outputs and 2 select lines. It is designed with AND gates."
+      ]
+    },
+    {
+      "id": "3.6",
+      "title": "Registers",
+      "notes": [
+        "A register is a group of flip-flops that stores binary information. An n-bit register has n flip-flops and can store any n-bit binary value.",
+        "Registers can also have combinational gates to perform data-processing tasks."
+      ]
+    },
+    {
+      "id": "3.7",
+      "title": "Shift Registers",
+      "notes": [
+        "A shift register can shift its binary information in one or both directions (left or right). It is built by connecting flip-flops in cascade, where the output of one flip-flop is the input of the next. All flip-flops share a common clock.",
+        "Types: SISO (Serial In Serial Out), SIPO (Serial In Parallel Out), PISO (Parallel In Serial Out), PIPO (Parallel In Parallel Out), and Bidirectional shift register (can shift left or right).",
+        "In SISO, data enters one bit at a time and comes out one bit at a time. In SIPO, data enters serially and all bits are read in parallel. In PISO, all bits are loaded at once and shifted out serially. In PIPO, data is loaded and read in parallel."
+      ]
+    },
+    {
+      "id": "3.8",
+      "title": "Binary Counters",
+      "notes": [
+        "A counter is a sequential circuit (register) that counts clock pulses. Counting can be ascending, descending or in a non-linear sequence. Counters give timing and control signals to other devices.",
+        "Synchronous counter: all flip-flops are driven by the same clock pulse, so they change state together. It is faster, has no propagation delay build-up, but is more complex to design and needs more circuitry.",
+        "Asynchronous counter (ripple counter): only the first flip-flop gets the clock; the output of one flip-flop clocks the next. It is slower and easier to design.",
+        "A 4-bit binary counter has 2^4 = 16 states (0 to 15) and uses 4 flip-flops.",
+        "Applications: pulse generators, digital clocks, alarm systems, digital watches.",
+        "Alternate name of a synchronous counter is simultaneous counter, because all flip-flops change together.",
+        "Synchronous counter disadvantages: all flip-flops driven by a single common CLK, needs large components and circuitry, complex logic as the number of states increases.",
+        "4-bit synchronous counter design: 2^4 = 16 possible values (0 to 15), 4 flip-flops, common clock pulse. Timing diagram: A is the LSB waveform, D is the MSB."
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "id": "u3-m01",
+      "topic": "3.1",
+      "q": "An Integrated Circuit is also called a:",
+      "options": [
+        "Board",
+        "Chip",
+        "Cable",
+        "Bus"
+      ],
+      "answer": 1,
+      "explanation": "An IC is commonly called a chip."
+    },
+    {
+      "id": "u3-m02",
+      "topic": "3.1",
+      "q": "IC components are made of:",
+      "options": [
+        "Copper",
+        "Silicon",
+        "Aluminium",
+        "Iron"
+      ],
+      "answer": 1,
+      "explanation": "ICs are manufactured using silicon."
+    },
+    {
+      "id": "u3-m03",
+      "topic": "3.1",
+      "q": "Which IC scale has 10 to 200 gates?",
+      "options": [
+        "SSI",
+        "MSI",
+        "LSI",
+        "VLSI"
+      ],
+      "answer": 1,
+      "explanation": "MSI (Medium Scale Integration) = 10 to 200 gates."
+    },
+    {
+      "id": "u3-m04",
+      "topic": "3.1",
+      "q": "Microprocessors come under which IC category?",
+      "options": [
+        "SSI",
+        "MSI",
+        "LSI or higher (VLSI/SLSI)",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Microprocessors have thousands to tens of thousands of gates (LSI/VLSI/SLSI)."
+    },
+    {
+      "id": "u3-m05",
+      "topic": "3.1",
+      "q": "A disadvantage of IC chips is that:",
+      "options": [
+        "They are large",
+        "They are expensive",
+        "They cannot be repaired or replaced individually",
+        "They need high voltage"
+      ],
+      "answer": 2,
+      "explanation": "The components inside an IC are fixed; the whole chip must be replaced."
+    },
+    {
+      "id": "u3-m06",
+      "topic": "3.2",
+      "q": "A decoder converts:",
+      "options": [
+        "Decimal to binary only",
+        "Binary code into a set of output signals",
+        "Analog to digital",
+        "Octal to hex only"
+      ],
+      "answer": 1,
+      "explanation": "A decoder identifies a binary code and activates one output line."
+    },
+    {
+      "id": "u3-m07",
+      "topic": "3.2",
+      "q": "A decoder with n inputs has how many outputs?",
+      "options": [
+        "n",
+        "2n",
+        "2^n",
+        "n^2"
+      ],
+      "answer": 2,
+      "explanation": "n inputs produce 2^n outputs."
+    },
+    {
+      "id": "u3-m08",
+      "topic": "3.2",
+      "q": "Which decoder is used for binary to octal conversion?",
+      "options": [
+        "2x4",
+        "3x8",
+        "4x16",
+        "8x3"
+      ],
+      "answer": 1,
+      "explanation": "Octal has 8 digits from 3 bits, so a 3x8 decoder is used."
+    },
+    {
+      "id": "u3-m09",
+      "topic": "3.2",
+      "q": "Which decoder is used for binary to hexadecimal conversion?",
+      "options": [
+        "2x4",
+        "3x8",
+        "4x16",
+        "8x3"
+      ],
+      "answer": 2,
+      "explanation": "Hexadecimal uses 4 bits to give 16 values, so a 4x16 decoder is used."
+    },
+    {
+      "id": "u3-m10",
+      "topic": "3.3",
+      "q": "An encoder performs the operation that is:",
+      "options": [
+        "Same as decoder",
+        "Reverse of decoder",
+        "Same as MUX",
+        "Reverse of flip-flop"
+      ],
+      "answer": 1,
+      "explanation": "Encoder is the reverse of the decoder."
+    },
+    {
+      "id": "u3-m11",
+      "topic": "3.3",
+      "q": "An 8x3 encoder has how many output lines?",
+      "options": [
+        "8",
+        "3",
+        "2",
+        "1"
+      ],
+      "answer": 1,
+      "explanation": "8 inputs are encoded into 3 output lines (log2 8 = 3)."
+    },
+    {
+      "id": "u3-m12",
+      "topic": "3.4",
+      "q": "A multiplexer is also known as:",
+      "options": [
+        "Data distributor",
+        "Data selector",
+        "Latch",
+        "Counter"
+      ],
+      "answer": 1,
+      "explanation": "MUX selects one of many inputs, so it is a data selector."
+    },
+    {
+      "id": "u3-m13",
+      "topic": "3.4",
+      "q": "A 4x1 multiplexer needs how many selection lines?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "4 inputs need 2^n = 4, so n = 2 selection lines."
+    },
+    {
+      "id": "u3-m14",
+      "topic": "3.4",
+      "q": "A MUX has 2^n data inputs, n select lines and:",
+      "options": [
+        "2 outputs",
+        "1 output",
+        "n outputs",
+        "2^n outputs"
+      ],
+      "answer": 1,
+      "explanation": "A MUX always has a single output line."
+    },
+    {
+      "id": "u3-m15",
+      "topic": "3.5",
+      "q": "A DEMUX is also known as:",
+      "options": [
+        "Data selector",
+        "Data distributor",
+        "Encoder",
+        "Latch"
+      ],
+      "answer": 1,
+      "explanation": "DEMUX distributes one input to many outputs, so it is a data distributor."
+    },
+    {
+      "id": "u3-m16",
+      "topic": "3.5",
+      "q": "DEMUX works as:",
+      "options": [
+        "Many to one",
+        "One to many",
+        "Many to many",
+        "One to one only"
+      ],
+      "answer": 1,
+      "explanation": "DEMUX means ONE TO MANY."
+    },
+    {
+      "id": "u3-m17",
+      "topic": "3.5",
+      "q": "A 1x4 DEMUX has how many select lines?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "4 outputs need 2 select lines."
+    },
+    {
+      "id": "u3-m18",
+      "topic": "3.6",
+      "q": "A register is a group of:",
+      "options": [
+        "Resistors",
+        "Flip-flops",
+        "Transistors only",
+        "Buses"
+      ],
+      "answer": 1,
+      "explanation": "A register is made of flip-flops; each flip-flop stores one bit."
+    },
+    {
+      "id": "u3-m19",
+      "topic": "3.6",
+      "q": "An 8-bit register uses how many flip-flops?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "2"
+      ],
+      "answer": 1,
+      "explanation": "One flip-flop per bit, so 8 flip-flops."
+    },
+    {
+      "id": "u3-m20",
+      "topic": "3.7",
+      "q": "Shift register that accepts serial input and gives parallel output is:",
+      "options": [
+        "SISO",
+        "SIPO",
+        "PISO",
+        "PIPO"
+      ],
+      "answer": 1,
+      "explanation": "SIPO = Serial In Parallel Out."
+    },
+    {
+      "id": "u3-m21",
+      "topic": "3.7",
+      "q": "Shift register in which all bits are loaded at once and read out one by one is:",
+      "options": [
+        "SISO",
+        "SIPO",
+        "PISO",
+        "PIPO"
+      ],
+      "answer": 2,
+      "explanation": "PISO = Parallel In Serial Out."
+    },
+    {
+      "id": "u3-m22",
+      "topic": "3.7",
+      "q": "A shift register that can shift in both directions is called:",
+      "options": [
+        "Ring counter",
+        "Bidirectional shift register",
+        "Ripple counter",
+        "Johnson counter"
+      ],
+      "answer": 1,
+      "explanation": "Bidirectional shift register can shift left or right."
+    },
+    {
+      "id": "u3-m23",
+      "topic": "3.7",
+      "q": "In shift registers, flip-flops are connected:",
+      "options": [
+        "In parallel",
+        "In cascade",
+        "In a ring with no clock",
+        "Randomly"
+      ],
+      "answer": 1,
+      "explanation": "Output of one flip-flop feeds the input of the next (cascade)."
+    },
+    {
+      "id": "u3-m24",
+      "topic": "3.8",
+      "q": "A counter is basically a:",
+      "options": [
+        "Combinational circuit",
+        "Sequential circuit",
+        "Memory cell only",
+        "Multiplexer"
+      ],
+      "answer": 1,
+      "explanation": "Counters are sequential circuits that count clock pulses."
+    },
+    {
+      "id": "u3-m25",
+      "topic": "3.8",
+      "q": "In a synchronous counter:",
+      "options": [
+        "Only first flip-flop is clocked",
+        "All flip-flops use the same clock",
+        "Each flip-flop has its own clock",
+        "There is no clock"
+      ],
+      "answer": 1,
+      "explanation": "Synchronous counters use a single common clock for all flip-flops."
+    },
+    {
+      "id": "u3-m26",
+      "topic": "3.8",
+      "q": "Which counter is faster?",
+      "options": [
+        "Asynchronous",
+        "Synchronous",
+        "Both are same speed",
+        "Neither"
+      ],
+      "answer": 1,
+      "explanation": "Synchronous counters are faster because all flip-flops change together."
+    },
+    {
+      "id": "u3-m27",
+      "topic": "3.8",
+      "q": "A 4-bit binary counter counts from:",
+      "options": [
+        "0 to 8",
+        "0 to 15",
+        "1 to 16",
+        "0 to 16"
+      ],
+      "answer": 1,
+      "explanation": "2^4 = 16 states, i.e. 0 to 15."
+    },
+    {
+      "id": "u3-m28",
+      "topic": "3.8",
+      "q": "Which is an application of counters?",
+      "options": [
+        "Digital clock",
+        "Keyboard",
+        "Printer",
+        "Speaker"
+      ],
+      "answer": 0,
+      "explanation": "Counters are used in digital clocks, watches, alarm systems and pulse generators."
+    },
+    {
+      "id": "u3-m29",
+      "topic": "3.8",
+      "q": "Asynchronous counter is also called:",
+      "options": [
+        "Ripple counter",
+        "Ring counter",
+        "Johnson counter",
+        "Bidirectional counter"
+      ],
+      "answer": 0,
+      "explanation": "Asynchronous counter is known as a ripple counter."
+    }
+  ],
+  "short": [
+    {
+      "id": "u3-s01",
+      "topic": "3.1",
+      "q": "What is an Integrated Circuit?",
+      "answer": "An IC is a small silicon chip that contains many electronic components (gates, transistors) packaged in a ceramic or plastic container.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s02",
+      "topic": "3.1",
+      "q": "Differentiate between SSI and VLSI.",
+      "answer": "SSI has a few gates (up to about 10). VLSI has 1000 to 10,000 or more gates in one chip.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s03",
+      "topic": "3.1",
+      "q": "Give two features of IC chips.",
+      "answer": "Low voltage operation, very small size, cheap cost, better performance; components cannot be repaired (any two).",
+      "marks": 2
+    },
+    {
+      "id": "u3-s04",
+      "topic": "3.2",
+      "q": "What is a decoder?",
+      "answer": "A decoder is a combinational circuit that converts n input binary lines into 2^n output lines and activates the output that corresponds to the input code.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s05",
+      "topic": "3.2",
+      "q": "Which decoder is used for binary to octal and binary to hexadecimal conversion?",
+      "answer": "Binary to octal uses a 3x8 decoder; binary to hexadecimal uses a 4x16 decoder.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s06",
+      "topic": "3.3",
+      "q": "What is an encoder?",
+      "answer": "An encoder is a combinational circuit with 2^n input lines and n output lines that produces the binary code of the active input. It is the reverse of a decoder.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s07",
+      "topic": "3.4",
+      "q": "What is a multiplexer? How many select lines does a 8x1 multiplexer need?",
+      "answer": "A MUX directs one of 2^n input lines to a single output using selection lines. An 8x1 MUX needs 3 select lines (2^3 = 8).",
+      "marks": 2
+    },
+    {
+      "id": "u3-s08",
+      "topic": "3.4",
+      "q": "What are the components needed to design a multiplexer?",
+      "answer": "2^n input data lines, n selection lines and 1 output line.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s09",
+      "topic": "3.5",
+      "q": "What is a de-multiplexer?",
+      "answer": "A DEMUX is a combinational circuit that directs one input line to one of 2^n output lines using n selection lines. It is also called a data distributor.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s10",
+      "topic": "3.5",
+      "q": "Differentiate between MUX and DEMUX.",
+      "answer": "MUX: many inputs to one output (data selector). DEMUX: one input to many outputs (data distributor).",
+      "marks": 2
+    },
+    {
+      "id": "u3-s11",
+      "topic": "3.6",
+      "q": "What is a register?",
+      "answer": "A register is a group of flip-flops, where an n-bit register has n flip-flops and stores n bits of binary information.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s12",
+      "topic": "3.7",
+      "q": "What is a shift register?",
+      "answer": "A shift register is a register whose binary information can be shifted to the left or right on each clock pulse. Flip-flops are connected in cascade.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s13",
+      "topic": "3.7",
+      "q": "Name the four basic types of shift registers.",
+      "answer": "SISO (Serial In Serial Out), SIPO (Serial In Parallel Out), PISO (Parallel In Serial Out), PIPO (Parallel In Parallel Out).",
+      "marks": 2
+    },
+    {
+      "id": "u3-s14",
+      "topic": "3.8",
+      "q": "What is a counter? Name its applications.",
+      "answer": "A counter is a sequential circuit that counts clock pulses. Applications: digital clocks, digital watches, alarm systems, pulse generators.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s15",
+      "topic": "3.8",
+      "q": "Differentiate between synchronous and asynchronous counters.",
+      "answer": "Synchronous: all flip-flops share one clock, faster, harder to design. Asynchronous: only first flip-flop gets the clock and each output clocks the next, slower, easier to design.",
+      "marks": 2
+    },
+    {
+      "id": "u3-s16",
+      "topic": "3.8",
+      "q": "How many states does a 4-bit binary counter have? Show the calculation.",
+      "answer": "2^4 = 16 states (0 to 15).",
+      "marks": 2
+    },
+    {
+      "id": "u3-s17",
+      "topic": "3.8",
+      "q": "Give two advantages of synchronous counters.",
+      "answer": "Faster operation, no propagation delay build-up, simple to control through logic gates (any two).",
+      "marks": 2
+    }
+  ]
+}

@@ -1,0 +1,414 @@
+{
+  "mcq": [
+    {
+      "id": "u3-x-m01",
+      "topic": "3.4",
+      "q": "In a 4x1 MUX, with S1 = 1 and S0 = 0 (standard convention, S1 is the most significant select bit), which input is passed to the output?",
+      "options": [
+        "I0",
+        "I1",
+        "I2",
+        "I3"
+      ],
+      "answer": 2,
+      "explanation": "S1S0 = 10 is binary 2, so I2 is selected. (The slide table lists S0 first; check your teacher convention.)"
+    },
+    {
+      "id": "u3-x-m02",
+      "topic": "3.4",
+      "q": "A 8x1 MUX needs how many select lines?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "2^3 = 8, so 3 select lines."
+    },
+    {
+      "id": "u3-x-m03",
+      "topic": "3.5",
+      "q": "In a 1x4 DEMUX with select lines S1S0 = 11, the output that becomes active is:",
+      "options": [
+        "Y0",
+        "Y1",
+        "Y2",
+        "Y3"
+      ],
+      "answer": 3,
+      "explanation": "S1S0 = 11 is binary 3, so Y3 gets the input."
+    },
+    {
+      "id": "u3-x-m04",
+      "topic": "3.2",
+      "q": "A 2x4 decoder has how many output lines?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "2 inputs give 2^2 = 4 outputs."
+    },
+    {
+      "id": "u3-x-m05",
+      "topic": "3.2",
+      "q": "A decoder with input 101 (3 bits) activates which output in a 3x8 decoder?",
+      "options": [
+        "Output 3",
+        "Output 5",
+        "Output 6",
+        "Output 8"
+      ],
+      "answer": 1,
+      "explanation": "Binary 101 = decimal 5, so output 5 is activated."
+    },
+    {
+      "id": "u3-x-m06",
+      "topic": "3.3",
+      "q": "An 8x3 encoder has:",
+      "options": [
+        "8 inputs and 3 outputs",
+        "3 inputs and 8 outputs",
+        "8 inputs and 8 outputs",
+        "3 inputs and 3 outputs"
+      ],
+      "answer": 0,
+      "explanation": "Encoder has 2^n inputs and n outputs; for n = 3, 8 inputs and 3 outputs."
+    },
+    {
+      "id": "u3-x-m07",
+      "topic": "3.7",
+      "q": "In a 4-bit SISO shift register, how many clock pulses are needed to shift a 4-bit serial word in fully?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "One bit is shifted in per clock pulse, so 4 pulses are needed."
+    },
+    {
+      "id": "u3-x-m08",
+      "topic": "3.7",
+      "q": "A register that loads all bits at once and gives output bit by bit is:",
+      "options": [
+        "SIPO",
+        "PISO",
+        "SISO",
+        "PIPO"
+      ],
+      "answer": 1,
+      "explanation": "Parallel In Serial Out (PISO)."
+    },
+    {
+      "id": "u3-x-m09",
+      "topic": "3.8",
+      "q": "A 3-bit binary counter has how many distinct states?",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explanation": "2^3 = 8 states (000 to 111)."
+    },
+    {
+      "id": "u3-x-m10",
+      "topic": "3.8",
+      "q": "In a synchronous counter, the flip-flops are driven by:",
+      "options": [
+        "Different clocks",
+        "One common clock",
+        "No clock",
+        "The output of the last flip-flop only"
+      ],
+      "answer": 1,
+      "explanation": "All flip-flops share one clock in a synchronous counter."
+    },
+    {
+      "id": "u3-x-m11",
+      "topic": "3.8",
+      "q": "Which counter is also called a ripple counter?",
+      "options": [
+        "Synchronous counter",
+        "Asynchronous counter",
+        "Bidirectional counter",
+        "Johnson counter"
+      ],
+      "answer": 1,
+      "explanation": "Asynchronous counters are called ripple counters because the carry ripples from stage to stage."
+    },
+    {
+      "id": "u3-x-m12",
+      "topic": "3.6",
+      "q": "A 16-bit register is built from how many flip-flops?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "answer": 2,
+      "explanation": "One flip-flop per bit, so 16."
+    },
+    {
+      "id": "u3-x-m13",
+      "topic": "3.1",
+      "q": "An IC with 10 to 200 gates is classified as:",
+      "options": [
+        "SSI",
+        "MSI",
+        "LSI",
+        "VLSI"
+      ],
+      "answer": 1,
+      "explanation": "MSI (Medium Scale Integration)."
+    },
+    {
+      "id": "u3-x-m14",
+      "topic": "3.1",
+      "q": "A chip with more than 1 million transistors is classified as:",
+      "options": [
+        "LSI",
+        "VLSI",
+        "SSI",
+        "ULSI"
+      ],
+      "answer": 3,
+      "explanation": "ULSI (Ultra Large Scale Integration) has more than 1 million transistors."
+    },
+    {
+      "id": "u3-x-m15",
+      "topic": "3.8",
+      "q": "Which is an application of counters?",
+      "options": [
+        "Digital clock",
+        "Keyboard",
+        "Speaker",
+        "Printer"
+      ],
+      "answer": 0,
+      "explanation": "Counters are used in digital clocks, watches, pulse generators and alarm systems."
+    },
+    {
+      "id": "u3-x-m16",
+      "topic": "3.5",
+      "q": "Which device sends one input line to one of many output lines?",
+      "options": [
+        "Multiplexer",
+        "Demultiplexer",
+        "Encoder",
+        "Register"
+      ],
+      "answer": 1,
+      "explanation": "DEMUX is one to many."
+    },
+    {
+      "id": "u3-x-m17",
+      "topic": "3.4",
+      "q": "A MUX with 16 inputs requires how many select lines?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "2^4 = 16, so 4 select lines."
+    },
+    {
+      "id": "u3-x-m18",
+      "topic": "3.2",
+      "q": "Binary to hexadecimal conversion uses which decoder?",
+      "options": [
+        "2x4",
+        "3x8",
+        "4x16",
+        "8x3"
+      ],
+      "answer": 2,
+      "explanation": "Hex needs 16 outputs from 4 bits."
+    },
+    {
+      "id": "u3-x-m19",
+      "topic": "3.7",
+      "q": "In a bidirectional shift register, data can be shifted:",
+      "options": [
+        "Only left",
+        "Only right",
+        "Left or right",
+        "Nowhere"
+      ],
+      "answer": 2,
+      "explanation": "A bidirectional shift register can shift left or right."
+    },
+    {
+      "id": "u3-x-m20",
+      "topic": "3.8",
+      "q": "Advantage of synchronous counters over asynchronous counters is:",
+      "options": [
+        "Simpler design",
+        "Faster operation",
+        "Fewer flip-flops",
+        "No clock needed"
+      ],
+      "answer": 1,
+      "explanation": "All flip-flops change together, so they are faster."
+    },
+    {
+      "id": "u3-x-m21",
+      "topic": "3.3",
+      "q": "In the 8x3 encoder, output X is equal to:",
+      "options": [
+        "D4+D5+D6+D7",
+        "D1+D3+D5+D7",
+        "D2+D3+D6+D7",
+        "D0+D1+D2+D3"
+      ],
+      "answer": 0,
+      "explanation": "From the slide circuit: X = D4+D5+D6+D7."
+    },
+    {
+      "id": "u3-x-m22",
+      "topic": "3.3",
+      "q": "In the 8x3 encoder, output Z is equal to:",
+      "options": [
+        "D4+D5+D6+D7",
+        "D2+D3+D6+D7",
+        "D1+D3+D5+D7",
+        "D0+D2+D4+D6"
+      ],
+      "answer": 2,
+      "explanation": "From the slide circuit: Z = D1+D3+D5+D7."
+    },
+    {
+      "id": "u3-x-m23",
+      "topic": "3.3",
+      "q": "In the 8x3 encoder, when input D0 is active, the output XYZ is:",
+      "options": [
+        "000",
+        "001",
+        "111",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "D0 is not part of any output equation, so the outputs are 000 for D0."
+    },
+    {
+      "id": "u3-x-m24",
+      "topic": "3.1",
+      "q": "Which device is said to have the most common component as NAND, NOR or inverter gate?",
+      "options": [
+        "SSI",
+        "MSI",
+        "LSI",
+        "VLSI"
+      ],
+      "answer": 3,
+      "explanation": "The slide says the most common component in VLSI technology is NAND, NOR or inverter."
+    },
+    {
+      "id": "u3-x-m25",
+      "topic": "3.8",
+      "q": "Another name of synchronous counter is:",
+      "options": [
+        "Ripple counter",
+        "Simultaneous counter",
+        "Johnson counter",
+        "Ring counter"
+      ],
+      "answer": 1,
+      "explanation": "A synchronous counter is also called a simultaneous counter."
+    },
+    {
+      "id": "u3-x-m26",
+      "topic": "3.5",
+      "q": "In the 1x4 DEMUX truth table on the slide, the select lines are written as S1 then S0. With S1 = 0 and S0 = 1 and D = 1, which output is 1?",
+      "options": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "answer": 1,
+      "explanation": "S1S0 = 01 selects F1."
+    }
+  ],
+  "short": [
+    {
+      "id": "u3-x-s01",
+      "topic": "3.4",
+      "q": "Explain the working of a 4x1 multiplexer with select lines S1 = 1, S0 = 0 (standard convention).",
+      "answer": "Binary 10 selects input I2, so the output Y equals I2.",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s02",
+      "topic": "3.5",
+      "q": "Draw the basic idea of a 1x4 DEMUX and state how many select lines it uses.",
+      "answer": "One input line D goes to one of four outputs Y0 to Y3 chosen by the two select lines S1 and S0; it uses 2 select lines.",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s03",
+      "topic": "3.2",
+      "q": "How many outputs does a 3x8 decoder have and why?",
+      "answer": "8 outputs, because 3 input lines can represent 2^3 = 8 different codes.",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s04",
+      "topic": "3.3",
+      "q": "Differentiate between an encoder and a decoder.",
+      "answer": "A decoder has n inputs and 2^n outputs and activates one output for each input code. An encoder has 2^n inputs and n outputs and produces the binary code of the active input. Encoder is the reverse of decoder.",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s05",
+      "topic": "3.7",
+      "q": "Name the four shift register types and give one example use for SIPO.",
+      "answer": "SISO, SIPO, PISO, PIPO. SIPO converts serial data into parallel form, e.g. a serial-to-parallel converter.",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s06",
+      "topic": "3.8",
+      "q": "Give the number of flip-flops and the number of states for a 4-bit binary counter.",
+      "answer": "4 flip-flops and 2^4 = 16 states (0 to 15).",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s07",
+      "topic": "3.8",
+      "q": "Why is an asynchronous counter slower than a synchronous counter?",
+      "answer": "In an asynchronous counter each flip-flop is clocked by the previous one, so changes ripple through stage by stage, causing a delay.",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s08",
+      "topic": "3.1",
+      "q": "Classify an IC that has 1000 to 10,000 gates and give an example.",
+      "answer": "VLSI (Very Large Scale Integration).",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s09",
+      "topic": "3.3",
+      "q": "Write the output equations of the 8x3 encoder for X, Y and Z.",
+      "answer": "X = D4+D5+D6+D7; Y = D2+D3+D6+D7; Z = D1+D3+D5+D7.",
+      "marks": 2
+    },
+    {
+      "id": "u3-x-s10",
+      "topic": "3.8",
+      "q": "List two advantages and one disadvantage of synchronous counters.",
+      "answer": "Advantages: simple to design (compared to asynchronous), works simultaneously, no propagation delay, faster operation. Disadvantage: needs large components and complex logic as number of states increases (any valid answer).",
+      "marks": 2
+    }
+  ]
+}

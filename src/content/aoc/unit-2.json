@@ -1,0 +1,705 @@
+{
+  "id": "unit-2",
+  "title": "Digital Logic Circuits",
+  "topics": [
+    {
+      "id": "2.1",
+      "title": "Logic Gates",
+      "notes": [
+        "Logic gates are electronic circuits with one or more inputs and one output. Binary 1 and 0 are represented by voltage levels.",
+        "AND gate: output is 1 only when ALL inputs are 1. Expression: Y = A.B.",
+        "OR gate: output is 1 when ANY input is 1. Expression: Y = A + B.",
+        "NOT gate (inverter): output is the complement of the input. Expression: Y = A'.",
+        "NAND = NOT + AND: output is 0 only when all inputs are 1. NOR = NOT + OR: output is 0 when any input is 1.",
+        "XOR (Ex-OR): output is 1 when the two inputs are at opposite levels. Y = A XOR B = A'B + AB'. For 3 inputs, XOR gives 1 when the number of 1s is odd.",
+        "XNOR (Ex-NOR) = XOR + NOT: output is 1 when inputs are equal. For 3 inputs, XNOR gives 1 when the number of 1s is even.",
+        "NAND and NOR are universal gates: any gate (AND, OR, NOT) can be built using only NAND or only NOR."
+      ]
+    },
+    {
+      "id": "2.2",
+      "title": "Boolean Algebra & Laws",
+      "notes": [
+        "Boolean algebra deals with binary variables and the three basic operations AND, OR and complement. A Boolean function can be shown as a truth table, logic diagram or algebraic expression.",
+        "Commutative law: A + B = B + A and A.B = B.A (order of variables does not change output).",
+        "Associative law: (A + B) + C = A + (B + C); (A.B).C = A.(B.C).",
+        "Distributive law: A.(B + C) = A.B + A.C; A + BC = (A + B)(A + C).",
+        "Identity and null: A + 0 = A; A . 1 = A; A + 1 = 1; A . 0 = 0. Complement: A + A' = 1; A . A' = 0. Idempotent: A + A = A; A . A = A. Involution: (A')' = A. Absorption: A + AB = A.",
+        "De Morgan's theorems: (A.B)' = A' + B' (NAND becomes negative-OR); (A + B)' = A'.B' (NOR becomes negative-AND). Break the bar and change the sign.",
+        "Full list of postulates and theorems (slides): X+0=X; X+1=1; X+X=X; X+X'=1; X.0=0; X.1=X; X.X=X; X.X'=0; (X')'=X; X+Y=Y+X; X.Y=Y.X; X+(Y+Z)=(X+Y)+Z; X.(YZ)=(XY).Z; X+YZ=(X+Y)(X+Z); X.(Y+Z)=XY+XZ; X+XY=X; X(X+Y)=X.",
+        "Example from slides: F = x + y'z. F is 1 when x = 1, or when y = 0 and z = 1."
+      ]
+    },
+    {
+      "id": "2.3",
+      "title": "Simplification using Karnaugh Map (K-map)",
+      "notes": [
+        "K-map (Karnaugh map, also called Veitch diagram) is a method to minimize Boolean functions. It was developed by Maurice Karnaugh in 1954.",
+        "A minterm is a product term that includes all variables. Number of minterms = 2^n (2 variables: 4, 3 variables: 8, 4 variables: 16).",
+        "Each cell of a K-map represents one minterm. Values of variables are written in Gray code order (00, 01, 11, 10).",
+        "Rules: groups must contain only 1s; each 1 must be in at least one group; group sizes are powers of 2 (1, 2, 4, 8, 16); make the largest possible groups; groups may overlap; groups may wrap around the table; groups must be horizontal, vertical or square/rectangular (not diagonal).",
+        "Sum of Products (SOP): use minterms (cells with 1). Product of Sum (POS): use maxterms (cells with 0).",
+        "3-variable K-map layout (Gray code): rows A = 0 and 1, columns BC = 00, 01, 11, 10. A=0 -> m0,m1,m3,m2; A=1 -> m4,m5,m7,m6.",
+        "4-variable K-map layout: rows AB and columns CD, both in Gray code (00, 01, 11, 10). Row 00 -> 0,1,3,2; row 01 -> 4,5,7,6; row 11 -> 12,13,15,14; row 10 -> 8,9,11,10.",
+        "Slide worked examples (SOP): F(X,Y)=Sum(2,3)=X. F(X,Y,Z)=Sum(0,4,6,7): correct minimal SOP is Y'Z' + XY (the slide shows XZ'+XY, which does not cover minterm 0). F(X,Y,Z)=Sum(1,3,6,7): correct minimal SOP is X'Z + XY (the slide shows YZ+XY, which does not cover minterm 1). Check these with your teacher.",
+        "Slide worked examples (POS): F(X,Y)=Pi(2,3)=X'. F(X,Y,Z)=Pi(1,3,5,7)=Z'. F(W,X,Y,Z)=Pi(0,4,8,12)=Y+Z."
+      ]
+    },
+    {
+      "id": "2.4",
+      "title": "Combinational Circuits",
+      "notes": [
+        "A combinational circuit combines logic gates. Its output depends ONLY on the present inputs. It has no memory.",
+        "A combinational circuit can have n inputs and m outputs.",
+        "Design steps: state the problem, assign symbols, make the truth table, obtain simplified Boolean functions, draw the logic diagram.",
+        "Examples: Half adder, Full adder, Half subtractor, Full subtractor, Parity generator, Parity checker, Multiplexer, Decoder, Encoder.",
+        "Half adder: adds two bits. Sum = X XOR Y, Carry = X.Y.",
+        "Full adder: adds three bits (X, Y, carry-in Z). Sum = X XOR Y XOR Z, Carry = XY + YZ + XZ (also written Z(X XOR Y) + XY).",
+        "Full adder carry can also be written as Carry = Z(X XOR Y) + XY.",
+        "Half adder truth table: X=0,Y=0 -> Sum 0, Carry 0; X=0,Y=1 -> Sum 1, Carry 0; X=1,Y=0 -> Sum 1, Carry 0; X=1,Y=1 -> Sum 0, Carry 1.",
+        "Full adder: sum is 1 for an odd number of 1s in X, Y, Z; carry is 1 when two or more inputs are 1."
+      ]
+    },
+    {
+      "id": "2.5",
+      "title": "Flip-Flops",
+      "notes": [
+        "A flip-flop is a binary cell that stores one bit. It has two stable states (0 and 1) and two outputs Q and Q' (complement).",
+        "Flip-flops are storage elements used in synchronous sequential circuits.",
+        "SR flip-flop: S = Set, R = Reset. S=0,R=0 holds; S=0,R=1 resets (Q=0); S=1,R=0 sets (Q=1); S=1,R=1 is an invalid/forbidden state.",
+        "D flip-flop (Delay/Data): output follows D at the clock edge, Q(next) = D. Simple, fast, used for registers and memory cells. Made by connecting R = D' and S = D.",
+        "JK flip-flop: J=0,K=0 holds; J=0,K=1 resets; J=1,K=0 sets; J=1,K=1 toggles. It has no invalid state.",
+        "T (Toggle) flip-flop: made by tying J and K together. When T=1 the output toggles on each clock; when T=0 it holds. Used in counters.",
+        "Applications: RS flip-flops in asynchronous counters and memory cells; D flip-flops in registers and counters; T flip-flops in counters.",
+        "Flip-flops are classified as Asynchronous and Synchronous. Types: SR, D, JK and T.",
+        "SR flip-flop truth table: S=0,R=0 -> No change; S=0,R=1 -> Reset (Q=0); S=1,R=0 -> Set (Q=1); S=1,R=1 -> Invalid. SR flip-flop can be built with two cross-coupled NOR gates.",
+        "D flip-flop truth table (clock edge): Clk=0 -> No change; Clk=1, D=0 -> Q becomes 0; Clk=1, D=1 -> Q becomes 1. Applications: memory cell, register, counter, synchronous system.",
+        "JK flip-flop truth table: J=0,K=0 -> No change; J=0,K=1 -> Clear (Q=0); J=1,K=0 -> Set (Q=1); J=1,K=1 -> complement Q(t)'.",
+        "T flip-flop: T=0 -> no change; T=1 -> toggle (complement). Slide table lists it with clock edges; standard convention: T=1 toggles the output on each clock."
+      ]
+    },
+    {
+      "id": "2.6",
+      "title": "Sequential Circuits",
+      "notes": [
+        "A sequential circuit output depends on present inputs AND past inputs (its state). It contains at least one memory element (flip-flop).",
+        "A sequential circuit = interconnection of flip-flops and gates.",
+        "Examples: Registers, Shift registers, Counters, Flip-flops.",
+        "Sequential circuits are harder to design and understand than combinational circuits."
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "id": "u2-m01",
+      "topic": "2.1",
+      "q": "Output of an AND gate is 1 when:",
+      "options": [
+        "Any input is 1",
+        "All inputs are 1",
+        "All inputs are 0",
+        "Inputs are different"
+      ],
+      "answer": 1,
+      "explanation": "AND gives 1 only when every input is 1."
+    },
+    {
+      "id": "u2-m02",
+      "topic": "2.1",
+      "q": "OR gate output is 0 only when:",
+      "options": [
+        "Any input is 1",
+        "All inputs are 1",
+        "All inputs are 0",
+        "Exactly one input is 1"
+      ],
+      "answer": 2,
+      "explanation": "OR gives 0 only when all inputs are 0."
+    },
+    {
+      "id": "u2-m03",
+      "topic": "2.1",
+      "q": "Which gate is the complement of AND?",
+      "options": [
+        "OR",
+        "NOR",
+        "NAND",
+        "XOR"
+      ],
+      "answer": 2,
+      "explanation": "NAND = NOT + AND."
+    },
+    {
+      "id": "u2-m04",
+      "topic": "2.1",
+      "q": "Which of these gates is called universal?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 3,
+      "explanation": "NAND and NOR are universal gates; any logic function can be built from NAND alone."
+    },
+    {
+      "id": "u2-m05",
+      "topic": "2.1",
+      "q": "XOR gate output is 1 when:",
+      "options": [
+        "Both inputs are 1",
+        "Both inputs are 0",
+        "Inputs are at opposite levels",
+        "Inputs are equal"
+      ],
+      "answer": 2,
+      "explanation": "XOR gives 1 when two inputs are different."
+    },
+    {
+      "id": "u2-m06",
+      "topic": "2.1",
+      "q": "XNOR gate output is 1 when:",
+      "options": [
+        "Inputs are different",
+        "Inputs are equal",
+        "Any input is 1",
+        "Exactly one input is 1"
+      ],
+      "answer": 1,
+      "explanation": "XNOR is XOR followed by NOT, so it gives 1 when inputs are equal."
+    },
+    {
+      "id": "u2-m07",
+      "topic": "2.1",
+      "q": "For a 3-input XOR gate, output is 1 when the number of 1s is:",
+      "options": [
+        "Even",
+        "Odd",
+        "Zero",
+        "Three only"
+      ],
+      "answer": 1,
+      "explanation": "3-input XOR is 1 for an odd number of 1s."
+    },
+    {
+      "id": "u2-m08",
+      "topic": "2.1",
+      "q": "Output of a NOT gate for input 1 is:",
+      "options": [
+        "1",
+        "0",
+        "Undefined",
+        "High impedance"
+      ],
+      "answer": 1,
+      "explanation": "NOT inverts its input, so 1 becomes 0."
+    },
+    {
+      "id": "u2-m09",
+      "topic": "2.2",
+      "q": "Which law says A + B = B + A?",
+      "options": [
+        "Associative",
+        "Commutative",
+        "Distributive",
+        "Idempotent"
+      ],
+      "answer": 1,
+      "explanation": "Commutative law: changing the order of variables does not change the result."
+    },
+    {
+      "id": "u2-m10",
+      "topic": "2.2",
+      "q": "A + A' equals:",
+      "options": [
+        "0",
+        "1",
+        "A",
+        "A'"
+      ],
+      "answer": 1,
+      "explanation": "Complement law: A + A' = 1."
+    },
+    {
+      "id": "u2-m11",
+      "topic": "2.2",
+      "q": "A . 0 equals:",
+      "options": [
+        "A",
+        "1",
+        "0",
+        "A'"
+      ],
+      "answer": 2,
+      "explanation": "Null law: anything AND 0 is 0."
+    },
+    {
+      "id": "u2-m12",
+      "topic": "2.2",
+      "q": "A + AB simplifies to:",
+      "options": [
+        "AB",
+        "A",
+        "B",
+        "A + B"
+      ],
+      "answer": 1,
+      "explanation": "Absorption law: A + AB = A."
+    },
+    {
+      "id": "u2-m13",
+      "topic": "2.2",
+      "q": "De Morgan's theorem: (A.B)' equals:",
+      "options": [
+        "A' . B'",
+        "A' + B'",
+        "A + B",
+        "A . B"
+      ],
+      "answer": 1,
+      "explanation": "(A.B)' = A' + B' (NAND converts to negative-OR)."
+    },
+    {
+      "id": "u2-m14",
+      "topic": "2.2",
+      "q": "De Morgan's theorem: (A + B)' equals:",
+      "options": [
+        "A' + B'",
+        "A . B",
+        "A' . B'",
+        "A + B'"
+      ],
+      "answer": 2,
+      "explanation": "(A + B)' = A'.B' (NOR converts to negative-AND)."
+    },
+    {
+      "id": "u2-m15",
+      "topic": "2.2",
+      "q": "The distributive law A.(B + C) equals:",
+      "options": [
+        "A.B + C",
+        "A.B + A.C",
+        "A + B.C",
+        "A.B.C"
+      ],
+      "answer": 1,
+      "explanation": "Distributive law: A(B + C) = AB + AC."
+    },
+    {
+      "id": "u2-m16",
+      "topic": "2.3",
+      "q": "K-map was developed by:",
+      "options": [
+        "De Morgan",
+        "Boole",
+        "Maurice Karnaugh",
+        "Shannon"
+      ],
+      "answer": 2,
+      "explanation": "Maurice Karnaugh developed the K-map in 1954 (also called Veitch diagram)."
+    },
+    {
+      "id": "u2-m17",
+      "topic": "2.3",
+      "q": "Number of minterms for a Boolean function with 3 variables is:",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explanation": "2^3 = 8 minterms."
+    },
+    {
+      "id": "u2-m18",
+      "topic": "2.3",
+      "q": "Number of minterms for 4 variables is:",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "answer": 2,
+      "explanation": "2^4 = 16."
+    },
+    {
+      "id": "u2-m19",
+      "topic": "2.3",
+      "q": "In a K-map, groups must contain cells with:",
+      "options": [
+        "Only 0s",
+        "Only 1s (for SOP)",
+        "Mixed 0s and 1s",
+        "Only don't-cares"
+      ],
+      "answer": 1,
+      "explanation": "Groups should include only 1s when simplifying SOP."
+    },
+    {
+      "id": "u2-m20",
+      "topic": "2.3",
+      "q": "Valid group sizes in a K-map are:",
+      "options": [
+        "3, 5, 7",
+        "Powers of 2",
+        "Any number",
+        "Even numbers only"
+      ],
+      "answer": 1,
+      "explanation": "Groups must be of size 1, 2, 4, 8, 16 (powers of 2)."
+    },
+    {
+      "id": "u2-m21",
+      "topic": "2.3",
+      "q": "Product of Sum (POS) uses:",
+      "options": [
+        "Minterms",
+        "Maxterms",
+        "Only AND gates",
+        "Only XOR gates"
+      ],
+      "answer": 1,
+      "explanation": "POS is built from maxterms (cells with 0)."
+    },
+    {
+      "id": "u2-m22",
+      "topic": "2.3",
+      "q": "K-map cells are labelled using:",
+      "options": [
+        "Decimal order",
+        "Gray code order",
+        "Binary random order",
+        "Hex order"
+      ],
+      "answer": 1,
+      "explanation": "Gray code order 00, 01, 11, 10 is used so adjacent cells differ by one bit."
+    },
+    {
+      "id": "u2-m23",
+      "topic": "2.4",
+      "q": "Output of a combinational circuit depends on:",
+      "options": [
+        "Only past inputs",
+        "Only present inputs",
+        "Present and past inputs",
+        "Clock only"
+      ],
+      "answer": 1,
+      "explanation": "Combinational circuits have no memory; output depends only on present inputs."
+    },
+    {
+      "id": "u2-m24",
+      "topic": "2.4",
+      "q": "Sum output of a half adder is:",
+      "options": [
+        "A AND B",
+        "A OR B",
+        "A XOR B",
+        "A NAND B"
+      ],
+      "answer": 2,
+      "explanation": "Sum = A XOR B; Carry = A AND B."
+    },
+    {
+      "id": "u2-m25",
+      "topic": "2.4",
+      "q": "Carry output of a half adder is:",
+      "options": [
+        "A XOR B",
+        "A AND B",
+        "A OR B",
+        "A XNOR B"
+      ],
+      "answer": 1,
+      "explanation": "Carry = A.B."
+    },
+    {
+      "id": "u2-m26",
+      "topic": "2.4",
+      "q": "A full adder adds how many bits?",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "One"
+      ],
+      "answer": 1,
+      "explanation": "Full adder adds two input bits and a carry-in (3 bits)."
+    },
+    {
+      "id": "u2-m27",
+      "topic": "2.4",
+      "q": "Which is NOT a combinational circuit?",
+      "options": [
+        "Half adder",
+        "Multiplexer",
+        "Decoder",
+        "Counter"
+      ],
+      "answer": 3,
+      "explanation": "Counter has memory (flip-flops), so it is sequential."
+    },
+    {
+      "id": "u2-m28",
+      "topic": "2.5",
+      "q": "Which flip-flop has a forbidden (invalid) state?",
+      "options": [
+        "D flip-flop",
+        "JK flip-flop",
+        "SR flip-flop",
+        "T flip-flop"
+      ],
+      "answer": 2,
+      "explanation": "SR flip-flop with S=1 and R=1 is invalid."
+    },
+    {
+      "id": "u2-m29",
+      "topic": "2.5",
+      "q": "In a JK flip-flop, J=1 and K=1 causes:",
+      "options": [
+        "Set",
+        "Reset",
+        "Toggle",
+        "Hold"
+      ],
+      "answer": 2,
+      "explanation": "J=K=1 makes the JK flip-flop toggle."
+    },
+    {
+      "id": "u2-m30",
+      "topic": "2.5",
+      "q": "D flip-flop stands for:",
+      "options": [
+        "Direct",
+        "Delay or Data",
+        "Dual",
+        "Digital"
+      ],
+      "answer": 1,
+      "explanation": "D stands for Delay or Data."
+    },
+    {
+      "id": "u2-m31",
+      "topic": "2.5",
+      "q": "T flip-flop is obtained from JK flip-flop by:",
+      "options": [
+        "Tying J and K together",
+        "Tying J to 1 and K to 0",
+        "Tying J to 0 and K to 0",
+        "Using a NOT gate only"
+      ],
+      "answer": 0,
+      "explanation": "Connecting J and K together gives a T (toggle) flip-flop."
+    },
+    {
+      "id": "u2-m32",
+      "topic": "2.5",
+      "q": "Flip-flop which is used to build simple memory cells and registers:",
+      "options": [
+        "D flip-flop",
+        "T flip-flop only",
+        "SR flip-flop with invalid input",
+        "NAND gate"
+      ],
+      "answer": 0,
+      "explanation": "D flip-flops are simple, fast and used to build registers and memory."
+    },
+    {
+      "id": "u2-m33",
+      "topic": "2.6",
+      "q": "Which of these is a sequential circuit?",
+      "options": [
+        "Full adder",
+        "Decoder",
+        "Shift register",
+        "Multiplexer"
+      ],
+      "answer": 2,
+      "explanation": "Shift register uses flip-flops (memory), so it is sequential."
+    },
+    {
+      "id": "u2-m34",
+      "topic": "2.6",
+      "q": "A sequential circuit must contain at least:",
+      "options": [
+        "One AND gate",
+        "One memory element",
+        "Two NOT gates",
+        "One XOR gate"
+      ],
+      "answer": 1,
+      "explanation": "A sequential circuit contains at least one memory element such as a flip-flop."
+    },
+    {
+      "id": "u2-m35",
+      "topic": "2.6",
+      "q": "Which statement about sequential circuits is TRUE?",
+      "options": [
+        "They have no memory",
+        "Output depends on present and past inputs",
+        "They are easier to design than combinational circuits",
+        "They use only NOT gates"
+      ],
+      "answer": 1,
+      "explanation": "Sequential output depends on present inputs and past states (memory)."
+    }
+  ],
+  "short": [
+    {
+      "id": "u2-s01",
+      "topic": "2.1",
+      "q": "Write the truth table of an XOR gate.",
+      "answer": "A=0,B=0 -> 0; A=0,B=1 -> 1; A=1,B=0 -> 1; A=1,B=1 -> 0.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s02",
+      "topic": "2.1",
+      "q": "Why are NAND and NOR called universal gates?",
+      "answer": "Any Boolean function (AND, OR, NOT) can be implemented using only NAND gates or only NOR gates.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s03",
+      "topic": "2.1",
+      "q": "What is the difference between an OR gate and an XOR gate?",
+      "answer": "OR gives 1 when any input is 1 (including both). XOR gives 1 only when the inputs are different (opposite levels).",
+      "marks": 2
+    },
+    {
+      "id": "u2-s04",
+      "topic": "2.2",
+      "q": "State the associative law of Boolean algebra.",
+      "answer": "(A + B) + C = A + (B + C) and (A.B).C = A.(B.C). The grouping of operations does not change the result.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s05",
+      "topic": "2.2",
+      "q": "State De Morgan's theorems.",
+      "answer": "(A.B)' = A' + B' and (A + B)' = A'.B'.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s06",
+      "topic": "2.2",
+      "q": "Simplify the Boolean expression A + A'B.",
+      "answer": "A + A'B = (A + A')(A + B) = A + B.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s07",
+      "topic": "2.2",
+      "q": "Simplify the expression AC + ABC.",
+      "answer": "AC + ABC = AC(1 + B) = AC.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s08",
+      "topic": "2.3",
+      "q": "How many minterms does a function of 2 variables have? Give the reason.",
+      "answer": "4, because 2^2 = 4 combinations of the variables (00, 01, 10, 11).",
+      "marks": 2
+    },
+    {
+      "id": "u2-s09",
+      "topic": "2.3",
+      "q": "Write two rules for forming groups in a K-map.",
+      "answer": "Groups must contain only 1s; group sizes must be powers of 2; groups may overlap and wrap around; groups must be horizontal, vertical or rectangular (not diagonal). (any two)",
+      "marks": 2
+    },
+    {
+      "id": "u2-s10",
+      "topic": "2.3",
+      "q": "What is the difference between SOP and POS form?",
+      "answer": "SOP (Sum of Products) is built from minterms (1 cells) as OR of AND terms. POS (Product of Sums) is built from maxterms (0 cells) as AND of OR terms.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s11",
+      "topic": "2.4",
+      "q": "What is a combinational circuit?",
+      "answer": "A circuit made of logic gates whose output depends only on the present input combination and which has no memory.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s12",
+      "topic": "2.4",
+      "q": "Write the sum and carry expressions of a half adder.",
+      "answer": "Sum = A XOR B (A'B + AB'); Carry = A.B.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s13",
+      "topic": "2.4",
+      "q": "Write the sum and carry expressions of a full adder.",
+      "answer": "Sum = X XOR Y XOR Z; Carry = XY + YZ + XZ.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s14",
+      "topic": "2.4",
+      "q": "Name any four combinational circuits.",
+      "answer": "Half adder, full adder, half subtractor, full subtractor, parity generator, parity checker, multiplexer, decoder, encoder (any four).",
+      "marks": 2
+    },
+    {
+      "id": "u2-s15",
+      "topic": "2.5",
+      "q": "What is a flip-flop?",
+      "answer": "A binary storage cell that stores one bit of information and has two stable states (0 and 1) with outputs Q and Q'.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s16",
+      "topic": "2.5",
+      "q": "Write the truth table of an SR flip-flop with S=1 and R=1 and say what is wrong with it.",
+      "answer": "S=1, R=1 is an invalid (forbidden) state because the outputs are not defined; both outputs try to become the same value.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s17",
+      "topic": "2.5",
+      "q": "Explain the working of a JK flip-flop for J=1 and K=1.",
+      "answer": "The JK flip-flop toggles: if Q was 0 it becomes 1, and if Q was 1 it becomes 0.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s18",
+      "topic": "2.5",
+      "q": "How is a T flip-flop made from a JK flip-flop and what does it do?",
+      "answer": "Tie J and K together to make T. When T=1 the output toggles at each clock pulse; when T=0 it holds its value.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s19",
+      "topic": "2.5",
+      "q": "Give two applications of D flip-flops.",
+      "answer": "Building registers, memory cells, counters (any two).",
+      "marks": 2
+    },
+    {
+      "id": "u2-s20",
+      "topic": "2.5",
+      "q": "Give two applications of T flip-flops.",
+      "answer": "Used in counters and in memory circuits to store data (any two).",
+      "marks": 2
+    },
+    {
+      "id": "u2-s21",
+      "topic": "2.6",
+      "q": "Differentiate between combinational and sequential circuits.",
+      "answer": "Combinational circuits have no memory and output depends only on present inputs. Sequential circuits have memory (flip-flops) and output depends on present inputs and past states.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s22",
+      "topic": "2.6",
+      "q": "Give two examples of sequential circuits.",
+      "answer": "Registers, shift registers, counters, flip-flops (any two).",
+      "marks": 2
+    }
+  ]
+}

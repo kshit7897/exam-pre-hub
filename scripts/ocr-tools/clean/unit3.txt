@@ -1,0 +1,63 @@
+001: DIGITAL COMPONENTS ¥) hid wel | 1. Integrated Circuits | 2. Decoders | 3. Encoder | 4. Multiplexers | 5. De-multiplexer | 6. Registers | 7. Shift Registers | 8. Binary Counters
+002: Introduction of IC © veal | Wao Chacon Go | « Integrated circuit Also known as chip. | 4 Manufactured using silicon material v | and mounted in a ceramic or plastic » Px) | container. er? | < The basic components of an ic consist SRR AO Nh, NE | el Sebi T SOVIRE oq | of electronic circuits for the digital ood % 3 Sige a | gates. f BNA | EARN AR | < The various gates are interconnected | inside an ic to form the required | circuit.
+003: Features of IC chip Wanlyersity Le) | + Combines The various gates are interconnected inside an IC. | < Gates are basic component of IC. | < Combines other components like register, transistor etc. | % All components are fixed. | < Can not repair, replaced or removed.
+004: Features of IC chip anlyersity o | « IC can works on low voltage. | «< IC can handle limited amount of voltage. | « Very small in size as compared to other components. | « Cheap in cost. | % IC gives better performance in complex operations.
+005: Applications of Integrated Circuit vU veal | Wan Crocs Gp | « They are used in smartphones, mp3 players, laptops, | computers. | « IC’s are also used in Television and cameras. | < IC’s are the basic component used in scientific calculators | and digital watches. | « They are used in control systems.
+006: CLASSIFICATION OF IC CHIP 5) veal
+007: Marka Crandarns Group | Small Scale It consists of 10 Transistors or few Gates such as | Integration AND, OR, NOT within a single chip. | Medium Scale 10 to 200 gates and basic components include | Integration decoders, adders, and registers. | LSI Large Scale A 200 to a 1000 gates in a single package. | Integration The basic components of an LSI device include | digital systems, such as processors, memory chips | VLSI Very Large Scale 1,000-10,000 or thousands of Gates. | Integration The most common example of a VLSI device is a | complex microcomputer chip. | The most common component in each technology | is either a NAND, a NOR, or an inverter gate.
+008: TYPES OF IC © univers | Wats Crd Gp | SLsI Super Large Scale  [#10,000-100,000 Gates within a single package like | Integration Microprocessor chips, Microcontrollers etc. | Ultra Large Scale In this type of fabrication more than 1 Million | | Integration Transistors are integrated on a single chip.
+009: Decoder
+010: Decoder © biti) | < The conversion of binary to decimal can be done using | decoder. | « It's a circuit that changes a code into a set of signals | < It is capable to identifying particular code. | « The operation performed by decoder is called decoding. | © Decoder performs the reverse operation of the Encoder.
+011: Decoder © biti) | to each possible binary code. | & Decoder performs the reverse operation of the Encoder. | « The combinational circuit that change the binary | information into 2" output lines is known as Decoders. | « The binary information is passed in the form of N input | lines. | « The output lines define the 2"-bit code for the binary | information.
+012: Decoder Wet, ( | < A decoder is a used to convert binary data to other code. | < For example: | + Binary to octal conversion 3*8 decoder will be used. | « Binary to hexadecimal 4 to 16 decoder will be used
+013: Decoder
+014: DECODER
+015: DECODER - | ENABLE
+016: 2 * 4 DECODER TRUTH TABLE 7) bt] Oo | Enable) Input | Output | | took 00 | Jo [1] ONIN [0 | tla folo] ONIN
+017: 2 * 4 Decoder circuit [1] iti | Wana Crna | § | ENABLE se — ee}
+018: BLOCK DIAGRAM OF 3'8 DECODER © Mar wal | x DECODER 5 v | ENABLE
+019: 3 * 8 DECODER TRUTH TABLE © ttn] o
+020: OU tiversier
+021: Encoder
+022: Encoder v} yeah | Wa Crocs Gp | 4 An Encoder is a combinational circuit that performs the | reverse operation of Decoder. | # It has maximum of 2" input lines and ‘n’ output lines. | < It will produce a binary code equivalent to the input, which | is active High. | < Therefore, the encoder encodes 2" input lines with ‘n’ bits. | « It is optional to represent the enable signal in encoders.
+023: 8 * 3 Encoder Truth Table U btn] 0 | [puts | outputs | | [oJojofJoJofoJo[i]o ool] | [oJoJofJoJofofJafoJo ofa] | [oJoJofJoJof[aJo[oJo[1[o] | [oJoJoJofa1flofofoJof1[a] | [ooo J1fofoJoJof1[o]o] | [o|o|1]ofofoJofJo]1fo]1] | [0 [1 ]oJoJofoJofo[1]1[o] | [1 ]oJoJofofoJoJoJa1fa]1]
+024: 8 * 3 Encoder Circuit U bt] Cc | D5 Te — AEE ESSERE
+025: Multiplexer © bits) | # It is also known as MUX or DATA SELECTOR. | # MUX is combinational circuit that is used to direct one out of | 2" input data Lines to A single output line. | # Itis also known as data selector because it selects one of | many inputs And directs it to the output. | < To select output it requires selection lines.
+026: . hobs | ultiplexer Macs Chandar Gop | < So to design a multiplexer we required: | « 2" Input Data Lines | « n Number Of Selection Lines | «1 Output Line
+027: Multiplexer- 2 * 1 Wena Cranarana Gop | « So to design a multiplexer we required: | «+ 2n Input Data Lines -[02 | + n Number Of Selection Lines 1 | «1 Output Line
+028: MULTIPLEXER
+029: 2* 1 truth table Ueto
+030: n—— ontversity (0)
+031: Multiplexer [1] biti) | # It is also known as MUX or DATA SELECTOR. | # MUX is combinational circuit that is used to direct one out of | 2" input data Lines to A single output line. | # It is also known as data selector because it selects one of | many inputs And directs it to the output. | < To select output it requires selection lines.
+032: Multiplexer Macs Crancarna Gop | < So to design a multiplexer we required: | « 2" Input Data Lines | « n Number Of Selection Lines | «1 Output Line
+033: 4* 1 multiplexer Yin @ | « It contain 4 inputs and one output. | + To select one output at a time we required 2 selection lines.
+034: BLOCK DIAGRAM OF 4 * 1 MULTIPLEXER = we | hits | p MULTIPLEXER | Y
+035: 4* 1 truth table Gh edd
+036: 4 * 1 Multiplexer Circuit [¥] veal | muniin | AATF
+037: Demultiplexer [] yeah | Vos Condi | # Itis also known as DEMUX or DATA DISTRIBUTOR. | < Perform reverser operation then multiplexer. | < De-multiplexer is combinational circuit that is used to direct one | input to 2" output line. | « It is also known as data distributor because it send one input to | more then output. | % In simple word DEMUX means ONE TO MANY
+038: DEMULTIPLEXER © veal | Wao Chon Gos | < A demultiplexer contain: | «1input Line | » 2" output Lines | + n number of selection line | % It is design with AND gate.
+039: BLOCK DIAGRAM OF 1 * 4 DE-MULTIPLEXER —— | Po | DE-MULTIPLEXER |—F 2% 5
+040: 1 *4 de-multiplexer truth table ¢ a gil | NPUT| SELECTION OUTPUT | LINES
+041: 1 *4 DE-Multiplexer Circuit © ttl
+042: Register © bits) | < A register is a group of flip-flops capable of storing one bit | of information. | < An n-bit register has a group of n flip-flops and is capable of | storing any binary information of n bits. | « In addition to flip-flops, registers can have combinational | gates that perform certain data-processing tasks.
+043: Shift register Wena Cran Gop | « A register capable of shifting its binary information in one or | both directions is called a shift register. | « Shift registers are constructed by connecting flip-flops in | cascade, where the output of one flip-flop is connected to the | input of the next flip-flop. | « All flip-flops receive common clock pulses that initiate the shift | from one stage to the next. | « Each remaining flip-flop uses the output of the previous flip-flop | as its input, with the last flip-flop producing the external output | (called the serial output).
+044: Serial Serial | input p 0 % 0 b 0 0 0 output | Clock
+045: Types of shift register 5) biti) | « Serial In Serial Out — (SISO) | «< Serial In Parallel Out —(SIPO) | « Parallel In Serial Out —(PISO) | « Parallel In Parallel Out—(PIPO) | % Bidirectional Shift Register— (SERIAL IN SERIAL OUT SHIFT | LEFT SHIFT RIGHT)
+046: Serial In Serial Out — (SISO) WJ) (ATversity ) | Roma haan
+047: Serial In Parallel Out — (SIPO) W) Dniversity Cc | | | | | Parallel Out
+048: Jiniverslo| | Parallel In | Parallel Out
+049: a atatison | Parallel In
+050: Bidirectional Shift Register W veal | Serial In —~|--F— Serial Out | Serial Out | Serial In
+051: "ol Counters
+052: ¥ tits) p= | < Counters are sequential circuit or register that capable of | counting clock pulse. | < They provide accurate timings & control signal to another | device | « Counting can be in ascending, descending order or in | non-linear sequence also.
+053: COUNTERS wn leeiy 1)
+054: Synchronous Asynchronous | - Devices use a system clock || - Devices use a system | to trigger of Flip Flops clock which is given to | - All flip flop given a single FIRST flip flop only. | clock pulse | - faster than a Asynchronous - Slower than a | counter. synchronous counter. | - Difficult to design - Easy to design.
+055: Synchronous Asynchronous | + In this types of devices are + In this types of devices are | dependent on a single connected with individual | clock pulse. clock pulse. | - It means that all devices + Output of first will used as | are dependent on single clock to another. | device which is clock pulse.
+056: Chil | SyNENranous | Binary Counter
+057: ea hist | Synchronous Counter 4 Mia 0) | < The synchronous counter can be defined as, a counter | which uses a clock signal for transforming their transition. | % So, these counters mainly depend on the input of the clock | to modify state values. In this counter, all flip flops (FFs) are | associated with the same clock signal to activate | simultaneously. | < An alternate name of this counter is a simultaneous | counter
+058: =. Y tits] pi | < Design this counter: | < Number of possible values: 24=16, values 0 to 15 | < Number of flip flopO 4 | < Common clock pulse
+059: carry | Clock
+060: Second counting cycle | Clock 1 2 3 a [5 FLL s| [0] [a] [e [F1 | WW [Fl] [1 [1 [3
+061: Applications i} Mere hi) | Vane ronson Go | % Pulse generators | « Digital clock | < Alarm systems | « Digital Watch
+062: < As compared to asynchronous, it is simple to design | < It works simultaneously. | + No propagation delay is linked with it. | « Count series is controlled through logic gates, | + Faster operation
+063: isadvantages 7 owas rancoram Gop | « All flip flops are driven through a single or common CLK | signal | < They need large components & circuitry. | < This counter uses a complex logic circuit & the increasing | number of states.

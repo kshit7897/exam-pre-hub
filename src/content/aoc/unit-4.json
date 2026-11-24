@@ -1,0 +1,813 @@
+{
+  "id": "unit-4",
+  "title": "Basic Computer Organization & Design",
+  "topics": [
+    {
+      "id": "4.1",
+      "title": "Instruction Codes",
+      "notes": [
+        "An instruction code is a group of bits that tells the computer to perform a specific operation. Each computer has its own instruction code format.",
+        "An instruction is divided into two parts: Opcode (operation code, says what to do) and Operand (data or address on which the operation is performed).",
+        "Opcode is a group of bits for basic operations like add, subtract, multiply, shift and complement. Its size depends on the number of operations: 64 operations need 6 bits (2^6 = 64).",
+        "Operand is the data (or address of data) used by the operation. Example: in 2 + 3, the numbers 2 and 3 are operands.",
+        "Instruction example from the slide: ADD 101 301 -> opcode ADD (operation), operands 101 and 301 (data/addresses).",
+        "Opcode is a unique binary code for each operation. It cannot be changed and is fixed when the computer is designed."
+      ]
+    },
+    {
+      "id": "4.2",
+      "title": "Processor Registers & Basic Computer Architecture",
+      "notes": [
+        "A basic computer needs certain registers: PC (Program Counter, 12 bits) holds the address of the next instruction to be fetched; AR (Address Register, 12 bits, also MAR) holds the address of the memory location to be accessed; IR (Instruction Register, 16 bits) holds the instruction being executed; DR/MDR (Data Register, 16 bits) holds memory operands fetched from memory; TR (Temporary Register, 16 bits) holds temporary data during processing.",
+        "AC (Accumulator, 16 bits) is the processor register that holds intermediate and final results of arithmetic and logic operations and performs micro-operations.",
+        "INPR (Input Register, 8 bits) holds the input characters given by the user. OUTR (Output Register, 8 bits) holds the output characters to send to the output device.",
+        "Memory of the basic computer: 4096 words x 16 bits each (4096 = 2^12, so 12-bit addresses).",
+        "A bus is a wire or collection of wires that carries multi-bit information from one unit to another.",
+        "Three control signals used on register: LD (load, copies data from bus into register), INR (increment content), CLR (clear content to zero).",
+        "PC increments automatically after each fetch, so instructions are read in sequence.",
+        "Slide conflict: the general register slide says CPU generally has 7 registers, but the bus slide shows 8 registers in the basic computer (PC, AR, IR, TR, DR, AC, INPR, OUTR). Use the bus-slide list."
+      ]
+    },
+    {
+      "id": "4.3",
+      "title": "Common Bus System",
+      "notes": [
+        "In a common bus system, all registers are connected to one shared bus. Only one register can place its data on the bus at a time.",
+        "Select lines S2, S1, S0 (3 bits) choose which register drives the bus: 8 registers can be selected with 3 select lines.",
+        "The register whose LD input is enabled receives the data from the bus.",
+        "ALU can receive data from DR, INPR or AC, and sends the result to AC. When the result is produced, it can be sent to OUTR for output."
+      ]
+    },
+    {
+      "id": "4.4",
+      "title": "Micro-operations & Control Word",
+      "notes": [
+        "Micro-operations are basic operations performed on data stored in registers, such as transfer, increment, decrement, AND, OR, XOR, complement, shift right and shift left.",
+        "Example operation codes: 00000 Transfer A, 00001 Increment A, 00100 Decrement A, 00101 A AND B, 00110 A OR B, 00111 A XOR B, 01000 Complement A, 01001 Shift right A, 01010 Shift left A.",
+        "Control word = SELA (3 bits) + SELB (3 bits) + SELD/SELREG (3 bits) + SELOPR (5 bits) = 14 bits (as on the slide: 3, 3, 5, 3). Operation codes like 10010 are 5 bits.",
+        "Example: R3 = R1 + R2 uses SELA = 001 (R1 on bus A), SELB = 010 (R2 on bus B), SELOPR = 10010 (ADD A+B), SELD = 011 (result into R3)."
+      ]
+    },
+    {
+      "id": "4.5",
+      "title": "Stack Organization",
+      "notes": [
+        "A stack is a data structure in which the item stored last is the first item retrieved (LIFO: Last In First Out).",
+        "Two operations: PUSH (insert an item on the top of the stack) and POP (remove or retrieve the item from the top).",
+        "A stack can be a separate unit, or it can be placed in a portion of a large random-access memory using a processor register as a stack pointer (SP).",
+        "SP (Stack Pointer) is a register that holds the address of the item on top of the stack.",
+        "PUSH steps: SP <- SP + 1; M[SP] <- DR; if SP = 0 then stack is FULL. POP steps: DR <- M[SP]; SP <- SP - 1; if SP = 0 then stack is EMPTY.",
+        "Computer memory is partitioned into three segments: Program (instructions), Data (operands) and Stack.",
+        "Stacks are used in expression evaluation, and Reverse Polish Notation (RPN, postfix) works well with a stack. Example: 3 4 * 5 6 * + = (3x4) + (5x6) = 12 + 30 = 42.",
+        "Memory stack example (slide): program segment at 1000, operands at 2000, stack at 3000. PC points to program, AR to operands, SP to stack.",
+        "PUSH flags: if SP = 0 then FULL = 1 (and EMPTY = 0). POP flags: if SP = 0 then EMPTY = 1 (and FULL = 0).",
+        "Infix to postfix: A*B + C*D becomes AB* CD* +."
+      ]
+    },
+    {
+      "id": "4.6",
+      "title": "Instruction Formats",
+      "notes": [
+        "Three address format: instruction has three operands (e.g. X = A + B needs 3 addresses). Uses more bits per instruction but gives shorter programs in assembly.",
+        "Two address format: instruction has two address fields. It is the most commonly used format. Example: (A+B)*(C+D) can be done with two-address moves and operations.",
+        "One address format: one operand is in the accumulator (AC) and the other is in memory. Uses special instructions LOAD and STORE.",
+        "Zero address format: no address field. Stack is used for operands, so it is also called stack-based format. Example: PUSH A, PUSH B, ADD.",
+        "Three-address example: (A+B)*(C+D) = ADD R1,A,B; ADD R2,C,D; MUL X,R1,R2.",
+        "Two-address example: MOV R1,A; ADD R1,B; MOV R2,C; ADD R2,D; MUL R1,R2; MOV X,R1.",
+        "One-address example: LOAD A; ADD B; STORE T; LOAD C; ADD D; MUL T; STORE X."
+      ]
+    },
+    {
+      "id": "4.7",
+      "title": "Addressing Modes",
+      "notes": [
+        "Addressing mode = the technique for specifying the address of the operand.",
+        "Direct (absolute) addressing: address field contains the effective address of the operand. Example: ADD 547 adds the content of memory location 547 to AC.",
+        "Indirect addressing: address field points to a memory word that contains the address of the operand. Example: ADD 300 means memory[300] holds the address of the operand. Two memory references are needed.",
+        "Immediate addressing: operand itself is given in the instruction (no memory reference is needed).",
+        "Register (direct) addressing: operand is in a CPU register. No memory reference is required. Example: ADD R adds the content of register R to AC.",
+        "Register indirect addressing: the register holds the address of the operand in memory. Only one memory reference is required.",
+        "Implied addressing: operand is implied by the instruction. Example: CMA (Complement Accumulator). Zero address instructions in a stack computer are implied mode instructions.",
+        "Auto-decrement / auto-increment: register is decremented or incremented automatically when used to access memory.",
+        "Direct example: instruction at address 20 is ADD 547, so the operand is read from memory location 547.",
+        "Indirect example: ADD 300 at address 35. Memory[300] = 1350, so the operand is at 1350.",
+        "Immediate example: ADD 10 means add the value 10 itself.",
+        "Register mode: AC <- AC + [R]. Register indirect: AC <- AC + [[R]] (the register holds the address, memory holds the operand).",
+        "Auto-decrement: the register pointer is decremented first and then used to access memory (slide example: 3302 -> 3300).",
+        "Implied mode examples from the slide: SWAPA and RLA (operand is implied by the instruction)."
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "id": "u4-m01",
+      "topic": "4.1",
+      "q": "In an instruction code, the part that specifies the operation to be performed is called:",
+      "options": [
+        "Operand",
+        "Opcode",
+        "Address",
+        "Register"
+      ],
+      "answer": 1,
+      "explanation": "Opcode = operation code."
+    },
+    {
+      "id": "u4-m02",
+      "topic": "4.1",
+      "q": "How many bits are needed for an opcode that must support 64 operations?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "explanation": "2^6 = 64, so 6 bits are needed."
+    },
+    {
+      "id": "u4-m03",
+      "topic": "4.1",
+      "q": "In the expression 2 + 3, the numbers 2 and 3 are called:",
+      "options": [
+        "Opcodes",
+        "Operands",
+        "Registers",
+        "Addresses"
+      ],
+      "answer": 1,
+      "explanation": "Operands are the data on which the operation works."
+    },
+    {
+      "id": "u4-m04",
+      "topic": "4.2",
+      "q": "Program Counter (PC) in a basic computer is how many bits?",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "4096"
+      ],
+      "answer": 1,
+      "explanation": "PC is 12 bits, because memory has 4096 (2^12) addresses."
+    },
+    {
+      "id": "u4-m05",
+      "topic": "4.2",
+      "q": "The Instruction Register (IR) is:",
+      "options": [
+        "16 bits",
+        "12 bits",
+        "8 bits",
+        "32 bits"
+      ],
+      "answer": 0,
+      "explanation": "IR is 16 bits and stores the instruction being executed."
+    },
+    {
+      "id": "u4-m06",
+      "topic": "4.2",
+      "q": "Memory size of a basic computer is:",
+      "options": [
+        "4096 x 8",
+        "4096 x 16",
+        "1024 x 16",
+        "256 x 16"
+      ],
+      "answer": 1,
+      "explanation": "4096 words, each word 16 bits."
+    },
+    {
+      "id": "u4-m07",
+      "topic": "4.2",
+      "q": "Which register holds the result of arithmetic and logic operations?",
+      "options": [
+        "PC",
+        "AR",
+        "AC (Accumulator)",
+        "IR"
+      ],
+      "answer": 2,
+      "explanation": "Accumulator (AC) holds intermediate and final results."
+    },
+    {
+      "id": "u4-m08",
+      "topic": "4.2",
+      "q": "Which register holds characters given by the user?",
+      "options": [
+        "INPR",
+        "OUTR",
+        "TR",
+        "DR"
+      ],
+      "answer": 0,
+      "explanation": "INPR (Input Register) holds input characters."
+    },
+    {
+      "id": "u4-m09",
+      "topic": "4.2",
+      "q": "The Address Register (AR) is also known as:",
+      "options": [
+        "MDR",
+        "MAR",
+        "IR",
+        "PC"
+      ],
+      "answer": 1,
+      "explanation": "AR is also called MAR (Memory Address Register)."
+    },
+    {
+      "id": "u4-m10",
+      "topic": "4.2",
+      "q": "Control signal that copies data from the bus into a register is:",
+      "options": [
+        "INR",
+        "CLR",
+        "LD (Load)",
+        "SHR"
+      ],
+      "answer": 2,
+      "explanation": "LD (load) loads the register from the bus."
+    },
+    {
+      "id": "u4-m11",
+      "topic": "4.2",
+      "q": "Control signal that sets register content to zero is:",
+      "options": [
+        "LD",
+        "INR",
+        "CLR",
+        "OUT"
+      ],
+      "answer": 2,
+      "explanation": "CLR clears the register."
+    },
+    {
+      "id": "u4-m12",
+      "topic": "4.3",
+      "q": "In a common bus system, how many select lines are needed to select one of 8 registers?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "2^3 = 8, so 3 select lines (S2, S1, S0)."
+    },
+    {
+      "id": "u4-m13",
+      "topic": "4.3",
+      "q": "A bus is:",
+      "options": [
+        "A single wire",
+        "A wire or collection of wires carrying multi-bit information",
+        "A type of memory",
+        "An ALU operation"
+      ],
+      "answer": 1,
+      "explanation": "A bus is one or more wires that carry multi-bit information."
+    },
+    {
+      "id": "u4-m14",
+      "topic": "4.4",
+      "q": "In a control word, SELOPR field has how many bits?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 2,
+      "explanation": "SELOPR = 5 bits (slide: 3, 3, 5, 3 bits)."
+    },
+    {
+      "id": "u4-m15",
+      "topic": "4.4",
+      "q": "Total number of bits in the control word (SELA, SELB, SELD, SELOPR) is:",
+      "options": [
+        "12",
+        "13",
+        "14",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "3 + 3 + 5 + 3 = 14 bits (as on the slide)."
+    },
+    {
+      "id": "u4-m16",
+      "topic": "4.4",
+      "q": "In the operation R3 = R1 + R2, SELA is set to:",
+      "options": [
+        "001",
+        "010",
+        "011",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "SELA = 001 places R1 on bus A."
+    },
+    {
+      "id": "u4-m17",
+      "topic": "4.4",
+      "q": "Micro-operation 'Complement A' is coded as:",
+      "options": [
+        "00000",
+        "01000",
+        "01001",
+        "00101"
+      ],
+      "answer": 1,
+      "explanation": "01000 = Complement A (COMA)."
+    },
+    {
+      "id": "u4-m18",
+      "topic": "4.5",
+      "q": "A stack follows which order?",
+      "options": [
+        "FIFO",
+        "LIFO",
+        "Random",
+        "Circular"
+      ],
+      "answer": 1,
+      "explanation": "Stack is LIFO (Last In First Out)."
+    },
+    {
+      "id": "u4-m19",
+      "topic": "4.5",
+      "q": "PUSH operation in a stack:",
+      "options": [
+        "Removes item from top",
+        "Inserts item on top",
+        "Clears the stack",
+        "Shifts the register"
+      ],
+      "answer": 1,
+      "explanation": "PUSH inserts an item on the top of the stack."
+    },
+    {
+      "id": "u4-m20",
+      "topic": "4.5",
+      "q": "Which register points to the top of the stack?",
+      "options": [
+        "PC",
+        "SP (Stack Pointer)",
+        "AR",
+        "IR"
+      ],
+      "answer": 1,
+      "explanation": "Stack Pointer (SP) holds the address of the top item."
+    },
+    {
+      "id": "u4-m21",
+      "topic": "4.5",
+      "q": "Postfix expression 3 4 * 5 6 * + evaluates to:",
+      "options": [
+        "35",
+        "42",
+        "47",
+        "56"
+      ],
+      "answer": 1,
+      "explanation": "(3 x 4) + (5 x 6) = 12 + 30 = 42."
+    },
+    {
+      "id": "u4-m22",
+      "topic": "4.5",
+      "q": "Which is NOT one of the three segments of computer memory partitioned for stack usage?",
+      "options": [
+        "Program",
+        "Data",
+        "Stack",
+        "Graphics"
+      ],
+      "answer": 3,
+      "explanation": "The three segments are Program, Data and Stack."
+    },
+    {
+      "id": "u4-m23",
+      "topic": "4.6",
+      "q": "Which instruction format is most commonly used?",
+      "options": [
+        "Zero address",
+        "One address",
+        "Two address",
+        "Three address"
+      ],
+      "answer": 2,
+      "explanation": "Two address format is the most commonly used."
+    },
+    {
+      "id": "u4-m24",
+      "topic": "4.6",
+      "q": "Which format uses the stack for all operands?",
+      "options": [
+        "Zero address",
+        "One address",
+        "Two address",
+        "Three address"
+      ],
+      "answer": 0,
+      "explanation": "Zero address format uses a stack; there is no address field."
+    },
+    {
+      "id": "u4-m25",
+      "topic": "4.6",
+      "q": "One-address format uses which special instructions?",
+      "options": [
+        "ADD and SUB",
+        "LOAD and STORE",
+        "PUSH and POP",
+        "AND and OR"
+      ],
+      "answer": 1,
+      "explanation": "One address instructions use LOAD and STORE with the accumulator."
+    },
+    {
+      "id": "u4-m26",
+      "topic": "4.6",
+      "q": "Three address format requires:",
+      "options": [
+        "Shorter programs but more bits per instruction",
+        "Less bits but more instructions",
+        "No registers",
+        "Only stack"
+      ],
+      "answer": 0,
+      "explanation": "It uses more bits but produces shorter assembly programs."
+    },
+    {
+      "id": "u4-m27",
+      "topic": "4.7",
+      "q": "In direct addressing mode, the address field contains:",
+      "options": [
+        "Address of the address",
+        "Effective address of the operand",
+        "The operand value",
+        "Stack pointer"
+      ],
+      "answer": 1,
+      "explanation": "Direct addressing: the address field gives the operand's effective address."
+    },
+    {
+      "id": "u4-m28",
+      "topic": "4.7",
+      "q": "In immediate addressing mode, the operand is:",
+      "options": [
+        "In a register",
+        "In memory",
+        "In the instruction itself",
+        "On the stack"
+      ],
+      "answer": 2,
+      "explanation": "Immediate addressing: the operand is given directly in the instruction."
+    },
+    {
+      "id": "u4-m29",
+      "topic": "4.7",
+      "q": "Register direct addressing requires how many memory references to fetch the operand?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "The operand is in a register, so no memory reference is needed."
+    },
+    {
+      "id": "u4-m30",
+      "topic": "4.7",
+      "q": "Register indirect addressing requires how many memory references?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explanation": "Only one memory reference is needed to fetch the operand."
+    },
+    {
+      "id": "u4-m31",
+      "topic": "4.7",
+      "q": "Instruction 'CMA' (complement accumulator) uses which addressing mode?",
+      "options": [
+        "Direct",
+        "Indirect",
+        "Implied",
+        "Immediate"
+      ],
+      "answer": 2,
+      "explanation": "Operand is implied (accumulator), so it is implied mode."
+    },
+    {
+      "id": "u4-m32",
+      "topic": "4.2",
+      "q": "Accumulator in the basic computer is how many bits?",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "32"
+      ],
+      "answer": 2,
+      "explanation": "AC is 16 bits."
+    },
+    {
+      "id": "u4-m33",
+      "topic": "4.2",
+      "q": "The memory address register (AR) is how many bits?",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "4096"
+      ],
+      "answer": 1,
+      "explanation": "AR is 12 bits."
+    },
+    {
+      "id": "u4-m34",
+      "topic": "4.5",
+      "q": "When the stack pointer becomes 0 after a POP, the stack is:",
+      "options": [
+        "Full",
+        "Empty",
+        "Overflowed",
+        "Locked"
+      ],
+      "answer": 1,
+      "explanation": "Per the stack algorithm, SP = 0 after a POP means the stack is EMPTY."
+    },
+    {
+      "id": "u4-m35",
+      "topic": "4.6",
+      "q": "Zero address instructions are called stack-based because:",
+      "options": [
+        "They use ALU only",
+        "They have no address field and use the stack",
+        "They use registers only",
+        "They store output on disk"
+      ],
+      "answer": 1,
+      "explanation": "No address field: operands are taken from the stack."
+    },
+    {
+      "id": "u4-s-m01",
+      "topic": "4.4",
+      "q": "According to the slide, the SELOPR field of the control word has how many bits?",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "14"
+      ],
+      "answer": 1,
+      "explanation": "SELOPR is 5 bits. The total control word is 14 bits."
+    },
+    {
+      "id": "u4-s-m02",
+      "topic": "4.6",
+      "q": "In the two-address example for (A+B)*(C+D), the first instruction is:",
+      "options": [
+        "MOV R1, A",
+        "ADD R1, B",
+        "LOAD A",
+        "PUSH A"
+      ],
+      "answer": 0,
+      "explanation": "The sequence starts with MOV R1, A, then ADD R1, B."
+    },
+    {
+      "id": "u4-s-m03",
+      "topic": "4.7",
+      "q": "For the instruction ADD 300 with memory[300] = 1350, the operand is found at:",
+      "options": [
+        "300",
+        "1350",
+        "301",
+        "35"
+      ],
+      "answer": 1,
+      "explanation": "Indirect mode: address 300 holds the operand address 1350."
+    },
+    {
+      "id": "u4-s-m04",
+      "topic": "4.7",
+      "q": "In ADD 10 (immediate mode), the value 10 is:",
+      "options": [
+        "In a register",
+        "In memory location 10",
+        "Inside the instruction itself",
+        "On the stack"
+      ],
+      "answer": 2,
+      "explanation": "Immediate mode: the operand is the value given in the instruction."
+    },
+    {
+      "id": "u4-s-m05",
+      "topic": "4.5",
+      "q": "Postfix form of A*B + C*D is:",
+      "options": [
+        "AB*CD*+",
+        "AB+CD*",
+        "A*BC+D*",
+        "ABCD*+"
+      ],
+      "answer": 0,
+      "explanation": "Infix A*B + C*D becomes postfix AB* CD* +."
+    },
+    {
+      "id": "u4-s-m06",
+      "topic": "4.5",
+      "q": "A memory stack example has program segment at 1000, operands at 2000 and stack starting at:",
+      "options": [
+        "3000",
+        "4000",
+        "2500",
+        "1500"
+      ],
+      "answer": 0,
+      "explanation": "The slide shows the stack at 3000."
+    }
+  ],
+  "short": [
+    {
+      "id": "u4-s01",
+      "topic": "4.1",
+      "q": "Define an instruction code and state its two parts.",
+      "answer": "An instruction code is a group of bits that tells the computer to perform a specific operation. It has two parts: opcode (operation) and operand (data or address).",
+      "marks": 2
+    },
+    {
+      "id": "u4-s02",
+      "topic": "4.1",
+      "q": "What is an operand? Give an example.",
+      "answer": "An operand is the data or address part of an instruction on which the operation is done. Example: in 2 + 3, 2 and 3 are operands.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s03",
+      "topic": "4.2",
+      "q": "What is the role of the Program Counter (PC)?",
+      "answer": "PC holds the address of the next instruction to be fetched from memory after the current instruction is completed. It is 12 bits.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s04",
+      "topic": "4.2",
+      "q": "Give the sizes of the Accumulator, Input register and Output register in a basic computer.",
+      "answer": "AC is 16 bits, INPR is 8 bits, OUTR is 8 bits.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s05",
+      "topic": "4.2",
+      "q": "What is the function of the Data Register (DR)?",
+      "answer": "DR (also called MDR) holds memory operands; data fetched from memory is stored here for processing (16 bits).",
+      "marks": 2
+    },
+    {
+      "id": "u4-s06",
+      "topic": "4.2",
+      "q": "Name the three control signals used with registers and state what each does.",
+      "answer": "LD (load): copies data from the bus into the register. INR (increment): increases the register content by one. CLR (clear): sets the register content to zero.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s07",
+      "topic": "4.3",
+      "q": "What is a common bus system?",
+      "answer": "It is a system in which all registers are connected to a shared bus. Select lines choose which register puts its data on the bus, so only one register uses the bus at a time.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s08",
+      "topic": "4.3",
+      "q": "How many select lines are needed to choose one of 8 registers on the common bus?",
+      "answer": "3 select lines (S2, S1, S0), because 2^3 = 8.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s09",
+      "topic": "4.4",
+      "q": "What is a micro-operation? Name any three.",
+      "answer": "A micro-operation is a basic operation on data in registers, performed in one clock cycle. Examples: transfer, increment, AND, complement, shift (any three).",
+      "marks": 2
+    },
+    {
+      "id": "u4-s10",
+      "topic": "4.4",
+      "q": "Explain the four fields of a control word.",
+      "answer": "SELA (3 bits) selects the register for bus A; SELB (3 bits) selects the register for bus B; SELD/SELREG (3 bits) selects the destination register; SELOPR (5 bits) selects the ALU operation.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s11",
+      "topic": "4.4",
+      "q": "Give the selection bits to perform R3 = R1 + R2.",
+      "answer": "SELA = 001 (R1), SELB = 010 (R2), SELOPR = 10010 (ADD), SELD = 011 (R3).",
+      "marks": 2
+    },
+    {
+      "id": "u4-s12",
+      "topic": "4.5",
+      "q": "What is a stack and what does LIFO mean?",
+      "answer": "A stack is a data structure where the item stored last is retrieved first. LIFO = Last In, First Out.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s13",
+      "topic": "4.5",
+      "q": "Explain the PUSH and POP operations of a stack.",
+      "answer": "PUSH inserts an item at the top: SP <- SP + 1, M[SP] <- DR. POP removes the top item: DR <- M[SP], SP <- SP - 1.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s14",
+      "topic": "4.5",
+      "q": "What is the role of the stack pointer?",
+      "answer": "The stack pointer (SP) is a register that holds the address of the item on the top of the stack, and it changes on each push and pop.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s15",
+      "topic": "4.5",
+      "q": "Evaluate the postfix expression 3 4 * 5 6 * + using a stack.",
+      "answer": "Push 3, push 4, multiply -> 12; push 5, push 6, multiply -> 30; add -> 42.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s16",
+      "topic": "4.6",
+      "q": "Differentiate between three-address and two-address instruction formats.",
+      "answer": "Three address has three operand fields (shorter programs, more bits per instruction). Two address has two operand fields and is the most commonly used format.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s17",
+      "topic": "4.6",
+      "q": "What is a zero address instruction format?",
+      "answer": "An instruction format with no address field; the operands are taken from the stack (stack-based computers).",
+      "marks": 2
+    },
+    {
+      "id": "u4-s18",
+      "topic": "4.6",
+      "q": "What are LOAD and STORE instructions? In which format are they used?",
+      "answer": "LOAD brings an operand from memory into the accumulator; STORE saves the accumulator content into memory. They are used in the one address instruction format.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s19",
+      "topic": "4.7",
+      "q": "What is addressing mode? Explain direct addressing with an example.",
+      "answer": "Addressing mode is the technique for specifying the address of the operand. In direct addressing the address field contains the effective address of the operand. Example: ADD 547 uses the data at memory location 547.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s20",
+      "topic": "4.7",
+      "q": "Explain indirect addressing mode.",
+      "answer": "The address field points to a memory word that contains the address of the operand. It needs two memory references (one for the pointer, one for the operand).",
+      "marks": 2
+    },
+    {
+      "id": "u4-s21",
+      "topic": "4.7",
+      "q": "Differentiate between immediate and register addressing modes.",
+      "answer": "Immediate: operand is inside the instruction itself. Register: operand is in a CPU register named in the instruction. Neither needs a memory reference for the operand itself, but register mode is named in the register.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s22",
+      "topic": "4.7",
+      "q": "What is register indirect addressing mode?",
+      "answer": "The register contains the address of the operand in memory. Only one memory reference is required to fetch the operand.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s23",
+      "topic": "4.7",
+      "q": "Give an example of implied addressing mode.",
+      "answer": "CMA (Complement Accumulator): the operand (accumulator) is implied by the instruction, so no address is written.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s-s01",
+      "topic": "4.6",
+      "q": "Write the one-address (LOAD/STORE) instructions to compute (A+B)*(C+D).",
+      "answer": "LOAD A; ADD B; STORE T; LOAD C; ADD D; MUL T; STORE X.",
+      "marks": 2
+    },
+    {
+      "id": "u4-s-s02",
+      "topic": "4.7",
+      "q": "Explain indirect addressing with the example ADD 300 where memory[300] = 1350.",
+      "answer": "The address field 300 holds the address of a memory word; that word contains 1350, the address of the operand. So the operand is read from 1350 (two memory references).",
+      "marks": 2
+    }
+  ]
+}

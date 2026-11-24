@@ -1,0 +1,195 @@
+{
+  "1.1": [
+    "Digital computer = electronic device jo input leta hai, instructions se process karta hai, output deta hai.",
+    "Digital ka matlab: information digits (0 aur 1) me hoti hai. Ek binary digit = bit.",
+    "Characteristics: Speed, Automatic, Accuracy, Diligence, Versatility, Storage. Computer ka IQ zero hai, feelings nahi hote.",
+    "COMPUTER acronym (Common, Machine, Purposely, Used For, Technological, Educational & Research). Basic law: Input -> Process -> Output."
+  ],
+  "1.2": [
+    "Hardware = CPU (ALU + CU) + Memory + Input + Output. Software = instructions aur data.",
+    "Input unit data leta hai aur memory me bhejta hai. Output unit result ko human-readable form me dikhata hai.",
+    "ALU arithmetic aur logic karta hai. CU flow control karta hai. Primary memory fast aur volatile, secondary memory permanent hai.",
+    "Slides: Software vs Hardware; simple model = Input + CPU (CU, ALU, memory) + Output; I/O processor in block diagram; CU directs flow, ALU computes and compares, memory stores before/after processing."
+  ],
+  "1.3": [
+    "Positional system me digit ki value = digit x base^position. Non-positional me position ka asar nahi hota (Unary).",
+    "Base: Decimal 10, Binary 2, Octal 8, Hexadecimal 16 (A=10 ... F=15).",
+    "MSB = sabse bada place value wala digit. LSB = sabse chhota place value wala digit.",
+    "Non-positional (unary) vs positional (weighted). Base 2, 8, 10, 16 table. MSD/LSD. Units: bit, nibble, byte, KB (1024), MB ... YB."
+  ],
+  "1.4": [
+    "Decimal to binary: 2 se baar-baar divide karo, remainder ulta padho. Example: 27 = 11011.",
+    "Binary to decimal: har bit ko 2 ki power se multiply karo aur jodo. Example: 10011 = 19.",
+    "Octal ke liye 8 ki power, hex ke liye 16 ki power. Binary to octal me 3-3 bits, binary to hex me 4-4 bits group karo.",
+    "Division-by-2 (remainders bottom to top) and place-value methods. Slide error: 101011 = 43 (slide shows 42)."
+  ],
+  "1.5": [
+    "Binary add: 1+1 = 10 (sum 0, carry 1). Subtraction me borrow hota hai.",
+    "Multiplication decimal jaisa hi hota hai, bas digits 0 aur 1 hain. Example: 1011 x 101 = 110111.",
+    "Division repeated subtraction hai. Divisor fit ho to quotient me 1, nahi to 0 aur next bit lao.",
+    "Addition, subtraction (borrow), multiplication (partial products) and division (repeated subtraction) with slide examples. Subtraction example 3 title is reversed on the slide."
+  ],
+  "1.6": [
+    "Fixed point me binary point fixed hota hai. Integer aur fraction bits fixed hote hain. Range aur precision limited hoti hai.",
+    "Signed: MSB sign bit hai (0 positive, 1 negative). Teen methods: sign-magnitude, 1's complement, 2's complement.",
+    "2's complement = 1's complement + 1. Example: -35 (8-bit) = 11011101.",
+    "Unsigned: 5.5 -> 0101.1000; 25.25 -> 11001.01. Signed layouts 8/16/32-bit (1 sign + int + frac). -7.5 = 10111100 (sign-mag), 11000011 (1's), 11000100 (2's)."
+  ],
+  "1.7": [
+    "Floating point = Mantissa x Radix^Exponent. Bahut bade aur chhote numbers store ho sakte hain.",
+    "Normalized form example: 1,200,000 = 0.12 x 10^7. Binary: 1.111011000110 x 2^5.",
+    "Single precision 32 bit, double precision 64 bit. 0.1 exactly store nahi hota (precision limit).",
+    "m x r^e form; 1,200,000 = 0.12 x 10^7. Layout Sign | Mantissa | Exponent. Advantages (range, fractions) and disadvantages (precision, bits, speed)."
+  ],
+  "1.8": [
+    "Parity bit error detect karne ke liye extra bit hai. Even parity me total 1s even, odd parity me odd.",
+    "1011 (teen 1s): even parity bit = 1 (11011), odd parity bit = 0 (01011).",
+    "Single parity bit single-bit error detect karta hai, par exact location nahi batata.",
+    "Error detection: parity, check sum, CRC. Even/odd parity, 3-bit parity table, parity generator and checker flow."
+  ],
+  "2.1": [
+    "AND: sab inputs 1 to output 1. OR: koi bhi input 1 to output 1. NOT: output ulta.",
+    "NAND aur NOR universal gates hain. XOR: inputs alag hon to 1. XNOR: inputs same hon to 1.",
+    "3-input XOR odd number of 1s par 1 deta hai."
+  ],
+  "2.2": [
+    "Laws: Commutative, Associative, Distributive, Identity, Null, Complement, Absorption (A + AB = A).",
+    "De Morgan: (AB)' = A' + B' aur (A+B)' = A'B'. Bar todo aur sign badlo.",
+    "Simplification me Boolean laws lagao, jaise AC + ABC = AC.",
+    "17 theorems (slides): X+X'=1, X.X'=0, X+XY=X, X(X+Y)=X, X+YZ=(X+Y)(X+Z), etc."
+  ],
+  "2.3": [
+    "K-map ek visual method hai expression minimize karne ka (Karnaugh, 1954).",
+    "2 variables = 4 cells, 3 = 8, 4 = 16 minterms. Cells Gray code order (00, 01, 11, 10) me hote hain.",
+    "Groups sirf 1s ke hon, size 2 ki power me, bade se bada group. Wrap-around allowed hai. SOP minterms se, POS maxterms se.",
+    "Slides me kuch examples ke answers galat hain (e.g. Sum(0,4,6,7) = Y'Z'+XY, Sum(1,3,6,7) = X'Z+XY). Teacher se confirm karo."
+  ],
+  "2.4": [
+    "Combinational circuit me output sirf present inputs par depend karta hai. Koi memory nahi.",
+    "Half adder: Sum = A XOR B, Carry = AB. Full adder: Sum = X XOR Y XOR Z, Carry = XY + YZ + XZ.",
+    "Examples: adders, subtractors, parity generator/checker, MUX, decoder, encoder."
+  ],
+  "2.5": [
+    "Flip-flop ek bit store karta hai aur do stable states (0 aur 1) hain.",
+    "SR: S=1,R=1 forbidden. D: Q next = D. JK: J=K=1 par toggle. T: J aur K ko jodne se bana, T=1 par toggle.",
+    "D flip-flop registers aur memory me, T flip-flop counters me use hota hai.",
+    "Truth tables: SR (S,R = 0,0 hold; 1,1 invalid), D (Q = D on clock), JK (1,1 complement), T (1 toggles)."
+  ],
+  "2.6": [
+    "Sequential circuit = gates + flip-flops. Output present aur past inputs (state) dono par depend karta hai.",
+    "Memory element hona zaroori hai. Examples: register, shift register, counter, flip-flop."
+  ],
+  "3.1": [
+    "IC = silicon chip jisme bahut saare gates/transistors hote hain. Chhota, sasta, low voltage par chalta hai.",
+    "Scale: SSI (few gates), MSI (10 to 200), LSI (200 to 1000), VLSI (1000 se zyada), ULSI (10 lakh+ transistors).",
+    "IC ke andar ke components alag se repair nahi hote, poori chip badalni padti hai."
+  ],
+  "3.2": [
+    "Decoder: n input se 2^n output. Binary code ko ek active output me badalta hai.",
+    "Binary to octal = 3x8 decoder. Binary to hex = 4x16 decoder. Enable input se on/off hota hai.",
+    "Address decoding aur code conversion me kaam aata hai."
+  ],
+  "3.3": [
+    "Encoder decoder ka ulta hai: 2^n inputs se n outputs.",
+    "8x3 encoder: 8 inputs, 3 outputs. Active input ka binary code banata hai."
+  ],
+  "3.4": [
+    "MUX (data selector): 2^n inputs me se ek ko output par bhejta hai. n select lines chahiye.",
+    "2x1: 1 select line. 4x1: 2 select lines. 8x1: 3 select lines. 16 inputs ke liye 4 select lines.",
+    "Select lines ka binary value decide karta hai kaunsa input pass hoga."
+  ],
+  "3.5": [
+    "DEMUX (data distributor): ek input ko 2^n outputs me se ek par bhejta hai. ONE TO MANY.",
+    "1x4 DEMUX: 2 select lines. S1S0 = 11 par Y3 active hota hai.",
+    "MUX aur DEMUX ek dusre ke ulte hain."
+  ],
+  "3.6": [
+    "Register = n flip-flops ka group, n bits store karta hai.",
+    "Register ke saath combinational gates bhi ho sakte hain data processing ke liye."
+  ],
+  "3.7": [
+    "Shift register bits ko left ya right shift karta hai. Flip-flops cascade me jude hote hain.",
+    "Types: SISO, SIPO (serial to parallel), PISO (parallel to serial), PIPO, aur bidirectional.",
+    "SISO me 4 bits daalne ke liye 4 clock pulses chahiye."
+  ],
+  "3.8": [
+    "Counter clock pulses ginta hai. Sequential circuit hai.",
+    "Synchronous: sab flip-flops ek clock par, fast. Asynchronous (ripple): ek ke output se agla clock hota hai, slow.",
+    "n-bit counter ke 2^n states hote hain. 4-bit = 16 states (0 to 15). Use: digital clock, watch, alarm."
+  ],
+  "4.1": [
+    "Instruction code = opcode (kya karna hai) + operand (data ya address).",
+    "64 operations ke liye opcode 6 bits (2^6 = 64) chahiye."
+  ],
+  "4.2": [
+    "PC 12 bit (next instruction address), AR 12 bit (memory address), IR 16 bit (current instruction).",
+    "DR/TR 16 bit, AC 16 bit (results), INPR aur OUTR 8 bit. Memory 4096 words x 16 bit.",
+    "Register controls: LD (load), INR (increment), CLR (clear).",
+    "CPU/bus slide me 8 registers hain (PC, AR, IR, TR, DR, AC, INPR, OUTR); general register slide me 7 likha hai, teacher se confirm karo."
+  ],
+  "4.3": [
+    "Common bus: sab registers ek bus se jude hain. S2 S1 S0 se 8 registers me se ek select hota hai.",
+    "Register jiska LD enable hai, wo bus se data leta hai. ALU input DR, INPR ya AC se leta hai."
+  ],
+  "4.4": [
+    "Micro-operations: transfer, increment, AND, OR, XOR, complement, shift.",
+    "Control word = SELA (3) + SELB (3) + SELD (3) + SELOPR (5) = 14 bits (slide ke hisaab se).",
+    "R3 = R1 + R2: SELA=001, SELB=010, SELOPR=10010, SELD=011."
+  ],
+  "4.5": [
+    "Stack LIFO hai: jo last push hua wo pehle pop hota hai.",
+    "PUSH: SP++ phir store. POP: read phir SP--. SP top ka address rakhta hai.",
+    "Postfix evaluation stack se hota hai. Example: 3 4 * 5 6 * + = 42."
+  ],
+  "4.6": [
+    "Three-address: 3 operands, lambi instruction, short program. Two-address: sabse common.",
+    "One-address: accumulator + memory, LOAD aur STORE use hote hain. Zero-address: operands stack se."
+  ],
+  "4.7": [
+    "Direct: address field me operand ka address. Indirect: address field me wo memory word hota hai jisme operand ka address hai.",
+    "Immediate: operand instruction ke andar. Register: operand register me. Register indirect: register me address, ek memory access.",
+    "Implied: operand fixed hota hai, jaise CMA (accumulator complement).",
+    "Indirect: address field me memory word ka address; wahan se operand ka address milta hai."
+  ],
+  "5.1": [
+    "Peripheral = bahar ke devices (keyboard, mouse, monitor, printer, storage).",
+    "Input, output, storage aur communication categories. CPU electronic aur fast hai, peripheral electro-mechanical aur slow.",
+    "Impact printer (dot matrix, daisy wheel) vs non-impact (inkjet, laser).",
+    "Slides: input (OCR, light pen, OMR, MICR, barcode), output (CRT/LCD/LED/PDP, impact vs non-impact printers), storage (RAM/ROM/cache, tape, disk, optical, flash)."
+  ],
+  "5.2": [
+    "I/O interface CPU aur devices ke beech bridge hai. Speed match karta hai, device select karta hai.",
+    "Functions: control aur timing signals, data buffering, serial-parallel aur digital-analog conversion, error detection.",
+    "Commands: control, status, data input, data output."
+  ],
+  "5.3": [
+    "Synchronous: common clock, frames/blocks me data, fast aur costly. Asynchronous: start/stop bits, bytes/characters me, slow aur sasta.",
+    "Strobe: ek extra signal. Leading strobe data se pehle, trailing data ke baad.",
+    "Handshaking: RTS (Request to Send) aur CTS (Clear to Send), zyada reliable.",
+    "Async = bytes/characters, start-stop bits. Strobe (leading/trailing; source/destination initiated) and Handshaking (RTS/CTS; data valid/accepted; ready for data) ensure dependable delivery."
+  ],
+  "5.4": [
+    "Programmed I/O: CPU har transfer control karta hai (polling). Simple par CPU busy rehta hai.",
+    "Interrupt I/O: device ready hone par interrupt. CPU service karke wapas previous task par aata hai.",
+    "DMA: controller bus leta hai, data device aur memory ke beech directly jata hai. Bade aur fast transfers ke liye best.",
+    "Programmed I/O: CPU polls flag F in status register (busy CPU). Interrupt: device interrupts when ready. DMA: BR/BG/HOLD/HLDA, CPU idle during transfer."
+  ],
+  "5.5": [
+    "Primary memory: CPU se direct access, volatile, costly, fast. Secondary: non-volatile, sasta, bada, slow.",
+    "RAM: read-write, volatile. Static RAM flip-flop se (fast, cache me), dynamic RAM capacitor se (refresh chahiye, zyada density).",
+    "ROM: read-only, non-volatile, bootstrap loader rakhta hai. PROM ek baar, EPROM UV se erase, EEPROM electrically (byte-by-byte, slow).",
+    "Hierarchy: cache (fastest) > RAM > disk > tape (slowest, sabse bada).",
+    "Primary: RAM (SRAM flip-flops, DRAM capacitor + refresh), ROM (PROM once, EPROM UV, EEPROM byte-wise). Memory hierarchy: register, cache, main, disk, tape."
+  ],
+  "5.6": [
+    "Magnetic tape: sequential access, backup ke liye. 7 ya 9 bits + parity se character banta hai.",
+    "Magnetic disk: tracks (concentric circles) aur sectors. Sector minimum transfer unit hai. Hard disk fixed hoti hai.",
+    "Tape: sequential, 7/9 bits + parity per character, backup. Disk: tracks, sectors (minimum transfer unit), hard disk fixed in unit."
+  ],
+  "5.7": [
+    "Cache chhoti aur bahut fast memory hai, CPU aur main memory ke beech.",
+    "Cache hit: data cache me mila. Cache miss: main memory se lana padta hai.",
+    "Cache RAM se 10 se 100 guna fast hai (notes ke hisaab se). Average access time kam karta hai.",
+    "Cache: 10 to 100 times faster than RAM, buffer between CPU and RAM, hit/miss operation, reduces average access time."
+  ]
+}

@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+/* ============ LIGHT (default) ============ */
+:root {
+  --bg: #130a05;
+  --card: #1f120a;
+  --card-2: #2a190e;
+  --fg: #fbeee4;
+  --muted: #d1ae95;
+  --accent: #fb923c;
+  --accent-fg: #130a05;
+  --accent-soft: #3a2010;
+  --good: #86efac;
+  --good-soft: #14321f;
+  --bad: #fca5a5;
+  --bad-soft: #3b1a1a;
+  --warn: #fcd34d;
+  --warn-soft: #3a2e0e;
+  --hint: #c4b5fd;
+  --hint-soft: #2a1f47;
+  --border: #3d2517;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 18px 40px -18px rgb(0 0 0 / 0.8);
+  color-scheme: dark;
+}
+
+/* ============ DARK (only when the user picks it) ============ */
+:root[data-theme="light"] {
+  --bg: #fff8f3;
+  --card: #ffffff;
+  --card-2: #fef1e7;
+  --fg: #2a1606;
+  --muted: #7a5a45;
+  --accent: #f97316;
+  --accent-fg: #ffffff;
+  --accent-soft: #ffedd5;
+  --good: #15803d;
+  --good-soft: #dcfce7;
+  --bad: #dc2626;
+  --bad-soft: #fee2e2;
+  --warn: #b45309;
+  --warn-soft: #fef3c7;
+  --hint: #8b5cf6;
+  --hint-soft: #ede9fe;
+  --border: #f5e0cf;
+  --shadow: 0 1px 2px rgb(42 22 6 / 0.05), 0 8px 24px -14px rgb(42 22 6 / 0.2);
+  --shadow-lg: 0 18px 40px -20px rgb(42 22 6 / 0.35);
+  color-scheme: light;
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Highlight pulse when a topic is opened from the topic list */
+@keyframes topic-flash {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--c, #fb923c) 55%, transparent); }
+  60% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--c, #fb923c) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+.topic-flash {
+  animation: topic-flash 1.1s ease-out;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Noto Sans", sans-serif;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+/* ============ Surfaces ============ */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.card-link {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+@media (hover: hover) {
+  .card-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--c, var(--accent));
+  }
+}
+
+/* Coloured hero banner using the unit/subject colour (--c) */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--c, #ea580c) 0%, color-mix(in srgb, var(--c, #ea580c) 70%, #7c3aed) 100%);
+  box-shadow: var(--shadow-lg);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.12);
+  pointer-events: none;
+}
+
+/* Solid colour tile (icon box) and soft tint (chip background) */
+.tile {
+  background: var(--c, #ea580c);
+  color: #fff;
+}
+.tint {
+  background: color-mix(in srgb, var(--c, #ea580c) 13%, var(--card));
+  color: var(--c, #ea580c);
+}
+
+/* ============ Buttons ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.08s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:active { transform: scale(0.98); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+@media (hover: hover) {
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-fg);
+  border-color: transparent;
+}
+@media (hover: hover) {
+  .btn-primary:hover { filter: brightness(1.08); color: var(--accent-fg); border-color: transparent; }
+}
+
+.btn-good { background: var(--good); color: #fff; border-color: transparent; }
+.btn-bad { background: var(--bad); color: #fff; border-color: transparent; }
+.btn-hint { background: var(--hint-soft); color: var(--hint); border-color: transparent; }
+@media (hover: hover) {
+  .btn-good:hover, .btn-bad:hover { color: #fff; filter: brightness(1.06); }
+}
+
+/* ============ Chips ============ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--card-2);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.chip-accent { background: var(--accent-soft); color: var(--accent); }
+.chip-warn { background: var(--warn-soft); color: var(--warn); }
+.chip-good { background: var(--good-soft); color: var(--good); }
+.chip-hint { background: var(--hint-soft); color: var(--hint); }
+
+/* Theme switch */
+.seg {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 12px;
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  gap: 2px;
+}
+.seg button {
+  border-radius: 9px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.seg button[aria-pressed="true"] {
+  background: var(--card);
+  color: var(--fg);
+  box-shadow: var(--shadow);
+}
+
+.progress-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--card-2);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Text inputs */
+.field {
+  width: 100%;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: var(--card-2);
+  color: var(--fg);
+  padding: 0.75rem 0.9rem;
+  font-size: 0.97rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+/* Reading typography */
+.note-body {
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+/* Hide scrollbars on the horizontal chip row, keep it scrollable */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* Safe area for the mobile bottom bar (iPhone notch) */
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }

@@ -1,0 +1,434 @@
+{
+  "mcq": [
+    {
+      "id": "u2-x-m01",
+      "topic": "2.2",
+      "q": "Simplify A + A'B.",
+      "options": [
+        "A",
+        "B",
+        "A + B",
+        "AB"
+      ],
+      "answer": 2,
+      "explanation": "A + A'B = (A + A')(A + B) = A + B."
+    },
+    {
+      "id": "u2-x-m02",
+      "topic": "2.2",
+      "q": "Simplify A(A + B).",
+      "options": [
+        "A",
+        "B",
+        "AB",
+        "A + B"
+      ],
+      "answer": 0,
+      "explanation": "Absorption law: A(A + B) = A."
+    },
+    {
+      "id": "u2-x-m03",
+      "topic": "2.2",
+      "q": "Simplify XY + X(Y + Z) + Y(Y + Z).",
+      "options": [
+        "Y + XZ",
+        "XY",
+        "X + Z",
+        "Y + Z"
+      ],
+      "answer": 0,
+      "explanation": "Expanding and applying absorption gives Y + XZ."
+    },
+    {
+      "id": "u2-x-m04",
+      "topic": "2.2",
+      "q": "Simplify (A + B)(A' + B)B'.",
+      "options": [
+        "0",
+        "1",
+        "B",
+        "A"
+      ],
+      "answer": 0,
+      "explanation": "B'(A + B) = AB' and AB'A' = 0 because A and A' cannot both be 1."
+    },
+    {
+      "id": "u2-x-m05",
+      "topic": "2.1",
+      "q": "A NOR gate output is 1 when:",
+      "options": [
+        "Any input is 1",
+        "All inputs are 0",
+        "All inputs are 1",
+        "Inputs are different"
+      ],
+      "answer": 1,
+      "explanation": "NOR is NOT of OR, so it gives 1 only when all inputs are 0."
+    },
+    {
+      "id": "u2-x-m06",
+      "topic": "2.1",
+      "q": "NOT A can be built using only NAND gates by:",
+      "options": [
+        "Connecting both inputs of a NAND gate to A",
+        "Connecting one input to 1",
+        "Using an OR gate",
+        "Using an XOR gate"
+      ],
+      "answer": 0,
+      "explanation": "NAND(A, A) = A' ."
+    },
+    {
+      "id": "u2-x-m07",
+      "topic": "2.3",
+      "q": "Which is a valid group size in a K-map?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 1,
+      "explanation": "Valid group sizes are powers of 2: 1, 2, 4, 8, 16."
+    },
+    {
+      "id": "u2-x-m08",
+      "topic": "2.3",
+      "q": "A minterm for ABC = 101 is:",
+      "options": [
+        "m3",
+        "m4",
+        "m5",
+        "m6"
+      ],
+      "answer": 2,
+      "explanation": "101 in binary is 5, so it is m5."
+    },
+    {
+      "id": "u2-x-m09",
+      "topic": "2.3",
+      "q": "Simplify F(X,Y,Z) = Σ(1,3,6,7) using a K-map. The minimal SOP is:",
+      "options": [
+        "X'Z + XY",
+        "XY + YZ",
+        "X'Y + XZ",
+        "X + Z"
+      ],
+      "answer": 0,
+      "explanation": "Groups (1,3) gives X'Z and (6,7) gives XY, which covers all four minterms."
+    },
+    {
+      "id": "u2-x-m10",
+      "topic": "2.3",
+      "q": "Simplify F(X,Y) = Σ(2,3).",
+      "options": [
+        "X",
+        "Y",
+        "X'",
+        "XY"
+      ],
+      "answer": 0,
+      "explanation": "Minterms 2 (10) and 3 (11) both have X = 1, so F = X."
+    },
+    {
+      "id": "u2-x-m11",
+      "topic": "2.3",
+      "q": "POS form F(X,Y) = ΠM(2,3) simplifies to:",
+      "options": [
+        "X'",
+        "X",
+        "Y'",
+        "XY"
+      ],
+      "answer": 0,
+      "explanation": "M2 = X' + Y and M3 = X' + Y'; their product is X'."
+    },
+    {
+      "id": "u2-x-m12",
+      "topic": "2.4",
+      "q": "Half adder with inputs A = 1 and B = 1 gives:",
+      "options": [
+        "Sum 0, carry 1",
+        "Sum 1, carry 0",
+        "Sum 1, carry 1",
+        "Sum 0, carry 0"
+      ],
+      "answer": 0,
+      "explanation": "Sum = A XOR B = 0; Carry = A AND B = 1."
+    },
+    {
+      "id": "u2-x-m13",
+      "topic": "2.4",
+      "q": "Full adder with inputs 1, 1, 1 gives:",
+      "options": [
+        "Sum 0, carry 1",
+        "Sum 1, carry 0",
+        "Sum 1, carry 1",
+        "Sum 0, carry 0"
+      ],
+      "answer": 2,
+      "explanation": "Sum = 1 XOR 1 XOR 1 = 1; Carry = 1 (since 1+1+1 = 11 in binary)."
+    },
+    {
+      "id": "u2-x-m14",
+      "topic": "2.4",
+      "q": "Carry output of a full adder is given by:",
+      "options": [
+        "XY + YZ + XZ",
+        "X XOR Y",
+        "X + Y + Z",
+        "XYZ"
+      ],
+      "answer": 0,
+      "explanation": "Carry = XY + YZ + XZ."
+    },
+    {
+      "id": "u2-x-m15",
+      "topic": "2.5",
+      "q": "In a D flip-flop, the next state Q is equal to:",
+      "options": [
+        "D",
+        "D'",
+        "Q'",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "D flip-flop copies its D input to Q on the clock edge."
+    },
+    {
+      "id": "u2-x-m16",
+      "topic": "2.5",
+      "q": "In a T flip-flop, when T = 0 the output:",
+      "options": [
+        "Toggles",
+        "Holds its value",
+        "Becomes 1",
+        "Becomes 0"
+      ],
+      "answer": 1,
+      "explanation": "T = 0 means no change; T = 1 means toggle."
+    },
+    {
+      "id": "u2-x-m17",
+      "topic": "2.5",
+      "q": "JK flip-flop with J = 0 and K = 1 does:",
+      "options": [
+        "Set",
+        "Reset",
+        "Toggle",
+        "Hold"
+      ],
+      "answer": 1,
+      "explanation": "J=0, K=1 resets the output to 0."
+    },
+    {
+      "id": "u2-x-m18",
+      "topic": "2.5",
+      "q": "The clock input is required for which type of flip-flops to act synchronously?",
+      "options": [
+        "Synchronous (clocked) flip-flops like D and JK",
+        "Only RS latch",
+        "Only NOT gates",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Synchronous flip-flops change state only at the clock edge."
+    },
+    {
+      "id": "u2-x-m19",
+      "topic": "2.6",
+      "q": "Which of the following is NOT a sequential circuit?",
+      "options": [
+        "Counter",
+        "Shift register",
+        "Full adder",
+        "Flip-flop"
+      ],
+      "answer": 2,
+      "explanation": "A full adder is combinational (no memory)."
+    },
+    {
+      "id": "u2-x-m20",
+      "topic": "2.4",
+      "q": "Which of the following is a combinational circuit?",
+      "options": [
+        "Decoder",
+        "Counter",
+        "Register",
+        "D flip-flop"
+      ],
+      "answer": 0,
+      "explanation": "Decoder is combinational; counters, registers and flip-flops are sequential."
+    },
+    {
+      "id": "u2-s-m01",
+      "topic": "2.3",
+      "q": "Minimal SOP of F(X,Y,Z) = Sum(0,4,6,7) is:",
+      "options": [
+        "Y'Z' + XY",
+        "XZ' + XY",
+        "X'Y' + XY",
+        "Z + XY"
+      ],
+      "answer": 0,
+      "explanation": "Y'Z' covers minterms 0 and 4; XY covers 6 and 7."
+    },
+    {
+      "id": "u2-s-m02",
+      "topic": "2.2",
+      "q": "Which theorem says X + XY = X?",
+      "options": [
+        "Absorption law",
+        "De Morgan law",
+        "Idempotent law",
+        "Involution law"
+      ],
+      "answer": 0,
+      "explanation": "X + XY = X is the absorption law."
+    },
+    {
+      "id": "u2-s-m03",
+      "topic": "2.2",
+      "q": "X + X' equals:",
+      "options": [
+        "0",
+        "1",
+        "X",
+        "X'"
+      ],
+      "answer": 1,
+      "explanation": "Complement law: X + X' = 1."
+    },
+    {
+      "id": "u2-s-m04",
+      "topic": "2.4",
+      "q": "Full adder carry can be written as:",
+      "options": [
+        "Z(X XOR Y) + XY",
+        "X + Y + Z",
+        "XYZ",
+        "X XOR Y XOR Z"
+      ],
+      "answer": 0,
+      "explanation": "The slide gives Carry = Z(X XOR Y) + XY as an alternative form."
+    },
+    {
+      "id": "u2-s-m05",
+      "topic": "2.5",
+      "q": "SR flip-flop with S = 0 and R = 0 gives:",
+      "options": [
+        "Set",
+        "Reset",
+        "No change",
+        "Invalid"
+      ],
+      "answer": 2,
+      "explanation": "S=0, R=0 holds the previous output (no change)."
+    },
+    {
+      "id": "u2-s-m06",
+      "topic": "2.5",
+      "q": "In a D flip-flop with clock = 1, if D = 1 then Q becomes:",
+      "options": [
+        "0",
+        "1",
+        "Toggles",
+        "Invalid"
+      ],
+      "answer": 1,
+      "explanation": "D flip-flop copies D to Q on the clock edge (Q = 1 here)."
+    },
+    {
+      "id": "u2-s-m07",
+      "topic": "2.5",
+      "q": "JK flip-flop with J = 1 and K = 1 gives:",
+      "options": [
+        "Set",
+        "Clear",
+        "No change",
+        "Complement of Q"
+      ],
+      "answer": 3,
+      "explanation": "JK truth table: J=1, K=1 gives the complement Q(t)'."
+    }
+  ],
+  "short": [
+    {
+      "id": "u2-x-s01",
+      "topic": "2.3",
+      "q": "Simplify F(X,Y,Z) = Σ(1,3,6,7) using a K-map and state the groups.",
+      "answer": "Groups: (1,3) = X'Z, (6,7) = XY. Minimal SOP: F = X'Z + XY.",
+      "marks": 2
+    },
+    {
+      "id": "u2-x-s02",
+      "topic": "2.3",
+      "q": "Write the POS form simplification of F(X,Y) = ΠM(2,3).",
+      "answer": "M2 = X' + Y, M3 = X' + Y'. Product = X'. So F = X'.",
+      "marks": 2
+    },
+    {
+      "id": "u2-x-s03",
+      "topic": "2.2",
+      "q": "Prove the absorption law A + AB = A.",
+      "answer": "A + AB = A(1 + B) = A.1 = A.",
+      "marks": 2
+    },
+    {
+      "id": "u2-x-s04",
+      "topic": "2.4",
+      "q": "Write the truth table of a half subtractor's difference output and borrow output.",
+      "answer": "Difference = A XOR B. Borrow = A'B. (A=0,B=1 gives borrow 1.)",
+      "marks": 2
+    },
+    {
+      "id": "u2-x-s05",
+      "topic": "2.5",
+      "q": "Write the characteristic behavior of an RS flip-flop when R = 1 and S = 0.",
+      "answer": "Reset: Q becomes 0 (and Q' becomes 1).",
+      "marks": 2
+    },
+    {
+      "id": "u2-x-s06",
+      "topic": "2.5",
+      "q": "Why is the RS flip-flop used in building asynchronous counters?",
+      "answer": "It stores a bit that can be set or reset; chaining such cells lets each output trigger the next stage, which forms a counter.",
+      "marks": 2
+    },
+    {
+      "id": "u2-x-s07",
+      "topic": "2.4",
+      "q": "Write the Boolean expression for a half adder and explain its carry.",
+      "answer": "Sum = A XOR B (A'B + AB'). Carry = AB, which is 1 only when both inputs are 1.",
+      "marks": 2
+    },
+    {
+      "id": "u2-x-s08",
+      "topic": "2.3",
+      "q": "State two rules of K-map grouping.",
+      "answer": "Groups contain only 1s; group sizes are powers of 2; groups may wrap around; groups may overlap; groups must be horizontal, vertical or rectangular (any two).",
+      "marks": 2
+    },
+    {
+      "id": "u2-s-s01",
+      "topic": "2.2",
+      "q": "State the absorption law and prove X + XY = X.",
+      "answer": "X + XY = X(1 + Y) = X.1 = X.",
+      "marks": 2
+    },
+    {
+      "id": "u2-s-s02",
+      "topic": "2.3",
+      "q": "Write the minimal SOP of F(X,Y,Z) = Sum(0,4,6,7).",
+      "answer": "Y'Z' + XY (groups: (0,4) gives Y'Z', (6,7) gives XY).",
+      "marks": 2
+    },
+    {
+      "id": "u2-s-s03",
+      "topic": "2.5",
+      "q": "What does a D flip-flop output when the clock is 1?",
+      "answer": "With clock = 1, Q follows D: D=0 gives Q=0, D=1 gives Q=1.",
+      "marks": 2
+    }
+  ]
+}

@@ -1,0 +1,808 @@
+{
+  "mcq": [
+    {
+      "id": "u1-x-m01",
+      "topic": "1.4",
+      "q": "Binary 1101.1 in decimal is:",
+      "options": [
+        "13.5",
+        "13.25",
+        "12.5",
+        "14.5"
+      ],
+      "answer": 0,
+      "explanation": "8+4+0+1 = 13, and the bit after the point is 1/2 = 0.5, so 13.5."
+    },
+    {
+      "id": "u1-x-m02",
+      "topic": "1.4",
+      "q": "Hexadecimal F2 in binary is:",
+      "options": [
+        "11110010",
+        "11100010",
+        "11110100",
+        "10110010"
+      ],
+      "answer": 0,
+      "explanation": "F = 1111, 2 = 0010."
+    },
+    {
+      "id": "u1-x-m03",
+      "topic": "1.4",
+      "q": "Octal 17 in decimal is:",
+      "options": [
+        "15",
+        "17",
+        "13",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "1x8 + 7 = 15."
+    },
+    {
+      "id": "u1-x-m04",
+      "topic": "1.5",
+      "q": "Binary 1011 x 11 equals:",
+      "options": [
+        "100001",
+        "110011",
+        "101101",
+        "1000001"
+      ],
+      "answer": 0,
+      "explanation": "11 x 3 = 33 = 100001."
+    },
+    {
+      "id": "u1-x-m05",
+      "topic": "1.5",
+      "q": "Binary 101 - 10 equals:",
+      "options": [
+        "011",
+        "010",
+        "100",
+        "001"
+      ],
+      "answer": 0,
+      "explanation": "5 - 2 = 3 = 011."
+    },
+    {
+      "id": "u1-x-m06",
+      "topic": "1.5",
+      "q": "Binary 1 + 1 + 1 (three bits) gives sum and carry:",
+      "options": [
+        "Sum 1, carry 1",
+        "Sum 0, carry 1",
+        "Sum 1, carry 0",
+        "Sum 0, carry 0"
+      ],
+      "answer": 0,
+      "explanation": "1+1+1 = 3 = 11 in binary: sum 1, carry 1."
+    },
+    {
+      "id": "u1-x-m07",
+      "topic": "1.6",
+      "q": "The 1's complement of 1010 is:",
+      "options": [
+        "0101",
+        "0110",
+        "1011",
+        "1001"
+      ],
+      "answer": 0,
+      "explanation": "Invert every bit: 1010 -> 0101."
+    },
+    {
+      "id": "u1-x-m08",
+      "topic": "1.6",
+      "q": "The 2's complement of 1010 (4 bits) is:",
+      "options": [
+        "0110",
+        "0101",
+        "1110",
+        "1011"
+      ],
+      "answer": 0,
+      "explanation": "1's complement is 0101; add 1 to get 0110."
+    },
+    {
+      "id": "u1-x-m09",
+      "topic": "1.6",
+      "q": "In sign-magnitude form, -5 in 4 bits is:",
+      "options": [
+        "1101",
+        "0101",
+        "1011",
+        "1111"
+      ],
+      "answer": 0,
+      "explanation": "Magnitude 5 = 101, with sign bit 1 gives 1101."
+    },
+    {
+      "id": "u1-x-m10",
+      "topic": "1.8",
+      "q": "Data 1101 with EVEN parity. The parity bit is:",
+      "options": [
+        "1",
+        "0",
+        "Depends on the next bit",
+        "No parity bit needed"
+      ],
+      "answer": 0,
+      "explanation": "1101 has three 1s (odd). Add 1 so the total count of 1s becomes four (even)."
+    },
+    {
+      "id": "u1-x-m11",
+      "topic": "1.8",
+      "q": "Data 1101 with ODD parity. The parity bit is:",
+      "options": [
+        "0",
+        "1",
+        "Not required",
+        "Same as even parity"
+      ],
+      "answer": 0,
+      "explanation": "Three 1s already odd, so add 0."
+    },
+    {
+      "id": "u1-x-m12",
+      "topic": "1.1",
+      "q": "Which of these is NOT a characteristic of a digital computer?",
+      "options": [
+        "Diligence",
+        "Accuracy",
+        "Feelings and emotions",
+        "Speed"
+      ],
+      "answer": 2,
+      "explanation": "Computers have no feelings, emotions or IQ."
+    },
+    {
+      "id": "u1-x-m13",
+      "topic": "1.2",
+      "q": "1 KB in computer memory is equal to:",
+      "options": [
+        "1000 bytes",
+        "1024 bytes",
+        "1024 bits",
+        "8 bytes"
+      ],
+      "answer": 1,
+      "explanation": "1 KB = 1024 bytes."
+    },
+    {
+      "id": "u1-x-m14",
+      "topic": "1.2",
+      "q": "1 byte equals:",
+      "options": [
+        "4 bits",
+        "8 bits",
+        "16 bits",
+        "32 bits"
+      ],
+      "answer": 1,
+      "explanation": "8 bits = 1 byte."
+    },
+    {
+      "id": "u1-x-m15",
+      "topic": "1.3",
+      "q": "In hexadecimal, the digit that comes after 9 is:",
+      "options": [
+        "10",
+        "A",
+        "B",
+        "F"
+      ],
+      "answer": 1,
+      "explanation": "Hex digits are 0-9 then A (=10), B, C, D, E, F."
+    },
+    {
+      "id": "u1-x-m16",
+      "topic": "1.7",
+      "q": "A disadvantage of floating point representation is:",
+      "options": [
+        "It can store very large numbers",
+        "It cannot represent some real numbers exactly, e.g. 0.1",
+        "Flexible scaling",
+        "Easy fraction representation"
+      ],
+      "answer": 1,
+      "explanation": "Limited precision: 0.1 has no exact binary form."
+    },
+    {
+      "id": "u1-x-m17",
+      "topic": "1.6",
+      "q": "Fixed point number 11001.01 has how many integer and fraction bits?",
+      "options": [
+        "5 integer, 2 fraction",
+        "2 integer, 5 fraction",
+        "4 integer, 4 fraction",
+        "3 integer, 3 fraction"
+      ],
+      "answer": 0,
+      "explanation": "Digits before the point = 5 (11001); after the point = 2 (01)."
+    },
+    {
+      "id": "u1-x-m18",
+      "topic": "1.3",
+      "q": "Which number system has base 16?",
+      "options": [
+        "Octal",
+        "Decimal",
+        "Hexadecimal",
+        "Binary"
+      ],
+      "answer": 2,
+      "explanation": "Hexadecimal is base 16."
+    },
+    {
+      "id": "u1-x-m19",
+      "topic": "1.5",
+      "q": "Which is correct about binary division?",
+      "options": [
+        "It is repeated addition",
+        "It is repeated subtraction",
+        "It uses digits 0-9",
+        "It is the same as multiplication"
+      ],
+      "answer": 1,
+      "explanation": "Binary division is repeated subtraction, like decimal division."
+    },
+    {
+      "id": "u1-x-m20",
+      "topic": "1.7",
+      "q": "The mantissa of 0.12 x 10^7 is:",
+      "options": [
+        "7",
+        "10",
+        "0.12",
+        "12"
+      ],
+      "answer": 2,
+      "explanation": "Mantissa = 0.12 (the part before the exponent)."
+    },
+    {
+      "id": "u1-a-m01",
+      "topic": "1.1",
+      "q": "In the COMPUTER characteristics acronym, the letter C stands for:",
+      "options": [
+        "Common",
+        "Complex",
+        "Cheap",
+        "Constant"
+      ],
+      "answer": 0,
+      "explanation": "Slide: C = Common machine."
+    },
+    {
+      "id": "u1-a-m02",
+      "topic": "1.1",
+      "q": "The basic law of computer operation is:",
+      "options": [
+        "Process -> Input -> Output",
+        "Input -> Process -> Output",
+        "Output -> Input -> Process",
+        "Input -> Output -> Process"
+      ],
+      "answer": 1,
+      "explanation": "Slide: Input -> Process -> Output."
+    },
+    {
+      "id": "u1-a-m03",
+      "topic": "1.1",
+      "q": "The first electronic digital computers (late 1940s) were used primarily for:",
+      "options": [
+        "Gaming",
+        "Numerical computations",
+        "Video editing",
+        "Internet browsing"
+      ],
+      "answer": 1,
+      "explanation": "Slide intro says they were used primarily for numerical computations."
+    },
+    {
+      "id": "u1-a-m04",
+      "topic": "1.2",
+      "q": "According to the simple model on the slides, a computer is divided into how many parts?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "explanation": "Input devices, CPU and output devices: three parts."
+    },
+    {
+      "id": "u1-a-m05",
+      "topic": "1.2",
+      "q": "Which of these is NOT a part of the CPU as per the slides?",
+      "options": [
+        "Control unit",
+        "Arithmetic & logic unit",
+        "Memory unit",
+        "Output devices"
+      ],
+      "answer": 3,
+      "explanation": "Output devices are separate from the CPU. CU, ALU and memory unit are listed under the CPU slide."
+    },
+    {
+      "id": "u1-a-m06",
+      "topic": "1.2",
+      "q": "The ALU performs:",
+      "options": [
+        "Only printing",
+        "Arithmetic and logical operations and comparisons",
+        "Permanent storage",
+        "Display of output"
+      ],
+      "answer": 1,
+      "explanation": "Slide: ALU does computations, comparisons, AND/OR/NOT."
+    },
+    {
+      "id": "u1-a-m07",
+      "topic": "1.2",
+      "q": "Which unit directs the flow of data between the CPU, memory and I/O devices?",
+      "options": [
+        "ALU",
+        "Control Unit",
+        "Input unit",
+        "Output unit"
+      ],
+      "answer": 1,
+      "explanation": "Slide: CU directs the flow of data between CPU, memory and I/O devices."
+    },
+    {
+      "id": "u1-a-m08",
+      "topic": "1.2",
+      "q": "Which function is NOT performed by an input device?",
+      "options": [
+        "Takes data to be processed",
+        "Converts input into machine-readable form",
+        "Transmits data into main memory",
+        "Converts results into human-readable form"
+      ],
+      "answer": 3,
+      "explanation": "Converting results into human-readable form is an output device function."
+    },
+    {
+      "id": "u1-a-m09",
+      "topic": "1.3",
+      "q": "In the unary (non-positional) system, the number 3 is written as:",
+      "options": [
+        "***",
+        "*3",
+        "3*",
+        "**"
+      ],
+      "answer": 0,
+      "explanation": "Unary: value = count of the symbol, so 3 = ***."
+    },
+    {
+      "id": "u1-a-m10",
+      "topic": "1.3",
+      "q": "In the number 1925, the digit 1 is the:",
+      "options": [
+        "LSD",
+        "MSD",
+        "Base",
+        "Positional value"
+      ],
+      "answer": 1,
+      "explanation": "MSD (most significant digit) has the highest place value."
+    },
+    {
+      "id": "u1-a-m11",
+      "topic": "1.3",
+      "q": "Which of these is a positional number system?",
+      "options": [
+        "Unary",
+        "Tally",
+        "Decimal",
+        "Roman numerals"
+      ],
+      "answer": 2,
+      "explanation": "Decimal is positional; unary and tally are non-positional."
+    },
+    {
+      "id": "u1-a-m12",
+      "topic": "1.3",
+      "q": "As per the slide pyramid, 1 kilobyte (KB) equals:",
+      "options": [
+        "1000 bytes",
+        "1024 bytes",
+        "2048 bytes",
+        "512 bytes"
+      ],
+      "answer": 1,
+      "explanation": "Slide: Kilobyte = 1024 bytes."
+    },
+    {
+      "id": "u1-a-m13",
+      "topic": "1.3",
+      "q": "How many bits are there in a nibble?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "Nibble = 4 bits; byte = 8 bits."
+    },
+    {
+      "id": "u1-a-m14",
+      "topic": "1.4",
+      "q": "Decimal 5 converted to binary by the division-by-2 method is:",
+      "options": [
+        "110",
+        "101",
+        "111",
+        "100"
+      ],
+      "answer": 1,
+      "explanation": "Remainders 1, 0, 1 read bottom to top = 101."
+    },
+    {
+      "id": "u1-a-m15",
+      "topic": "1.4",
+      "q": "Binary 11100 in decimal is:",
+      "options": [
+        "24",
+        "28",
+        "30",
+        "32"
+      ],
+      "answer": 1,
+      "explanation": "16 + 8 + 4 = 28."
+    },
+    {
+      "id": "u1-a-m16",
+      "topic": "1.4",
+      "q": "Binary 1000001 in decimal is:",
+      "options": [
+        "63",
+        "64",
+        "65",
+        "66"
+      ],
+      "answer": 2,
+      "explanation": "64 + 1 = 65."
+    },
+    {
+      "id": "u1-a-m17",
+      "topic": "1.4",
+      "q": "Decimal 9 in binary is:",
+      "options": [
+        "1001",
+        "1010",
+        "1100",
+        "1111"
+      ],
+      "answer": 0,
+      "explanation": "8 + 1 = 9 = 1001."
+    },
+    {
+      "id": "u1-a-m18",
+      "topic": "1.4",
+      "q": "Binary 101011 in decimal is:",
+      "options": [
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "answer": 1,
+      "explanation": "32 + 8 + 2 + 1 = 43. (The slide shows 42 due to a mistake in its expansion.)"
+    },
+    {
+      "id": "u1-a-m19",
+      "topic": "1.5",
+      "q": "Binary 110110 + 101011 equals:",
+      "options": [
+        "1100001",
+        "1100010",
+        "1011111",
+        "1010001"
+      ],
+      "answer": 0,
+      "explanation": "54 + 43 = 97 = 1100001."
+    },
+    {
+      "id": "u1-a-m20",
+      "topic": "1.5",
+      "q": "Binary 11 x 10 equals:",
+      "options": [
+        "101",
+        "110",
+        "111",
+        "1100"
+      ],
+      "answer": 1,
+      "explanation": "3 x 2 = 6 = 110."
+    },
+    {
+      "id": "u1-a-m21",
+      "topic": "1.5",
+      "q": "Binary 1111 x 110 equals:",
+      "options": [
+        "1011010",
+        "1010101",
+        "1100110",
+        "1001010"
+      ],
+      "answer": 0,
+      "explanation": "15 x 6 = 90 = 1011010."
+    },
+    {
+      "id": "u1-a-m22",
+      "topic": "1.5",
+      "q": "In binary subtraction, 0 - 1 gives:",
+      "options": [
+        "1 with a borrow",
+        "0 with a carry",
+        "1 without a borrow",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Slide: 0 - 1 = 1 with 1 bit borrow."
+    },
+    {
+      "id": "u1-a-m23",
+      "topic": "1.5",
+      "q": "Binary 11010 divided by 101 gives quotient:",
+      "options": [
+        "101",
+        "110",
+        "100",
+        "111"
+      ],
+      "answer": 0,
+      "explanation": "26 / 5 = 5 remainder 1, so quotient 101 and remainder 001."
+    },
+    {
+      "id": "u1-a-m24",
+      "topic": "1.6",
+      "q": "In an 8-bit signed fixed-point register (1 sign, 4 integer, 3 fraction bits), -7.5 in sign-magnitude form is:",
+      "options": [
+        "10111100",
+        "11000011",
+        "11000100",
+        "00111100"
+      ],
+      "answer": 0,
+      "explanation": "7.5 = 0111.100, sign bit 1 -> 1 0111 100 = 10111100."
+    },
+    {
+      "id": "u1-a-m25",
+      "topic": "1.6",
+      "q": "In a 16-bit signed fixed-point register (slide layout), how many integer bits are there?",
+      "options": [
+        "6",
+        "9",
+        "15",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "16-bit: 1 sign, 9 integer, 6 fraction."
+    },
+    {
+      "id": "u1-a-m26",
+      "topic": "1.6",
+      "q": "In a 32-bit signed fixed-point register, how many fraction bits are there?",
+      "options": [
+        "15",
+        "16",
+        "1",
+        "31"
+      ],
+      "answer": 1,
+      "explanation": "32-bit: 1 sign, 15 integer, 16 fraction."
+    },
+    {
+      "id": "u1-a-m27",
+      "topic": "1.7",
+      "q": "In floating-point form, number = Mantissa x (base)^Exponent. The base is called:",
+      "options": [
+        "Radix",
+        "Sign",
+        "Parity",
+        "Register"
+      ],
+      "answer": 0,
+      "explanation": "Slide formula m x r^e: r is the radix (base)."
+    },
+    {
+      "id": "u1-a-m28",
+      "topic": "1.7",
+      "q": "The floating-point form of 1,200,000 is:",
+      "options": [
+        "0.12 x 10^7",
+        "1.2 x 10^5",
+        "12 x 10^6",
+        "0.012 x 10^8"
+      ],
+      "answer": 0,
+      "explanation": "Slide: 1,200,000 = 0.12 x 10^7."
+    },
+    {
+      "id": "u1-a-m29",
+      "topic": "1.7",
+      "q": "Which is a disadvantage of floating-point representation?",
+      "options": [
+        "Very large range",
+        "Cannot represent all real numbers exactly",
+        "Represents fractions easily",
+        "Reserves fixed bits for fraction"
+      ],
+      "answer": 1,
+      "explanation": "Slide: cannot represent all real numbers exactly (e.g. 0.1), so precision is limited."
+    },
+    {
+      "id": "u1-a-m30",
+      "topic": "1.8",
+      "q": "For the 3-bit message 001, the even parity bit is:",
+      "options": [
+        "0",
+        "1",
+        "either 0 or 1",
+        "no bit is needed"
+      ],
+      "answer": 1,
+      "explanation": "Message 001 has one 1 (odd), so the even parity bit is 1."
+    },
+    {
+      "id": "u1-a-m31",
+      "topic": "1.8",
+      "q": "For the 3-bit message 011, the odd parity bit is:",
+      "options": [
+        "1",
+        "0",
+        "either",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "011 has two 1s (even), so add 1 to make the total odd."
+    },
+    {
+      "id": "u1-a-m32",
+      "topic": "1.8",
+      "q": "Which is NOT one of the three error detection methods on the slides?",
+      "options": [
+        "Parity bit",
+        "Check sum",
+        "Cyclic Redundancy Check",
+        "Hamming code"
+      ],
+      "answer": 3,
+      "explanation": "Slides list parity bit, check sum and CRC."
+    }
+  ],
+  "short": [
+    {
+      "id": "u1-x-s01",
+      "topic": "1.4",
+      "q": "Convert binary 1101 to decimal and show the steps.",
+      "answer": "1x8 + 1x4 + 0x2 + 1x1 = 13.",
+      "marks": 2
+    },
+    {
+      "id": "u1-x-s02",
+      "topic": "1.4",
+      "q": "Convert decimal 27 into binary.",
+      "answer": "27 = 11011 (16+8+2+1).",
+      "marks": 2
+    },
+    {
+      "id": "u1-x-s03",
+      "topic": "1.5",
+      "q": "Subtract 0111 from 1100 in binary.",
+      "answer": "12 - 7 = 5 = 0101.",
+      "marks": 2
+    },
+    {
+      "id": "u1-x-s04",
+      "topic": "1.6",
+      "q": "Find the 1's and 2's complement of 0110.",
+      "answer": "1's complement = 1001. 2's complement = 1001 + 1 = 1010.",
+      "marks": 2
+    },
+    {
+      "id": "u1-x-s05",
+      "topic": "1.8",
+      "q": "Find the even parity bit and the transmitted message for data 1001.",
+      "answer": "1001 has two 1s (even), so parity bit = 0 for even parity. Message = 01001.",
+      "marks": 2
+    },
+    {
+      "id": "u1-x-s06",
+      "topic": "1.8",
+      "q": "Find the odd parity bit and the transmitted message for data 1011.",
+      "answer": "1011 has three 1s (odd), so parity bit = 0. Message = 01011.",
+      "marks": 2
+    },
+    {
+      "id": "u1-x-s07",
+      "topic": "1.7",
+      "q": "Why does floating point representation need more bits than fixed point?",
+      "answer": "It stores a mantissa and an exponent, and the exponent gives a wider range. For precision it needs 32 bits (single) or 64 bits (double).",
+      "marks": 2
+    },
+    {
+      "id": "u1-x-s08",
+      "topic": "1.2",
+      "q": "What is the role of the control unit in a computer?",
+      "answer": "It directs the flow of data and instructions between CPU, memory and I/O devices and manages all the internal and external parts.",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s01",
+      "topic": "1.1",
+      "q": "State the basic law of computer operation.",
+      "answer": "Input -> Process -> Output: the computer accepts input from the user, processes it as per instructions and gives output as per the user's requirement.",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s02",
+      "topic": "1.2",
+      "q": "Write the three major functions of an input device.",
+      "answer": "(i) It takes the data to be processed by the user, (ii) converts it into machine-readable form, (iii) transmits the converted data into the main memory.",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s03",
+      "topic": "1.2",
+      "q": "What does the ALU do? Give two examples of its operations.",
+      "answer": "The ALU performs arithmetic (addition, subtraction, multiplication, division) and logical operations (AND, OR, NOT) and comparisons (equal to, greater than, less than). Its results are stored back in the memory unit.",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s04",
+      "topic": "1.3",
+      "q": "Differentiate between positional and non-positional number systems.",
+      "answer": "In a non-positional system the value of a symbol never depends on its position (e.g. unary: 3 = ***). In a positional system the value of a digit depends on its position and the base (e.g. decimal, binary).",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s05",
+      "topic": "1.3",
+      "q": "Name the units of data storage from bit to kilobyte.",
+      "answer": "Bit -> nibble (4 bits) -> byte (8 bits) -> kilobyte (1024 bytes).",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s06",
+      "topic": "1.4",
+      "q": "Convert decimal 27 into binary using the division-by-2 method.",
+      "answer": "Remainders are 1, 1, 0, 1, 1. Read bottom to top: 11011.",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s07",
+      "topic": "1.5",
+      "q": "Multiply 1011 x 101 in binary.",
+      "answer": "1011 x 101 = 110111 (11 x 5 = 55). Partial products 1011, 0000, 1011 are added.",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s08",
+      "topic": "1.6",
+      "q": "Represent -7.5 in an 8-bit register (4 integer, 3 fraction bits) using 2's complement.",
+      "answer": "7.5 = 0111.100; 1's complement = 1000.011; add 1 -> 1000.100; with sign bit 1: 11000100.",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s09",
+      "topic": "1.7",
+      "q": "Why does floating-point representation give a larger range than fixed-point?",
+      "answer": "It stores numbers as mantissa x r^exponent, so the binary point moves with the exponent. It does not reserve fixed bits for integer or fraction parts, so very large and very small numbers can be represented.",
+      "marks": 2
+    },
+    {
+      "id": "u1-a-s10",
+      "topic": "1.8",
+      "q": "What is a parity bit? Find the even-parity bit for 1011.",
+      "answer": "A parity bit is an extra bit added to make the total number of 1s even or odd. 1011 has three 1s (odd), so the even-parity bit is 1 and the transmitted message is 11011.",
+      "marks": 2
+    }
+  ]
+}

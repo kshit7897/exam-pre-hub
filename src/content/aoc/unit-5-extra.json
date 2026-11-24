@@ -1,0 +1,755 @@
+{
+  "mcq": [
+    {
+      "id": "u5-x-m01",
+      "topic": "5.1",
+      "q": "Which category is NOT one of the standard peripheral categories given in the notes?",
+      "options": [
+        "Input devices",
+        "Output devices",
+        "Storage devices",
+        "Processing devices"
+      ],
+      "answer": 3,
+      "explanation": "The notes list input, output, storage and communication devices. Processing units are part of the CPU."
+    },
+    {
+      "id": "u5-x-m02",
+      "topic": "5.1",
+      "q": "A modem or network card belongs to which peripheral category?",
+      "options": [
+        "Input",
+        "Output",
+        "Storage",
+        "Communication"
+      ],
+      "answer": 3,
+      "explanation": "Communication devices connect the computer to other systems."
+    },
+    {
+      "id": "u5-x-m03",
+      "topic": "5.2",
+      "q": "Which function of the I/O interface converts data between serial and parallel form?",
+      "options": [
+        "Selecting devices",
+        "Data conversion",
+        "Clock generation",
+        "Printing"
+      ],
+      "answer": 1,
+      "explanation": "Interfaces convert serial data to parallel and back, and digital to analog and back."
+    },
+    {
+      "id": "u5-x-m04",
+      "topic": "5.2",
+      "q": "Which of these is NOT an interface command?",
+      "options": [
+        "Control",
+        "Status",
+        "Data input",
+        "Compile"
+      ],
+      "answer": 3,
+      "explanation": "The four commands are control, status, data input and data output."
+    },
+    {
+      "id": "u5-x-m05",
+      "topic": "5.3",
+      "q": "In handshaking, RTS stands for:",
+      "options": [
+        "Request to Send",
+        "Ready to Stop",
+        "Read Transfer Signal",
+        "Return to Start"
+      ],
+      "answer": 0,
+      "explanation": "RTS = Request to Send, sent by the transmitter to say it is ready to send."
+    },
+    {
+      "id": "u5-x-m06",
+      "topic": "5.3",
+      "q": "In handshaking, CTS stands for:",
+      "options": [
+        "Clear to Send",
+        "Clock to Synchronize",
+        "Control Transfer Signal",
+        "Carry to Store"
+      ],
+      "answer": 0,
+      "explanation": "CTS = Clear to Send, the receiver's reply that it is ready to accept data."
+    },
+    {
+      "id": "u5-x-m07",
+      "topic": "5.3",
+      "q": "A strobe signal sent BEFORE the data is called:",
+      "options": [
+        "Trailing strobe",
+        "Leading strobe",
+        "Clock strobe",
+        "Handshake strobe"
+      ],
+      "answer": 1,
+      "explanation": "Leading strobe comes before the data; trailing strobe comes after."
+    },
+    {
+      "id": "u5-x-m08",
+      "topic": "5.3",
+      "q": "Which device generates the strobe signal in a source-initiated strobe?",
+      "options": [
+        "Destination",
+        "Source (transmitter)",
+        "Memory",
+        "Clock"
+      ],
+      "answer": 1,
+      "explanation": "In source-initiated strobe, the sender generates the strobe."
+    },
+    {
+      "id": "u5-x-m09",
+      "topic": "5.3",
+      "q": "In asynchronous transmission, each character is framed by:",
+      "options": [
+        "Clock pulses",
+        "Start and stop bits",
+        "Frame headers only",
+        "Parity bits only"
+      ],
+      "answer": 1,
+      "explanation": "Start and stop bits mark the beginning and end of each character."
+    },
+    {
+      "id": "u5-x-m10",
+      "topic": "5.3",
+      "q": "Which transmission sends data in frames or blocks?",
+      "options": [
+        "Asynchronous",
+        "Synchronous",
+        "Strobe",
+        "Handshake"
+      ],
+      "answer": 1,
+      "explanation": "Synchronous transmission sends frames or blocks at fixed intervals."
+    },
+    {
+      "id": "u5-x-m11",
+      "topic": "5.4",
+      "q": "During DMA the CPU:",
+      "options": [
+        "Is busy with every transfer",
+        "Is idle and has no control over the memory buses",
+        "Stops permanently",
+        "Only checks status"
+      ],
+      "answer": 1,
+      "explanation": "The DMA controller takes over the buses; the CPU is idle during the transfer."
+    },
+    {
+      "id": "u5-x-m12",
+      "topic": "5.4",
+      "q": "Which mode is best for fast devices and bulk transfers without CPU involvement?",
+      "options": [
+        "Programmed I/O",
+        "Interrupt initiated I/O",
+        "DMA",
+        "Polling only"
+      ],
+      "answer": 2,
+      "explanation": "DMA moves data directly between device and memory."
+    },
+    {
+      "id": "u5-x-m13",
+      "topic": "5.4",
+      "q": "In interrupt initiated I/O, after servicing the interrupt the CPU:",
+      "options": [
+        "Stops permanently",
+        "Returns to its previous task",
+        "Starts a new program",
+        "Shuts down the device"
+      ],
+      "answer": 1,
+      "explanation": "CPU services the transfer and resumes the earlier task."
+    },
+    {
+      "id": "u5-x-m14",
+      "topic": "5.4",
+      "q": "The main disadvantage of programmed I/O is:",
+      "options": [
+        "It is asynchronous",
+        "It keeps the CPU busy during transfers",
+        "It needs DMA",
+        "It uses no status register"
+      ],
+      "answer": 1,
+      "explanation": "CPU must monitor and transfer each item, degrading system performance."
+    },
+    {
+      "id": "u5-x-m15",
+      "topic": "5.5",
+      "q": "Which memory is the first to be accessed by the CPU in the memory hierarchy?",
+      "options": [
+        "Magnetic tape",
+        "Hard disk",
+        "Cache",
+        "ROM only"
+      ],
+      "answer": 2,
+      "explanation": "Cache is checked first, since it is the fastest and closest to the CPU."
+    },
+    {
+      "id": "u5-x-m16",
+      "topic": "5.5",
+      "q": "The ROM part of main memory stores:",
+      "options": [
+        "Current user files",
+        "The bootstrap loader program",
+        "Temporary results",
+        "Input characters"
+      ],
+      "answer": 1,
+      "explanation": "Bootstrap loader starts the computer when power is turned on."
+    },
+    {
+      "id": "u5-x-m17",
+      "topic": "5.5",
+      "q": "Which RAM needs refreshing circuitry?",
+      "options": [
+        "Static RAM",
+        "Dynamic RAM",
+        "Cache RAM",
+        "ROM"
+      ],
+      "answer": 1,
+      "explanation": "Dynamic RAM stores bits in capacitors, which leak charge and must be refreshed."
+    },
+    {
+      "id": "u5-x-m18",
+      "topic": "5.5",
+      "q": "Compared to SRAM, DRAM has:",
+      "options": [
+        "More memory cells per unit area",
+        "Fewer memory cells per unit area",
+        "No capacitors",
+        "No charge"
+      ],
+      "answer": 0,
+      "explanation": "DRAM has more cells per area, which is why it is used for main memory."
+    },
+    {
+      "id": "u5-x-m19",
+      "topic": "5.5",
+      "q": "Processes are loaded into primary memory because:",
+      "options": [
+        "Secondary memory cannot be accessed directly by the CPU",
+        "Primary memory is cheaper",
+        "Primary memory is non-volatile",
+        "Secondary memory is faster"
+      ],
+      "answer": 0,
+      "explanation": "CPU can access only primary memory directly, so ready processes are loaded there."
+    },
+    {
+      "id": "u5-x-m20",
+      "topic": "5.6",
+      "q": "In magnetic tape, data is recorded as:",
+      "options": [
+        "Bits in parallel across all tracks",
+        "Seven or nine bits per character with a parity bit",
+        "Sectors only",
+        "Charge on capacitors"
+      ],
+      "answer": 1,
+      "explanation": "Seven or nine bits are recorded together with a parity bit to form a character."
+    },
+    {
+      "id": "u5-x-m21",
+      "topic": "5.6",
+      "q": "Hard disk is also called:",
+      "options": [
+        "Removable disk",
+        "Fixed disk",
+        "Optical disk",
+        "Floppy disk"
+      ],
+      "answer": 1,
+      "explanation": "Hard disks are permanently attached to the unit, so they are called fixed disks."
+    },
+    {
+      "id": "u5-x-m22",
+      "topic": "5.7",
+      "q": "Cache memory is commonly how many times faster than RAM (per the notes)?",
+      "options": [
+        "2 to 3 times",
+        "10 to 100 times",
+        "1000 times",
+        "Same speed"
+      ],
+      "answer": 1,
+      "explanation": "Notes say cache is 10 to 100 times faster than RAM."
+    },
+    {
+      "id": "u5-x-m23",
+      "topic": "5.5",
+      "q": "Which is correct about access time in the hierarchy?",
+      "options": [
+        "Primary memory access time is less than secondary and greater than cache",
+        "Cache is slower than RAM",
+        "Secondary memory is faster than cache",
+        "All have equal access time"
+      ],
+      "answer": 0,
+      "explanation": "Cache is fastest, then primary (RAM), then secondary memory."
+    },
+    {
+      "id": "u5-x-m24",
+      "topic": "5.5",
+      "q": "Static RAM is used in:",
+      "options": [
+        "Cache memory",
+        "Hard disk",
+        "Magnetic tape",
+        "Optical disc"
+      ],
+      "answer": 0,
+      "explanation": "Static RAM is fast and used to implement cache."
+    },
+    {
+      "id": "u5-a-m01",
+      "topic": "5.3",
+      "q": "Which of these is NOT given as an asynchronous transfer example on the slide?",
+      "options": [
+        "Email",
+        "Forum",
+        "Radio",
+        "Frame-based clock bus"
+      ],
+      "answer": 3,
+      "explanation": "Slide examples are email, forum and radio."
+    },
+    {
+      "id": "u5-a-m02",
+      "topic": "5.3",
+      "q": "A strobe signal sent AFTER the data is called:",
+      "options": [
+        "Leading strobe",
+        "Trailing strobe",
+        "Clock strobe",
+        "Handshake strobe"
+      ],
+      "answer": 1,
+      "explanation": "Trailing strobe comes after the data; leading strobe comes before."
+    },
+    {
+      "id": "u5-a-m03",
+      "topic": "5.3",
+      "q": "In asynchronous transmission, data is sent in the form of:",
+      "options": [
+        "Frames or blocks",
+        "Bytes or characters",
+        "Packets only",
+        "A continuous clocked stream"
+      ],
+      "answer": 1,
+      "explanation": "Slide: asynchronous data is sent as bytes or characters; synchronous data is sent in frames or blocks."
+    },
+    {
+      "id": "u5-a-m04",
+      "topic": "5.3",
+      "q": "A buffer in data transfer is:",
+      "options": [
+        "A short-term location for storing incoming or departing data",
+        "A long-term disk",
+        "A clock generator",
+        "A type of interrupt"
+      ],
+      "answer": 0,
+      "explanation": "Slide definition of buffer."
+    },
+    {
+      "id": "u5-a-m05",
+      "topic": "5.3",
+      "q": "Compared with asynchronous transmission, synchronous transmission is:",
+      "options": [
+        "Cheaper",
+        "Faster",
+        "More complex to design",
+        "Based on start and stop bits"
+      ],
+      "answer": 1,
+      "explanation": "Slide: synchronous is faster (and costlier); asynchronous is slower and cheaper."
+    },
+    {
+      "id": "u5-a-m06",
+      "topic": "5.4",
+      "q": "In Programmed I/O, the I/O device cannot:",
+      "options": [
+        "Send data",
+        "Access memory directly",
+        "Be a keyboard",
+        "Generate status"
+      ],
+      "answer": 1,
+      "explanation": "Slide: I/O device cannot direct-access memory, so the CPU program must control each transfer."
+    },
+    {
+      "id": "u5-a-m07",
+      "topic": "5.4",
+      "q": "In Programmed I/O, the flag bit F is kept in the:",
+      "options": [
+        "Data register",
+        "Status register",
+        "Address bus",
+        "Main memory"
+      ],
+      "answer": 1,
+      "explanation": "The interface sets the flag F in its status register."
+    },
+    {
+      "id": "u5-a-m08",
+      "topic": "5.4",
+      "q": "Which characteristic belongs to interrupt-initiated I/O?",
+      "options": [
+        "CPU polls every device constantly",
+        "Reduces CPU involvement during idle times",
+        "Inefficient for devices with unpredictable response",
+        "Only synchronous operation"
+      ],
+      "answer": 1,
+      "explanation": "Slide: interrupt mode is asynchronous, reduces CPU involvement during idle times, and suits unpredictable or slow devices."
+    },
+    {
+      "id": "u5-a-m09",
+      "topic": "5.4",
+      "q": "The modes of data transfer aim to manage the trade-off between:",
+      "options": [
+        "Cost and colour",
+        "CPU involvement and data transfer speed",
+        "Memory size and printer speed",
+        "Input and output names"
+      ],
+      "answer": 1,
+      "explanation": "Slide: different modes manage CPU involvement against transfer speed."
+    },
+    {
+      "id": "u5-a-m10",
+      "topic": "5.4",
+      "q": "In DMA, which signal does the DMA controller send to request the bus from the processor?",
+      "options": [
+        "HLDA",
+        "BR (bus request)",
+        "BG (bus grant)",
+        "I/O read"
+      ],
+      "answer": 1,
+      "explanation": "BR goes to the processor's HOLD input; the processor acknowledges with HLDA and sends BG."
+    },
+    {
+      "id": "u5-a-m11",
+      "topic": "5.4",
+      "q": "During DMA, the CPU:",
+      "options": [
+        "Controls the memory buses",
+        "Is idle and has no control over the memory buses",
+        "Performs every byte transfer",
+        "Is removed from the system"
+      ],
+      "answer": 1,
+      "explanation": "Slide: during DMA the CPU is idle and the DMA controller takes over the buses."
+    },
+    {
+      "id": "u5-a-m12",
+      "topic": "5.5",
+      "q": "The slide describes secondary memory as:",
+      "options": [
+        "Internal and volatile",
+        "External and not directly accessible by the CPU",
+        "Directly accessible and costly",
+        "Only ROM"
+      ],
+      "answer": 1,
+      "explanation": "Secondary memory is external, non-volatile and not directly accessible by the processor."
+    },
+    {
+      "id": "u5-a-m13",
+      "topic": "5.5",
+      "q": "Which statement about Dynamic RAM is correct?",
+      "options": [
+        "It needs no refreshing",
+        "It stores charge on a capacitor and needs refreshing",
+        "It uses flip-flops",
+        "It is non-volatile"
+      ],
+      "answer": 1,
+      "explanation": "DRAM uses capacitor charge and refresh circuitry."
+    },
+    {
+      "id": "u5-a-m14",
+      "topic": "5.5",
+      "q": "RAM is also known as:",
+      "options": [
+        "Auxiliary memory",
+        "Computer memory or main memory",
+        "Firmware",
+        "Magnetic memory"
+      ],
+      "answer": 1,
+      "explanation": "Slide: RAM is known as computer memory or main memory."
+    },
+    {
+      "id": "u5-a-m15",
+      "topic": "5.5",
+      "q": "The bootstrap loader is stored in:",
+      "options": [
+        "RAM",
+        "ROM",
+        "Cache",
+        "Magnetic tape"
+      ],
+      "answer": 1,
+      "explanation": "The ROM portion of main memory holds the bootstrap loader, which starts the computer when power is on."
+    },
+    {
+      "id": "u5-a-m16",
+      "topic": "5.5",
+      "q": "Which ROM type can be programmed by the user only once?",
+      "options": [
+        "PROM",
+        "EPROM",
+        "EEPROM",
+        "Flash"
+      ],
+      "answer": 0,
+      "explanation": "PROM: the user writes a blank PROM once; it cannot be altered afterwards."
+    },
+    {
+      "id": "u5-a-m17",
+      "topic": "5.5",
+      "q": "Which statement about the memory hierarchy is correct?",
+      "options": [
+        "Access speed is the same for all memory types",
+        "Cache and main memory are faster but smaller and costlier",
+        "Magnetic tape is the fastest",
+        "Disks have the smallest capacity"
+      ],
+      "answer": 1,
+      "explanation": "Slide: cache and main memory are faster but smaller and more costly; access speed varies by type."
+    },
+    {
+      "id": "u5-a-m18",
+      "topic": "5.5",
+      "q": "Which of these is a primary memory type on the slide classification?",
+      "options": [
+        "Magnetic tape",
+        "Static RAM",
+        "Floppy disk",
+        "CD"
+      ],
+      "answer": 1,
+      "explanation": "Primary memory = RAM (SRAM, DRAM) and ROM (PROM, EPROM, EEPROM)."
+    },
+    {
+      "id": "u5-a-m19",
+      "topic": "5.6",
+      "q": "Magnetic tape records a character as:",
+      "options": [
+        "Seven or nine bits plus a parity bit",
+        "Sectors only",
+        "Tracks",
+        "Capacitor charges"
+      ],
+      "answer": 0,
+      "explanation": "Slide: usually 7 or 9 bits form a character together with a parity bit."
+    },
+    {
+      "id": "u5-a-m20",
+      "topic": "5.6",
+      "q": "Which secondary storage is permanently attached to the unit and cannot be removed by an occasional user?",
+      "options": [
+        "Floppy disk",
+        "Hard disk",
+        "Pen drive",
+        "CD"
+      ],
+      "answer": 1,
+      "explanation": "Slide: disks permanently attached to the unit assembly are called hard disks."
+    },
+    {
+      "id": "u5-a-m21",
+      "topic": "5.6",
+      "q": "Which of these is an optical disk storage device?",
+      "options": [
+        "Magnetic tape",
+        "CD",
+        "Pen drive",
+        "Hard disk"
+      ],
+      "answer": 1,
+      "explanation": "CD is an optical disk; pen drive is flash memory; hard disk and tape are magnetic."
+    },
+    {
+      "id": "u5-a-m22",
+      "topic": "5.6",
+      "q": "Which device is classified as flash memory on the slide?",
+      "options": [
+        "Hard disk",
+        "Pen drive",
+        "Magnetic tape",
+        "Floppy disk"
+      ],
+      "answer": 1,
+      "explanation": "Slide classification: flash memory -> pen drive."
+    },
+    {
+      "id": "u5-a-m23",
+      "topic": "5.7",
+      "q": "Cache memory is described as:",
+      "options": [
+        "Slow and large",
+        "Fast and small",
+        "Large and cheap",
+        "Non-volatile backup"
+      ],
+      "answer": 1,
+      "explanation": "Slide: cache is a fast and small memory."
+    },
+    {
+      "id": "u5-a-m24",
+      "topic": "5.7",
+      "q": "The primary role of cache memory is to:",
+      "options": [
+        "Increase storage capacity",
+        "Reduce the average time taken to access data",
+        "Replace the hard disk",
+        "Store firmware"
+      ],
+      "answer": 1,
+      "explanation": "Slide: cache reduces average access time and improves performance."
+    },
+    {
+      "id": "u5-a-m25",
+      "topic": "5.7",
+      "q": "According to the slides, cache memory is how many times faster than RAM?",
+      "options": [
+        "2 to 5 times",
+        "10 to 100 times",
+        "1000 to 2000 times",
+        "The same speed"
+      ],
+      "answer": 1,
+      "explanation": "Slide: 10 to 100 times faster than RAM."
+    }
+  ],
+  "short": [
+    {
+      "id": "u5-x-s01",
+      "topic": "5.3",
+      "q": "Explain the RTS and CTS signals in handshaking.",
+      "answer": "RTS (Request to Send) is sent by the transmitter when it is ready to provide data. CTS (Clear to Send) is the receiver's reply when it is ready to accept the data.",
+      "marks": 2
+    },
+    {
+      "id": "u5-x-s02",
+      "topic": "5.3",
+      "q": "Differentiate between leading strobe and trailing strobe.",
+      "answer": "A leading strobe is sent before the data; a trailing strobe is sent after the data.",
+      "marks": 2
+    },
+    {
+      "id": "u5-x-s03",
+      "topic": "5.4",
+      "q": "How does DMA differ from interrupt initiated I/O?",
+      "answer": "In interrupt I/O the CPU still transfers data after the interrupt. In DMA a controller takes over the buses and transfers data directly between device and memory while the CPU is idle.",
+      "marks": 2
+    },
+    {
+      "id": "u5-x-s04",
+      "topic": "5.4",
+      "q": "Why is DMA preferred for magnetic disks?",
+      "answer": "Disks are fast and transfer large blocks; DMA moves them directly into memory without CPU involvement, so the transfer is efficient.",
+      "marks": 2
+    },
+    {
+      "id": "u5-x-s05",
+      "topic": "5.2",
+      "q": "What functions does an I/O interface perform? Name any three.",
+      "answer": "Synchronizes CPU and device speeds; selects the right device; provides control and timing signals; data buffering; error detection; serial to parallel and digital to analog conversion (any three).",
+      "marks": 2
+    },
+    {
+      "id": "u5-x-s06",
+      "topic": "5.5",
+      "q": "What is a bootstrap loader and where is it stored?",
+      "answer": "It is a small initial program stored in ROM that starts the computer software when power is turned on.",
+      "marks": 2
+    },
+    {
+      "id": "u5-x-s07",
+      "topic": "5.5",
+      "q": "Why is DRAM preferred for main memory even though it needs refreshing?",
+      "answer": "It stores more cells per unit area, so it gives more capacity at lower cost, while SRAM is used for faster cache.",
+      "marks": 2
+    },
+    {
+      "id": "u5-x-s08",
+      "topic": "5.6",
+      "q": "What is the access style of magnetic tape and what is it mainly used for?",
+      "answer": "Sequential access, meaning data must be read in order. It is mainly used for backup.",
+      "marks": 2
+    },
+    {
+      "id": "u5-a-s01",
+      "topic": "5.3",
+      "q": "Explain strobe control in brief.",
+      "answer": "A separate strobe signal, generated by the transmitting device, is sent with the data to show when the data on the bus is valid. It is sent before the data (leading strobe) or after it (trailing strobe).",
+      "marks": 2
+    },
+    {
+      "id": "u5-a-s02",
+      "topic": "5.3",
+      "q": "What is handshaking and why is it used in asynchronous transfer?",
+      "answer": "Handshaking is a method in which the two devices exchange control signals (RTS/CTS, or data valid/data accepted) so both are ready before data moves. It guarantees synchronized and dependable data delivery.",
+      "marks": 2
+    },
+    {
+      "id": "u5-a-s03",
+      "topic": "5.4",
+      "q": "Why is programmed I/O inefficient?",
+      "answer": "The CPU must constantly monitor the device and transfer every data item through program instructions, so the processor stays busy and overall system performance is degraded.",
+      "marks": 2
+    },
+    {
+      "id": "u5-a-s04",
+      "topic": "5.4",
+      "q": "What are the BR and BG signals in DMA?",
+      "answer": "BR (bus request) is sent by the DMA controller to the processor's HOLD input to request the bus. The processor acknowledges with HLDA and then sends BG (bus grant) to the DMA controller.",
+      "marks": 2
+    },
+    {
+      "id": "u5-a-s05",
+      "topic": "5.5",
+      "q": "Why are programs and data kept in secondary memory, while the CPU runs them from primary memory?",
+      "answer": "Secondary memory is larger and cheaper, so it stores all programs and data. The CPU cannot access secondary memory directly, so the OS loads the required process into primary memory, which the CPU can access quickly.",
+      "marks": 2
+    },
+    {
+      "id": "u5-a-s06",
+      "topic": "5.6",
+      "q": "Explain the difference between a track and a sector on a magnetic disk.",
+      "answer": "A track is one of the concentric circles on the disk surface. A track is divided into sectors, and a sector is the minimum quantity of information transferred.",
+      "marks": 2
+    },
+    {
+      "id": "u5-a-s07",
+      "topic": "5.6",
+      "q": "Why is magnetic tape slower to access than a disk?",
+      "answer": "Magnetic tape is sequential access storage, so the tape must be read in order to reach the required data, which increases access time.",
+      "marks": 2
+    },
+    {
+      "id": "u5-a-s08",
+      "topic": "5.7",
+      "q": "Why is cache memory placed between the CPU and main memory?",
+      "answer": "It acts as a buffer and provides faster access to active data. This reduces the average time taken to access data and improves overall system performance.",
+      "marks": 2
+    }
+  ]
+}

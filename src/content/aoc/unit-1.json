@@ -1,0 +1,844 @@
+{
+  "id": "unit-1",
+  "title": "Basics of Digital Computer",
+  "topics": [
+    {
+      "id": "1.1",
+      "title": "Digital Computers & Characteristics",
+      "notes": [
+        "A digital computer is an electronic device that accepts input, processes it as per instructions and gives output.",
+        "The word 'digital' means information is represented by digits. Digital computers use the binary number system (0 and 1). A binary digit is called a bit.",
+        "Characteristics: Speed (millions of instructions per second), Automatic (works without constant human intervention), Accuracy (almost 100% correct results), Diligence (never gets tired or bored), Versatility (business, education, healthcare, engineering etc.), Storage (stores large data in hard disk, CD, pen drive etc.), No IQ / no feelings (works only on instructions given by the programmer; cannot take its own decisions).",
+        "Slide intro: the first electronic digital computers (late 1940s) were used mainly for numerical computations. Input is given and output comes within a fraction of a second.",
+        "Coding techniques let groups of bits represent decimal digits and letters too. English text is converted to binary, so computers and humans can communicate.",
+        "COMPUTER acronym (slide): Common machine, Purposely used for Technological, Educational and Research work. Basic law of computer: Input -> Process -> Output (accept input from the user, process it, give output as per user requirement)."
+      ]
+    },
+    {
+      "id": "1.2",
+      "title": "Block Diagram of Digital Computer",
+      "notes": [
+        "A computer system has two parts: Hardware (physical devices) and Software (instructions and data).",
+        "Hardware is divided into: CPU (ALU + Control Unit), Memory (Primary/Main and Secondary/Auxiliary), Input devices (keyboard, mouse, scanner, MICR, OMR, barcode reader, joystick, touchpad) and Output devices (monitor, printer, plotter, speaker, projector, headset).",
+        "Input unit: accepts data, converts it into machine-readable form and sends it to main memory.",
+        "Output unit: receives the result from CPU, converts it into human-readable form and displays it (soft copy or hard copy).",
+        "CPU is the 'brain' of the computer. ALU does arithmetic and logical operations (add, subtract, multiply, divide, AND, OR, NOT, comparisons). Control Unit (CU) directs the flow of data and instructions and keeps track of everything inside the system.",
+        "Memory unit stores instructions, data, intermediate results and final results. Primary memory is fast and directly accessed by CPU (RAM, ROM). Secondary/auxiliary memory is for permanent storage (hard disk, SSD, CD, pen drive).",
+        "Computer system = two functional entities: Software (instructions and data that the computer manipulates) and Hardware (all electronic and electromechanical devices forming the physical entity).",
+        "Hardware examples (slide): input = keyboard, mouse, scanner; output = monitor, printer, plotter, speaker; processing = CPU; storage = hard disk, RAM, SSD.",
+        "Internal hardware is grouped into three major parts on the slide: CPU, Random Access Memory and Input-Output Processor. Simple model computer = Input devices + CPU (memory unit, control unit, ALU) + Output devices.",
+        "Block diagram (slide): Input devices -> Input-Output Processor -> CPU (Control Unit, ALU, Main Memory) <-> Auxiliary Storage -> Output devices. Dotted lines = control flow, solid lines = data flow. Memory unit = main memory + auxiliary storage.",
+        "Input device functions (slide): takes the data to be processed, converts it into machine-readable form, transmits the converted data into main memory. Input devices on the slides also include OCR, trackball, touch panel, joystick, MICR, bar code reader.",
+        "Output device functions (slide): accepts output/result from the CPU, converts it into human-readable form, transmits the result to the output device. Output is soft copy or hard copy.",
+        "CPU (slide): the real brain of the computer. It receives instructions, interprets them and performs the required operations. It has two units: ALU and CU.",
+        "ALU (slide): data processing actually takes place here. All computations and comparisons are done here: basic arithmetic (addition, subtraction, multiplication, division), comparisons (equal to, greater than, less than) and logical operations (AND, OR, NOT). The ALU result is stored back in the memory unit.",
+        "Control Unit (slide): controls all peripherals connected to it. Its main job is to keep track of everything inside the computer. It directs the flow of data between CPU, memory and I/O devices, and manages the computer's internal and external parts.",
+        "Memory unit (slide): data and instructions must be stored before processing starts. Two types: primary (main) and secondary (auxiliary) memory, both essential. Functions: store instructions and data, store intermediate results, store results. After processing it holds the output until it is sent to output devices or saved permanently.",
+        "Revision (slide): Input devices enter data and instructions. Output devices present processed data in readable form. CPU = brain; CU directs the flow of data and instructions; ALU does calculations and logical comparisons; MU stores data and instructions temporarily or permanently."
+      ]
+    },
+    {
+      "id": "1.3",
+      "title": "Number Systems (Introduction)",
+      "notes": [
+        "Number system = symbols used to represent numbers. Two types: Non-positional (value of a symbol never changes with position, e.g. Unary/tally) and Positional/weighted (value depends on position of digit).",
+        "In a positional number system the value of a digit depends on three things: the digit, its place (position) and the base.",
+        "MSB = most significant digit (highest place value), LSB = least significant digit (lowest place value).",
+        "Decimal: base 10, digits 0-9. Binary: base 2, digits 0,1. Octal: base 8, digits 0-7. Hexadecimal: base 16, digits 0-9 and A-F (A=10, B=11, C=12, D=13, E=14, F=15).",
+        "Positional value example: 49365 = 4x10^4 + 9x10^3 + 3x10^2 + 6x10^1 + 5x10^0.",
+        "Non-positional number system (slide): the value of a symbol never changes with its position; only the symbol and how many times it appears matter. Earliest example: Unary, one symbol only, e.g. 1 -> *, 3 -> ***, 5 -> *****.",
+        "Positional number system (slide): the weight or value of a digit depends on its position. It is also called a weighted number system. The value depends on three factors: the digit, its positional value and the base.",
+        "Base is written from right to left: 10^0 at the rightmost place, then 10^1, 10^2 and so on, each place to the left is 10 times greater (for decimal).",
+        "MSD/MSB = digit with the highest place value; LSD/LSB = digit with the lowest place value. Example 1925: MSD = 1, LSD = 5.",
+        "Four positional systems (slide): decimal (base 10, digits 0-9), binary (base 2, 0 and 1), octal (base 8, 0-7), hexadecimal (base 16, 0-9 and A-F). Slide summary table: Binary 0,1 base 2; Decimal 0-9 base 10; Octal 0-7 base 8; Hexadecimal 0-9, A-F base 16.",
+        "Decimal place names (slide): ones, tens, hundreds, thousands, ten thousands, hundred thousands. Example 49,365 = 4x10^4 + 9x10^3 + 3x10^2 + 6x10^1 + 5x10^0.",
+        "Binary units (slide pyramid): bit -> nibble (4 bits) -> byte (8 bits) -> kilobyte KB (1024 bytes) -> MB (1024 KB) -> GB (1024 MB) -> TB (1024 GB) -> PB (1024 TB) -> EB (1024 PB) -> ZB (1024 EB) -> YB (1024 ZB).",
+        "Binary base is 2: a binary number 101 has 3 bits (each digit is a bit). Computers operate only in machine language made of 0 and 1."
+      ]
+    },
+    {
+      "id": "1.4",
+      "title": "Number Conversions",
+      "notes": [
+        "Decimal to Binary: divide by 2 repeatedly, write remainders, read them bottom to top. Example: 5 -> 101; 27 -> 11011; 99 -> 1100011; 117 -> 1110101; 59 -> 111011; 71 -> 1000111.",
+        "Binary to Decimal: multiply each bit by its power of 2 (2^0, 2^1, ...) and add. Example: 1011 = 8+0+2+1 = 11; 10011 = 19; 1110011 = 115.",
+        "Octal to Decimal: multiply each digit by power of 8. Example: (135)8 = 1x64 + 3x8 + 5x1 = 93.",
+        "Hexadecimal to Decimal: multiply each digit by power of 16. Example: (F2)16 = 15x16 + 2 = 242.",
+        "Binary to Octal: group bits in 3s from the right. Binary to Hexadecimal: group bits in 4s from the right.",
+        "Division-by-2 method (slide): take the decimal number, divide by 2, write the remainder, repeat on the quotient until it becomes 0. The binary number is the remainders read from bottom to top.",
+        "Slide worked examples: 5 -> 101; 27 -> 11011; 99 -> 1100011; 117 -> 1110101; 59 -> 111011; 71 -> 1000111.",
+        "Slide practice exercise (answers): 9 -> 1001; 33 -> 100001; 72 -> 1001000; 123 -> 1111011; 237 -> 11101101.",
+        "Binary to decimal (slide): write the number, assign powers of 2 from the right, multiply each bit with its power, add the results. Method 2 uses a place-value row (8 4 2 1 etc.) and adds the place values where the bit is 1.",
+        "Slide worked examples: 1011 = 11; 1000001 = 65; 10011 = 19; 11110 = 30; 110001 = 49; 1110011 = 115; 101011 = 43 (see the slide error below).",
+        "Slide practice (answers): 11100 = 28; 1011100 = 92; 10111 = 23; 101100 = 44; 11100011 = 227.",
+        "Slide error to know: the slide writes 101011 = 32+0+8+0+1+1 = 42. The correct value is 32+8+2+1 = 43 (the bit for 2^1 is 1). Use 43 in the exam."
+      ]
+    },
+    {
+      "id": "1.5",
+      "title": "Binary Arithmetic",
+      "notes": [
+        "Binary addition rules: 0+0=0, 0+1=1, 1+0=1, 1+1=10 (sum 0, carry 1). Example: 1101 + 1011 = 11000.",
+        "Binary subtraction: 0-0=0, 1-0=1, 1-1=0, 0-1=1 with borrow 1 from the next higher bit. Example: 1010 - 0111 = 0011; 110100 - 100111 = 001101.",
+        "Binary multiplication: same as decimal multiplication, but only 0 and 1 are used. Multiplying by 1 copies the multiplicand, by 0 gives zeros. Example: 1011 x 101 = 110111.",
+        "Binary division: repeated subtraction. Compare divisor with the part of dividend, if divisor fits write 1 in quotient, else write 0 and bring down the next bit. The leftover is the remainder. Example: 10010011 / 1011 = quotient 1101, remainder 0100.",
+        "Binary addition rules (slide table): 0+0 = 0 (carry 0); 0+1 = 1; 1+0 = 1; 1+1 = 0 with carry 1. Examples: 1101 + 1011 = 11000 (slide); 110110 + 101011 = 1100001 (slide).",
+        "Binary subtraction rules (slide table, A - B): 0-0 = 0; 0-1 = 1 with 1 bit borrow; 1-0 = 1; 1-1 = 0. Examples (slides): 1010 - 0111 = 0011; 110100 - 100111 = 001101; 101110 - 100101 = 001001 (46 - 37 = 9). The slide title for example 3 writes the subtraction in reverse order.",
+        "Binary multiplication (slide examples): 110 x 11 = 10010; 1011 x 101 = 110111; 1111 x 110 = 1011010; 1100 x 1011 = 10000100; 111 x 111 = 110001; 11001 x 111 = 10101111; 1000 x 1100 = 1100000; 11 x 10 = 110. Method: write partial products (multiplier bit 1 copies the multiplicand, 0 gives zeros), shift left for each next bit, then add.",
+        "Binary division (slide): division is repeated subtraction, similar to decimal division. Rules table: 0/0 = 0; 0/1 = 0; 1/0 = 0 (as the slide shows); 1/1 = 1.",
+        "Slide division examples: 100100 / 100 = quotient 1001, remainder 000; 1010 / 10 = quotient 101, remainder 00; 11010 / 101 = quotient 101, remainder 001; 10010011 / 1011 = quotient 1101, remainder 0100.",
+        "Decimal division example (slide): 5 / 2 = quotient 2, remainder 1. Terms: divisor, dividend, quotient, remainder."
+      ]
+    },
+    {
+      "id": "1.6",
+      "title": "Fixed-Point Representation",
+      "notes": [
+        "Real (fractional) numbers are stored in memory registers of fixed size (8, 16, 32 bits). Two approaches: Fixed-point and Floating-point.",
+        "Fixed-point: the binary point is at a fixed position, so the register has a fixed number of bits for the integer part and the fractional part.",
+        "Unsigned fixed-point: only non-negative numbers. Example: 5.5 in 8-bit register with 4 integer bits and 4 fraction bits = 0101.1000. Example 2: 25.25 with 5 integer bits and 2 fraction bits, binary 11001.01.",
+        "Signed fixed-point: MSB is the sign bit (0 = positive, 1 = negative). Three methods: Sign-magnitude, 1's complement, 2's complement.",
+        "Sign-magnitude: 35 = 0100011 (7-bit magnitude), so +35 = 00100011 and -35 = 10100011.",
+        "1's complement of a number = invert all bits. 2's complement = 1's complement + 1. Example: -35 in 8 bits: 00100011 -> 1's complement 11011100 -> 2's complement 11011101.",
+        "Example -7.5 in 8-bit register (1 sign, 4 integer, 3 fraction): 7.5 = 0111.100. 1's complement = 1000.011. 2's complement = 1000.100.",
+        "Advantages of fixed-point: simple representation, simple hardware, faster computation. Disadvantages: limited range and limited precision.",
+        "Fixed-point (slide): the position of the binary point is fixed. It has a fixed number of bits for the integer part and the fractional part. Numbers can be signed or unsigned, and integer or fractional.",
+        "Unsigned fixed-point example (slide): store 25.25 in 8 bits with 5 integer bits and 2 fraction bits: 11001.01 (integer 11001, fraction 01).",
+        "Signed fixed-point structure (slide): Sign bit | Integer field | Fractional field. Sign bit: 1 = negative, 0 = positive. Register layouts: 8-bit = 1 sign, 4 integer, 3 fraction; 16-bit = 1 sign, 9 integer, 6 fraction; 32-bit = 1 sign, 15 integer, 16 fraction.",
+        "Slide diagram example: place values 2^4 2^3 2^2 2^1 2^0 . 2^-1 2^-2 2^-3 with bits 00010 . 110 = 2 + 0.75 = 2.75.",
+        "Sign-magnitude, -7.5 in 8 bits (4 integer, 3 fraction): 7.5 = 111.1 = 0111.100; sign bit 1 -> 1 0111 100 = 10111100.",
+        "1's complement of -7.5: 0111.100 -> invert -> 1000.011; with sign bit 1 -> 1 1000 011 = 11000011.",
+        "2's complement of -7.5: 1's complement 1000.011 + 1 = 1000.100; with sign bit 1 -> 1 1000 100 = 11000100.",
+        "Advantages (slide): simple representation, simple hardware implementation, faster computation compared to floating point, better performance. Disadvantages: limited range (cannot represent very large or very small numbers) and limited precision (number of fraction bits is fixed)."
+      ]
+    },
+    {
+      "id": "1.7",
+      "title": "Floating-Point Representation",
+      "notes": [
+        "Floating-point numbers are stored in exponential form: number = Mantissa x Radix^Exponent. Example: 1,200,000 = 0.12 x 10^7 (decimal scientific form).",
+        "Floating-point representation has two parts: Mantissa (fixed point part) and Exponent. It does not reserve a fixed number of bits for integer or fractional part.",
+        "Example: 111101.1000110 in binary floating-point form = 1.111011000110 x 2^5 (normalized mantissa).",
+        "Advantages: can represent very large and very small numbers, flexible scaling, represents fractions easily.",
+        "Disadvantages: cannot represent all real numbers exactly (e.g. 0.1), needs more bits (32-bit single precision, 64-bit double precision), operations are slower than fixed-point.",
+        "Floating-point (slide): binary numbers can be described in exponential form, called floating-point representation. Formula: number = m x r^e (mantissa x radix^exponent). Example: 1,200,000 = 0.12 x 10^7 (m = 0.12, r = 10, e = 7).",
+        "It does not reserve any specific number of bits for the integer or fractional part. It has two parts: fixed-point mantissa and exponent. Storage layout (slide): Sign | Fixed-point mantissa | Exponent.",
+        "Slide example: 111101.1000110 -> m = 1.111011000110, r = 2, e = 5. Sign bit 0, mantissa 1.111011000110, exponent 5.",
+        "Advantages (slide): can represent very large numbers; stored as m x r^e like scientific notation; fractions like 0.1, 0.25, 3.75 can be represented easily; more scaling and flexibility than fixed-point.",
+        "Disadvantages (slide): cannot represent all real numbers exactly (e.g. 0.1 in binary), so precision is limited; needs more bits (32-bit single precision, 64-bit double precision) than fixed-point; operations on floating-point numbers can be slower."
+      ]
+    },
+    {
+      "id": "1.8",
+      "title": "Error Detection - Parity Bit",
+      "notes": [
+        "An error detection code detects errors during transmission. Redundant (extra) bits are added to the data. Methods: Parity bit, Checksum, Cyclic Redundancy Check (CRC).",
+        "Parity bit is an extra bit added to make the total number of 1s either even (even parity) or odd (odd parity).",
+        "Even parity example: data 1011 has three 1s (odd), so add 1 -> 11011 (total four 1s, even).",
+        "Odd parity example: data 1011 has three 1s (already odd), so add 0 -> 01011 (total three 1s, odd).",
+        "Parity generator adds the bit at the sender. Parity checker at the receiver recounts the 1s; if the count does not match the chosen parity, an error is detected. A single parity bit detects single-bit errors but cannot always locate them.",
+        "Error detection code (slide): a binary code that detects errors during transmission. Without redundant (extra) bits it is not possible to detect errors in the received message. Three methods: parity bit, check sum, cyclic redundancy check (CRC).",
+        "Parity bit (slide): an extra bit added to a binary message to make the total number of 1s either odd or even. Even parity: total 1s should be even. Odd parity: total 1s should be odd.",
+        "Even parity example (slide): 1011 has three 1s (odd), add 1 -> 11011 (four 1s). Odd parity example (slide): 1011 has three 1s (already odd), add 0 -> 01011.",
+        "Odd parity rule (slide): if the given string has an even number of 1s, append 1; otherwise append 0.",
+        "Parity table for 3-bit messages (slide): 000 -> P(odd)=1, P(even)=0; 001 -> 0, 1; 010 -> 0, 1; 011 -> 1, 0; 100 -> 0, 1; 101 -> 1, 0; 110 -> 1, 0; 111 -> 0, 1.",
+        "Parity system flow (slide): the sender's parity generator adds the parity bit (even parity) to make the new message. The receiver's parity checker checks it; if an error is found, it demands signal regeneration."
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "id": "u1-m01",
+      "topic": "1.1",
+      "q": "Digital computers use which number system internally?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 1,
+      "explanation": "Digital computers work only with 0 and 1, i.e. the binary system."
+    },
+    {
+      "id": "u1-m02",
+      "topic": "1.1",
+      "q": "A single binary digit is called a ____.",
+      "options": [
+        "Byte",
+        "Nibble",
+        "Bit",
+        "Word"
+      ],
+      "answer": 2,
+      "explanation": "Binary digit = bit. 8 bits = 1 byte."
+    },
+    {
+      "id": "u1-m03",
+      "topic": "1.1",
+      "q": "Which characteristic of a computer means it can work for hours without any mistake or fatigue?",
+      "options": [
+        "Speed",
+        "Diligence",
+        "Versatility",
+        "Storage"
+      ],
+      "answer": 1,
+      "explanation": "Diligence: a computer is not affected by tiredness, lack of focus or boredom."
+    },
+    {
+      "id": "u1-m04",
+      "topic": "1.1",
+      "q": "A computer can take its own decision because it has high IQ.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "A computer has zero IQ. It works only on instructions given by a programmer and cannot take its own decisions."
+    },
+    {
+      "id": "u1-m05",
+      "topic": "1.1",
+      "q": "Which characteristic refers to the ability of a computer to work without constant human intervention once instructions are given?",
+      "options": [
+        "Accuracy",
+        "Automatic",
+        "Versatility",
+        "Storage"
+      ],
+      "answer": 1,
+      "explanation": "Automatic: after proper instructions, the computer works on its own."
+    },
+    {
+      "id": "u1-m06",
+      "topic": "1.1",
+      "q": "Speed of a computer is measured in terms of:",
+      "options": [
+        "Bits per second",
+        "Instructions per second",
+        "Bytes per day",
+        "Hertz only"
+      ],
+      "answer": 1,
+      "explanation": "A computer can process millions of instructions per second."
+    },
+    {
+      "id": "u1-m07",
+      "topic": "1.2",
+      "q": "Which unit of the computer does arithmetic and logical operations?",
+      "options": [
+        "Control Unit",
+        "ALU",
+        "Memory Unit",
+        "Input Unit"
+      ],
+      "answer": 1,
+      "explanation": "ALU (Arithmetic Logic Unit) performs arithmetic and logical operations."
+    },
+    {
+      "id": "u1-m08",
+      "topic": "1.2",
+      "q": "Which unit directs the flow of data between CPU, memory and I/O devices?",
+      "options": [
+        "ALU",
+        "Control Unit",
+        "Input Unit",
+        "Output Unit"
+      ],
+      "answer": 1,
+      "explanation": "The Control Unit (CU) manages the flow of data and instructions."
+    },
+    {
+      "id": "u1-m09",
+      "topic": "1.2",
+      "q": "Which of these is an input device?",
+      "options": [
+        "Printer",
+        "Monitor",
+        "Scanner",
+        "Plotter"
+      ],
+      "answer": 2,
+      "explanation": "Scanner sends data into the computer. Printer, monitor and plotter are output devices."
+    },
+    {
+      "id": "u1-m10",
+      "topic": "1.2",
+      "q": "Which of these is an output device?",
+      "options": [
+        "Keyboard",
+        "Mouse",
+        "Scanner",
+        "Speaker"
+      ],
+      "answer": 3,
+      "explanation": "Speaker outputs sound. Keyboard, mouse and scanner are input devices."
+    },
+    {
+      "id": "u1-m11",
+      "topic": "1.2",
+      "q": "Which memory is used for permanent storage of data?",
+      "options": [
+        "Primary memory",
+        "Cache",
+        "Secondary (auxiliary) memory",
+        "Register"
+      ],
+      "answer": 2,
+      "explanation": "Secondary/auxiliary memory such as hard disk, SSD or pen drive stores data permanently."
+    },
+    {
+      "id": "u1-m12",
+      "topic": "1.2",
+      "q": "The CPU is commonly called the ____ of the computer.",
+      "options": [
+        "Heart",
+        "Brain",
+        "Memory",
+        "Eye"
+      ],
+      "answer": 1,
+      "explanation": "CPU controls all tasks of the computer, like a human brain."
+    },
+    {
+      "id": "u1-m13",
+      "topic": "1.2",
+      "q": "Which of these is NOT a part of the CPU?",
+      "options": [
+        "ALU",
+        "Control Unit",
+        "Main memory",
+        "Registers"
+      ],
+      "answer": 2,
+      "explanation": "Main memory is a separate unit. CPU consists of ALU and CU (plus registers)."
+    },
+    {
+      "id": "u1-m14",
+      "topic": "1.3",
+      "q": "In a positional number system, the value of a digit depends on:",
+      "options": [
+        "Only the digit itself",
+        "Digit, its position and the base",
+        "Only the base",
+        "Number of symbols"
+      ],
+      "answer": 1,
+      "explanation": "Value = digit x base^position, so digit, position and base all matter."
+    },
+    {
+      "id": "u1-m15",
+      "topic": "1.3",
+      "q": "Unary number system is an example of:",
+      "options": [
+        "Positional system",
+        "Non-positional system",
+        "Octal system",
+        "Binary system"
+      ],
+      "answer": 1,
+      "explanation": "In non-positional systems the symbol value does not depend on position. Unary uses one symbol (tally marks)."
+    },
+    {
+      "id": "u1-m16",
+      "topic": "1.3",
+      "q": "The base of the hexadecimal number system is:",
+      "options": [
+        "8",
+        "10",
+        "16",
+        "2"
+      ],
+      "answer": 2,
+      "explanation": "Hexadecimal is base 16 (digits 0-9 and A-F)."
+    },
+    {
+      "id": "u1-m17",
+      "topic": "1.3",
+      "q": "Base of the octal number system is:",
+      "options": [
+        "2",
+        "8",
+        "10",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "Octal uses digits 0-7, so base 8."
+    },
+    {
+      "id": "u1-m18",
+      "topic": "1.3",
+      "q": "In the number 49365, the digit 9 is at the 10^3 place. Its value is:",
+      "options": [
+        "9",
+        "90",
+        "900",
+        "9000"
+      ],
+      "answer": 3,
+      "explanation": "9 x 10^3 = 9000."
+    },
+    {
+      "id": "u1-m19",
+      "topic": "1.3",
+      "q": "Which digit has the highest place value in a number?",
+      "options": [
+        "LSD",
+        "MSD",
+        "Radix",
+        "Mantissa"
+      ],
+      "answer": 1,
+      "explanation": "MSD (Most Significant Digit) has the highest place value."
+    },
+    {
+      "id": "u1-m20",
+      "topic": "1.4",
+      "q": "Decimal 5 converted to binary is:",
+      "options": [
+        "110",
+        "101",
+        "111",
+        "100"
+      ],
+      "answer": 1,
+      "explanation": "4 + 1 = 5 = 101."
+    },
+    {
+      "id": "u1-m21",
+      "topic": "1.4",
+      "q": "Decimal 27 in binary is:",
+      "options": [
+        "11011",
+        "11101",
+        "10111",
+        "11001"
+      ],
+      "answer": 0,
+      "explanation": "16 + 8 + 2 + 1 = 27 = 11011."
+    },
+    {
+      "id": "u1-m22",
+      "topic": "1.4",
+      "q": "Binary 10011 in decimal is:",
+      "options": [
+        "17",
+        "19",
+        "21",
+        "23"
+      ],
+      "answer": 1,
+      "explanation": "16 + 2 + 1 = 19."
+    },
+    {
+      "id": "u1-m23",
+      "topic": "1.4",
+      "q": "Octal (135) in decimal is:",
+      "options": [
+        "93",
+        "91",
+        "95",
+        "135"
+      ],
+      "answer": 0,
+      "explanation": "1x64 + 3x8 + 5 = 64 + 24 + 5 = 93."
+    },
+    {
+      "id": "u1-m24",
+      "topic": "1.4",
+      "q": "Hexadecimal (F2) in decimal is:",
+      "options": [
+        "242",
+        "252",
+        "232",
+        "256"
+      ],
+      "answer": 0,
+      "explanation": "15 x 16 + 2 = 242."
+    },
+    {
+      "id": "u1-m25",
+      "topic": "1.4",
+      "q": "Binary 1110011 in decimal is:",
+      "options": [
+        "113",
+        "115",
+        "117",
+        "119"
+      ],
+      "answer": 1,
+      "explanation": "64 + 32 + 16 + 2 + 1 = 115."
+    },
+    {
+      "id": "u1-m26",
+      "topic": "1.5",
+      "q": "Sum of binary 1101 and 1011 is:",
+      "options": [
+        "11000",
+        "10111",
+        "11110",
+        "11100"
+      ],
+      "answer": 0,
+      "explanation": "13 + 11 = 24 = 11000."
+    },
+    {
+      "id": "u1-m27",
+      "topic": "1.5",
+      "q": "Binary 1010 - 0111 equals:",
+      "options": [
+        "0011",
+        "0101",
+        "0111",
+        "1001"
+      ],
+      "answer": 0,
+      "explanation": "10 - 7 = 3 = 0011."
+    },
+    {
+      "id": "u1-m28",
+      "topic": "1.5",
+      "q": "Binary multiplication 1011 x 101 equals:",
+      "options": [
+        "110111",
+        "101111",
+        "111011",
+        "100111"
+      ],
+      "answer": 0,
+      "explanation": "11 x 5 = 55 = 110111."
+    },
+    {
+      "id": "u1-m29",
+      "topic": "1.5",
+      "q": "In binary addition, 1 + 1 equals:",
+      "options": [
+        "0 carry 1",
+        "1 carry 1",
+        "2",
+        "1 carry 0"
+      ],
+      "answer": 0,
+      "explanation": "1 + 1 = 10 in binary: sum 0, carry 1."
+    },
+    {
+      "id": "u1-m30",
+      "topic": "1.5",
+      "q": "Binary division is basically:",
+      "options": [
+        "Repeated addition",
+        "Repeated subtraction",
+        "Repeated multiplication",
+        "Repeated shifting only"
+      ],
+      "answer": 1,
+      "explanation": "Division is repeated subtraction, the same idea as in decimal."
+    },
+    {
+      "id": "u1-m31",
+      "topic": "1.6",
+      "q": "In fixed-point representation the binary point is:",
+      "options": [
+        "Floating",
+        "Fixed at a specific position",
+        "Removed",
+        "Decided by the exponent"
+      ],
+      "answer": 1,
+      "explanation": "Fixed-point keeps the binary point at a fixed place in the register."
+    },
+    {
+      "id": "u1-m32",
+      "topic": "1.6",
+      "q": "In signed fixed-point (sign-magnitude) form, MSB 1 means:",
+      "options": [
+        "Positive number",
+        "Negative number",
+        "Zero",
+        "Overflow"
+      ],
+      "answer": 1,
+      "explanation": "Sign bit 0 = positive, 1 = negative."
+    },
+    {
+      "id": "u1-m33",
+      "topic": "1.6",
+      "q": "2's complement of 00100011 (35) is:",
+      "options": [
+        "11011100",
+        "11011101",
+        "00100011",
+        "11100010"
+      ],
+      "answer": 1,
+      "explanation": "1's complement = 11011100, add 1 gives 11011101."
+    },
+    {
+      "id": "u1-m34",
+      "topic": "1.6",
+      "q": "1's complement of 0111.100 (7.5) is:",
+      "options": [
+        "1000.011",
+        "1000.100",
+        "0111.011",
+        "1111.100"
+      ],
+      "answer": 0,
+      "explanation": "Invert every bit: 0111.100 -> 1000.011."
+    },
+    {
+      "id": "u1-m35",
+      "topic": "1.6",
+      "q": "Which is a disadvantage of fixed-point representation?",
+      "options": [
+        "Simple hardware",
+        "Faster computation",
+        "Limited range",
+        "Simple representation"
+      ],
+      "answer": 2,
+      "explanation": "Fixed-point has limited range and limited precision."
+    },
+    {
+      "id": "u1-m36",
+      "topic": "1.7",
+      "q": "Floating-point representation consists of:",
+      "options": [
+        "Sign and magnitude only",
+        "Mantissa and exponent",
+        "Integer and fraction bits",
+        "Base and radix only"
+      ],
+      "answer": 1,
+      "explanation": "A floating-point number has a mantissa and an exponent."
+    },
+    {
+      "id": "u1-m37",
+      "topic": "1.7",
+      "q": "Which standard size is double precision floating-point?",
+      "options": [
+        "16 bit",
+        "32 bit",
+        "64 bit",
+        "128 bit"
+      ],
+      "answer": 2,
+      "explanation": "Single precision = 32 bits, double precision = 64 bits."
+    },
+    {
+      "id": "u1-m38",
+      "topic": "1.7",
+      "q": "Which is a disadvantage of floating-point representation?",
+      "options": [
+        "Can represent very large numbers",
+        "Cannot represent all real numbers exactly",
+        "Flexible scaling",
+        "Represents fractions easily"
+      ],
+      "answer": 1,
+      "explanation": "Limited precision: e.g. 0.1 cannot be stored exactly in binary."
+    },
+    {
+      "id": "u1-m39",
+      "topic": "1.8",
+      "q": "Data bits 1011 with EVEN parity. The parity bit is:",
+      "options": [
+        "0",
+        "1"
+      ],
+      "answer": 1,
+      "explanation": "Three 1s in 1011, so add 1 to make the total count of 1s even (four)."
+    },
+    {
+      "id": "u1-m40",
+      "topic": "1.8",
+      "q": "Data bits 1011 with ODD parity. The transmitted message is:",
+      "options": [
+        "11011",
+        "01011",
+        "10110",
+        "10111"
+      ],
+      "answer": 1,
+      "explanation": "Three 1s is already odd, so the parity bit is 0: 01011."
+    }
+  ],
+  "short": [
+    {
+      "id": "u1-s01",
+      "topic": "1.1",
+      "q": "List any four characteristics of a digital computer.",
+      "answer": "Speed, accuracy, diligence, versatility, automatic working, storage capacity (any four).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s02",
+      "topic": "1.1",
+      "q": "Why is a computer said to have 'zero IQ'?",
+      "answer": "A computer does not understand or think on its own. It only processes the instructions given by a programmer and cannot take its own decisions.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s03",
+      "topic": "1.2",
+      "q": "What is the function of the Input Unit?",
+      "answer": "It accepts data from the user, converts it into machine-readable (binary) form and transmits it to the main memory.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s04",
+      "topic": "1.2",
+      "q": "Name the two parts of the CPU and state one function of each.",
+      "answer": "ALU: performs arithmetic and logical operations. CU: controls and directs the flow of data and instructions.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s05",
+      "topic": "1.2",
+      "q": "What is the difference between primary and secondary memory?",
+      "answer": "Primary memory is fast, directly accessed by the CPU and temporary (RAM). Secondary memory is slower, used for permanent storage (hard disk, SSD, pen drive).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s06",
+      "topic": "1.3",
+      "q": "What is the difference between a positional and a non-positional number system?",
+      "answer": "In a positional system the value of a digit depends on its position and base (e.g. decimal, binary). In a non-positional system the value of a symbol never changes with its position (e.g. Unary).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s07",
+      "topic": "1.3",
+      "q": "Define MSB and LSB.",
+      "answer": "MSB (Most Significant Bit/Digit) is the bit with the highest place value. LSB (Least Significant Bit/Digit) is the bit with the lowest place value.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s08",
+      "topic": "1.3",
+      "q": "Write the base and the digits used in the hexadecimal number system.",
+      "answer": "Base 16. Digits: 0-9 and A-F, where A=10, B=11, C=12, D=13, E=14, F=15.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s09",
+      "topic": "1.4",
+      "q": "Convert decimal 99 to binary using the division-by-2 method.",
+      "answer": "99 -> 1100011.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s10",
+      "topic": "1.4",
+      "q": "Convert binary 101011 to decimal.",
+      "answer": "32 + 8 + 2 + 1 = 43.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s11",
+      "topic": "1.4",
+      "q": "Convert octal (135) to decimal.",
+      "answer": "1x8^2 + 3x8^1 + 5x8^0 = 64 + 24 + 5 = 93.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s12",
+      "topic": "1.4",
+      "q": "Convert hexadecimal (F2) to decimal.",
+      "answer": "15x16 + 2 = 242.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s13",
+      "topic": "1.5",
+      "q": "Add the binary numbers 110110 and 101011.",
+      "answer": "Sum = 1100001.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s14",
+      "topic": "1.5",
+      "q": "Subtract 100111 from 110100 in binary.",
+      "answer": "110100 - 100111 = 001101 (52 - 39 = 13).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s15",
+      "topic": "1.5",
+      "q": "Multiply 11 x 10 in binary.",
+      "answer": "11 x 10 = 110 (3 x 2 = 6).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s16",
+      "topic": "1.5",
+      "q": "What is the rule of binary division?",
+      "answer": "Compare divisor with the dividend part from left. If the divisor fits, write 1 in the quotient and subtract; otherwise write 0 and bring down the next bit. The leftover is the remainder.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s17",
+      "topic": "1.6",
+      "q": "Represent 5.5 in an 8-bit unsigned fixed-point register (4 integer bits, 4 fraction bits).",
+      "answer": "5 = 0101 and .5 = 1000, so 0101.1000.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s18",
+      "topic": "1.6",
+      "q": "What is the sign bit in signed fixed-point representation and what do 0 and 1 mean?",
+      "answer": "The MSB is the sign bit. 0 means the number is positive, 1 means the number is negative.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s19",
+      "topic": "1.6",
+      "q": "Find the 2's complement of 00100011 (+35).",
+      "answer": "1's complement = 11011100; add 1 gives 11011101 (i.e. -35).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s20",
+      "topic": "1.6",
+      "q": "Give two advantages of fixed-point representation.",
+      "answer": "Simple representation, simple hardware, faster computation (any two).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s21",
+      "topic": "1.6",
+      "q": "Give two disadvantages of fixed-point representation.",
+      "answer": "Limited range and limited precision (the number of fraction bits is fixed).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s22",
+      "topic": "1.7",
+      "q": "What are the two parts of a floating-point number?",
+      "answer": "Mantissa (significand) and exponent.",
+      "marks": 2
+    },
+    {
+      "id": "u1-s23",
+      "topic": "1.7",
+      "q": "Express 1,200,000 in normalized decimal floating-point form.",
+      "answer": "0.12 x 10^7 (mantissa 0.12, radix 10, exponent 7).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s24",
+      "topic": "1.7",
+      "q": "Give two advantages of floating-point representation.",
+      "answer": "Can represent very large and very small numbers; flexible scaling; can represent fractions easily (any two).",
+      "marks": 2
+    },
+    {
+      "id": "u1-s25",
+      "topic": "1.8",
+      "q": "What is a parity bit? Name its two types.",
+      "answer": "A parity bit is an extra bit added to a binary message to make the total number of 1s even or odd. Types: even parity and odd parity.",
+      "marks": 2
+    }
+  ]
+}
