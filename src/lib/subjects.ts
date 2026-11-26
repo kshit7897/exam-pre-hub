@@ -18,9 +18,11 @@ import mathsStudyData from "@/content/maths/study.json";
 import mathsUnit1 from "@/content/maths/unit-1.json";
 import mathsUnit2 from "@/content/maths/unit-2.json";
 import mathsUnit3 from "@/content/maths/unit-3.json";
+import mathsUnit4 from "@/content/maths/unit-4.json";
 import mathsExtra1 from "@/content/maths/unit-1-extra.json";
 import mathsExtra2 from "@/content/maths/unit-2-extra.json";
 import mathsExtra3 from "@/content/maths/unit-3-extra.json";
+import mathsExtra4 from "@/content/maths/unit-4-extra.json";
 import mathsSummaries from "@/content/maths/summaries.json";
 import mathsHints from "@/content/maths/hints.json";
 
@@ -107,8 +109,8 @@ const mathsConfig: SubjectConfig = {
   // supporting topics are 'medium'; pure notation/definition MCQs stay untagged.
   // Every short question gets a tag because short answers carry 2 marks.
   importance: (kind, topic) => {
-    const HIGH = ["1.5", "1.6", "2.4", "2.5", "2.6", "2.7", "3.4", "3.5", "3.6", "3.7", "3.8"];
-    const MEDIUM = ["1.3", "1.4", "1.7", "2.2", "2.3", "3.2", "3.3"];
+    const HIGH = ["1.5", "1.6", "2.4", "2.5", "2.6", "2.7", "3.4", "3.5", "3.6", "3.7", "3.8", "4.5", "4.6", "4.7", "4.8", "4.10"];
+    const MEDIUM = ["1.3", "1.4", "1.7", "2.2", "2.3", "3.2", "3.3", "4.1", "4.2", "4.3", "4.4", "4.9", "4.11"];
     if (HIGH.includes(topic)) return "high";
     if (MEDIUM.includes(topic)) return "medium";
     return kind === "short" ? "medium" : undefined;
@@ -134,13 +136,14 @@ const aoc: Subject = {
 const maths: Subject = {
   id: "maths",
   name: "Maths",
-  subtitle: "Set theory, propositional logic and matrix algebra · 3 units",
+  subtitle: "Set theory, logic, matrix algebra, relations and functions · 4 units",
   icon: "sigma",
   art: "math",
   units: [
     withExtra(mathsUnit1 as Unit, mathsExtra1 as Extra, mathsConfig),
     withExtra(mathsUnit2 as Unit, mathsExtra2 as Extra, mathsConfig),
     withExtra(mathsUnit3 as Unit, mathsExtra3 as Extra, mathsConfig),
+    withExtra(mathsUnit4 as Unit, mathsExtra4 as Extra, mathsConfig),
   ],
 };
 

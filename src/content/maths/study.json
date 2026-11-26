@@ -2447,5 +2447,543 @@
       "mt1-w-s05",
       "mt1-d-m05"
     ]
+  },
+  "mt4-p001": {
+    "context": "A × B = sab ordered pairs (x, y) jahan x ∈ A aur y ∈ B. A = {1, 2, 4}, B = {1, 3, 9}.",
+    "table": {
+      "head": [
+        "A \\ B",
+        "1",
+        "3",
+        "9"
+      ],
+      "rows": [
+        [
+          "1",
+          "(1, 1)",
+          "(1, 3)",
+          "(1, 9)"
+        ],
+        [
+          "2",
+          "(2, 1)",
+          "(2, 3)",
+          "(2, 9)"
+        ],
+        [
+          "4",
+          "(4, 1)",
+          "(4, 3)",
+          "(4, 9)"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "A ke har element (row) ko B ke har element (column) ke saath pair karo.",
+      "3 × 3 = 9 pairs banenge.",
+      "B × A ke liye pair ka order ulta hoga: (1, 1), (1, 2), ..."
+    ],
+    "example": {
+      "q": "A = {1, 2, 4} aur B = {1, 3, 9} ho to n(A × B) kitna hai?",
+      "a": "9 (3 × 3)."
+    },
+    "questions": [
+      "mt4-m01",
+      "mt4-s01"
+    ]
+  },
+  "mt4-p002": {
+    "context": "Relation R ⊆ A × B. Pehle A × B likho, phir condition lagao. Example 1: A = {1, 2, 3}, B = {3, 5, 6, 7}, R = {(a, b) | a = b} = {(3, 3)}. Example 2: A = {1, 2, 3, 4}, B = {2, 4, 5, 6}, R = {(a, b) | a > b} = {(3, 2), (4, 2)}.",
+    "walkthrough": [
+      "Pehle A × B ki list banao.",
+      "Har pair par condition check karo (a = b, a > b, a + b < 8, ...).",
+      "Jo pairs condition pass karein, woh R mein jaate hain."
+    ],
+    "example": {
+      "q": "A = {1, 2, 3}, B = {3, 5, 6, 7}, R = {(a, b) | a = b} kya hai?",
+      "a": "{(3, 3)}."
+    },
+    "questions": [
+      "mt4-m02",
+      "mt4-d-m04"
+    ]
+  },
+  "mt4-p003": {
+    "context": "Domain = pehle elements; Range = dusre elements. Mapping: R = {(1, 5), (2, 8), (3, 12), (4, 7)}, har pair ka ek arrow. Slide ka dusra example: R = {(a, b) | a ≠ b} on A = {1, 2, 3, 4}, B = {3, 4, 5, 6}: domain {1, 2, 3, 4}, range {3, 4, 5, 6}.",
+    "walkthrough": [
+      "Bayi oval = A, daayi oval = B.",
+      "Har pair (a, b) ke liye a se b tak arrow.",
+      "Jis B element par arrow nahi laga (jaise 17), woh range mein nahi aata."
+    ],
+    "example": {
+      "q": "R = {(1, 5), (2, 8), (3, 12), (4, 7)} ka domain aur range?",
+      "a": "Domain = {1, 2, 3, 4}, Range = {5, 7, 8, 12}."
+    },
+    "questions": [
+      "mt4-s02",
+      "mt4-m03",
+      "mt4-m04"
+    ]
+  },
+  "mt4-p004": {
+    "context": "R = {(3, 6), (3, 8), (3, 9), (5, 6), (5, 8), (5, 9), (7, 8), (7, 9)}. Domain = {3, 5, 7}, Range = {6, 8, 9}.",
+    "table": {
+      "head": [
+        "R: A → B",
+        "1",
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "rows": [
+        [
+          "3",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "5",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "7",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "11",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Rows = A ke elements (3, 5, 7, 11).",
+      "Columns = B ke elements (1, 3, 6, 8, 9).",
+      "Jo pair R mein hai uske liye 1, warna 0. Jaise (3, 6) ∈ R, isliye row 3, column 6 par 1."
+    ],
+    "example": {
+      "q": "Row 7 mein 1 kin columns mein hai?",
+      "a": "Columns 8 aur 9 (7 < 8 aur 7 < 9)."
+    },
+    "questions": [
+      "mt4-s03",
+      "mt4-m05",
+      "mt4-m06"
+    ]
+  },
+  "mt4-p005": {
+    "context": "R = {(1, 3), (1, 4), (1, 5), (1, 6), (2, 3), (2, 4), (2, 5), (3, 3), (3, 4), (4, 3)}. Domain = {1, 2, 3, 4}, Range = {3, 4, 5, 6}.",
+    "table": {
+      "head": [
+        "R: A → B",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "3",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "4",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Har a ke liye dekho kaun se b ke liye a + b < 8.",
+      "a = 1: 1 + 3, 1 + 4, 1 + 5, 1 + 6 sab < 8; 1 + 7 = 8 nahi.",
+      "a = 5 aur 6 ke liye koi b nahi, isliye unki rows zero hain."
+    ],
+    "example": {
+      "q": "Row 2 mein kaun se columns 1 hain?",
+      "a": "Columns 3, 4, 5 (2 + 5 = 7 < 8, 2 + 6 = 8 nahi)."
+    },
+    "questions": [
+      "mt4-m06",
+      "mt4-d-m01"
+    ]
+  },
+  "mt4-p006": {
+    "context": "Relation on A ⊆ A × A. Examples: A = {1, 2, 3}, R = {(a, b) | a = b} = {(1, 1), (2, 2), (3, 3)}. A = {2, 4, 6, 8, 10}, R = {(a, b) | a + b multiple of 3} = {(2, 4), (4, 2), (2, 10), (10, 2), (4, 8), (8, 4), (6, 6), (8, 10), (10, 8)}.",
+    "walkthrough": [
+      "Pehle A × A likho (n × n pairs).",
+      "Condition wale pairs chuno.",
+      "Slide ke reflexive example mein R = {(1, 1), (1, 2), (2, 1), (2, 2), (3, 4), (3, 3), (4, 1), (4, 2), (4, 4)} har (a, a) mein hai, isliye reflexive hai."
+    ],
+    "example": {
+      "q": "A = {1, 2, 3} par R = {(a, b) | a = b} likho.",
+      "a": "{(1, 1), (2, 2), (3, 3)}."
+    },
+    "questions": [
+      "mt4-m07",
+      "mt4-m08",
+      "mt4-s04"
+    ]
+  },
+  "mt4-p007": {
+    "context": "Reflexive matlab har a ke liye (a, a) ∈ R. Slide mein R ka pehla example: (3, 3) ∉ R, isliye reflexive nahi. Slide ke dusre example mein (2, 2) ∈ R likha hai, lekin 2 + 2 = 4 > 5 nahi hai, isliye (2, 2) ∉ R. Conclusion phir bhi same hai: reflexive nahi.",
+    "walkthrough": [
+      "Har a ∈ A ke liye (a, a) check karo.",
+      "Pehla fail hone wala pair kaafi hai — (3, 3) ∉ R.",
+      "Dusre example mein condition a + b > 5 hai: a = 2 par 2 + 2 = 4 > 5 false hai."
+    ],
+    "example": {
+      "q": "A = {2, 3, 4, 5}, R = {(a, b) | a + b > 5}: reflexive hai?",
+      "a": "Nahi. (2, 2): 2 + 2 = 4 > 5 false, isliye (2, 2) ∉ R."
+    },
+    "questions": [
+      "mt4-m09",
+      "mt4-s05"
+    ]
+  },
+  "mt4-p008": {
+    "context": "Irreflexive = koi bhi (a, a) ∈ R nahi. Neither example: A = {1, 2, 3, 4}, R = {(a, b) | a + b = 2} = {(1, 1)}. (1, 1) ∈ R, isliye irreflexive nahi; (2, 2) ∉ R, isliye reflexive nahi.",
+    "walkthrough": [
+      "Har a ke liye (a, a) check karo.",
+      "Agar sab (a, a) ∉ R, to irreflexive.",
+      "Agar kuch (a, a) ∈ R aur kuch ∉ R, to neither."
+    ],
+    "example": {
+      "q": "R = {(1, 1)} on {1, 2, 3, 4} kya hai?",
+      "a": "Neither reflexive nor irreflexive."
+    },
+    "questions": [
+      "mt4-m10",
+      "mt4-s05"
+    ]
+  },
+  "mt4-p009": {
+    "context": "Symmetric: (a, b) ∈ R ⇒ (b, a) ∈ R. A = {1, 2, 3}, R = {(1, 1), (1, 2), (2, 1), (2, 3), (3, 2), (2, 2)} symmetric hai. A = {1, 2, 3, 4}, R = {(1, 1), (1, 2), (2, 1), (2, 3), (3, 2), (3, 4)}: (3, 4) ∈ R lekin (4, 3) ∉ R, isliye symmetric nahi.",
+    "walkthrough": [
+      "Har pair (a, b) ka reverse (b, a) check karo.",
+      "Ek bhi reverse missing ho to symmetric nahi.",
+      "Slide ke a + b < 6 example mein (1, 3) ↔ (3, 1), (2, 3) ↔ (3, 2) sab present hain, isliye symmetric."
+    ],
+    "example": {
+      "q": "R = {(1, 1), (1, 2), (2, 1), (2, 3), (3, 2), (3, 4)} symmetric hai?",
+      "a": "Nahi, (3, 4) ∈ R lekin (4, 3) ∉ R."
+    },
+    "questions": [
+      "mt4-m12",
+      "mt4-s06"
+    ]
+  },
+  "mt4-p010": {
+    "context": "Anti-symmetric: (a, b) ∈ R aur a ≠ b ⇒ (b, a) ∉ R. A = {1, 2, 3, 4}, R = {(1, 1), (1, 2), (1, 4), (2, 3), (3, 4)} anti-symmetric hai. a < b on {1, ..., 5} irreflexive hai aur symmetric nahi.",
+    "walkthrough": [
+      "Har pair (a, b) mein a ≠ b ke liye reverse check karo.",
+      "(1, 2) ∈ R, lekin (2, 1) ∉ R; (1, 4) ∈ R, lekin (4, 1) ∉ R.",
+      "Yahi check x > y, x < y aur a + b divisible by 2 par karna (do it yourself)."
+    ],
+    "example": {
+      "q": "R = {(1, 1), (1, 2), (1, 4), (2, 3), (3, 4)} anti-symmetric hai?",
+      "a": "Haan."
+    },
+    "questions": [
+      "mt4-m13",
+      "mt4-d-s08"
+    ]
+  },
+  "mt4-p011": {
+    "context": "A = {1, 2, 3, 4, 5}, R = {(a, b) | a + b divisible by 3} = {(1, 2), (1, 5), (2, 1), (2, 4), (3, 3), (4, 2), (4, 5), (5, 1), (5, 4)}. Slide ka conclusion: sirf symmetric hai. Transitive definition aur A = {1, 2, 3} par ek example bhi.",
+    "walkthrough": [
+      "Reflexive: (1, 1) ∉ R (1 + 1 = 2), isliye reflexive nahi.",
+      "Irreflexive nahi: (3, 3) ∈ R.",
+      "Symmetric: har pair ka reverse R mein hai.",
+      "Anti-symmetric nahi: (1, 2) aur (2, 1) dono R mein hain."
+    ],
+    "example": {
+      "q": "Is R mein (1, 1) hai?",
+      "a": "Nahi, 1 + 1 = 2 divisible by 3 nahi hai."
+    },
+    "questions": [
+      "mt4-d-m08",
+      "mt4-m12"
+    ]
+  },
+  "mt4-p012": {
+    "context": "Transitive: (a, b) ∈ R aur (b, c) ∈ R ⇒ (a, c) ∈ R. Example: R = {(1, 2), (2, 1), (1, 1), (1, 3), (3, 2), (2, 3), (3, 4), (1, 4), (4, 3)}: (3, 2) aur (2, 3) ∈ R, lekin (3, 3) ∉ R, isliye transitive nahi. Compatibility = reflexive + symmetric; x + y even on {1, ..., 5} ek compatibility relation hai.",
+    "walkthrough": [
+      "Chains dekho: (a, b) aur (b, c) se (a, c) check karo.",
+      "Compatibility ke liye sirf reflexive aur symmetric check karo.",
+      "x + y even: har (a, a) (2a even), aur (1, 3)/(3, 1) jaise pairs symmetric."
+    ],
+    "example": {
+      "q": "R = {(1, 2), (2, 3)} transitive hai?",
+      "a": "Nahi, (1, 3) ∉ R."
+    },
+    "questions": [
+      "mt4-s07",
+      "mt4-m14",
+      "mt4-m15",
+      "mt4-d-m14"
+    ]
+  },
+  "mt4-p013": {
+    "context": "Equivalence = reflexive + symmetric + transitive. A = {1, ..., 5}, R = {(x, y) | x + y divisible by 2} = {(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (1, 3), (3, 1), (1, 5), (5, 1), (2, 4), (4, 2), (3, 5), (5, 3)}. Equivalence hai.",
+    "walkthrough": [
+      "Reflexive: har (a, a) R mein hai.",
+      "Symmetric: (1, 3) ↔ (3, 1), (1, 5) ↔ (5, 1), (2, 4) ↔ (4, 2), (3, 5) ↔ (5, 3).",
+      "Transitive: (1, 3) aur (3, 5) se (1, 5) ∈ R; (2, 4) aur (4, 2) se (2, 2) ∈ R. Sab combinations check karo."
+    ],
+    "example": {
+      "q": "Every equivalence relation compatibility relation hai — True ya False?",
+      "a": "True (equivalence = reflexive + symmetric + transitive, isliye reflexive aur symmetric dono hain)."
+    },
+    "questions": [
+      "mt4-m16",
+      "mt4-m17",
+      "mt4-s08"
+    ]
+  },
+  "mt4-p014": {
+    "context": "A = {1, ..., 6}, R = {(x, y) | x + y odd}: reflexive nahi, kyunki (1, 1): 1 + 1 = 2 even. A = {1, 2, 3, 4}, R = {(x, y) | x + y ≤ 8}: slide mein transitive check hota hai; har chain (a, b), (b, c) ke liye (a, c) R mein milta hai.",
+    "walkthrough": [
+      "Pehle reflexive check karo: (1, 1) ∈ R?",
+      "Agar nahi, to equivalence nahi — aage check ki zaroorat nahi.",
+      "x + y ≤ 8 ke liye symmetric check: x + y = y + x, isliye symmetric.",
+      "Transitive: a, c ≤ 4 hone par a + c ≤ 8 hamesha, isliye transitive."
+    ],
+    "example": {
+      "q": "A = {1, 2, 3, 4} par R = {(x, y) | x + y ≤ 8} equivalence hai?",
+      "a": "Haan — reflexive (2x ≤ 8), symmetric, aur transitive sab satisfy hote hain."
+    },
+    "questions": [
+      "mt4-m17",
+      "mt4-s08"
+    ]
+  },
+  "mt4-p015": {
+    "context": "POSET = reflexive + antisymmetric + transitive. A = {1, ..., 5}, R = {(x, y) | x ≤ y}. Slide ke according: reflexive (har (a, a) ∈ R), antisymmetric ((1, 2) ∈ R lekin (2, 1) ∉ R), transitive ((1, 2), (2, 3) ⇒ (1, 3)). Isliye POSET hai.",
+    "walkthrough": [
+      "Reflexive: 1 ≤ 1, 2 ≤ 2, ... sab.",
+      "Antisymmetric: (a, b) aur (b, a) dono R mein sirf a = b hone par.",
+      "Transitive: (a, b) aur (b, c) ⇒ (a, c) — chain check karo."
+    ],
+    "example": {
+      "q": "x ≤ y on A = {1, ..., 5} POSET hai?",
+      "a": "Haan."
+    },
+    "questions": [
+      "mt4-m18",
+      "mt4-s09"
+    ]
+  },
+  "mt4-p016": {
+    "context": "A = {1, ..., 6}, R = {(x, y) | x = y}: reflexive (1, 1), (2, 2), ... ∈ R; antisymmetric (koi a ≠ b pair nahi); transitive (sirf (a, a) pairs, isliye chain (a, a), (a, a) ⇒ (a, a)). Isliye POSET hai.",
+    "walkthrough": [
+      "Reflexive: har (a, a) R mein hai.",
+      "Antisymmetric: (2, 1) ∈ R? Nahi — R mein sirf (a, a) pairs hain.",
+      "Transitive: (a, a) aur (a, a) se (a, a) — hamesha satisfy."
+    ],
+    "example": {
+      "q": "R = {(x, y) | x = y} on {1, ..., 6} POSET hai?",
+      "a": "Haan."
+    },
+    "questions": [
+      "mt4-m18",
+      "mt4-d-m09"
+    ]
+  },
+  "mt4-p017": {
+    "context": "A = {1, ..., 5}, R = {(x, y) | x > y}: reflexive nahi (1 > 1 false), isliye POSET nahi. Function: A se B tak relation jahan har x ∈ A ka exactly ek y ∈ B hai. Example: f: N → N, f(x) = x + 2: f(1) = 3, f(2) = 4, ... function hai.",
+    "walkthrough": [
+      "POSET check: reflexive pehle check karo — x > x kabhi true nahi.",
+      "Function check: har input ka exactly ek output.",
+      "f(x) = x + 2 ke liye har natural number ka output N mein hai."
+    ],
+    "example": {
+      "q": "f(x) = x + 2 on N function hai?",
+      "a": "Haan, har x ka exactly ek image hai."
+    },
+    "questions": [
+      "mt4-m19",
+      "mt4-m20"
+    ]
+  },
+  "mt4-p018": {
+    "context": "f: A → B, A = {1, 3, 5}, B = {1, 3, 5, 7, 9, 11, 13}, f(x) = 2x + 1: f(1) = 3, f(3) = 7, f(5) = 11, sab B mein hain — function. f: N → N, f(x) = 1 − x: f(1) = 0, f(2) = −1 — N mein nahi, isliye function nahi.",
+    "walkthrough": [
+      "Har input ko rule mein daalo.",
+      "Check karo output co-domain B ke andar hai ya nahi.",
+      "Composition: (g ∘ f)(x) = g(f(x)). f = x², g = x + 2 par (g ∘ f)(x) = x² + 2 aur (f ∘ g)(x) = (x + 2)²."
+    ],
+    "example": {
+      "q": "f(x) = 1 − x, f: N → N function hai?",
+      "a": "Nahi, f(1) = 0 aur f(2) = −1 N mein nahi hain."
+    },
+    "questions": [
+      "mt4-m21",
+      "mt4-d-s15",
+      "mt4-s11"
+    ]
+  },
+  "mt4-p019": {
+    "context": "f(x) = x + 3, g(x) = 3x − 4, h(x) = x/2. Slide ke results: (f ∘ g)(x) = 3x − 1, (g ∘ f)(x) = 3x + 5, (f ∘ h)(x) = (x + 6)/2, (h ∘ f)(x) = (x + 3)/2, (g ∘ h)(x) = (3x − 8)/2, (h ∘ g)(x) = (3x − 4)/2, (f ∘ f)(x) = x + 6.",
+    "table": {
+      "head": [
+        "Composition",
+        "Result"
+      ],
+      "rows": [
+        [
+          "(f ∘ g)(x)",
+          "3x − 1"
+        ],
+        [
+          "(g ∘ f)(x)",
+          "3x + 5"
+        ],
+        [
+          "(f ∘ h)(x)",
+          "(x + 6)/2"
+        ],
+        [
+          "(h ∘ f)(x)",
+          "(x + 3)/2"
+        ],
+        [
+          "(g ∘ h)(x)",
+          "(3x − 8)/2"
+        ],
+        [
+          "(h ∘ g)(x)",
+          "(3x − 4)/2"
+        ],
+        [
+          "(f ∘ f)(x)",
+          "x + 6"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Inner function pehle substitute karo.",
+      "Jaise (f ∘ g)(x): g(x) = 3x − 4 ko f mein daalo: 3x − 4 + 3 = 3x − 1.",
+      "Composition ka order badalne se answer badalta hai (f ∘ g ≠ g ∘ f)."
+    ],
+    "example": {
+      "q": "(g ∘ f)(x) kya hai?",
+      "a": "g(x + 3) = 3(x + 3) − 4 = 3x + 5."
+    },
+    "questions": [
+      "mt4-m22",
+      "mt4-m23",
+      "mt4-d-m12"
+    ]
+  },
+  "mt4-p020": {
+    "context": "f(x) = 2x + 3, g(x) = x − 5, h(x) = (x + 2)/3. Slide ke results: (f ∘ g)(x) = 2x − 7, (g ∘ f)(x) = 2x − 2, (f ∘ h)(x) = (2x + 13)/3, (h ∘ f)(x) = (2x + 5)/3, (g ∘ h)(x) = (x − 13)/3, (h ∘ g)(x) = (x − 3)/3, (f ∘ f)(x) = 4x + 9, (g ∘ g)(x) = x − 10, (f ∘ g ∘ h)(x) = (2x − 17)/3, (g ∘ f ∘ h)(x) = (2x − 2)/3.",
+    "table": {
+      "head": [
+        "Composition",
+        "Result"
+      ],
+      "rows": [
+        [
+          "(f ∘ g)(x)",
+          "2x − 7"
+        ],
+        [
+          "(g ∘ f)(x)",
+          "2x − 2"
+        ],
+        [
+          "(f ∘ h)(x)",
+          "(2x + 13)/3"
+        ],
+        [
+          "(h ∘ f)(x)",
+          "(2x + 5)/3"
+        ],
+        [
+          "(g ∘ h)(x)",
+          "(x − 13)/3"
+        ],
+        [
+          "(h ∘ g)(x)",
+          "(x − 3)/3"
+        ],
+        [
+          "(f ∘ g ∘ h)(x)",
+          "(2x − 17)/3"
+        ],
+        [
+          "(g ∘ f ∘ h)(x)",
+          "(2x − 2)/3"
+        ]
+      ]
+    },
+    "walkthrough": [
+      "Teen functions ke composition mein sabse andar wale function se shuru karo.",
+      "(f ∘ g ∘ h)(x): pehle h(x) = (x + 2)/3, phir g, phir f.",
+      "Bijective check: f, g, h sab linear hain aur R → R par one-one aur onto hain, isliye bijective."
+    ],
+    "example": {
+      "q": "(f ∘ g)(x) kya hai?",
+      "a": "f(x − 5) = 2(x − 5) + 3 = 2x − 7."
+    },
+    "questions": [
+      "mt4-s12",
+      "mt4-m23"
+    ]
   }
 }

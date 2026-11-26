@@ -1,0 +1,384 @@
+{
+  "id": "unit-4",
+  "title": "Relations and Functions",
+  "topics": [
+    {
+      "id": "4.1",
+      "title": "Cartesian product and relation from A to B",
+      "notes": [
+        "A × B = {(x, y) | x ∈ A and y ∈ B}: all ordered pairs with first element from A and second from B.",
+        "n(A × B) = n(A) · n(B). Example: A = {1, 2, 4}, B = {1, 3, 9} gives 3 × 3 = 9 pairs.",
+        "A × B and B × A are different sets in general (order of pairs matters).",
+        "A relation R from A to B is a subset of A × B. If (a, b) ∈ R, we write a R b (a is related to b)."
+      ]
+    },
+    {
+      "id": "4.2",
+      "title": "Domain and range of a relation",
+      "notes": [
+        "Domain of R = set of all first elements a of the pairs (a, b) ∈ R.",
+        "Range of R = set of all second elements b of the pairs (a, b) ∈ R.",
+        "If R is a relation from A to B, then domain ⊆ A and range ⊆ B.",
+        "Example: R = {(1, 4), (1, 6), (2, 4), (2, 6), (3, 5), (3, 6), (5, 5)}: domain {1, 2, 3, 5}, range {4, 5, 6}."
+      ]
+    },
+    {
+      "id": "4.3",
+      "title": "Mapping and matrix representation of relations",
+      "notes": [
+        "Mapping (arrow diagram): draw sets A and B as two ovals; for each (a, b) ∈ R draw an arrow from a to b.",
+        "Matrix representation: rows = elements of A, columns = elements of B. Entry 1 if (a, b) ∈ R, else 0.",
+        "Example: A = {3, 5, 7, 11}, B = {1, 3, 6, 8, 9}, R = {(a, b) | a < b}. Domain {3, 5, 7}, range {6, 8, 9}.",
+        "Row 11 has all zeros because 11 is not less than any element of B."
+      ]
+    },
+    {
+      "id": "4.4",
+      "title": "Relation on a set",
+      "notes": [
+        "A relation on a set A is a subset of A × A.",
+        "Example: A = {1, 2, 3}, R = {(a, b) | a = b} gives R = {(1, 1), (2, 2), (3, 3)}.",
+        "If |A| = n, then |A × A| = n² and the number of relations on A is 2^(n²). For n = 3: 2^9 = 512."
+      ]
+    },
+    {
+      "id": "4.5",
+      "title": "Reflexive and irreflexive relations",
+      "notes": [
+        "Reflexive: (a, a) ∈ R for every a ∈ A. Every element must have a self-pair.",
+        "Irreflexive: (a, a) ∉ R for every a ∈ A. No element may have a self-pair.",
+        "Neither: some (a, a) ∈ R and some (a, a) ∉ R. Example: a + b = 2 on {1, 2, 3, 4} gives R = {(1, 1)}, so it is neither.",
+        "a = b is reflexive. a < b and a > b are irreflexive."
+      ]
+    },
+    {
+      "id": "4.6",
+      "title": "Symmetric and anti-symmetric relations",
+      "notes": [
+        "Symmetric: if (a, b) ∈ R then (b, a) ∈ R. Check every pair; one missing reverse pair breaks symmetry.",
+        "Anti-symmetric: if (a, b) ∈ R and (b, a) ∈ R, then a = b. Equivalently, for a ≠ b, (a, b) ∈ R means (b, a) ∉ R.",
+        "A relation can be symmetric and anti-symmetric together (e.g. equality), or neither.",
+        "A relation is symmetric when its matrix is a symmetric matrix (A = Aᵀ)."
+      ]
+    },
+    {
+      "id": "4.7",
+      "title": "Transitive and compatibility relations",
+      "notes": [
+        "Transitive: if (a, b) ∈ R and (b, c) ∈ R, then (a, c) ∈ R. Check all chains of two pairs.",
+        "Compatibility relation: reflexive and symmetric (transitivity is not needed).",
+        "Example: R = {(x, y) | x + y is an even integer} on {1, 2, 3, 4, 5} is a compatibility relation."
+      ]
+    },
+    {
+      "id": "4.8",
+      "title": "Equivalence relation",
+      "notes": [
+        "Equivalence relation = reflexive + symmetric + transitive.",
+        "Every equivalence relation is a compatibility relation, but not every compatibility relation is transitive.",
+        "Example: R = {(x, y) | x + y is divisible by 2} on {1, 2, 3, 4, 5} is reflexive (2x is even), symmetric and transitive, so it is an equivalence relation.",
+        "Not an equivalence relation: x + y is odd on {1, ..., 6} is not reflexive, because 1 + 1 = 2 is even, so (1, 1) ∉ R."
+      ]
+    },
+    {
+      "id": "4.9",
+      "title": "Partial order relation (POSET)",
+      "notes": [
+        "Partial order = reflexive + anti-symmetric + transitive. The set with this relation is a POSET.",
+        "Example: x ≤ y on {1, 2, 3, 4, 5} is a POSET (reflexive, anti-symmetric and transitive).",
+        "x > y is NOT a POSET because it is not reflexive (no pair (a, a))."
+      ]
+    },
+    {
+      "id": "4.10",
+      "title": "Functions",
+      "notes": [
+        "A function f: A → B is a relation from A to B such that every x ∈ A has exactly one image y ∈ B, written y = f(x).",
+        "A is the domain and B is the co-domain. Two different elements of A may have the same image.",
+        "Check: f(x) must be defined for every x in A and its value must lie in B. Example: f(x) = x + 2 on N is a function; f(x) = 1 − x on N is not (f(2) = −1 ∉ N)."
+      ]
+    },
+    {
+      "id": "4.11",
+      "title": "Composition of functions",
+      "notes": [
+        "For f: X → Y and g: Y → Z, the composition g ∘ f: X → Z is defined by (g ∘ f)(x) = g(f(x)). Apply f first, then g.",
+        "Composition is generally NOT commutative: g ∘ f ≠ f ∘ g in general.",
+        "Example: f(x) = x² and g(x) = x + 2 give (g ∘ f)(x) = x² + 2 and (f ∘ g)(x) = (x + 2)².",
+        "Method: substitute the inner function into the outer one. Example: f(x) = x + 3, g(x) = 3x − 4 gives (f ∘ g)(x) = 3x − 1 and (g ∘ f)(x) = 3x + 5."
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "id": "mt4-m01",
+      "topic": "4.1",
+      "q": "If A = {1, 2} and B = {3, 4, 5}, then n(A × B) is:",
+      "options": ["5", "6", "8", "9"],
+      "answer": 1,
+      "explanation": "n(A × B) = n(A) · n(B) = 2 · 3 = 6."
+    },
+    {
+      "id": "mt4-m02",
+      "topic": "4.1",
+      "q": "A relation from set A to set B is a subset of:",
+      "options": ["A ∪ B", "A ∩ B", "A × B", "A − B"],
+      "answer": 2,
+      "explanation": "A relation from A to B is R ⊆ A × B."
+    },
+    {
+      "id": "mt4-m03",
+      "topic": "4.2",
+      "q": "R = {(1, 4), (2, 4), (3, 5)}. The domain of R is:",
+      "options": ["{1, 2, 3}", "{4, 5}", "{1, 2, 3, 4, 5}", "{4}"],
+      "answer": 0,
+      "explanation": "Domain = set of first elements = {1, 2, 3}."
+    },
+    {
+      "id": "mt4-m04",
+      "topic": "4.2",
+      "q": "For the same R = {(1, 4), (2, 4), (3, 5)}, the range of R is:",
+      "options": ["{4, 5}", "{1, 2, 3}", "{4}", "{5}"],
+      "answer": 0,
+      "explanation": "Range = set of second elements = {4, 5} (4 is listed once in a set)."
+    },
+    {
+      "id": "mt4-m05",
+      "topic": "4.3",
+      "q": "In the matrix representation of a relation from A to B, the rows correspond to:",
+      "options": ["Range of R", "Co-domain B", "Elements of A (first set)", "Elements of A × B"],
+      "answer": 2,
+      "explanation": "Rows = elements of A (first set), columns = elements of B."
+    },
+    {
+      "id": "mt4-m06",
+      "topic": "4.3",
+      "q": "In a matrix representation, an entry 1 at position (a, b) means:",
+      "options": ["(a, b) ∈ R", "(a, b) ∉ R", "a = b", "a > b"],
+      "answer": 0,
+      "explanation": "Entry 1 = the pair is in R. Entry 0 = the pair is not in R."
+    },
+    {
+      "id": "mt4-m07",
+      "topic": "4.4",
+      "q": "If |A| = 4, then the number of ordered pairs in A × A is:",
+      "options": ["8", "12", "16", "4"],
+      "answer": 2,
+      "explanation": "|A × A| = 4 · 4 = 16."
+    },
+    {
+      "id": "mt4-m08",
+      "topic": "4.4",
+      "q": "On A = {1, 2, 3}, the relation R = {(a, b) | a = b} written in listing form is:",
+      "options": ["{(1, 1), (2, 2), (3, 3)}", "{(1, 2), (2, 3)}", "{(1, 1), (1, 2), (1, 3)}", "{(1, 3), (2, 2)}"],
+      "answer": 0,
+      "explanation": "a = b gives only the pairs (1, 1), (2, 2) and (3, 3)."
+    },
+    {
+      "id": "mt4-m09",
+      "topic": "4.5",
+      "q": "A relation R on A is reflexive if:",
+      "options": ["(a, b) ∈ R for all a, b ∈ A", "(a, a) ∈ R for every a ∈ A", "(a, a) ∉ R for every a ∈ A", "(a, b) ∈ R implies (b, a) ∈ R"],
+      "answer": 1,
+      "explanation": "Reflexive means every element has a self-pair (a, a) in R."
+    },
+    {
+      "id": "mt4-m10",
+      "topic": "4.5",
+      "q": "On A = {1, 2, 3}, R = {(1, 2), (2, 3), (3, 1)} is:",
+      "options": ["Reflexive", "Irreflexive", "Equivalence relation", "Neither reflexive nor irreflexive"],
+      "answer": 1,
+      "explanation": "None of (1, 1), (2, 2), (3, 3) is in R, so R is irreflexive."
+    },
+    {
+      "id": "mt4-m11",
+      "topic": "4.5",
+      "q": "The relation a < b on A = {1, 2, 3, 4, 5} is:",
+      "options": ["Reflexive", "Irreflexive", "Symmetric", "Equivalence relation"],
+      "answer": 1,
+      "explanation": "a < a is never true, so no (a, a) is in R: the relation is irreflexive."
+    },
+    {
+      "id": "mt4-m12",
+      "topic": "4.6",
+      "q": "A relation R is symmetric if (a, b) ∈ R implies:",
+      "options": ["(b, a) ∈ R", "(a, a) ∈ R", "(b, c) ∈ R", "(a, b) ∉ R"],
+      "answer": 0,
+      "explanation": "Symmetric: the reverse pair must also be in R."
+    },
+    {
+      "id": "mt4-m13",
+      "topic": "4.6",
+      "q": "Which relation on A = {1, 2, 3} is anti-symmetric?",
+      "options": ["{(1, 2), (2, 1)}", "{(1, 2), (2, 3)}", "{(1, 1), (2, 2), (1, 2), (2, 1)}", "{(3, 1), (1, 3)}"],
+      "answer": 1,
+      "explanation": "In {(1, 2), (2, 3)} no pair (a, b) with a ≠ b has its reverse (b, a) in R. The other three have both (1, 2) and (2, 1), or (3, 1) and (1, 3)."
+    },
+    {
+      "id": "mt4-m14",
+      "topic": "4.7",
+      "q": "A relation R is transitive if (a, b) ∈ R and (b, c) ∈ R together imply:",
+      "options": ["(a, c) ∈ R", "(c, a) ∈ R", "(b, a) ∈ R", "(a, a) ∈ R"],
+      "answer": 0,
+      "explanation": "Transitive: a R b and b R c give a R c."
+    },
+    {
+      "id": "mt4-m15",
+      "topic": "4.7",
+      "q": "A compatibility relation is a relation that is:",
+      "options": ["Reflexive and symmetric", "Symmetric and anti-symmetric", "Reflexive and transitive", "Irreflexive only"],
+      "answer": 0,
+      "explanation": "Compatibility relation = reflexive + symmetric."
+    },
+    {
+      "id": "mt4-m16",
+      "topic": "4.8",
+      "q": "An equivalence relation is reflexive, transitive and:",
+      "options": ["Symmetric", "Anti-symmetric", "Irreflexive", "Asymmetric"],
+      "answer": 0,
+      "explanation": "Equivalence = reflexive + symmetric + transitive."
+    },
+    {
+      "id": "mt4-m17",
+      "topic": "4.8",
+      "q": "Is R = {(x, y) | x + y is divisible by 2} on A = {1, 2, 3, 4, 5} an equivalence relation?",
+      "options": ["Yes", "No, it is not reflexive", "No, it is not symmetric", "No, it is not transitive"],
+      "answer": 0,
+      "explanation": "x + x = 2x is always even, so R is reflexive. x + y = y + x makes it symmetric. Transitive because x + y even and y + z even means x and z have the same parity, so x + z is even."
+    },
+    {
+      "id": "mt4-m18",
+      "topic": "4.9",
+      "q": "A partial order (POSET) relation is reflexive, anti-symmetric and:",
+      "options": ["Symmetric", "Irreflexive", "Transitive", "Anti-reflexive"],
+      "answer": 2,
+      "explanation": "POSET = reflexive + anti-symmetric + transitive."
+    },
+    {
+      "id": "mt4-m19",
+      "topic": "4.9",
+      "q": "Is R = {(x, y) | x > y} on A = {1, 2, 3, 4, 5} a POSET?",
+      "options": ["Yes", "No, because it is not reflexive", "No, because it is symmetric", "No, because it is not transitive"],
+      "answer": 1,
+      "explanation": "x > x is false, so R is not reflexive and therefore not a POSET."
+    },
+    {
+      "id": "mt4-m20",
+      "topic": "4.10",
+      "q": "For a function f: A → B, every element of A has:",
+      "options": ["No image in B", "Exactly one image in B", "Two images in B", "An image only if it is in B"],
+      "answer": 1,
+      "explanation": "Every x ∈ A has exactly one image f(x) ∈ B."
+    },
+    {
+      "id": "mt4-m21",
+      "topic": "4.10",
+      "q": "Is f(x) = 1 − x a function from N to N?",
+      "options": ["Yes", "No, because f(1) = 0 and f(2) = −1 are not in N", "No, because f(x) is not defined", "Yes, because it is linear"],
+      "answer": 1,
+      "explanation": "0 and −1 are not natural numbers, so f does not map N into N."
+    },
+    {
+      "id": "mt4-m22",
+      "topic": "4.11",
+      "q": "If f(x) = x + 3 and g(x) = 3x − 4, then (g ∘ f)(x) is:",
+      "options": ["3x + 5", "3x − 1", "3x + 9", "x + 6"],
+      "answer": 0,
+      "explanation": "(g ∘ f)(x) = g(x + 3) = 3(x + 3) − 4 = 3x + 5."
+    },
+    {
+      "id": "mt4-m23",
+      "topic": "4.11",
+      "q": "If f(x) = x + 3 and g(x) = 3x − 4, then (f ∘ g)(x) is:",
+      "options": ["3x + 5", "3x − 1", "3x + 9", "x + 6"],
+      "answer": 1,
+      "explanation": "(f ∘ g)(x) = f(3x − 4) = 3x − 4 + 3 = 3x − 1."
+    }
+  ],
+  "short": [
+    {
+      "id": "mt4-s01",
+      "topic": "4.1",
+      "q": "Let A = {1, 2} and B = {x, y, z}. Find A × B and n(A × B).",
+      "answer": "A × B = {(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)}. n(A × B) = 2 · 3 = 6.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s02",
+      "topic": "4.2",
+      "q": "R = {(1, 4), (1, 6), (2, 4), (2, 6), (3, 5), (3, 6), (5, 5)}. Find the domain and range of R.",
+      "answer": "Domain = {1, 2, 3, 5} (first elements). Range = {4, 5, 6} (second elements).",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s03",
+      "topic": "4.3",
+      "q": "A = {3, 5, 7, 11}, B = {1, 3, 6, 8, 9} and R = {(a, b) | a < b}. Write the matrix representation of R (columns in the order 1, 3, 6, 8, 9).",
+      "answer": "R = {(3, 6), (3, 8), (3, 9), (5, 6), (5, 8), (5, 9), (7, 8), (7, 9)}. Rows: 3 → 0 0 1 1 1; 5 → 0 0 1 1 1; 7 → 0 0 0 1 1; 11 → 0 0 0 0 0.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s04",
+      "topic": "4.4",
+      "q": "On A = {1, 2, 3, 4}, write R = {(a, b) | a + b = 5} in listing form.",
+      "answer": "R = {(1, 4), (2, 3), (3, 2), (4, 1)}.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s05",
+      "topic": "4.5",
+      "q": "Define a reflexive relation and an irreflexive relation.",
+      "answer": "Reflexive: (a, a) ∈ R for every a ∈ A. Irreflexive: (a, a) ∉ R for every a ∈ A.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s06",
+      "topic": "4.6",
+      "q": "Check whether R = {(1, 1), (1, 2), (2, 1), (2, 3)} on A = {1, 2, 3} is symmetric.",
+      "answer": "No. (2, 3) ∈ R but (3, 2) ∉ R, so R is not symmetric.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s07",
+      "topic": "4.7",
+      "q": "Check whether R = {(1, 2), (2, 3)} on A = {1, 2, 3} is transitive.",
+      "answer": "No. (1, 2) ∈ R and (2, 3) ∈ R, but (1, 3) ∉ R. So R is not transitive.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s08",
+      "topic": "4.8",
+      "q": "Check whether R = {(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (2, 3)} on A = {1, 2, 3} is an equivalence relation.",
+      "answer": "No. R is reflexive, but it is not symmetric: (2, 3) ∈ R while (3, 2) ∉ R. So R is not an equivalence relation.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s09",
+      "topic": "4.9",
+      "q": "Is R = {(x, y) | x ≤ y} on A = {1, 2, 3} a POSET? Give reasons.",
+      "answer": "Yes. Reflexive: x ≤ x for all x. Anti-symmetric: x ≤ y and y ≤ x give x = y. Transitive: x ≤ y and y ≤ z give x ≤ z. So it is a POSET.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s10",
+      "topic": "4.10",
+      "q": "R = {(1, 2), (1, 4), (2, 6), (3, 6)} is a relation from A = {1, 2, 3} to B = {2, 4, 6}. Is R a function?",
+      "answer": "No. Element 1 of A has two images (2 and 4). A function must give each element of A exactly one image.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s11",
+      "topic": "4.11",
+      "q": "f(x) = x² and g(x) = x + 2. Find (g ∘ f)(x) and (f ∘ g)(x).",
+      "answer": "(g ∘ f)(x) = g(x²) = x² + 2. (f ∘ g)(x) = f(x + 2) = (x + 2)² = x² + 4x + 4.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-s12",
+      "topic": "4.11",
+      "q": "f(x) = 2x + 3 and g(x) = x − 5. Find (f ∘ g)(x) and (g ∘ f)(x).",
+      "answer": "(f ∘ g)(x) = f(x − 5) = 2(x − 5) + 3 = 2x − 7. (g ∘ f)(x) = g(2x + 3) = 2x + 3 − 5 = 2x − 2.",
+      "marks": 2
+    }
+  ]
+}

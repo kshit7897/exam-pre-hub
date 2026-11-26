@@ -88,5 +88,49 @@
   "3.8": [
     "A⁻¹ = adj(A)/|A|, sirf |A| ≠ 0 par.",
     "Check: A·A⁻¹ = I."
+  ],
+  "4.1": [
+    "A × B = sab ordered pairs (x, y), jahan x ∈ A aur y ∈ B.",
+    "A se B tak relation = A × B ka subset."
+  ],
+  "4.2": [
+    "Domain = pehle elements ka set; Range = dusre elements ka set.",
+    "Domain ⊆ A aur Range ⊆ B."
+  ],
+  "4.3": [
+    "Arrow diagram: har pair ka ek arrow (a → b).",
+    "Matrix: rows = A, columns = B; entry 1 matlab pair R mein hai."
+  ],
+  "4.4": [
+    "Set A par relation = A × A ka subset.",
+    "|A| = n ho to 2^(n²) alag relations possible."
+  ],
+  "4.5": [
+    "Reflexive: har (a, a) R mein. Irreflexive: koi (a, a) R mein nahi.",
+    "a = b reflexive hai; a < b irreflexive hai."
+  ],
+  "4.6": [
+    "Symmetric: (a, b) ∈ R ⇒ (b, a) ∈ R.",
+    "Anti-symmetric: (a, b) aur (b, a) dono ∈ R ⇒ a = b."
+  ],
+  "4.7": [
+    "Transitive: (a, b) aur (b, c) ∈ R ⇒ (a, c) ∈ R.",
+    "Compatibility = reflexive + symmetric."
+  ],
+  "4.8": [
+    "Equivalence = reflexive + symmetric + transitive.",
+    "x + y divisible by 2 ek equivalence relation ka example hai."
+  ],
+  "4.9": [
+    "POSET = reflexive + anti-symmetric + transitive.",
+    "x ≤ y POSET hai; x > y nahi (reflexive nahi)."
+  ],
+  "4.10": [
+    "Function: A ke har element ka B mein exactly ek image.",
+    "Domain = A, co-domain = B; do alag inputs ka same output ho sakta hai."
+  ],
+  "4.11": [
+    "(g ∘ f)(x) = g(f(x)): pehle f lagao, phir g.",
+    "g ∘ f aur f ∘ g generally same nahi hote."
   ]
 }

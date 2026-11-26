@@ -475,5 +475,185 @@
     "title": "Symmetric difference A Δ B (disjoint sets)",
     "image": "/maths/diagrams/mt1-p020.jpg",
     "reading": "Disjoint sets ka A Δ B = A ∪ B, kyunki overlap khaali hai."
+  },
+  {
+    "id": "mt4-p001",
+    "unit": "unit-4",
+    "page": 1,
+    "topic": "4.1",
+    "title": "Cartesian product A × B",
+    "image": "/maths/diagrams/mt4-p001.jpg",
+    "reading": "Cartesian product ki definition aur A = {1, 2, 4}, B = {1, 3, 9} ka example."
+  },
+  {
+    "id": "mt4-p002",
+    "unit": "unit-4",
+    "page": 2,
+    "topic": "4.1",
+    "title": "Relation from A to B (examples)",
+    "image": "/maths/diagrams/mt4-p002.jpg",
+    "reading": "A = {1, 2, 3}, B = {3, 5, 6, 7} par R = {(a, b) | a = b}; A = {1, 2, 3, 4}, B = {2, 4, 5, 6} par R = {(a, b) | a > b}; factor-based R1 se R4 tak."
+  },
+  {
+    "id": "mt4-p003",
+    "unit": "unit-4",
+    "page": 3,
+    "topic": "4.3",
+    "title": "Domain, range and mapping of a relation",
+    "image": "/maths/diagrams/mt4-p003.jpg",
+    "reading": "Domain aur range ka example, aur A = {1, 2, 3, 4} se B = {5, 7, 8, 12, 17} tak arrow diagram (mapping)."
+  },
+  {
+    "id": "mt4-p004",
+    "unit": "unit-4",
+    "page": 4,
+    "topic": "4.3",
+    "title": "Matrix representation (a < b)",
+    "image": "/maths/diagrams/mt4-p004.jpg",
+    "reading": "A = {3, 5, 7, 11}, B = {1, 3, 6, 8, 9}, R = {(a, b) | a < b}: mapping aur matrix."
+  },
+  {
+    "id": "mt4-p005",
+    "unit": "unit-4",
+    "page": 5,
+    "topic": "4.3",
+    "title": "Matrix representation (a + b < 8)",
+    "image": "/maths/diagrams/mt4-p005.jpg",
+    "reading": "A = {1, ..., 6}, B = {3, ..., 7}, R = {(a, b) | a + b < 8}: domain, range, mapping aur matrix."
+  },
+  {
+    "id": "mt4-p006",
+    "unit": "unit-4",
+    "page": 6,
+    "topic": "4.4",
+    "title": "Relation on a set (A × A)",
+    "image": "/maths/diagrams/mt4-p006.jpg",
+    "reading": "Set par relation (A × A ka subset) ke examples aur reflexive example A = {1, 2, 3, 4}."
+  },
+  {
+    "id": "mt4-p007",
+    "unit": "unit-4",
+    "page": 7,
+    "topic": "4.5",
+    "title": "Reflexive check (not reflexive)",
+    "image": "/maths/diagrams/mt4-p007.jpg",
+    "reading": "A = {1, ..., 5} par R check: (3, 3) ∉ R, isliye reflexive nahi. Phir a + b > 5 ka example."
+  },
+  {
+    "id": "mt4-p008",
+    "unit": "unit-4",
+    "page": 8,
+    "topic": "4.5",
+    "title": "Irreflexive, neither and symmetric start",
+    "image": "/maths/diagrams/mt4-p008.jpg",
+    "reading": "Irreflexive ka conclusion, neither reflexive nor irreflexive ka example (a + b = 2), aur symmetric ki shuruaat."
+  },
+  {
+    "id": "mt4-p009",
+    "unit": "unit-4",
+    "page": 9,
+    "topic": "4.6",
+    "title": "Symmetric check (examples)",
+    "image": "/maths/diagrams/mt4-p009.jpg",
+    "reading": "Symmetric examples: ek symmetric R, aur ek non-symmetric R jahan (4, 3) ∉ R."
+  },
+  {
+    "id": "mt4-p010",
+    "unit": "unit-4",
+    "page": 10,
+    "topic": "4.6",
+    "title": "Anti-symmetric check",
+    "image": "/maths/diagrams/mt4-p010.jpg",
+    "reading": "a < b par check (reflexive, irreflexive, symmetric), anti-symmetric ka example, aur do-it-yourself questions."
+  },
+  {
+    "id": "mt4-p011",
+    "unit": "unit-4",
+    "page": 11,
+    "topic": "4.6",
+    "title": "Symmetric only (a + b divisible by 3)",
+    "image": "/maths/diagrams/mt4-p011.jpg",
+    "reading": "a + b divisible by 2 ka solution aur a + b divisible by 3 par symmetric check (sirf symmetric)."
+  },
+  {
+    "id": "mt4-p012",
+    "unit": "unit-4",
+    "page": 12,
+    "topic": "4.7",
+    "title": "Transitive check and compatibility",
+    "image": "/maths/diagrams/mt4-p012.jpg",
+    "reading": "Transitive example (A = {1, 2, 3, 4}, not transitive) aur compatibility relation (x + y even)."
+  },
+  {
+    "id": "mt4-p013",
+    "unit": "unit-4",
+    "page": 13,
+    "topic": "4.8",
+    "title": "Equivalence relation (x + y divisible by 2)",
+    "image": "/maths/diagrams/mt4-p013.jpg",
+    "reading": "True/False: equivalence ⇒ compatibility. Equivalence relation ki definition aur x + y divisible by 2 par example."
+  },
+  {
+    "id": "mt4-p014",
+    "unit": "unit-4",
+    "page": 14,
+    "topic": "4.8",
+    "title": "Equivalence checks (x + y odd, x + y ≤ 8)",
+    "image": "/maths/diagrams/mt4-p014.jpg",
+    "reading": "x + y odd par check (reflexive nahi), x + y ≤ 8 par transitive check, aur x + y multiple of 2 ka example."
+  },
+  {
+    "id": "mt4-p015",
+    "unit": "unit-4",
+    "page": 15,
+    "topic": "4.9",
+    "title": "POSET (x ≤ y)",
+    "image": "/maths/diagrams/mt4-p015.jpg",
+    "reading": "POSET ki definition aur x ≤ y par example: reflexive, antisymmetric, transitive."
+  },
+  {
+    "id": "mt4-p016",
+    "unit": "unit-4",
+    "page": 16,
+    "topic": "4.9",
+    "title": "POSET (x = y) and transitive chains",
+    "image": "/maths/diagrams/mt4-p016.jpg",
+    "reading": "x ≤ y ke transitive chains aur x = y par POSET check."
+  },
+  {
+    "id": "mt4-p017",
+    "unit": "unit-4",
+    "page": 17,
+    "topic": "4.9",
+    "title": "x > y is not POSET; functions start",
+    "image": "/maths/diagrams/mt4-p017.jpg",
+    "reading": "x > y ko POSET check karna (reflexive nahi), aur function ki definition aur f(x) = x + 2 ka example."
+  },
+  {
+    "id": "mt4-p018",
+    "unit": "unit-4",
+    "page": 18,
+    "topic": "4.10",
+    "title": "Function checks (2x + 1, 1 − x, x²)",
+    "image": "/maths/diagrams/mt4-p018.jpg",
+    "reading": "f(x) = 2x + 1 function hai; f(x) = 1 − x N par function nahi; f(x) = x² ka do-it-yourself. Composition ki definition aur f = x², g = x + 2 ka example."
+  },
+  {
+    "id": "mt4-p019",
+    "unit": "unit-4",
+    "page": 19,
+    "topic": "4.11",
+    "title": "Composition: evaluate f, g, h (x + 3, 3x − 4, x/2)",
+    "image": "/maths/diagrams/mt4-p019.jpg",
+    "reading": "f(x) = x + 3, g(x) = 3x − 4, h(x) = x/2 ke saath composition ke results."
+  },
+  {
+    "id": "mt4-p020",
+    "unit": "unit-4",
+    "page": 20,
+    "topic": "4.11",
+    "title": "Composition: more evaluations and bijective check",
+    "image": "/maths/diagrams/mt4-p020.jpg",
+    "reading": "f(x) = 2x + 3, g(x) = x − 5, h(x) = (x + 2)/3 ke saath composition aur bijective check."
   }
 ]

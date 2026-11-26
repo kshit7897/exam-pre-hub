@@ -1,0 +1,507 @@
+{
+  "mcq": [
+    {
+      "id": "mt4-d-m01",
+      "topic": "4.3",
+      "q": "A = {1, 2, 3}, B = {4, 5} aur R = {(1, 4), (3, 5)}. Matrix mein row 3, column 5 ka element kya hoga?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "(3, 5) ∈ R, so the entry is 1."
+    },
+    {
+      "id": "mt4-d-m02",
+      "topic": "4.2",
+      "q": "R = {(1, 2), (2, 2), (3, 4)} ka domain kya hai?",
+      "options": [
+        "{1, 2, 3}",
+        "{2, 4}",
+        "{1, 2, 3, 4}",
+        "{2}"
+      ],
+      "answer": 0,
+      "explanation": "Domain = first elements = {1, 2, 3}."
+    },
+    {
+      "id": "mt4-d-m03",
+      "topic": "4.2",
+      "q": "Same R = {(1, 2), (2, 2), (3, 4)} ka range kya hai?",
+      "options": [
+        "{2, 4}",
+        "{1, 2, 3}",
+        "{2}",
+        "{4}"
+      ],
+      "answer": 0,
+      "explanation": "Range = second elements = {2, 4}."
+    },
+    {
+      "id": "mt4-d-m04",
+      "topic": "4.1",
+      "q": "A = {1, 2} aur B = {3, 4} ho to A × B kya hai?",
+      "options": [
+        "{(1, 3), (1, 4), (2, 3), (2, 4)}",
+        "{(1, 3), (2, 4)}",
+        "{(3, 1), (4, 2)}",
+        "{(1, 2), (3, 4)}"
+      ],
+      "answer": 0,
+      "explanation": "A × B mein har x ∈ A ko har y ∈ B ke saath pair banate hain."
+    },
+    {
+      "id": "mt4-d-m05",
+      "topic": "4.4",
+      "q": "Agar |A| = 3 ho, to A × A mein kitne ordered pairs honge?",
+      "options": [
+        "6",
+        "9",
+        "3",
+        "27"
+      ],
+      "answer": 1,
+      "explanation": "|A × A| = 3 · 3 = 9."
+    },
+    {
+      "id": "mt4-d-m06",
+      "topic": "4.5",
+      "q": "A = {1, 2, 3} par R = {(1, 2), (2, 3)} kaisa relation hai?",
+      "options": [
+        "Reflexive",
+        "Irreflexive",
+        "Equivalence",
+        "Symmetric aur reflexive"
+      ],
+      "answer": 1,
+      "explanation": "(1, 1), (2, 2), (3, 3) mein se koi bhi R mein nahi hai, isliye irreflexive hai."
+    },
+    {
+      "id": "mt4-d-m07",
+      "topic": "4.6",
+      "q": "A = {1, 2} par R = {(1, 1), (2, 2), (1, 2)} symmetric hai?",
+      "options": [
+        "Haan",
+        "Nahi",
+        "Sirf reflexive hai",
+        "Equivalence hai"
+      ],
+      "answer": 1,
+      "explanation": "(1, 2) ∈ R lekin (2, 1) ∉ R, isliye symmetric nahi hai."
+    },
+    {
+      "id": "mt4-d-m08",
+      "topic": "4.8",
+      "q": "R = {(x, y) | x + y, 3 se divisible hai} on A = {1, 2, 3, 4, 5}: kya yeh equivalence relation hai?",
+      "options": [
+        "Haan, equivalence relation hai",
+        "Reflexive nahi, kyunki 1 + 1 = 2 divisible by 3 nahi hai",
+        "Symmetric nahi hai",
+        "Transitive nahi hai"
+      ],
+      "answer": 1,
+      "explanation": "Reflexive ke liye (1, 1) ∈ R hona chahiye, lekin 1 + 1 = 2 3 se divisible nahi hai."
+    },
+    {
+      "id": "mt4-d-m09",
+      "topic": "4.9",
+      "q": "A = {1, 2, 3, 4} par 'a divides b' (R = {(a, b) | a | b}) kya POSET hai?",
+      "options": [
+        "Haan: reflexive, anti-symmetric aur transitive hai",
+        "Nahi, symmetric hai",
+        "Nahi, reflexive nahi hai",
+        "Nahi, transitive nahi hai"
+      ],
+      "answer": 0,
+      "explanation": "a | a (reflexive), a | b aur b | a ho to a = b (anti-symmetric), a | b aur b | c ho to a | c (transitive)."
+    },
+    {
+      "id": "mt4-d-m10",
+      "topic": "4.10",
+      "q": "f: N → N, f(x) = x² kya function hai?",
+      "options": [
+        "Haan, har x ka ek hi image hai",
+        "Nahi, kyunki f(2) = f(3)",
+        "Nahi, kyunki x² kabhi negative ho sakta hai",
+        "Nahi, kyunki range N se alag hai"
+      ],
+      "answer": 0,
+      "explanation": "Har natural number x ka x² ek hi value deta hai aur woh N mein hai, isliye function hai."
+    },
+    {
+      "id": "mt4-d-m11",
+      "topic": "4.10",
+      "q": "f: Z → Z, f(x) = x / 2 kya function hai?",
+      "options": [
+        "Haan",
+        "Nahi, f(1) = 1/2 Z mein nahi hai",
+        "Nahi, f(0) define nahi hai",
+        "Haan, kyunki yeh linear hai"
+      ],
+      "answer": 1,
+      "explanation": "f(1) = 1/2 integer nahi hai, isliye f, Z se Z mein function nahi hai."
+    },
+    {
+      "id": "mt4-d-m12",
+      "topic": "4.11",
+      "q": "f(x) = 2x aur g(x) = x + 1 ho to (f ∘ g)(3) kitna hai?",
+      "options": [
+        "7",
+        "8",
+        "6",
+        "9"
+      ],
+      "answer": 1,
+      "explanation": "g(3) = 4, f(4) = 8. So (f ∘ g)(3) = 8."
+    },
+    {
+      "id": "mt4-d-m13",
+      "topic": "4.11",
+      "q": "Same f(x) = 2x aur g(x) = x + 1 ke liye (g ∘ f)(3) kitna hai?",
+      "options": [
+        "7",
+        "8",
+        "6",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "f(3) = 6, g(6) = 7. So (g ∘ f)(3) = 7."
+    },
+    {
+      "id": "mt4-d-m14",
+      "topic": "4.7",
+      "q": "Compatibility relation kya hota hai?",
+      "options": [
+        "Reflexive aur symmetric",
+        "Symmetric aur anti-symmetric",
+        "Transitive only",
+        "Irreflexive aur symmetric"
+      ],
+      "answer": 0,
+      "explanation": "Compatibility relation = reflexive + symmetric."
+    },
+    {
+      "id": "mt4-d-m15",
+      "topic": "4.4",
+      "q": "3 elements wale set A par kitne alag relations banaye ja sakte hain?",
+      "options": [
+        "9",
+        "81",
+        "512",
+        "256"
+      ],
+      "answer": 2,
+      "explanation": "|A × A| = 9, isliye relations = 2^9 = 512."
+    },
+    {
+      "id": "mt4-d-m16",
+      "topic": "4.2",
+      "q": "|A| = 3 aur |B| = 2 ho to A se B tak kitne alag relations possible hain?",
+      "options": [
+        "6",
+        "12",
+        "36",
+        "64"
+      ],
+      "answer": 3,
+      "explanation": "|A × B| = 6, isliye relations = 2^6 = 64."
+    },
+    {
+      "id": "mt4-d-m17",
+      "topic": "4.6",
+      "q": "A = {1, 2, 3, 4, 5} par R = {(x, y) | x > y} anti-symmetric hai?",
+      "options": [
+        "Haan",
+        "Nahi",
+        "Sirf reflexive hai",
+        "Equivalence hai"
+      ],
+      "answer": 0,
+      "explanation": "(x, y) ∈ R ke liye (y, x) ∈ R kabhi nahi hota, isliye anti-symmetric hai."
+    },
+    {
+      "id": "mt4-d-m18",
+      "topic": "4.6",
+      "q": "A = {1, 2, 3, 4, 5} par R = {(a, b) | a + b divisible by 3} ka sahi conclusion kya hai?",
+      "options": [
+        "Sirf symmetric hai",
+        "Reflexive aur symmetric hai",
+        "Equivalence relation hai",
+        "Sirf anti-symmetric hai"
+      ],
+      "answer": 0,
+      "explanation": "(1, 1) ∉ R (not reflexive), (3, 3) ∈ R (not irreflexive), R symmetric hai, aur (1, 2), (2, 1) dono hain (not anti-symmetric)."
+    },
+    {
+      "id": "mt4-d-m19",
+      "topic": "4.10",
+      "q": "A = {1, 2, 3, 4, 5} se B = {1, ..., 25} tak f(x) = x² function hai?",
+      "options": [
+        "Haan, har x ka ek hi image hai",
+        "Nahi, f(5) = 25 B mein nahi",
+        "Nahi, f(2) define nahi hai",
+        "Nahi, f(1) = f(−1)"
+      ],
+      "answer": 0,
+      "explanation": "f(1) = 1, f(2) = 4, ..., f(5) = 25 — sab B mein hain aur har x ka ek image hai."
+    },
+    {
+      "id": "mt4-d-m20",
+      "topic": "4.10",
+      "q": "f: R → R, f(x) = 2x + 3 bijective function hai?",
+      "options": [
+        "Haan, one-one aur onto dono hai",
+        "Nahi, range R nahi hai",
+        "Nahi, one-one nahi hai",
+        "Nahi, f(0) nahi hai"
+      ],
+      "answer": 0,
+      "explanation": "Linear function (slope 2 ≠ 0) R → R par one-one aur onto hai, isliye bijective hai."
+    },
+    {
+      "id": "mt4-d-m21",
+      "topic": "4.11",
+      "q": "f(x) = x + 3 ho to (f ∘ f)(x) kya hai?",
+      "options": [
+        "x + 6",
+        "x + 9",
+        "3x + 5",
+        "3x − 1"
+      ],
+      "answer": 0,
+      "explanation": "(f ∘ f)(x) = f(x + 3) = x + 3 + 3 = x + 6."
+    },
+    {
+      "id": "mt4-d-m22",
+      "topic": "4.11",
+      "q": "f(x) = x + 3 aur g(x) = 3x − 4 ho to (g ∘ g)(x) kya hai?",
+      "options": [
+        "9x − 16",
+        "3x − 1",
+        "9x − 12",
+        "3x − 16"
+      ],
+      "answer": 0,
+      "explanation": "(g ∘ g)(x) = g(3x − 4) = 3(3x − 4) − 4 = 9x − 16."
+    },
+    {
+      "id": "mt4-d-m23",
+      "topic": "4.9",
+      "q": "A = {1, 2, 3, 4, 5} par R = {(x, y) | x ≥ y} POSET hai?",
+      "options": [
+        "Haan",
+        "Nahi, reflexive nahi hai",
+        "Nahi, anti-symmetric nahi hai",
+        "Nahi, transitive nahi hai"
+      ],
+      "answer": 0,
+      "explanation": "x ≥ x (reflexive), x ≥ y aur y ≥ x sirf x = y par (anti-symmetric), aur chains transitive hain — isliye POSET hai."
+    },
+    {
+      "id": "mt4-d-m24",
+      "topic": "4.5",
+      "q": "A = {1, 2, 3, 4} par R = {(a, b) | a + b = 2} kaisa relation hai?",
+      "options": [
+        "Reflexive",
+        "Irreflexive",
+        "Neither reflexive nor irreflexive",
+        "Equivalence"
+      ],
+      "answer": 2,
+      "explanation": "R = {(1, 1)}: (1, 1) ∈ R (irreflexive nahi), (2, 2) ∉ R (reflexive nahi)."
+    }
+  ],
+  "short": [
+    {
+      "id": "mt4-d-s01",
+      "topic": "4.1",
+      "q": "A = {a, b} aur B = {1} ho to A × B aur B × A likho.",
+      "answer": "A × B = {(a, 1), (b, 1)}. B × A = {(1, a), (1, b)}.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s02",
+      "topic": "4.2",
+      "q": "A = {1, 2, 3} se B = {2, 3, 4, 5} tak R = {(x, y) | y = x + 1}. R likho, domain aur range nikaalo.",
+      "answer": "R = {(1, 2), (2, 3), (3, 4)}. Domain = {1, 2, 3}. Range = {2, 3, 4}.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s03",
+      "topic": "4.3",
+      "q": "A = B = {1, 2, 3} par R = {(1, 2), (2, 3), (3, 1)} ka matrix representation banao.",
+      "answer": "Row 1: 0 1 0. Row 2: 0 0 1. Row 3: 1 0 0. (Rows aur columns 1, 2, 3 ke order mein.)",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s04",
+      "topic": "4.4",
+      "q": "A = {1, 2, 3, 4} par R = {(a, b) | a < b} ko listing method mein likho.",
+      "answer": "R = {(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)}.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s05",
+      "topic": "4.5",
+      "q": "A = {1, 2, 3, 4} par R = {(1, 1), (2, 2), (3, 3), (4, 4), (1, 2)} reflexive hai ya nahi?",
+      "answer": "Haan. Har a ∈ A ke liye (a, a) ∈ R hai, isliye R reflexive hai (1, 2 wala pair iske liye zaroori nahi).",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s06",
+      "topic": "4.5",
+      "q": "A = {1, 2, 3, 4, 5} par R = {(a, b) | a + b = 6} reflexive hai, irreflexive hai ya dono nahi?",
+      "answer": "R = {(1, 5), (2, 4), (3, 3), (4, 2), (5, 1)}. (1, 1) ∉ R, isliye reflexive nahi. (3, 3) ∈ R, isliye irreflexive nahi. Answer: dono nahi (neither).",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s07",
+      "topic": "4.6",
+      "q": "A = {1, 2, 3} par R = {(1, 2), (2, 1), (2, 3), (3, 2)} symmetric aur anti-symmetric dono check karo.",
+      "answer": "Symmetric: haan, har pair ka reverse R mein hai. Anti-symmetric: nahi, kyunki (1, 2) aur (2, 1) dono R mein hain aur 1 ≠ 2.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s08",
+      "topic": "4.6",
+      "q": "A = {1, 2} par R = {(1, 1), (2, 2), (1, 2)} anti-symmetric hai ya nahi?",
+      "answer": "Haan. Sirf (1, 2) ∈ R hai aur (2, 1) ∉ R. (1, 1) aur (2, 2) mein a = b hai, isliye anti-symmetric hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s09",
+      "topic": "4.7",
+      "q": "A = {1, 2, 3} par R = {(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (1, 3), (3, 1)} transitive hai ya nahi?",
+      "answer": "Nahi. (2, 1) ∈ R aur (1, 3) ∈ R, lekin (2, 3) ∉ R. Isliye transitive nahi hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s10",
+      "topic": "4.7",
+      "q": "A = {1, 2} par R = {(1, 1), (2, 2), (1, 2), (2, 1)} transitive hai ya nahi?",
+      "answer": "Haan. Saare chains check karo: (1, 2)(2, 1) → (1, 1) ∈ R; (2, 1)(1, 2) → (2, 2) ∈ R; baaki chains mein bhi result R mein hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s11",
+      "topic": "4.8",
+      "q": "A = {1, 2, 3, 4} par R = {(a, b) | a − b, 2 se divisible hai} equivalence relation hai? Reason do.",
+      "answer": "Haan. Reflexive: a − a = 0. Symmetric: a − b even ho to b − a bhi even. Transitive: a − b aur b − c even ho to a − c bhi even. Classes: {1, 3} aur {2, 4}.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s12",
+      "topic": "4.9",
+      "q": "A = {1, 2} par R = {(1, 1), (2, 2), (1, 2), (2, 1)} POSET hai ya nahi?",
+      "answer": "Nahi. Reflexive hai aur transitive bhi, lekin anti-symmetric nahi: (1, 2) aur (2, 1) dono R mein hain aur 1 ≠ 2.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s13",
+      "topic": "4.10",
+      "q": "f = {(1, a), (2, b), (3, a)} ek function hai A = {1, 2, 3} se B = {a, b, c} tak. Kya yeh function hai?",
+      "answer": "Haan. A ke har element ka exactly ek image hai. Do elements (1 aur 3) ka image same ho sakta hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s14",
+      "topic": "4.10",
+      "q": "f = {(1, a), (2, b)} A = {1, 2, 3} se B = {a, b} tak. Kya yeh function hai?",
+      "answer": "Nahi. Element 3 ∈ A ka koi image nahi hai. Function mein A ke har element ka image hona zaroori hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s15",
+      "topic": "4.10",
+      "q": "f: N → N, f(x) = x − 1 function hai ya nahi? Reason do.",
+      "answer": "Nahi. f(1) = 0, aur 0 N = {1, 2, 3, ...} mein nahi hai (slides ka N yahi hai). Isliye f, N → N function nahi hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s16",
+      "topic": "4.11",
+      "q": "f(x) = x + 1 aur g(x) = x² ho to (g ∘ f)(x) aur (f ∘ g)(x) nikaalo.",
+      "answer": "(g ∘ f)(x) = g(x + 1) = (x + 1)². (f ∘ g)(x) = f(x²) = x² + 1.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s17",
+      "topic": "4.11",
+      "q": "f(x) = x + 3 aur g(x) = 3x − 4 ho to (g ∘ f)(2) aur (f ∘ g)(2) kitne hain?",
+      "answer": "(g ∘ f)(2) = g(5) = 11. (f ∘ g)(2) = f(2) = 5. (Check: g ∘ f = 3x + 5, f ∘ g = 3x − 1.)",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s18",
+      "topic": "4.5",
+      "q": "A = {1, 2, 3, 4, 5} par R = {(a, b) | a < b} irreflexive hai? Reason do.",
+      "answer": "Haan. Kisi bhi a ke liye a < a sach nahi hai, isliye (a, a) ∉ R sab ke liye.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s19",
+      "topic": "4.6",
+      "q": "A = {1, 2, 3, 4, 5} par R = {(x, y) | x > y} anti-symmetric hai? Reason do.",
+      "answer": "Haan. Agar (x, y) ∈ R, to x > y; (y, x) ∈ R ke liye y > x chahiye, jo nahi ho sakta. Isliye anti-symmetric.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s20",
+      "topic": "4.6",
+      "q": "A = {1, 2, 3, 4, 5} par R = {(a, b) | a + b even} ke liye (i) reflexive (ii) irreflexive (iii) symmetric (iv) anti-symmetric check karo.",
+      "answer": "(i) Reflexive: haan. (ii) Irreflexive: nahi, (1, 1) ∈ R. (iii) Symmetric: haan. (iv) Anti-symmetric: nahi, (1, 3) aur (3, 1) dono R mein hain.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s21",
+      "topic": "4.7",
+      "q": "A = {1, 2, 3, 4} par R = {(1, 2), (2, 1), (1, 1), (1, 3), (3, 2), (2, 3), (3, 4), (1, 4), (4, 3)} transitive hai ya nahi?",
+      "answer": "Nahi. (3, 2) ∈ R aur (2, 3) ∈ R, lekin (3, 3) ∉ R.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s22",
+      "topic": "4.8",
+      "q": "A = {1, ..., 6} par R = {(x, y) | x + y odd} equivalence relation hai?",
+      "answer": "Nahi. Reflexive nahi: (1, 1) ∉ R, kyunki 1 + 1 = 2 odd nahi hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s23",
+      "topic": "4.8",
+      "q": "A = {1, 2, 3, 4} par R = {(x, y) | x + y ≤ 8} equivalence relation hai? Reason do.",
+      "answer": "Haan. Reflexive: 2x ≤ 8 (x ≤ 4). Symmetric: x + y = y + x. Transitive: a, c ≤ 4 hone se a + c ≤ 8 hamesha.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s24",
+      "topic": "4.10",
+      "q": "f(x) = 2x + 1, A = {1, 3, 5}, B = {1, 3, 5, 7, 9, 11, 13}: f function hai?",
+      "answer": "Haan. f(1) = 3, f(3) = 7, f(5) = 11 — teenon B mein hain aur har input ka ek output hai.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s25",
+      "topic": "4.10",
+      "q": "f(x) = x² se A = {1, 2, 3, 4, 5} ko B = {1, ..., 25} tak function hai? Check karo.",
+      "answer": "Haan. f(1) = 1, f(2) = 4, f(3) = 9, f(4) = 16, f(5) = 25 — sab B mein hain.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s26",
+      "topic": "4.11",
+      "q": "f(x) = x + 2 aur g(x) = 2x ho to (f ∘ g)(x) aur (g ∘ f)(x) nikaalo.",
+      "answer": "(f ∘ g)(x) = f(2x) = 2x + 2. (g ∘ f)(x) = g(x + 2) = 2(x + 2) = 2x + 4.",
+      "marks": 2
+    },
+    {
+      "id": "mt4-d-s27",
+      "topic": "4.11",
+      "q": "f(x) = 2x + 3, g(x) = x − 5, h(x) = (x + 2)/3 ho to (f ∘ g ∘ h)(x) nikaalo.",
+      "answer": "h(x) = (x + 2)/3; g(h(x)) = (x − 13)/3; f(g(h(x))) = 2(x − 13)/3 + 3 = (2x − 17)/3.",
+      "marks": 2
+    }
+  ]
+}
