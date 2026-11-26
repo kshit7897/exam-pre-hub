@@ -60,10 +60,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="focus-ring rounded-lg">
               <Logo />
             </Link>
-            <ThemeToggle />
+            <div className="flex items-center gap-4">
+              <Link href="/about" className="focus-ring rounded-lg text-sm text-[var(--muted)] hover:text-[var(--fg)]">
+                About
+              </Link>
+              <ThemeToggle />
+            </div>
           </div>
         </header>
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-5 sm:pt-7">{children}</main>
+        <footer className="border-t border-[var(--border)] px-4 py-4 text-center text-xs text-[var(--muted)]">
+          Developed by Parikshit Chauhan
+        </footer>
       </body>
     </html>
   );
