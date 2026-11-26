@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ClipboardCheck, PenLine } from "lucide-react";
+import { ClipboardCheck, PenLine, Timer } from "lucide-react";
 import { getSubject, getUnit, subjects } from "@/lib/subjects";
 import { colorAt, iconAt } from "@/lib/unitStyle";
 import BackButton from "@/components/BackButton";
@@ -64,8 +64,11 @@ async function UnitLoader({ params }: { params: Promise<{ subject: string; unit:
               <Link href={`/${subject.id}/practice?unit=${unit.id}`} className="btn focus-ring !border-0 !bg-white !text-[#141a2e]">
                 <PenLine size={17} aria-hidden /> Is unit ki practice
               </Link>
+              <Link href={`/${subject.id}/unit/${unit.id}/mock`} className="btn focus-ring !border-0 !bg-white !text-[#141a2e]">
+                <Timer size={17} aria-hidden /> Is unit ka mock test
+              </Link>
               <Link href={`/${subject.id}/mock`} className="btn focus-ring !border-white/40 !bg-transparent !text-white">
-                <ClipboardCheck size={17} aria-hidden /> Mock exam
+                <ClipboardCheck size={17} aria-hidden /> Full mock exam
               </Link>
             </div>
           </div>

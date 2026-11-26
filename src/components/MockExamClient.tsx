@@ -20,6 +20,8 @@ type Props = {
   mcqCount: number;
   shortCount: number;
   durationMinutes: number;
+  title?: string; // heading on the intro card (default "Mock exam")
+  scopeText?: string; // what the paper covers (default: all units)
 };
 
 type Phase = "intro" | "exam" | "result";
@@ -39,6 +41,8 @@ export default function MockExamClient({
   mcqCount,
   shortCount,
   durationMinutes,
+  title = "Mock exam",
+  scopeText = "Exam jaisa paper, saare units se random questions. Real test ki tarah time par likho.",
 }: Props) {
   const [phase, setPhase] = useState<Phase>("intro");
   const [paper, setPaper] = useState<{ mcq: TaggedMCQ[]; short: TaggedShort[] }>({ mcq: [], short: [] });
@@ -111,10 +115,8 @@ export default function MockExamClient({
           <section className="hero p-6 sm:p-10" style={{ ["--c" as string]: "#ea580c" }}>
             <div className="relative z-10 max-w-xl">
               <div className="text-xs font-semibold uppercase tracking-widest opacity-85">Exam mode</div>
-              <h1 className="mt-2 text-3xl font-bold sm:text-4xl">Mock exam</h1>
-              <p className="mt-2 text-sm leading-relaxed opacity-90 sm:text-base">
-                Exam jaisa paper, saare units se random questions. Real test ki tarah time par likho.
-              </p>
+              <h1 className="mt-2 text-3xl font-bold sm:text-4xl">{title}</h1>
+              <p className="mt-2 text-sm leading-relaxed opacity-90 sm:text-base">{scopeText}</p>
               <div className="mt-6 grid grid-cols-3 gap-2 sm:max-w-md">
                 <Stat value={mcqCount} label="MCQ · 1 mark" />
                 <Stat value={shortCount} label="Short · 2 marks" />
